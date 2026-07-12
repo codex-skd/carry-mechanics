@@ -1,0 +1,13 @@
+{
+  "itemGroup.carry_mechanics": "Example Mod Tab",
+  "block.carry_mechanics.example_block": "Example Block",
+  "item.carry_mechanics.example_item": "Example Item",
+
+  "carry_mechanics.configuration.title": "Carry Mechanics Configs",
+  "carry_mechanics.configuration.section.carry_mechanics.common.toml": "Carry Mechanics Configs",
+  "carry_mechanics.configuration.section.carry_mechanics.common.toml.title": "Carry Mechanics Configs",
+  "carry_mechanics.configuration.items": "Item List",
+  "carry_mechanics.configuration.logDirtBlock": "Log Dirt Block",
+  "carry_mechanics.configuration.magicNumberIntroduction": "Magic Number Text",
+  "carry_mechanics.configuration.magicNumber": "Magic Number"
+}

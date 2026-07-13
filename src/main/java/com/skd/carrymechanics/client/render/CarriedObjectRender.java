@@ -11,7 +11,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 @OnlyIn(Dist.CLIENT)
 public class CarriedObjectRender {
 
-    public static void renderCarriedObject(Object renderState, PoseStack poseStack, MultiBufferSource bufferSource, int light) {
+    public static void renderCarriedObject(PoseStack poseStack, MultiBufferSource bufferSource, int light) {
         // Visual rendering placeholder - will be implemented for this Minecraft version
     }
 }

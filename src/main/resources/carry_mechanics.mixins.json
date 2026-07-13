@@ -11,9 +11,7 @@
   "client": [
     "AvatarRendererMixin",
     "EntityRendererMixin",
-    "HumanoidModelMixin",
-    "PlayerRenderStateMixin",
-    "ICarryOnRenderState"
+    "HumanoidModelMixin"
   ],
   "server": [],
   "injectors": {

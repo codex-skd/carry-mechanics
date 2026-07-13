@@ -9,7 +9,6 @@
     "PlayerMixin"
   ],
   "client": [
-    "AvatarRendererMixin",
     "EntityRendererMixin"
   ],
   "server": [],

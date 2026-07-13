@@ -184,9 +184,8 @@ public class PickupHandler {
     private static void applySlowness(ServerPlayer player, CarryData data) {
         if (!player.isCreative() || ConfigAccess.SLOWNESS_IN_CREATIVE.get()) {
             int level = potionLevel(data, (ServerLevel) player.level());
-            if (level > 0) {
-                player.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 100000000, level, false, false));
-            }
+            if (level < 0) level = 0;
+            player.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 100000000, level, false, false));
         }
     }
 

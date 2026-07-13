@@ -3,6 +3,7 @@ package com.skd.carrymechanics.events;
 import com.skd.carrymechanics.CarryMechanics;
 import com.skd.carrymechanics.carry.*;
 import com.skd.carrymechanics.command.CommandCarryMechanics;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
@@ -12,6 +13,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
@@ -29,17 +31,28 @@ public class CommonEvents {
 
         CarryData data = CarryDataManager.getCarryData(player);
 
-        if (!data.isCarrying()) {
-            PickupHandler.tryPickUpBlock((ServerPlayer) player, event.getPos(), level, (state, bp) -> true);
-        } else if (data.isCarrying(CarryData.CarryType.BLOCK)) {
-            PlacementHandler.tryPlaceBlock((ServerPlayer) player, event.getPos(), event.getFace(), (bp, bs) -> true);
+        if (data.isCarrying()) {
+            boolean placed = false;
+            if (data.isCarrying(CarryData.CarryType.BLOCK)) {
+                placed = PlacementHandler.tryPlaceBlock((ServerPlayer) player, event.getPos(), event.getFace(), (bp, bs) -> true);
+            } else {
+                placed = PlacementHandler.tryPlaceEntity((ServerPlayer) player, event.getPos(), event.getFace(), (v, e) -> true);
+            }
+            if (placed) {
+                event.setUseBlock(net.minecraft.util.TriState.FALSE);
+                event.setUseItem(net.minecraft.util.TriState.FALSE);
+                event.setCancellationResult(InteractionResult.SUCCESS);
+                event.setCanceled(true);
+            }
         } else {
-            PlacementHandler.tryPlaceEntity((ServerPlayer) player, event.getPos(), event.getFace(), (v, e) -> true);
+            boolean picked = PickupHandler.tryPickUpBlock((ServerPlayer) player, event.getPos(), level, (state, bp) -> true);
+            if (picked) {
+                event.setUseBlock(net.minecraft.util.TriState.FALSE);
+                event.setUseItem(net.minecraft.util.TriState.FALSE);
+                event.setCancellationResult(InteractionResult.SUCCESS);
+                event.setCanceled(true);
+            }
         }
-        event.setUseBlock(net.minecraft.util.TriState.FALSE);
-        event.setUseItem(net.minecraft.util.TriState.FALSE);
-        event.setCancellationResult(InteractionResult.SUCCESS);
-        event.setCanceled(true);
     }
 
     @SubscribeEvent
@@ -76,7 +89,7 @@ public class CommonEvents {
             data.getActiveScript().ifPresent(script -> {
                 String loopCmd = script.effects().commandLoop();
                 if (!loopCmd.isEmpty()) {
-                    var server = ((net.minecraft.server.level.ServerLevel) player.level()).getServer();
+                    var server = ((ServerLevel) player.level()).getServer();
                     var source = server.createCommandSourceStack().withPosition(player.position()).withEntity(player);
                     server.getCommands().performPrefixedCommand(source, loopCmd.replace("@p", player.getGameProfile().name()));
                 }
@@ -99,6 +112,15 @@ public class CommonEvents {
         if (player == null) return;
         if (CarryDataManager.getCarryData(player).isCarrying() && !ConfigAccess.HIT_WHILE_CARRYING.get())
             event.setCanceled(true);
+    }
+
+    @SubscribeEvent
+    public static void onJump(LivingEvent.LivingJumpEvent event) {
+        if (event.getEntity() instanceof Player player) {
+            if (CarryDataManager.getCarryData(player).isCarrying()) {
+                event.setCanceled(true);
+            }
+        }
     }
 
     @SubscribeEvent

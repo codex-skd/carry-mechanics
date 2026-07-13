@@ -10,8 +10,7 @@
   ],
   "client": [
     "AvatarRendererMixin",
-    "EntityRendererMixin",
-    "HumanoidModelMixin"
+    "EntityRendererMixin"
   ],
   "server": [],
   "injectors": {

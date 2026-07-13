@@ -13,7 +13,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
-import net.neoforged.neoforge.event.entity.living.LivingEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
@@ -95,6 +94,10 @@ public class CommonEvents {
                 }
             });
             player.getInventory().setSelectedSlot(data.getSelected());
+            var motion = player.getDeltaMovement();
+            if (motion.y > 0) {
+                player.setDeltaMovement(motion.x, 0, motion.z);
+            }
         }
     }
 
@@ -112,15 +115,6 @@ public class CommonEvents {
         if (player == null) return;
         if (CarryDataManager.getCarryData(player).isCarrying() && !ConfigAccess.HIT_WHILE_CARRYING.get())
             event.setCanceled(true);
-    }
-
-    @SubscribeEvent
-    public static void onJump(LivingEvent.LivingJumpEvent event) {
-        if (event.getEntity() instanceof Player player) {
-            if (CarryDataManager.getCarryData(player).isCarrying()) {
-                event.setCanceled(true);
-            }
-        }
     }
 
     @SubscribeEvent

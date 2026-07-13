@@ -39,3 +39,8 @@ run/
 repo/
 !**/src/**/repo/
 lib_ext/
+
+# Temp files
+decompiled/
+temp_extract/
+build_errors.txt

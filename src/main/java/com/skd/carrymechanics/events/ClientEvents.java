@@ -15,14 +15,18 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 @EventBusSubscriber(modid = CarryMechanics.MODID, value = Dist.CLIENT)
 public class ClientEvents {
 
+    private static boolean wasKeyDown = false;
+
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Pre event) {
         Minecraft mc = Minecraft.getInstance();
         var player = mc.player;
         if (player == null) return;
 
-        if (CarryKeybinds.CARRY_KEY.consumeClick()) {
-            ClientPacketDistributor.sendToServer(new ServerboundCarryKeyPressedPacket(CarryKeybinds.CARRY_KEY.isDown()));
+        boolean isDown = CarryKeybinds.CARRY_KEY.isDown();
+        if (isDown != wasKeyDown) {
+            wasKeyDown = isDown;
+            ClientPacketDistributor.sendToServer(new ServerboundCarryKeyPressedPacket(isDown));
         }
 
         CarryData data = CarryDataManager.getCarryData(player);

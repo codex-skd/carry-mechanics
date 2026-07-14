@@ -190,17 +190,19 @@ public class PickupHandler {
     }
 
     public static int potionLevel(CarryData data, Level level) {
-        if (data.isCarrying(CarryData.CarryType.PLAYER)) return 1;
+        if (data.isCarrying(CarryData.CarryType.PLAYER)) return 2;
         if (data.isCarrying(CarryData.CarryType.ENTITY)) {
             Entity entity = data.getEntity(level);
             int size = (int)(entity.getBbHeight() * entity.getBbWidth());
             if (size > 4) size = 4;
+            if (size < 1) size = 1;
             if (!ConfigAccess.HEAVY_ENTITIES.get()) size = 1;
             return (int)(size * ConfigAccess.ENTITY_SLOWNESS_MULTIPLIER.get());
         }
         if (data.isCarrying(CarryData.CarryType.BLOCK)) {
             int size = data.getFullNbt().toString().length() / 500;
             if (size > 4) size = 4;
+            if (size < 1) size = 1;
             if (!ConfigAccess.HEAVY_TILES.get()) size = 1;
             return (int)(size * ConfigAccess.BLOCK_SLOWNESS_MULTIPLIER.get());
         }

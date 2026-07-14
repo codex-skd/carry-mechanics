@@ -94,10 +94,6 @@ public class CommonEvents {
                 }
             });
             player.getInventory().setSelectedSlot(data.getSelected());
-            var motion = player.getDeltaMovement();
-            if (motion.y > 0) {
-                player.setDeltaMovement(motion.x, 0, motion.z);
-            }
         }
     }
 

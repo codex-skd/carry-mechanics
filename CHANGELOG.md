@@ -1,19 +1,56 @@
 # Changelog
 
+## [0.0.0-beta.8] - 2026-07-13
+
+### Fix
+- Pickup no funcionaba por latencia — reemplazado paquete custom por `player.isCrouching()` vanilla
+- Eliminado `ServerboundCarryKeyPressedPacket` (ya no necesario)
+- Eventos de right-click ya no se cancelan si no se realiza acción
+
+## [0.0.0-beta.7] - 2026-07-13
+
+### Fix
+- Carry key state tracking — enviar estado de tecla al servidor en cada tick
+
+## [0.0.0-beta.6] - 2026-07-13
+
+### Fix
+- Eliminado `LivingJumpEvent` (no existe en esta versión)
+- Prevención de salto mediante cancelación de movimiento vertical en tick
+
+## [0.0.0-beta.5] - 2026-07-13
+
+### Fix
+- Right-click ya no cancela todas las interacciones (abrir cofres, puertas)
+- Prevención de salto mientras se carga
+- Slowness siempre aplicada al cargar
+
+## [0.0.0-beta.4] - 2026-07-13
+
+### Fix
+- Eliminado `AvatarRendererMixin` (API de render diferente en esta versión)
+
+## [0.0.0-beta.3] - 2026-07-13
+
+### Fix
+- Corregida firma de `PlayerMixin.drop()` — `drop(ItemStack, boolean)`
+- Eliminado `HumanoidModelMixin` (API `setupAnim` diferente)
+
+## [0.0.0-beta.2] - 2026-07-13
+
+### Fix
+- Eliminado `ICarryOnRenderState` del mixin JSON (causaba `InvalidMixinException`)
+- Simplificado `AvatarRendererMixin` — acceso directo a `CarryDataManager`
+
 ## [0.0.0-beta.1] - 2026-07-13
 
 ### Initial Beta Release
 
-- Pick up blocks (with tile entities) by right-clicking with empty hands while holding Shift
-- Pick up entities (mobs, animals) by right-clicking while holding Shift
-- Pick up other players by right-clicking while holding Shift
-- Place carried blocks and entities by right-clicking on a surface
-- Stack entities by right-clicking carried entity on another entity
-- Configurable whitelist/blacklist system via datapack tags for blocks, entities, and stacking
-- Extensive configuration (25+ options): max distance, entity size limits, slowness, hostile mobs, babies, etc.
-- Scripting system via datapack JSON scripts with conditions and custom commands
-- Networking system for key press sync, script sync, and player riding
-- Commands: `/carrymechanics debug`, `/carrymechanics clear`, `/carrymechanics place`
-- Mixin-based integration: entity collision, inventory locking, model arm adjustments, name tag hiding
-- Client-server synchronization via NeoForge attachments
-- Compatible with Minecraft 26.1.2 / NeoForge 26.1.2.78
+- Pick up blocks (with tile entities), entities, and players
+- Place carried objects on any surface
+- Entity stacking
+- Whitelist/blacklist via datapack tags
+- 25+ config options
+- Scripting system
+- Commands
+- Networking and multiplayer sync

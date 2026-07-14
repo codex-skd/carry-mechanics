@@ -5,9 +5,8 @@ import com.skd.carrymechanics.carry.CarryData;
 import com.skd.carrymechanics.carry.CarryDataManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
-import net.minecraft.client.renderer.block.BlockModelRenderState;
-import net.minecraft.client.renderer.block.model.BlockDisplayContext;
 import net.minecraft.client.renderer.entity.player.AvatarRenderer;
+import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Player;
@@ -35,16 +34,18 @@ public class AvatarRendererMixin {
             var state = data.getBlock();
             if (state.isAir()) return;
 
-            var resolver = Minecraft.getInstance().getBlockModelResolver();
-            var renderState = new BlockModelRenderState();
-            resolver.update(renderState, state, BlockDisplayContext.create());
+            var mc = Minecraft.getInstance();
+            ItemStack stack = new ItemStack(state.getBlock().asItem());
+            if (stack.isEmpty()) return;
 
-            if (!renderState.isEmpty()) {
+            var itemState = new ItemStackRenderState();
+            mc.getItemModelResolver().updateForLiving(itemState, stack, ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, player);
+
+            if (!itemState.isEmpty()) {
                 poseStack.pushPose();
-                // Position in front of player's face in first-person
-                poseStack.translate(0.8, -0.25, -0.8);
-                poseStack.scale(0.3f, 0.3f, 0.3f);
-                renderState.submitMultiLayer(poseStack, collector, lightCoords, OverlayTexture.NO_OVERLAY, 0);
+                poseStack.translate(0.6, -0.25, -0.6);
+                poseStack.scale(0.6f, 0.6f, 0.6f);
+                itemState.submit(poseStack, collector, lightCoords, OverlayTexture.NO_OVERLAY, 0);
                 poseStack.popPose();
             }
         }

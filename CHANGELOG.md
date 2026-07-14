@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.11] - 2026-07-13
+
+### Feat
+- Renderizado del bloque cargado en primera persona (mano derecha) usando `BlockModelRenderState` + `SubmitNodeCollector`
+
 ## [0.0.0-beta.10] - 2026-07-13
 
 ### Fix

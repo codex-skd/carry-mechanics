@@ -3,7 +3,6 @@ package com.skd.carrymechanics;
 import com.mojang.logging.LogUtils;
 import com.skd.carrymechanics.carry.CarryData;
 import com.skd.carrymechanics.config.CarryConfig;
-import com.skd.carrymechanics.networking.ServerboundCarryKeyPressedPacket;
 import com.skd.carrymechanics.networking.ClientboundStartRidingPacket;
 import com.skd.carrymechanics.networking.ClientboundSyncScriptsPacket;
 import com.skd.carrymechanics.networking.ClientboundStartRidingOtherPlayerPacket;
@@ -53,12 +52,6 @@ public class CarryMechanics {
 
     private void registerPackets(final RegisterPayloadHandlersEvent event) {
         PayloadRegistrar registrar = event.registrar("1.0");
-
-        registrar.playToServer(
-                ServerboundCarryKeyPressedPacket.TYPE,
-                ServerboundCarryKeyPressedPacket.STREAM_CODEC,
-                ServerboundCarryKeyPressedPacket::handle
-        );
 
         registrar.playToClient(
                 ClientboundStartRidingPacket.TYPE,

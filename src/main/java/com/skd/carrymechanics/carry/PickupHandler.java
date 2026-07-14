@@ -39,7 +39,7 @@ public class PickupHandler {
 
         CarryData data = CarryDataManager.getCarryData(player);
         if (data.isCarrying()) return false;
-        if (!data.isKeyPressed()) return false;
+        if (!player.isCrouching()) return false;
         if (player.tickCount == data.getTick()) return false;
 
         GameType mode = player.gameMode.getGameModeForPlayer();

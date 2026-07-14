@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.0-beta.10] - 2026-07-13
+
+### Fix
+- Prevención de salto no funcionaba — mixin movido de `LivingEntity` a `ServerPlayer.jumpFromGround()`
+
+## [0.0.0-beta.9] - 2026-07-13
+
+### Feat
+- Slowness mínima nivel 1 siempre aplicada al transportar
+- Hook de render en `AvatarRenderer.renderRightHand()` con firma correcta
+- Mixin de prevención de salto en `LivingEntity.jumpFromGround()`
+
 ## [0.0.0-beta.8] - 2026-07-13
 
 ### Fix

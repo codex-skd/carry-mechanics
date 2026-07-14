@@ -11,8 +11,8 @@ import net.minecraft.client.renderer.entity.player.AvatarRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -41,9 +41,10 @@ public class AvatarRendererMixin {
 
             if (!renderState.isEmpty()) {
                 poseStack.pushPose();
-                poseStack.translate(0.1, -0.3, -0.5);
-                poseStack.scale(0.5f, 0.5f, 0.5f);
-                renderState.submit(poseStack, collector, lightCoords, OverlayTexture.NO_OVERLAY, 0);
+                // Position in front of player's face in first-person
+                poseStack.translate(0.8, -0.25, -0.8);
+                poseStack.scale(0.3f, 0.3f, 0.3f);
+                renderState.submitMultiLayer(poseStack, collector, lightCoords, OverlayTexture.NO_OVERLAY, 0);
                 poseStack.popPose();
             }
         }

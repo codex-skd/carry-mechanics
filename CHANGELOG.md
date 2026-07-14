@@ -4,6 +4,10 @@
 
 ### Feat
 - Renderizado del bloque cargado en primera persona (mano derecha) usando `BlockModelRenderState` + `SubmitNodeCollector`
+- Prevención de salto reforzada con cancelación de movimiento vertical en ServerTick
+
+### Fix
+- Eliminado mixin `ServerPlayerMixin` (no lograba interceptar el salto correctamente)
 
 ## [0.0.0-beta.10] - 2026-07-13
 

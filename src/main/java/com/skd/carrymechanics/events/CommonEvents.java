@@ -94,6 +94,12 @@ public class CommonEvents {
                 }
             });
             player.getInventory().setSelectedSlot(data.getSelected());
+            // Prevent jumping by canceling upward motion
+            var motion = player.getDeltaMovement();
+            if (motion.y > 0) {
+                player.setDeltaMovement(motion.x, 0, motion.z);
+                player.hurtMarked = true;
+            }
         }
     }
 

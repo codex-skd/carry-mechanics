@@ -6,8 +6,8 @@
   "mixins": [
     "EntityMixin",
     "InventoryMixin",
-    "LivingEntityMixin",
-    "PlayerMixin"
+    "PlayerMixin",
+    "ServerPlayerMixin"
   ],
   "client": [
     "AvatarRendererMixin",

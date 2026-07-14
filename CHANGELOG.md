@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.12] - 2026-07-13
+
+### Fix
+- Prevención de salto: eliminado mixin ServerPlayerMixin (no funcionaba), reemplazado por cancelación de movimiento vertical en ServerTick
+
 ## [0.0.0-beta.11] - 2026-07-13
 
 ### Feat

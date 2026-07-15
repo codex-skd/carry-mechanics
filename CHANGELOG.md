@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.14] - 2026-07-13
+
+### Fix
+- Slowness refrescado en cada tick del servidor para asegurar que el efecto se mantiene activo
+- Render: cambiada posición del bloque en la mano para mejor visibilidad
+
 ## [0.0.0-beta.13] - 2026-07-13
 
 ### Fix

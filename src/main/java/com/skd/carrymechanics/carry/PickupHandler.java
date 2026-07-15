@@ -189,6 +189,15 @@ public class PickupHandler {
         }
     }
 
+    public static void refreshSlowness(ServerPlayer player) {
+        CarryData data = CarryDataManager.getCarryData(player);
+        if (data.isCarrying()) {
+            applySlowness(player, data);
+        } else {
+            player.removeEffect(MobEffects.SLOWNESS);
+        }
+    }
+
     public static int potionLevel(CarryData data, Level level) {
         if (data.isCarrying(CarryData.CarryType.PLAYER)) return 2;
         if (data.isCarrying(CarryData.CarryType.ENTITY)) {

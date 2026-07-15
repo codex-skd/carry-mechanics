@@ -94,6 +94,7 @@ public class CommonEvents {
                 }
             });
             player.getInventory().setSelectedSlot(data.getSelected());
+            PickupHandler.refreshSlowness(player);
             // Prevent jumping by canceling upward motion
             var motion = player.getDeltaMovement();
             if (motion.y > 0) {

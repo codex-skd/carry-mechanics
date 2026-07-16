@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.16] - 2026-07-13
+
+### Docs
+- Actualizado WORKFLOW.md: nueva sección Ramas, nuevo formato de tags `<mc-version>-neoforge-beta.X`
+- Creada rama `minecraft/26.1.2/neoforge-26.1.2.78/production` según workflow
+
 ## [0.0.0-beta.15] - 2026-07-13
 
 ### Fix

@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.15] - 2026-07-13
+
+### Fix
+- Render del bloque cargado: cambiado a mixin en `ItemInHandRenderer.renderItem()` (método real que pinta items en la mano en primera persona)
+- Eliminado `AvatarRendererMixin` (solo renderiza el brazo, no items)
+
 ## [0.0.0-beta.14] - 2026-07-13
 
 ### Fix

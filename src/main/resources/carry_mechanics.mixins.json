@@ -9,8 +9,8 @@
     "PlayerMixin"
   ],
   "client": [
-    "AvatarRendererMixin",
-    "EntityRendererMixin"
+    "EntityRendererMixin",
+    "ItemInHandRendererMixin"
   ],
   "server": [],
   "injectors": {

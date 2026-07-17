@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.17] - 2026-07-13
+
+### Fix
+- Render del bloque cargado: mixin movido a `renderArmWithItem` (método que maneja la mano vacía en primera persona)
+- Desactivada recogida de entidades (mobs, animales, npcs) — solo objetos inanimados
+
 ## [0.0.0-beta.16] - 2026-07-13
 
 ### Docs

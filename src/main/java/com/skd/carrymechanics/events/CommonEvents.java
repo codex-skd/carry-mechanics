@@ -56,7 +56,22 @@ public class CommonEvents {
 
     @SubscribeEvent
     public static void onEntityRightClick(PlayerInteractEvent.EntityInteract event) {
-        // Entity pickup disabled - only blocks can be carried
+        if (event.isCanceled()) return;
+        Player player = event.getEntity();
+        Level level = event.getLevel();
+        if (level.isClientSide()) return;
+
+        Entity target = event.getTarget();
+        CarryData data = CarryDataManager.getCarryData(player);
+
+        if (!data.isCarrying()) {
+            if (PickupHandler.tryPickupEntity((ServerPlayer) player, target, e -> true)) {
+                event.setCancellationResult(InteractionResult.SUCCESS);
+                event.setCanceled(true);
+            }
+        } else if (data.isCarrying(CarryData.CarryType.ENTITY) || data.isCarrying(CarryData.CarryType.PLAYER)) {
+            PlacementHandler.tryStackEntity((ServerPlayer) player, target);
+        }
     }
 
     @SubscribeEvent

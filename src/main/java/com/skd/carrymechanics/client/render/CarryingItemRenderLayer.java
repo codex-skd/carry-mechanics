@@ -1,8 +1,8 @@
 package com.skd.carrymechanics.client.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import com.skd.carrymechanics.carry.CarryData;
-import com.skd.carrymechanics.carry.CarryDataManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.player.PlayerModel;
 import net.minecraft.client.renderer.SubmitNodeCollector;
@@ -11,9 +11,12 @@ import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.entity.state.AvatarRenderState;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ChestBlock;
 
 public class CarryingItemRenderLayer extends RenderLayer<AvatarRenderState, PlayerModel> {
 
@@ -40,15 +43,57 @@ public class CarryingItemRenderLayer extends RenderLayer<AvatarRenderState, Play
             if (stack.isEmpty()) return;
 
             ItemStackRenderState itemState = new ItemStackRenderState();
-            itemState.newLayer();
             var mc = Minecraft.getInstance();
             mc.getItemModelResolver().updateForTopItem(itemState, stack,
                     ItemDisplayContext.NONE, player.level(), null, 0);
 
-            poseStack.pushPose();
-            poseStack.translate(0.0, 0.3, -0.15);
-            itemState.submit(poseStack, collector, lightCoords, OverlayTexture.NO_OVERLAY, 0);
-            poseStack.popPose();
+            if (!itemState.isEmpty()) {
+                // --- Exact transformations from the original CarryOn mod ---
+                poseStack.pushPose();
+
+                // applyBlockTransformations
+                poseStack.mulPose(Axis.ZN.rotationDegrees(180.0f));
+
+                // applyGeneralTransformations
+                Pose playerPose = player.getPose();
+                poseStack.scale(0.6f, 0.6f, 0.6f);
+                poseStack.translate(0.0, 0.0, -1.35);
+
+                // doSneakCheck
+                if (!player.getAbilities().flying
+                        && (player.isShiftKeyDown() || player.isCrouching())) {
+                    poseStack.translate(0.0, -0.4, 0.0);
+                }
+
+                if (playerPose == Pose.SWIMMING || playerPose == Pose.FALL_FLYING) {
+                    poseStack.translate(0.0, 0.0, 2.5);
+                    poseStack.mulPose(Axis.XP.rotationDegrees(90.0f));
+                }
+                poseStack.translate(0.0, -0.5, 0.65);
+
+                // Rotate if not chest
+                boolean isChest = blockState.is(Blocks.CHEST)
+                        || blockState.is(Blocks.ENDER_CHEST)
+                        || blockState.is(Blocks.TRAPPED_CHEST)
+                        || blockState.getBlock() instanceof ChestBlock;
+                if (!isChest) {
+                    poseStack.mulPose(Axis.YP.rotationDegrees(180.0f));
+                }
+
+                // getRenderHeight: voxel shape height
+                float height = 1.0f;
+                var shape = blockState.getShape(player.level(), player.blockPosition());
+                if (shape != null && !shape.isEmpty()) {
+                    height = (float) Math.abs(shape.bounds().maxY - shape.bounds().minY);
+                }
+                float yOffset = (height - 1.0f) / 1.2f;
+                poseStack.translate(0.0f, -yOffset, 0.0f);
+
+                // Submit with the transformed pose stack
+                itemState.submit(poseStack, collector, lightCoords, OverlayTexture.NO_OVERLAY, 0);
+
+                poseStack.popPose();
+            }
         }
     }
 }

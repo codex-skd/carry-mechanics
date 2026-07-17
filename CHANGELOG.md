@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.22] - 2026-07-17
+
+### Fix
+- Render del bloque cargado: implementadas las transformaciones exactas del mod original (rotaciones, escala, altura, agachado, natación)
+- Reactivada recogida de entidades
+
 ## [0.0.0-beta.21] - 2026-07-17
 
 ### Fix

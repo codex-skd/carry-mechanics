@@ -2,9 +2,9 @@ package com.skd.carrymechanics.client.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.skd.carrymechanics.carry.CarryData;
+import com.skd.carrymechanics.carry.CarryDataManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.player.PlayerModel;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
@@ -23,7 +23,7 @@ public class CarryingItemRenderLayer extends RenderLayer<AvatarRenderState, Play
 
     @Override
     public void submit(PoseStack poseStack, SubmitNodeCollector collector, int lightCoords,
-                       AvatarRenderState renderState, float partialTick, float unknown) {
+                       AvatarRenderState renderState, float yRot, float xRot) {
         if (!(renderState instanceof ICarryOnRenderState carryState)) return;
 
         CarryData data = carryState.carry_mechanics$getCarryData();
@@ -33,21 +33,20 @@ public class CarryingItemRenderLayer extends RenderLayer<AvatarRenderState, Play
             var blockState = data.getBlock();
             if (blockState.isAir()) return;
 
-            var mc = Minecraft.getInstance();
-            Player player = mc.player;
+            Player player = Minecraft.getInstance().player;
             if (player == null) return;
 
-            ItemStackRenderState itemState = new ItemStackRenderState();
-            var layer = itemState.newLayer();
             ItemStack stack = new ItemStack(blockState.getBlock().asItem());
             if (stack.isEmpty()) return;
 
+            ItemStackRenderState itemState = new ItemStackRenderState();
+            itemState.newLayer();
+            var mc = Minecraft.getInstance();
             mc.getItemModelResolver().updateForTopItem(itemState, stack,
                     ItemDisplayContext.NONE, player.level(), null, 0);
 
             poseStack.pushPose();
-            // Position in front of the player's chest area (third-person style)
-            poseStack.translate(0.0, 0.2, -0.1);
+            poseStack.translate(0.0, 0.3, -0.15);
             itemState.submit(poseStack, collector, lightCoords, OverlayTexture.NO_OVERLAY, 0);
             poseStack.popPose();
         }

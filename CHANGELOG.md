@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.0-beta.19] - 2026-07-17
+
+### Fix
+- Render en tercera persona vía `CarryingItemRenderLayer` (RenderLayer)
+- Render en primera persona vía mixin en `renderHand` de AvatarRenderer
+- Datos de carry inyectados en `AvatarRenderState` via `AvatarExtractorMixin`
+
 ## [0.0.0-beta.18] - 2026-07-13
 
 ### Fix

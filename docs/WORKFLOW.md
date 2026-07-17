@@ -54,7 +54,7 @@ CurseForge admite **Markdown y HTML** en las descripciones y release notes. Usam
 - El HTML permite control preciso sobre espaciado, alineación y estructura visual
 - El Markdown es más limpio para listas, tablas y código
 
-Usamos HTML para la **descripción general del proyecto** (`project_description.md`), donde el control visual es más importante. Para las **release notes** (`versions/<version>.md`) usamos Markdown con emojis, que es más ligero y rápido de escribir.
+Usamos HTML tanto para la **descripción general del proyecto** (`project_description.md`) como para las **release notes** (`versions/<version>.md`), ya que el contenido de estos archivos se sube directamente a CurseForge, que renderiza HTML correctamente.
 
 #### Estructura de la descripción general
 
@@ -301,8 +301,8 @@ git push
 #    Solo hacer si el usuario confirma.
 
 # 3. Si el usuario confirma:
-#    cp build/libs/carry_mechanics-26.1.2-neoforge-<version>.jar /ruta/a/la/instancia/mods/
-#    rm /ruta/a/la/instancia/mods/carry_mechanics-*-<version-anterior>.jar
+#    cp build/libs/<mod_id>-<minecraft_version>-<framework>-<version>.jar /ruta/a/la/instancia/mods/
+#    rm /ruta/a/la/instancia/mods/<mod_id>-<framework>-<version-anterior>.jar
 ```
 
 ### 3. Probar en instancia
@@ -338,7 +338,7 @@ git push origin 26.1.2-neoforge-beta.3
 
 # 8. PREGUNTAR: "¿Subir JAR a CurseForge ahora?"
 #    Solo subir si el usuario confirma.
-#    El JAR está en build/libs/carry_mechanics-26.1.2-neoforge-<version>.jar
+#    El JAR está en build/libs/<mod_id>-<minecraft_version>-<framework>-<version>.jar
 ```
 
 ### 5. Release estable

@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.20] - 2026-07-17
+
+### Fix
+- Crash al iniciar: `AvatarExtractorMixin` usaba tipo incorrecto (`AbstractClientPlayer` en vez del genérico `AvatarlikeEntity`)
+- Render: corregido mixin extractor para inyectar datos de carry en el render state
+
 ## [0.0.0-beta.19] - 2026-07-17
 
 ### Fix

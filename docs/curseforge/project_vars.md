@@ -14,6 +14,15 @@
 | Upload Token | `ee776b0a-ee95-4850-b554-06be02a8657f` |
 | Core API GET | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` |
 
+## Game Versions (IDs)
+
+| Recurso | ID |
+|---------|----|
+| Minecraft 26.1.2 | `16082` |
+| Client | `9638` |
+| Server | `9639` |
+| NeoForge | `10150` |
+
 ## Versiones
 
 | Recurso | Versión |

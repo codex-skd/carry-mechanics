@@ -1,9 +1,12 @@
 # Changelog
 
-## [0.0.0-beta.27] - 2026-07-17
+## [0.0.0-beta.27] - 2026-07-18
 
 ### Fix
 - Crash al iniciar por `LivingEntityRendererMixin`: firma del método corregida (`LivingEntityRenderState` + `CameraRenderState` en vez de `EntityRenderState` + `Object`)
+- Eliminada inner class `AvatarExtractorMixin` duplicada dentro de `PlayerRenderStateMixin` que causaba conflicto de mixins
+- Eliminados todos los logs `[DEBUG]` de producción en `AvatarExtractorMixin`, `AvatarRendererMixin` y `CarryingItemRenderLayer`
+- `CarryingItemRenderLayer`: reemplazado texto debug "CARRYING" por renderizado real de bloques vía `BlockModelRenderState`
 
 ## [0.0.0-beta.23] - 2026-07-17
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.18] - 2026-07-13
+
+### Fix
+- Render del bloque cargado: implementado via `RenderLayer` + `ICarryOnRenderState` (misma técnica que el mod original)
+- Eliminado mixin `ItemInHandRendererMixin` (no funcionaba)
+
 ## [0.0.0-beta.17] - 2026-07-13
 
 ### Fix

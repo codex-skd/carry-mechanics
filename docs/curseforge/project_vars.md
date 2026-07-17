@@ -59,4 +59,7 @@ PROJECT_ID = 1608286
 headers = {
     "X-Api-Tokens": UPLOAD_TOKEN
 }
+
+# displayName debe seguir el formato: "Carry Mechanics (0.0.0-beta.X)"
+# gameVersions: [16082=Minecraft 26.1.2, 9638=Client, 9639=Server, 10150=NeoForge]
 ```

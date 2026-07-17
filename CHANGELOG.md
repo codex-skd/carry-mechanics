@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.23] - 2026-07-17
+
+### Fix
+- Render del bloque: cambiado de `ItemStackRenderState` a `BlockModelRenderState.submitMultiLayer`
+
 ## [0.0.0-beta.22] - 2026-07-17
 
 ### Fix

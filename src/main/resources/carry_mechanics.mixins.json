@@ -12,6 +12,7 @@
     "AvatarExtractorMixin",
     "AvatarRendererMixin",
     "EntityRendererMixin",
+    "LivingEntityRendererMixin",
     "PlayerRenderStateMixin"
   ],
   "server": [],

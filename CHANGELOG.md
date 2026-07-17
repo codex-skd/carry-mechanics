@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.27] - 2026-07-17
+
+### Fix
+- Crash al iniciar por `LivingEntityRendererMixin`: firma del método corregida (`LivingEntityRenderState` + `CameraRenderState` en vez de `EntityRenderState` + `Object`)
+
 ## [0.0.0-beta.23] - 2026-07-17
 
 ### Fix

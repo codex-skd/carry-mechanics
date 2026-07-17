@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.21] - 2026-07-17
+
+### Fix
+- Crash al iniciar: `AvatarExtractorMixin` usaba `Object` como parámetro, corregido a `Avatar` (tipo base del genérico)
+
 ## [0.0.0-beta.20] - 2026-07-17
 
 ### Fix

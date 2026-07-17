@@ -4,6 +4,7 @@ import com.skd.carrymechanics.carry.CarryDataManager;
 import com.skd.carrymechanics.client.render.ICarryOnRenderState;
 import net.minecraft.client.renderer.entity.player.AvatarRenderer;
 import net.minecraft.client.renderer.entity.state.AvatarRenderState;
+import net.minecraft.world.entity.Avatar;
 import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,7 +16,7 @@ public class AvatarExtractorMixin {
 
     @Inject(method = "extractRenderState",
             at = @At("TAIL"))
-    private void onExtractRenderState(Object entity, AvatarRenderState state, float partialTicks, CallbackInfo ci) {
+    private void onExtractRenderState(Avatar entity, AvatarRenderState state, float partialTicks, CallbackInfo ci) {
         if (entity instanceof Player player) {
             var data = CarryDataManager.getCarryData(player);
             ((ICarryOnRenderState) state).carry_mechanics$setCarryData(data);

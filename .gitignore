@@ -42,5 +42,7 @@ lib_ext/
 
 # Temp files
 decompiled/
+temp/
 temp_extract/
 build_errors.txt
+upload.ps1

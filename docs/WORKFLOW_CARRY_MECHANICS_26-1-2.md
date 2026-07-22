@@ -1,6 +1,6 @@
 # Flujo de trabajo — Carry Mechanics (NeoForge)
 
-> **Versión del workflow**: 1.0.0 (codex-docs)
+> **Versión del workflow**: 1.1.0 (codex-docs)
 > Este archivo pertenece al proyecto **Carry Mechanics**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -361,7 +361,7 @@ Antes de que el CI/CD funcione, la rama `main` hermana debe existir al menos una
 
 ### .gitlab-ci.yml
 
-Ver `.gitlab-ci.yml` en la raíz del proyecto.
+Ver `.gitlab-ci.yml` en la raíz del proyecto. El CI sanitiza `gradle.properties` incluyendo `mod_curseforge_project_id`. El API token de CurseForge no está en `gradle.properties` sino en `docs/curseforge/project_vars.md`, y no se sanitiza porque GitLab es privado.
 
 ### Archivos que pasan a GitHub
 
@@ -453,6 +453,13 @@ git push origin 26.1.2-neoforge-beta.28
 # 8. PREGUNTAR: "¿Subir JAR a CurseForge ahora?"
 #    Solo subir si el usuario confirma.
 #    El JAR está en build/libs/carry_mechanics-26.1.2-neoforge-0.0.0-beta.28.jar
+
+# 9. Subir a CurseForge usando el script compartido
+#    powershell -File ../codex-docs/scripts/curseforge-upload.ps1
+#
+#    Este script lee project_vars.md (project_id, api_token) y gradle.properties
+#    (mod_id, mod_name, mod_version) y sube el JAR automáticamente.
+#    Es el mismo script para todos los mods, vive en codex-docs.
 ```
 
 ### 5. Release estable
@@ -525,4 +532,5 @@ El código, los logs y los commits siguen el estándar internacional de programa
 
 | Versión | Fecha | Cambios |
 |---|---|---|
+| 1.1.0 | 2026-07-21 | CI: eliminado `mod_curseforge_token` (nunca en gradle.properties). Script: displayName usa `mod_name`. Workflow: añadido paso de subida con el script compartido |
 | 1.0.0 | 2026-07-21 | Versión inicial: estructura, naming, tipografía, CI/CD, Graphify, fork attribution, temp/, README en inglés |

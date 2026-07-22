@@ -10,7 +10,6 @@
   ],
   "client": [
     "AvatarExtractorMixin",
-    "AvatarRendererMixin",
     "EntityRendererMixin",
     "LivingEntityRendererMixin",
     "PlayerRenderStateMixin"

@@ -1,6 +1,6 @@
 # Flujo de trabajo — Carry Mechanics (NeoForge)
 
-> **Versión del workflow**: 1.1.0 (codex-docs)
+> **Versión del workflow**: 1.2.7 (codex-docs)
 > Este archivo pertenece al proyecto **Carry Mechanics**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -194,9 +194,9 @@ El changelog se envía en formato **HTML**, no Markdown. Aunque CurseForge acept
 
 | Rama | Propósito |
 |---|---|
-| `main` | Vacía. Solo contiene un commit inicial. No se usa para desarrollo |
-| `minecraft/26.1.2/neoforge-26.1.2.78/production` | Rama de trabajo para Minecraft 26.1.2, NeoForge 26.1.2.78. Contiene todo el proyecto (incluyendo docs/, lib_ext/, graphify-out/) |
-| `minecraft/26.1.2/neoforge-26.1.2.78/main` | Rama pública para mirror a GitHub. Solo contiene código fuente compilable. Se actualiza automáticamente vía CI/CD desde su hermana production |
+| `main` | ~~Eliminar.~~ Ya no existe. La default ahora es `*/production` |
+| `minecraft/26.1.2/neoforge-26.1.2.78/production` | **Rama por defecto**. Rama de trabajo con todo el proyecto: código, docs/, lib_ext/, graphify-out/, tokens reales |
+| `minecraft/26.1.2/neoforge-26.1.2.78/main` | **Rama protegida**. Recibe el mirror a GitHub. Solo contiene código fuente compilable. Se actualiza vía CI/CD con force push |
 
 ### Esquema de publicación
 
@@ -217,20 +217,37 @@ Cada versión de Minecraft/NeoForge tiene su propio par `production` ↔ `main`.
 
 ### Inicialización única de cada rama `*/main`
 
-Al crear una nueva rama `production` para una versión, su hermana `main` debe existir en el remoto al menos una vez antes de que el CI funcione:
+Cada vez que se crea una rama `production` para una nueva versión, la agente (sesión) debe crear su hermana `main` inmediatamente después. Sin este paso, el CI/CD fallará (ya no la crea automáticamente).
+
+> La rama `main` raíz (vacía) puede y debe eliminarse. La rama por defecto del repositorio debe ser `*/production`. Si GitLab no permite borrar la rama por defecto, cámbiala primero a `*/production` en Settings → Repository → Default branch.
+
+**Responsabilidades:**
+
+| Rol | Acción |
+|---|---|
+| **Agente (sesión)** | Crear la rama `*/main` desde `*/production` y pushearla |
+| **Operador (desarrollador)** | Cambiar rama por defecto a `*/production` y eliminar `main` raíz. También proteger ramas `*/main` y configurar mirror a GitHub |
+
+**1. La agente crea la rama `*/main`** (al crear `production`):
 
 ```bash
-# Crear la rama main desde production (solo la primera vez)
+# Ejemplo: para minecraft/26.1.2/neoforge-26.1.2.78/production
 git checkout minecraft/26.1.2/neoforge-26.1.2.78/production
 git checkout -b minecraft/26.1.2/neoforge-26.1.2.78/main
 git push origin minecraft/26.1.2/neoforge-26.1.2.78/main
 git checkout minecraft/26.1.2/neoforge-26.1.2.78/production
 ```
 
-Esto solo se hace **una vez por versión**. A partir de ahí el CI/CD se encarga de mantenerla actualizada con force push.
+Esto solo se hace **una vez por versión**. A partir de ahí el CI/CD mantiene `*/main` actualizada con force push automático.
 
-> ⚠️ Las ramas `*/main` nunca se tocan manualmente. Solo el CI/CD escribe en ellas con force push.
-> La primera vez que el CI se ejecute, creará la rama automáticamente (orphan). Tras el primer push, el desarrollador debe protegerla y permitir force push desde GitLab.
+**2. El operador configura el repositorio** (una sola vez por repo):
+
+1. **Settings → Repository → Default branch**: cambiar a `minecraft/*/neoforge-*/production` (la rama de trabajo, la que se ve al clonar)
+2. **Settings → Repository → Branches**: eliminar `main` raíz (si existe)
+3. **Settings → Repository → Protected branches**: proteger `minecraft/*/neoforge-*/main` con force push permitido (es la rama del mirror, necesita protección)
+4. **Settings → Repository → Mirroring repositories**: configurar mirror a GitHub
+
+> ⚠️  Las ramas `*/main` nunca se tocan manualmente después de creadas. Solo el CI/CD escribe en ellas con force push.
 
 ---
 
@@ -354,6 +371,18 @@ Cada vez que se hace push a una rama `production`, GitLab CI ejecuta automática
 4. Sanitiza `gradle.properties` (reemplaza tokens reales con placeholders)
 5. Commitea con force push a la rama `*/main` hermana
 6. El mirror de GitLab replica esa rama a GitHub automáticamente
+
+### Variables de CI/CD (grupo GitLab)
+
+Estas variables se configuran en **Settings → CI/CD → Variables** a nivel de grupo `stalking-dragons/minecraft`. Así todos los proyectos del grupo tienen acceso automático sin repetirlas:
+
+| Variable | Propósito |
+|---|---|
+| `GITLAB_PUSH_TOKEN` | Token de GitLab con permisos de API y push. Usado por el CI para hacer force push a `*/main` |
+| `GH_USERNAME` | Usuario de GitHub (`santiagolosadaborrajo`) |
+| `GH_TOKEN` | Token de GitHub con permisos de push a repos. Usado para autenticar el mirror |
+
+> Los tokens personales del desarrollador se almacenan localmente en `codex-docs/secrets.md` (excluido vía `.gitignore`). No se suben al repositorio.
 
 ### Requisito previo
 
@@ -532,5 +561,13 @@ El código, los logs y los commits siguen el estándar internacional de programa
 
 | Versión | Fecha | Cambios |
 |---|---|---|
+| 1.2.7 | 2026-07-23 | Versión actual. Sincronizado con genérico v1.2.7 |
+| 1.2.6 | 2026-07-23 | Fix YAML en CI: `|| (&&)` reemplazado por bloque `if` para evitar error de sintaxis |
+| 1.2.5 | 2026-07-23 | `*/main` es ahora la rama por defecto, `main` raíz eliminada |
+| 1.2.4 | 2026-07-23 | Roles clarificados: agente crea `*/main`, operador elimina `main` raíz + protege + mirror |
+| 1.2.3 | 2026-07-23 | CI: elimina creación automática de `*/main` (orphan). Si no existe, falla. Rama `main` raíz marcada para eliminar |
+| 1.2.2 | 2026-07-23 | CI: `libs/` separado como opcional en checkout para no fallar si el mod no lo tiene |
+| 1.2.1 | 2026-07-21 | Limpieza de tabla de ramas (eliminadas filas duplicadas) |
+| 1.2.0 | 2026-07-21 | Separación clara de roles: agente crea `*/main`, operador protege + mirror. Sección reescrita con tabla de responsabilidades |
 | 1.1.0 | 2026-07-21 | CI: eliminado `mod_curseforge_token` (nunca en gradle.properties). Script: displayName usa `mod_name`. Workflow: añadido paso de subida con el script compartido |
 | 1.0.0 | 2026-07-21 | Versión inicial: estructura, naming, tipografía, CI/CD, Graphify, fork attribution, temp/, README en inglés |

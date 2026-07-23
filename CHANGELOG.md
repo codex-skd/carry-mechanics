@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.0.0-beta.28] - 2026-07-23
+
+### Fix
+- Third person render not showing: `LivingEntityRendererMixin` ahora cachea la entidad via `@Unique` field en `extractRenderState` en vez de filtrar solo `AvatarRenderState`
+- Eliminado doble render: removidos `CarryingItemRenderLayer` y `AvatarRendererMixin`
+- Eliminado dead code: `ICarryOnRenderState`, `PlayerRenderStateMixin`, `AvatarExtractorMixin`
+- Logo: añadido `carry_mechanics.png` + `assets/carry_mechanics/icon.png` + referencia en `neoforge.mods.toml`
+- README.md: actualizado badge de versión y secciones Requirements/Installation
+- workflow bumpado a v1.2.7
+
 ## [0.0.0-beta.27] - 2026-07-18
 
 ### Fix

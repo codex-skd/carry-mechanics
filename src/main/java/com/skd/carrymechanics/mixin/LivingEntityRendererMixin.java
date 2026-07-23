@@ -44,7 +44,7 @@ public class LivingEntityRendererMixin {
             if (blockState.isAir()) return;
 
             poseStack.pushPose();
-            poseStack.translate(0.0, 1.0, 0.0);
+            poseStack.translate(0.0, state.boundingBoxHeight, 0.0);
 
             var resolver = Minecraft.getInstance().getBlockModelResolver();
             var blockRenderState = new BlockModelRenderState();

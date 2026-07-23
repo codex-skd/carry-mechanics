@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.29] - 2026-07-23
+
+### Fix
+- Crouching render: reemplazado offset fijo `translate(0.0, 1.0, 0.0)` por `state.boundingBoxHeight` para posicionar el bloque dinámicamente según la pose (standing 1.8, crouching 1.5, swimming 0.6)
+
 ## [0.0.0-beta.28] - 2026-07-23
 
 ### Fix

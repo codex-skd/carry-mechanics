@@ -8,6 +8,7 @@ version="${mod_version}"
 displayName="${mod_name}"
 credits="SKD"
 authors="SKD"
+logoFile="${mod_id}.png"
 description='''Carry Mechanics is a mod that allows players to pick up, carry, and place blocks and entities with their bare hands.'''
 
 [[mixins]]

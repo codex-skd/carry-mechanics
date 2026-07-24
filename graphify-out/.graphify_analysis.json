@@ -1,0 +1,542 @@
+{
+  "communities": {
+    "0": [
+      "custompacketpayload",
+      "resourcemanager",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket_clientboundstartridingotherplayerpacket",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket_clientboundstartridingotherplayerpacket_handle",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket_clientboundstartridingotherplayerpacket_type",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket_java_ipayloadcontext",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket_java_override",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket_java_registryfriendlybytebuf",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket_java_streamcodec",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket_java_type",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket_clientboundstartridingpacket",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket_clientboundstartridingpacket_handle",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket_clientboundstartridingpacket_type",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket_java_ipayloadcontext",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket_java_override",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket_java_registryfriendlybytebuf",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket_java_streamcodec",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket_java_type",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_clientboundsyncscriptspacket",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_clientboundsyncscriptspacket_handle",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_clientboundsyncscriptspacket_type",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_java_ipayloadcontext",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_java_override",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_java_registryfriendlybytebuf",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_java_streamcodec",
+      "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_java_type",
+      "src_main_java_com_skd_carrymechanics_packetids",
+      "src_main_java_com_skd_carrymechanics_packetids_java_type",
+      "src_main_java_com_skd_carrymechanics_packetids_packetids",
+      "src_main_java_com_skd_carrymechanics_packetids_packetids_id",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_setscripts",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_java_serverplayer",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_scriptreloadlistener",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_scriptreloadlistener_onresourcemanagerreload",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_scriptreloadlistener_register",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_scriptreloadlistener_synctoclient",
+      "tag"
+    ],
+    "1": [
+      "blockentity",
+      "friendlybytebuf",
+      "mapcodec",
+      "provider",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_carrydata",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_clear",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_clone",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getblock",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getblockentity",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getcarryingplayer",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getentity",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getfullnbt",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_gettick",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_gettype",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setblock",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setcarryingplayer",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setentity",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setkeypressed",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_settick",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrytype",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrytype_block",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrytype_entity",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrytype_invalid",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrytype_player",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_blockpos",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_blockstate",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_codec",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_compoundtag",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_entity",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_level",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_player",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_registryfriendlybytebuf",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_serverplayer",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_java_streamcodec",
+      "src_main_java_com_skd_carrymechanics_carry_carrydatasynchandler",
+      "src_main_java_com_skd_carrymechanics_carry_carrydatasynchandler_carrydatasynchandler",
+      "src_main_java_com_skd_carrymechanics_carry_carrydatasynchandler_java_streamcodec",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel"
+    ],
+    "2": [
+      "builder",
+      "deferredregister",
+      "ieventbus",
+      "modconfigspec",
+      "registerpayloadhandlersevent",
+      "serverstartingevent",
+      "src_main_java_com_skd_carrymechanics_carry_configaccess",
+      "src_main_java_com_skd_carrymechanics_carry_configaccess_configaccess",
+      "src_main_java_com_skd_carrymechanics_carry_configaccess_java_booleanvalue",
+      "src_main_java_com_skd_carrymechanics_carry_configaccess_java_doublevalue",
+      "src_main_java_com_skd_carrymechanics_carry_configaccess_java_intvalue",
+      "src_main_java_com_skd_carrymechanics_carrymechanics",
+      "src_main_java_com_skd_carrymechanics_carrymechanics_carrymechanics",
+      "src_main_java_com_skd_carrymechanics_carrymechanics_carrymechanics_carrymechanics",
+      "src_main_java_com_skd_carrymechanics_carrymechanics_carrymechanics_onserverstarting",
+      "src_main_java_com_skd_carrymechanics_carrymechanics_carrymechanics_registerpackets",
+      "src_main_java_com_skd_carrymechanics_carrymechanics_java_attachmenttype",
+      "src_main_java_com_skd_carrymechanics_carrymechanics_java_logger",
+      "src_main_java_com_skd_carrymechanics_carrymechanics_java_mod",
+      "src_main_java_com_skd_carrymechanics_carrymechanics_java_modcontainer",
+      "src_main_java_com_skd_carrymechanics_carrymechanics_java_subscribeevent",
+      "src_main_java_com_skd_carrymechanics_config_carryconfig",
+      "src_main_java_com_skd_carrymechanics_config_carryconfig_carryconfig",
+      "src_main_java_com_skd_carrymechanics_config_carryconfig_carryconfig_buildclient",
+      "src_main_java_com_skd_carrymechanics_config_carryconfig_carryconfig_buildcommon",
+      "src_main_java_com_skd_carrymechanics_config_carryconfig_carryconfig_init",
+      "src_main_java_com_skd_carrymechanics_config_configdata",
+      "src_main_java_com_skd_carrymechanics_config_configdata_configdata",
+      "src_main_java_com_skd_carrymechanics_config_configdata_java_booleanvalue",
+      "src_main_java_com_skd_carrymechanics_config_configdata_java_doublevalue",
+      "src_main_java_com_skd_carrymechanics_config_configdata_java_intvalue"
+    ],
+    "3": [
+      "entityinteract",
+      "serverlevel",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setactivescript",
+      "src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockpos",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockstate",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_entity",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_level",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_property",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_vec3",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onentityrightclick",
+      "src_main_java_com_skd_carrymechanics_networking_networkhelper",
+      "src_main_java_com_skd_carrymechanics_networking_networkhelper_java_custompacketpayload",
+      "src_main_java_com_skd_carrymechanics_networking_networkhelper_networkhelper",
+      "src_main_java_com_skd_carrymechanics_networking_networkhelper_networkhelper_sendtoallplayers",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_carryscript_fulfillsconditions"
+    ],
+    "4": [
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setselected",
+      "src_main_java_com_skd_carrymechanics_carry_carrydatamanager",
+      "src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager",
+      "src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_setcarrydata",
+      "src_main_java_com_skd_carrymechanics_carry_carrydatamanager_java_player",
+      "src_main_java_com_skd_carrymechanics_carry_carrymechanicsaccess",
+      "src_main_java_com_skd_carrymechanics_carry_carrymechanicsaccess_carrymechanicsaccess",
+      "src_main_java_com_skd_carrymechanics_carry_carrymechanicsaccess_carrymechanicsaccess_getattachmenttype",
+      "src_main_java_com_skd_carrymechanics_carry_carrymechanicsaccess_java_attachmenttype",
+      "src_main_java_com_skd_carrymechanics_carry_carrymechanicsaccess_java_logger",
+      "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin",
+      "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_entityrenderermixin",
+      "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_entityrenderermixin_onshouldshowname",
+      "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_callbackinforeturnable",
+      "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_entity",
+      "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_inject",
+      "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_mixin",
+      "src_main_java_com_skd_carrymechanics_mixin_inventorymixin",
+      "src_main_java_com_skd_carrymechanics_mixin_inventorymixin_inventorymixin",
+      "src_main_java_com_skd_carrymechanics_mixin_inventorymixin_inventorymixin_onpickslot",
+      "src_main_java_com_skd_carrymechanics_mixin_inventorymixin_java_callbackinfo",
+      "src_main_java_com_skd_carrymechanics_mixin_inventorymixin_java_inject",
+      "src_main_java_com_skd_carrymechanics_mixin_inventorymixin_java_mixin",
+      "src_main_java_com_skd_carrymechanics_mixin_inventorymixin_java_player"
+    ],
+    "5": [
+      "blockplacecontext",
+      "direction",
+      "rightclickblock",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iscarrying",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_java_blockpos",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_java_blockstate",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_java_entity",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_java_property",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_java_serverplayer",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_java_vec3",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_executeplacecommand",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_getpassengercount",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_getplacementstate",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_gettoppassenger",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_placecarried",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_tryplaceblock",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_tryplaceentity",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_trystackentity",
+      "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_updateproperty",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onblockclick",
+      "suppresswarnings"
+    ],
+    "6": [
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_carryscript",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_java_codec",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_java_serverplayer",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_objecttype",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_objecttype_block",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_objecttype_entity",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_scriptconditions",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_scriptconditions_matches",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_scripteffects",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_scriptobject",
+      "src_main_java_com_skd_carrymechanics_scripting_carryscript_scriptrender",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_java_blockpos",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_java_blockstate",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_java_compoundtag",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_java_entity",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_java_level",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_inspectblock",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_inspectentity",
+      "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_scriptmatches"
+    ],
+    "7": [
+      "attackentityevent",
+      "breakspeed",
+      "commanddispatcher",
+      "commandsourcestack",
+      "entityleavelevelevent",
+      "post",
+      "registercommandsevent",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getactivescript",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iskeypressed",
+      "src_main_java_com_skd_carrymechanics_command_commandcarrymechanics",
+      "src_main_java_com_skd_carrymechanics_command_commandcarrymechanics_commandcarrymechanics",
+      "src_main_java_com_skd_carrymechanics_command_commandcarrymechanics_commandcarrymechanics_register",
+      "src_main_java_com_skd_carrymechanics_events_commonevents",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onattackentity",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onbreakspeed",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onentityleave",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onregistercommands",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onservertick",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_java_eventbussubscriber",
+      "src_main_java_com_skd_carrymechanics_events_commonevents_java_subscribeevent"
+    ],
+    "8": [
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_java_blockstate",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_java_entitytype",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_java_serverplayer",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_pickupcondition",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_pickupcondition_getblockstates",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_pickupcondition_getentitytypes",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_pickupcondition_isblock",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_pickupcondition_isfulfilled",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_pickupcondition_parse",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_pickupcondition_pickupcondition",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupconditionhandler",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupconditionhandler_java_blockstate",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupconditionhandler_java_entity",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupconditionhandler_java_entitytype",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupconditionhandler_pickupconditionhandler",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupconditionhandler_pickupconditionhandler_add",
+      "src_main_java_com_skd_carrymechanics_pickupcondition_pickupconditionhandler_pickupconditionhandler_getpickupcondition"
+    ],
+    "9": [
+      "camerarenderstate",
+      "livingentity",
+      "livingentityrenderstate",
+      "posestack",
+      "src_main_java_com_skd_carrymechanics_mixin_livingentityrenderermixin",
+      "src_main_java_com_skd_carrymechanics_mixin_livingentityrenderermixin_java_callbackinfo",
+      "src_main_java_com_skd_carrymechanics_mixin_livingentityrenderermixin_java_entity",
+      "src_main_java_com_skd_carrymechanics_mixin_livingentityrenderermixin_java_inject",
+      "src_main_java_com_skd_carrymechanics_mixin_livingentityrenderermixin_java_mixin",
+      "src_main_java_com_skd_carrymechanics_mixin_livingentityrenderermixin_livingentityrenderermixin",
+      "src_main_java_com_skd_carrymechanics_mixin_livingentityrenderermixin_livingentityrenderermixin_onextractrenderstate",
+      "src_main_java_com_skd_carrymechanics_mixin_livingentityrenderermixin_livingentityrenderermixin_onsubmit",
+      "submitnodecollector"
+    ],
+    "10": [
+      "item",
+      "src_main_java_com_skd_carrymechanics_carry_modeloverridehandler",
+      "src_main_java_com_skd_carrymechanics_carry_modeloverridehandler_java_block",
+      "src_main_java_com_skd_carrymechanics_carry_modeloverridehandler_java_itemstack",
+      "src_main_java_com_skd_carrymechanics_carry_modeloverridehandler_modeloverride",
+      "src_main_java_com_skd_carrymechanics_carry_modeloverridehandler_modeloverridehandler",
+      "src_main_java_com_skd_carrymechanics_carry_modeloverridehandler_modeloverridehandler_getoverridestack",
+      "src_main_java_com_skd_carrymechanics_carry_modeloverridehandler_modeloverridehandler_parseandadd",
+      "src_main_java_com_skd_carrymechanics_compat_modcompat",
+      "src_main_java_com_skd_carrymechanics_compat_modcompat_modcompat",
+      "src_main_java_com_skd_carrymechanics_compat_modcompat_modcompat_handlemessage"
+    ],
+    "11": [
+      "src_main_java_com_skd_carrymechanics_carry_listhandler",
+      "src_main_java_com_skd_carrymechanics_carry_listhandler_java_block",
+      "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entity",
+      "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entitytype",
+      "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createblocktag",
+      "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createentitytag",
+      "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted",
+      "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_isstackingpermitted",
+      "tagkey"
+    ],
+    "12": [
+      "fmlclientsetupevent",
+      "src_main_java_com_skd_carrymechanics_carrymechanicsclient",
+      "src_main_java_com_skd_carrymechanics_carrymechanicsclient_carrymechanicsclient",
+      "src_main_java_com_skd_carrymechanics_carrymechanicsclient_carrymechanicsclient_carrymechanicsclient",
+      "src_main_java_com_skd_carrymechanics_carrymechanicsclient_carrymechanicsclient_onclientsetup",
+      "src_main_java_com_skd_carrymechanics_carrymechanicsclient_java_eventbussubscriber",
+      "src_main_java_com_skd_carrymechanics_carrymechanicsclient_java_mod",
+      "src_main_java_com_skd_carrymechanics_carrymechanicsclient_java_modcontainer",
+      "src_main_java_com_skd_carrymechanics_carrymechanicsclient_java_subscribeevent"
+    ],
+    "13": [
+      "itementity",
+      "src_main_java_com_skd_carrymechanics_mixin_playermixin",
+      "src_main_java_com_skd_carrymechanics_mixin_playermixin_java_callbackinforeturnable",
+      "src_main_java_com_skd_carrymechanics_mixin_playermixin_java_inject",
+      "src_main_java_com_skd_carrymechanics_mixin_playermixin_java_itemstack",
+      "src_main_java_com_skd_carrymechanics_mixin_playermixin_java_mixin",
+      "src_main_java_com_skd_carrymechanics_mixin_playermixin_playermixin",
+      "src_main_java_com_skd_carrymechanics_mixin_playermixin_playermixin_ondrop"
+    ],
+    "14": [
+      "keymapping",
+      "registerkeymappingsevent",
+      "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds",
+      "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds_carrykeybinds",
+      "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds_carrykeybinds_registerkeymappings",
+      "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds_java_eventbussubscriber",
+      "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds_java_subscribeevent"
+    ],
+    "15": [
+      "pre",
+      "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getselected",
+      "src_main_java_com_skd_carrymechanics_events_clientevents",
+      "src_main_java_com_skd_carrymechanics_events_clientevents_clientevents",
+      "src_main_java_com_skd_carrymechanics_events_clientevents_clientevents_onclienttick",
+      "src_main_java_com_skd_carrymechanics_events_clientevents_java_eventbussubscriber",
+      "src_main_java_com_skd_carrymechanics_events_clientevents_java_subscribeevent"
+    ],
+    "16": [
+      "src_main_java_com_skd_carrymechanics_mixin_entitymixin",
+      "src_main_java_com_skd_carrymechanics_mixin_entitymixin_entitymixin",
+      "src_main_java_com_skd_carrymechanics_mixin_entitymixin_entitymixin_oniscolliding",
+      "src_main_java_com_skd_carrymechanics_mixin_entitymixin_java_callbackinforeturnable",
+      "src_main_java_com_skd_carrymechanics_mixin_entitymixin_java_inject",
+      "src_main_java_com_skd_carrymechanics_mixin_entitymixin_java_mixin"
+    ],
+    "17": [
+      "gradlew",
+      "gradlew__entry",
+      "gradlew_die",
+      "gradlew_warn"
+    ],
+    "18": [
+      "src_main_java_com_skd_carrymechanics_compat_gamestagecompat",
+      "src_main_java_com_skd_carrymechanics_compat_gamestagecompat_gamestagecompat",
+      "src_main_java_com_skd_carrymechanics_compat_gamestagecompat_gamestagecompat_hasstage",
+      "src_main_java_com_skd_carrymechanics_compat_gamestagecompat_gamestagecompat_isloaded"
+    ],
+    "19": [
+      "build"
+    ],
+    "20": [
+      "settings"
+    ]
+  },
+  "cohesion": {
+    "0": 0.09146341463414634,
+    "1": 0.09102564102564102,
+    "2": 0.0967741935483871,
+    "3": 0.1723076923076923,
+    "4": 0.12318840579710146,
+    "5": 0.233201581027668,
+    "6": 0.18181818181818182,
+    "7": 0.15714285714285714,
+    "8": 0.1895424836601307,
+    "9": 0.3076923076923077,
+    "10": 0.3090909090909091,
+    "11": 0.4222222222222222,
+    "12": 0.3611111111111111,
+    "13": 0.42857142857142855,
+    "14": 0.47619047619047616,
+    "15": 0.38095238095238093,
+    "16": 0.5333333333333333,
+    "17": 0.8333333333333334,
+    "18": 0.5,
+    "19": 1.0,
+    "20": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata",
+      "label": "CarryData",
+      "degree": 38
+    },
+    {
+      "id": "src_main_java_com_skd_carrymechanics_scripting_carryscript_carryscript",
+      "label": "CarryScript",
+      "degree": 16
+    },
+    {
+      "id": "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingotherplayerpacket_clientboundstartridingotherplayerpacket",
+      "label": "ClientboundStartRidingOtherPlayerPacket",
+      "degree": 14
+    },
+    {
+      "id": "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_clientboundsyncscriptspacket",
+      "label": "ClientboundSyncScriptsPacket",
+      "degree": 13
+    },
+    {
+      "id": "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler",
+      "label": "PlacementHandler",
+      "degree": 10
+    },
+    {
+      "id": "src_main_java_com_skd_carrymechanics_networking_clientboundstartridingpacket_clientboundstartridingpacket",
+      "label": "ClientboundStartRidingPacket",
+      "degree": 10
+    },
+    {
+      "id": "src_main_java_com_skd_carrymechanics_carrymechanics_carrymechanics",
+      "label": "CarryMechanics",
+      "degree": 9
+    },
+    {
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "label": "PickupHandler",
+      "degree": 9
+    },
+    {
+      "id": "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents",
+      "label": "CommonEvents",
+      "degree": 9
+    },
+    {
+      "id": "src_main_java_com_skd_carrymechanics_pickupcondition_pickupcondition_pickupcondition",
+      "label": "PickupCondition",
+      "degree": 9
+    }
+  ],
+  "surprises": [
+    {
+      "source": "CarryMechanics",
+      "target": "CarryData",
+      "source_files": [
+        "src/main/java/com/skd/carrymechanics/CarryMechanics.java",
+        "src/main/java/com/skd/carrymechanics/carry/CarryData.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "CarryData",
+      "target": "CarryScript",
+      "source_files": [
+        "src/main/java/com/skd/carrymechanics/carry/CarryData.java",
+        "src/main/java/com/skd/carrymechanics/scripting/CarryScript.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "PacketIds",
+      "target": "ClientboundStartRidingOtherPlayerPacket",
+      "source_files": [
+        "src/main/java/com/skd/carrymechanics/PacketIds.java",
+        "src/main/java/com/skd/carrymechanics/networking/ClientboundStartRidingOtherPlayerPacket.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "PacketIds",
+      "target": "ClientboundStartRidingPacket",
+      "source_files": [
+        "src/main/java/com/skd/carrymechanics/PacketIds.java",
+        "src/main/java/com/skd/carrymechanics/networking/ClientboundStartRidingPacket.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "PacketIds",
+      "target": "ClientboundSyncScriptsPacket",
+      "source_files": [
+        "src/main/java/com/skd/carrymechanics/PacketIds.java",
+        "src/main/java/com/skd/carrymechanics/networking/ClientboundSyncScriptsPacket.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `CarryData` connect `Community 1` to `Community 2`, `Community 3`, `Community 4`, `Community 5`, `Community 6`, `Community 7`, `Community 15`?",
+      "why": "High betweenness centrality (0.201) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ClientboundStartRidingOtherPlayerPacket` connect `Community 0` to `Community 2`, `Community 3`, `Community 5`?",
+      "why": "High betweenness centrality (0.098) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `CarryScript` connect `Community 6` to `Community 0`, `Community 1`, `Community 3`, `Community 7`?",
+      "why": "High betweenness centrality (0.065) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `INVALID`, `BLOCK`, `ENTITY` to the rest of the system?",
+      "why": "6 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09146341463414634 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09102564102564102 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0967741935483871 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

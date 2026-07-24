@@ -130,9 +130,9 @@
     "semantic_hash": "ec0112c8d42dae7aa3d087063e73b1e8"
   },
   "src/main/java/com/skd/carrymechanics/mixin/LivingEntityRendererMixin.java": {
-    "mtime": 1784825458.627424,
-    "ast_hash": "b45abd4b31926b8edcb63813c98ab79e",
-    "semantic_hash": "b45abd4b31926b8edcb63813c98ab79e"
+    "mtime": 1784902772.114772,
+    "ast_hash": "af547193a15962158ea9f4ecdc4e44fe",
+    "semantic_hash": "af547193a15962158ea9f4ecdc4e44fe"
   },
   "src/main/java/com/skd/carrymechanics/mixin/PlayerMixin.java": {
     "mtime": 1783941233.819846,
@@ -190,9 +190,9 @@
     "semantic_hash": "3816faa2b364f9494b923fbfbf6d5c8c"
   },
   "src/main/resources/carry_mechanics.mixins.json": {
-    "mtime": 1784822936.915105,
-    "ast_hash": "02f29cc272177f68b83ac3aea8725dc2",
-    "semantic_hash": "02f29cc272177f68b83ac3aea8725dc2"
+    "mtime": 1784902757.7487803,
+    "ast_hash": "01405a10f9b869adc9ff0c6389fb3b7e",
+    "semantic_hash": "01405a10f9b869adc9ff0c6389fb3b7e"
   },
   "src/main/resources/data/carry_mechanics/tags/block/block_blacklist.json": {
     "mtime": 1783892890.375702,
@@ -223,5 +223,30 @@
     "mtime": 1783892890.3736374,
     "ast_hash": "14b9fbaef63fffc640e886e452e03f0d",
     "semantic_hash": "14b9fbaef63fffc640e886e452e03f0d"
+  },
+  "src/main/java/com/skd/carrymechanics/client/render/CarryingItemRenderLayer.java": {
+    "mtime": 1784902719.1574733,
+    "ast_hash": "8253ec0cc79e45b595cfc0f9d012fc06",
+    "semantic_hash": "8253ec0cc79e45b595cfc0f9d012fc06"
+  },
+  "src/main/java/com/skd/carrymechanics/client/render/ICarryOnRenderState.java": {
+    "mtime": 1784902734.882865,
+    "ast_hash": "3b4619d908ba18170c1d66b499c8f9e7",
+    "semantic_hash": "3b4619d908ba18170c1d66b499c8f9e7"
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/AvatarExtractorMixin.java": {
+    "mtime": 1784902728.7182665,
+    "ast_hash": "b97cdf516eb40b82ac93c3f967c071dc",
+    "semantic_hash": "b97cdf516eb40b82ac93c3f967c071dc"
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/AvatarRendererMixin.java": {
+    "mtime": 1784902745.7953851,
+    "ast_hash": "547c312f561f182dd6a23b9931495594",
+    "semantic_hash": "547c312f561f182dd6a23b9931495594"
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/PlayerRenderStateMixin.java": {
+    "mtime": 1784902739.9753506,
+    "ast_hash": "52af651487aec814e1eb9f57cb6d6701",
+    "semantic_hash": "52af651487aec814e1eb9f57cb6d6701"
   }
 }

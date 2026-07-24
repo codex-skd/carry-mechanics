@@ -34,7 +34,10 @@ public class CarryMechanics {
 
     public static final Supplier<AttachmentType<CarryData>> CARRY_DATA =
             ATTACHMENT_TYPES.register("carry_data",
-                    () -> AttachmentType.<CarryData>builder((Supplier<CarryData>) CarryData::new).build());
+                    () -> AttachmentType.<CarryData>builder((Supplier<CarryData>) CarryData::new)
+                            .serialize(CarryData.CODEC)
+                            .sync(CarryData.STREAM_CODEC)
+                            .build());
 
     public CarryMechanics(IEventBus modEventBus, ModContainer modContainer) {
         ATTACHMENT_TYPES.register(modEventBus);

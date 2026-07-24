@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.30] - 2026-07-23
+
+### Fix
+- **CAUSA RAÍZ**: AttachmentType `carry_data` registrado sin `.sync()` — los datos de carry nunca se sincronizaban al cliente. Añadidos `.serialize(CarryData.CODEC)` + `.sync(CarryData.STREAM_CODEC)`. Sin esto, el render en cliente siempre veía `CarryData` vacío.
+
 ## [0.0.0-beta.29] - 2026-07-23
 
 ### Fix

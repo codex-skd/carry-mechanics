@@ -9,8 +9,11 @@
     "PlayerMixin"
   ],
   "client": [
+    "AvatarExtractorMixin",
+    "AvatarRendererMixin",
     "EntityRendererMixin",
-    "LivingEntityRendererMixin"
+    "LivingEntityRendererMixin",
+    "PlayerRenderStateMixin"
   ],
   "server": [],
   "injectors": {

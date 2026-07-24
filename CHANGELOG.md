@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.31] - 2026-07-24
+
+### Debug
+- Restaurados CarryingItemRenderLayer + AvatarExtractorMixin + PlayerRenderStateMixin + AvatarRendererMixin con ICarryOnRenderState
+- Añadidos logs [MIXIN] y [RENDER] para diagnosticar el pipeline de render
+
 ## [0.0.0-beta.30] - 2026-07-23
 
 ### Fix

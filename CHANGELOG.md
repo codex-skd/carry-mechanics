@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.32] - 2026-07-25
+
+### Fixed
+- Posición del bloque: ahora se renderiza sobre la cabeza del jugador (translate Y=2.5, scale 0.5)
+- Eliminados todos los logs de debug [MIXIN] y [RENDER] del código de render
+
 ## [0.0.0-beta.31] - 2026-07-24
 
 ### Debug

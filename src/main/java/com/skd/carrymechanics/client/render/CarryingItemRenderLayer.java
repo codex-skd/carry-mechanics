@@ -11,11 +11,8 @@ import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.entity.state.AvatarRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class CarryingItemRenderLayer extends RenderLayer<AvatarRenderState, PlayerModel> {
-    private static final Logger LOGGER = LoggerFactory.getLogger("CarryMechanics");
 
     public CarryingItemRenderLayer(RenderLayerParent<AvatarRenderState, PlayerModel> parent) {
         super(parent);
@@ -24,27 +21,17 @@ public class CarryingItemRenderLayer extends RenderLayer<AvatarRenderState, Play
     @Override
     public void submit(PoseStack poseStack, SubmitNodeCollector collector, int lightCoords,
                        AvatarRenderState renderState, float yRot, float xRot) {
-        if (!(renderState instanceof ICarryOnRenderState carryState)) {
-            LOGGER.info("[RENDER] State does NOT implement ICarryOnRenderState");
-            return;
-        }
-
+        if (!(renderState instanceof ICarryOnRenderState carryState)) return;
         CarryData data = carryState.carry_mechanics$getCarryData();
-        LOGGER.info("[RENDER] CarryData from state: {} isCarrying={}", data, data != null && data.isCarrying());
-
         if (data == null || !data.isCarrying()) return;
-
-        var player = Minecraft.getInstance().player;
-        if (player == null) return;
 
         if (data.isCarrying(CarryData.CarryType.BLOCK)) {
             var blockState = data.getBlock();
             if (blockState.isAir()) return;
 
-            LOGGER.info("[RENDER] Rendering block: {}", blockState);
-
             poseStack.pushPose();
-            poseStack.translate(0.0, 1.0, 0.0);
+            poseStack.translate(0.3, 2.5, -0.3);
+            poseStack.scale(0.5f, 0.5f, 0.5f);
 
             var resolver = Minecraft.getInstance().getBlockModelResolver();
             var blockRenderState = new BlockModelRenderState();
@@ -52,9 +39,6 @@ public class CarryingItemRenderLayer extends RenderLayer<AvatarRenderState, Play
 
             if (!blockRenderState.isEmpty()) {
                 blockRenderState.submit(poseStack, collector, lightCoords, OverlayTexture.NO_OVERLAY, 0);
-                LOGGER.info("[RENDER] Block submitted successfully");
-            } else {
-                LOGGER.info("[RENDER] Block render state is EMPTY");
             }
 
             poseStack.popPose();

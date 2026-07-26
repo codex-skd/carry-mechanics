@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.0-beta.34] - 2026-07-25
+
+### Fixed
+- Posición Y del bloque usando `-(boundingBoxHeight + 0.5)` (eje Y está invertido en el layer)
+- Offset lateral para centrar sobre los hombros
+
+## [0.0.0-beta.33] - 2026-07-25
+
+### Test
+- Test de posición Y=0 para diagnosis del sistema de coordenadas
+
 ## [0.0.0-beta.32] - 2026-07-25
 
 ### Fixed

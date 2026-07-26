@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.0-beta.35] - 2026-07-25
+
+### Fixed
+- Posición X cambiada a -0.3 (hombro izquierdo del jugador)
+- Scale 0.6 para tamaño natural de objeto cargado
+- Ajuste fino de altura Y
+
 ## [0.0.0-beta.34] - 2026-07-25
 
 ### Fixed

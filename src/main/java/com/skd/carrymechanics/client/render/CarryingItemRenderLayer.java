@@ -30,7 +30,8 @@ public class CarryingItemRenderLayer extends RenderLayer<AvatarRenderState, Play
             if (blockState.isAir()) return;
 
             poseStack.pushPose();
-            poseStack.translate(0.3, -(renderState.boundingBoxHeight + 0.5), -0.3);
+            poseStack.translate(-0.3, -(renderState.boundingBoxHeight + 0.2), -0.3);
+            poseStack.scale(0.6f, 0.6f, 0.6f);
 
             var resolver = Minecraft.getInstance().getBlockModelResolver();
             var blockRenderState = new BlockModelRenderState();

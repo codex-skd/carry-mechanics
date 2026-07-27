@@ -1,6 +1,6 @@
 # Flujo de trabajo — Carry Mechanics (NeoForge)
 
-> **Versión del workflow**: 1.6.0 (codex-docs)
+> **Versión del workflow**: 1.8.0 (codex-docs)
 > Este archivo pertenece al proyecto **Carry Mechanics**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -458,6 +458,22 @@ Ver `.gitlab-ci.yml` en la raíz del proyecto. El CI sanitiza `gradle.properties
 
 ## Flujo completo (paso a paso)
 
+### 0. Determinar alcance de versión
+
+Antes de comenzar cualquier tarea sobre un mod, la agente debe:
+
+1. Listar las carpetas de versión dentro del mod (ej: `1.21.1`, `26.1.2`, `26.2`)
+2. Preguntar al usuario usando un selector:
+
+> **¿A qué versión de Minecraft aplica este cambio?**
+
+| Opción | Significado |
+|---|---|
+| **Todas** | Aplicar el cambio en **cada** rama `production` de cada versión |
+| `<versión>` | Aplicar solo en la rama `production` de esa versión (ej: `26.1.2`) |
+
+La agente debe usar la herramienta `question` para presentar estas opciones como selectores. No asumir ni preguntar en texto libre.
+
 ### 1. Desarrollo
 
 ```bash
@@ -611,7 +627,8 @@ El código, los logs y los commits siguen el estándar internacional de programa
 
 | Versión | Fecha | Cambios |
 |---|---|---|
-| 1.4.0 | 2026-07-23 | Organización en workspace: todos los mods usan `<mod_id>/<mc-version>/` tengan 1 o N versiones |
+| 1.8.0 | 2026-07-27 | Sincronizado con genérico v1.8.0. Fix: exclude templates/ del build. Añadido paso 0 (alcance de versión) |
+| 1.6.0 | 2026-07-23 | Organización en workspace: todos los mods usan `<mod_id>/<mc-version>/` tengan 1 o N versiones |
 | 1.3.0 | 2026-07-23 | Nueva sección: organización multi-versión con estructura `<mod_id>/<mc-version>/` |
 | 1.2.7 | 2026-07-23 | Versión actual. Sincronizado con genérico v1.2.7 |
 | 1.2.6 | 2026-07-23 | Fix YAML en CI: `|| (&&)` reemplazado por bloque `if` para evitar error de sintaxis |

@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.38] - 2026-07-27
+
+### Fixed
+- Build: excluido `templates/` del JAR final para evitar metadatos inválidos en CurseForge
+
 ## [0.0.0-beta.37] - 2026-07-27
 
 ### Fixed

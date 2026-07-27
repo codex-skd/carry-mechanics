@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.0.0-beta.36] - 2026-07-27
+## [0.0.0-beta.37] - 2026-07-27
 
 ### Fixed
 - Orientación del bloque: ahora se renderiza con la cara correcta hacia arriba (rotación Y 180°)

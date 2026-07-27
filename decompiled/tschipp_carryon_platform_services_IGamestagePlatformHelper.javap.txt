@@ -1,4 +1,0 @@
-Compiled from "IGamestagePlatformHelper.java"
-public interface tschipp.carryon.platform.services.IGamestagePlatformHelper {
-  public abstract boolean hasStage(net.minecraft.world.entity.player.Player, java.lang.String);
-}

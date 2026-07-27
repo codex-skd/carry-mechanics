@@ -1,4 +1,0 @@
-Compiled from "Config.java"
-public interface tschipp.carryon.config.annotations.Config extends java.lang.annotation.Annotation {
-  public abstract java.lang.String value();
-}

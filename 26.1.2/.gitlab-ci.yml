@@ -32,11 +32,20 @@ publish-public:
     # Limpiar y copiar solo archivos públicos desde production
     - git rm -rf --ignore-unmatch --quiet . 2>/dev/null || true
 
-    # Archivos obligatorios (deben existir en todos los mods)
-    - git checkout "$CI_COMMIT_SHA" -- src/ build.gradle settings.gradle gradle.properties gradlew gradlew.bat .gitignore README.md CHANGELOG.md
+    # Detectar la versión de Minecraft desde la rama: minecraft/X/N/production → X
+    - MC_VERSION=$(echo "$CI_COMMIT_BRANCH" | sed 's|^minecraft/||;s|/neoforge-.*/production$||')
+    - echo "Minecraft version: $MC_VERSION"
+
+    # Archivos obligatorios (con prefijo de versión)
+    - git checkout "$CI_COMMIT_SHA" -- "${MC_VERSION}/src/" "${MC_VERSION}/build.gradle" "${MC_VERSION}/settings.gradle" "${MC_VERSION}/gradle.properties" "${MC_VERSION}/gradlew" "${MC_VERSION}/gradlew.bat" "${MC_VERSION}/.gitignore" "${MC_VERSION}/README.md" "${MC_VERSION}/CHANGELOG.md"
 
     # Archivos opcionales (pueden no existir en algunos mods)
-    - git checkout "$CI_COMMIT_SHA" -- libs/ 2>/dev/null || true
+    - git checkout "$CI_COMMIT_SHA" -- "${MC_VERSION}/libs/" 2>/dev/null || true
+
+    # Mover archivos del subdirectorio de versión a la raíz
+    - mv "${MC_VERSION}/"/* ./ 2>/dev/null || true
+    - mv "${MC_VERSION}"/.* ./ 2>/dev/null || true
+    - rmdir "${MC_VERSION}" 2>/dev/null || true
 
     # Sanitizar secrets en gradle.properties
     - sed -i 's/^mod_version=.*/mod_version=0.0.0/' gradle.properties

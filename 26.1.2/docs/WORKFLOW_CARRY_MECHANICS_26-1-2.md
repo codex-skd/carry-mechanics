@@ -1,6 +1,6 @@
 # Flujo de trabajo — Carry Mechanics (NeoForge)
 
-> **Versión del workflow**: 1.4.0 (codex-docs)
+> **Versión del workflow**: 1.5.0 (codex-docs)
 > Este archivo pertenece al proyecto **Carry Mechanics**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -44,86 +44,88 @@ Reglas:
 Todos los mods siguen esta estructura en el directorio raíz (`Mods_Minecraft/`), tengan una o varias versiones de Minecraft:
 
 ```
-<mod_id>/                    # Carpeta padre del mod (solo organizativa, sin .git)
-└── <minecraft_version>/     # Proyecto real con su propio .git y repositorio GitLab
-    ├── .git/
-    ├── build.gradle
-    ├── gradle.properties
+teleport_animation/          # Único repositorio Git (un solo .git/)
+├── 1.21.1/                  # Solo existe en su rama: minecraft/1.21.1/neoforge-21.1/production
+│   ├── src/
+│   ├── docs/
+│   └── ...
+└── 26.1.2/                  # Solo existe en su rama: minecraft/26.1.2/neoforge-26.1.2/production
     ├── src/
     ├── docs/
     └── ...
 ```
 
+Cada versión de Minecraft es una **rama** dentro del mismo repositorio. La carpeta de cada versión **solo existe en su propia rama** — no hay rastro de otras versiones al cambiar de rama.
+
 Ejemplo real actual:
 
 ```
-teleport_animation/          # Mod padre (organizativo)
-├── 1.21.1/                  # Repositorio independiente en GitLab
-│   ├── .git/
-│   ├── gradle.properties → minecraft_version=1.21.1
-│   └── ...
-└── 26.1.2/                  # Repositorio independiente en GitLab
-    ├── .git/
+carry_mechanics/             # Único repositorio Git (contiene el .git/)
+└── 26.1.2/                  # Rama: minecraft/26.1.2/neoforge-26.1.2.78/production
     ├── gradle.properties → minecraft_version=26.1.2
+    ├── src/
+    ├── docs/
     └── ...
 
+teleport_animation/          # Único repositorio Git
+├── 1.21.1/                  # Rama: minecraft/1.21.1/neoforge-21.1/production
+└── 26.1.2/                  # Rama: minecraft/26.1.2/neoforge-26.1.2/production
+
 info_tab/
-└── 26.1.2/                  # Repositorio independiente
-    ├── .git/
-    └── ...
+└── 26.1.2/                  # Rama: minecraft/26.1.2/neoforge-26.1.2/production
 ```
 
 **Reglas:**
-- La carpeta padre `<mod_id>/` es solo organizativa, **no tiene `.git`**
-- Cada `<minecraft_version>/` tiene su propio `.git/` y es un repositorio independiente en GitLab
+- `mod_id/` es el repositorio Git, contiene el `.git/`
+- Cada `<minecraft_version>/` es una subcarpeta **sin `.git/` propio**
+- Cada versión tiene su propia rama `minecraft/<mc-version>/neoforge-<neo-version>/production`
+- Cada rama solo contiene los archivos de su versión. Las carpetas de otras versiones **no existen** en esa rama
 - El `mod_id` en `gradle.properties` debe coincidir con la carpeta padre
-- La rama default del repo es `minecraft/<mc-version>/neoforge-<neo-version>/production`
 - El nombre del workflow sigue el patrón `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`
-
-> **Nota**: `carry_mechanics` actualmente usa estructura plana (`.git` en raíz del mod). Al ser single-version, funciona igual que `<mod_id>/<mc-version>/`. La migración a la nueva estructura es opcional por ahora.
 
 ## Estructura del proyecto
 
 ```
-carry_mechanics/
-├── build.gradle                        # Build con net.neoforged.moddev
-├── gradle.properties                   # mod_id, mod_version, mod_group_id...
-├── settings.gradle
-├── src/
-│   ├── main/
-│   │   ├── java/com/skd/carrymechanics/  # Código fuente del mod
-│   │   ├── resources/
-│   │   │   ├── assets/carry_mechanics/    # Texturas, shaders, lang, modelos...
-│   │   │   │   └── icon.png           # Logo del mod (64x64 píxeles, referenciado en neoforge.mods.toml)
-│   │   │   ├── templates/
-│   │   │   │   └── META-INF/
-│   │   │   │       └── neoforge.mods.toml  # Template con placeholders ${...}
-│   │   │   ├── META-INF/
-│   │   │   │   └── accesstransformer.cfg
-│   │   │   ├── carry_mechanics.mixins.json
-│   │   │   └── carry_mechanics.png       # Logo del mod
-│   │   └── templates/                    # (alternativa legacy, evitar)
-│   │       └── META-INF/
-│   │           └── neoforge.mods.toml
-│   ├── main/java/com/skd/carrymechanics/...  # Código fuente
-├── libs/                               # Dependencias reales del mod (JARs necesarios para compilar). Versionado.
-├── lib_ext/                            # Librerías externas para análisis de la sesión. NO versionado (.gitignore).
-├── temp/                               # Archivos temporales: investigaciones, prototipos, JARs extraídos, pruebas. NO versionado (.gitignore).
-├── docs/
-│   ├── WORKFLOW_CARRY_MECHANICS_26-1-2.md  # Este documento
-│   └── curseforge/                    # Documentación para publicación en CurseForge
-│       ├── project_vars.md             # Variables del proyecto (ID, token, versiones)
-│       ├── project_description.md      # Descripción del proyecto
-│       └── versions/                   # Release notes por versión
-│           ├── 0.0.0-beta.1.md
-│           └── ...
-├── CHANGELOG.md
-├── README.md
-├── graphify-out/                       # Knowledge Graph (generado por Graphify). Versionado en GitLab, NO va a GitHub (excluido por CI).
-│   ├── graph.html
-│   ├── GRAPH_REPORT.md
-│   └── graph.json
-└── .gitlab-ci.yml                      # CI/CD: publica código limpio a main para mirror a GitHub
+carry_mechanics/             # Repositorio Git (contiene el .git/)
+└── 26.1.2/                  # Versión de Minecraft
+    ├── build.gradle                        # Build con net.neoforged.moddev
+    ├── gradle.properties                   # mod_id, mod_version, mod_group_id...
+    ├── settings.gradle
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/com/skd/carrymechanics/  # Código fuente del mod
+    │   │   ├── resources/
+    │   │   │   ├── assets/carry_mechanics/    # Texturas, shaders, lang, modelos...
+    │   │   │   │   └── icon.png           # Logo del mod (64x64 píxeles, referenciado en neoforge.mods.toml)
+    │   │   │   ├── templates/
+    │   │   │   │   └── META-INF/
+    │   │   │   │       └── neoforge.mods.toml  # Template con placeholders ${...}
+    │   │   │   ├── META-INF/
+    │   │   │   │   └── accesstransformer.cfg
+    │   │   │   ├── carry_mechanics.mixins.json
+    │   │   │   └── carry_mechanics.png       # Logo del mod
+    │   │   └── templates/                    # (alternativa legacy, evitar)
+    │   │       └── META-INF/
+    │   │           └── neoforge.mods.toml
+    │   ├── main/java/com/skd/carrymechanics/...  # Código fuente
+    ├── libs/                               # Dependencias reales del mod (JARs necesarios para compilar). Versionado.
+    ├── lib_ext/                            # Librerías externas para análisis de la sesión. NO versionado (.gitignore).
+    ├── temp/                               # Archivos temporales: investigaciones, prototipos, JARs extraídos, pruebas. NO versionado (.gitignore).
+    ├── docs/
+    │   ├── WORKFLOW_CARRY_MECHANICS_26-1-2.md  # Este documento
+    │   └── curseforge/                    # Documentación para publicación en CurseForge
+    │       ├── project_vars.md             # Variables del proyecto (ID, token, versiones)
+    │       ├── project_description.md      # Descripción del proyecto
+    │       └── versions/                   # Release notes por versión
+    │           ├── 0.0.0-beta.1.md
+    │           └── ...
+    ├── CHANGELOG.md
+    ├── README.md
+    ├── graphify-out/                       # Knowledge Graph (generado por Graphify). Versionado en GitLab, NO va a GitHub (excluido por CI).
+    │   ├── graph.html
+    │   ├── GRAPH_REPORT.md
+    │   └── graph.json
+    └── .gitlab-ci.yml                      # CI/CD: publica código limpio a main para mirror a GitHub
 ```
 
 ### Archivos de CurseForge

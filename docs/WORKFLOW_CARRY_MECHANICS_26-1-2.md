@@ -1,6 +1,6 @@
 # Flujo de trabajo — Carry Mechanics (NeoForge)
 
-> **Versión del workflow**: 1.2.7 (codex-docs)
+> **Versión del workflow**: 1.4.0 (codex-docs)
 > Este archivo pertenece al proyecto **Carry Mechanics**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -38,6 +38,49 @@ Reglas:
 | Código fuente, logs, nombres técnicos, commits, mensajes de consola | **Monospace** (`Consolas`, `JetBrains Mono`, `Cascadia Code`, `Fira Code`) |
 | Documentación interna (README, CHANGELOG, docs/, WORKFLOW) | **Sans-serif** (`Segoe UI`, `Inter`, `Arial`) para cuerpo; **monospace** para código/rutas/comandos |
 | CurseForge (descripciones, release notes) | Sans-serif por defecto de la plataforma; usar `<code>` para términos técnicos |
+
+## Organización en el workspace
+
+Todos los mods siguen esta estructura en el directorio raíz (`Mods_Minecraft/`), tengan una o varias versiones de Minecraft:
+
+```
+<mod_id>/                    # Carpeta padre del mod (solo organizativa, sin .git)
+└── <minecraft_version>/     # Proyecto real con su propio .git y repositorio GitLab
+    ├── .git/
+    ├── build.gradle
+    ├── gradle.properties
+    ├── src/
+    ├── docs/
+    └── ...
+```
+
+Ejemplo real actual:
+
+```
+teleport_animation/          # Mod padre (organizativo)
+├── 1.21.1/                  # Repositorio independiente en GitLab
+│   ├── .git/
+│   ├── gradle.properties → minecraft_version=1.21.1
+│   └── ...
+└── 26.1.2/                  # Repositorio independiente en GitLab
+    ├── .git/
+    ├── gradle.properties → minecraft_version=26.1.2
+    └── ...
+
+info_tab/
+└── 26.1.2/                  # Repositorio independiente
+    ├── .git/
+    └── ...
+```
+
+**Reglas:**
+- La carpeta padre `<mod_id>/` es solo organizativa, **no tiene `.git`**
+- Cada `<minecraft_version>/` tiene su propio `.git/` y es un repositorio independiente en GitLab
+- El `mod_id` en `gradle.properties` debe coincidir con la carpeta padre
+- La rama default del repo es `minecraft/<mc-version>/neoforge-<neo-version>/production`
+- El nombre del workflow sigue el patrón `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`
+
+> **Nota**: `carry_mechanics` actualmente usa estructura plana (`.git` en raíz del mod). Al ser single-version, funciona igual que `<mod_id>/<mc-version>/`. La migración a la nueva estructura es opcional por ahora.
 
 ## Estructura del proyecto
 
@@ -543,6 +586,11 @@ git push
   - En `docs/curseforge/project_description.md`: misma atribución
   - En `neoforge.mods.toml` en el campo `credits` si aplica
   - La atribución no justifica mantener código muerto, clases renombradas mal o assets huérfanos
+- **Atribución de fork**: si el mod es un fork de otro proyecto, debe indicarse explícitamente:
+  - En `README.md`: "This mod is a fork of [Original Mod] by [Author]"
+  - En `docs/curseforge/project_description.md`: misma atribución
+  - En `neoforge.mods.toml` en el campo `credits` si aplica
+  - La atribución no justifica mantener código muerto, clases renombradas mal o assets huérfanos
 
 ## Idioma
 
@@ -561,6 +609,8 @@ El código, los logs y los commits siguen el estándar internacional de programa
 
 | Versión | Fecha | Cambios |
 |---|---|---|
+| 1.4.0 | 2026-07-23 | Organización en workspace: todos los mods usan `<mod_id>/<mc-version>/` tengan 1 o N versiones |
+| 1.3.0 | 2026-07-23 | Nueva sección: organización multi-versión con estructura `<mod_id>/<mc-version>/` |
 | 1.2.7 | 2026-07-23 | Versión actual. Sincronizado con genérico v1.2.7 |
 | 1.2.6 | 2026-07-23 | Fix YAML en CI: `|| (&&)` reemplazado por bloque `if` para evitar error de sintaxis |
 | 1.2.5 | 2026-07-23 | `*/main` es ahora la rama por defecto, `main` raíz eliminada |

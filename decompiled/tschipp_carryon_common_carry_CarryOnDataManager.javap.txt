@@ -1,0 +1,32 @@
+Compiled from "CarryOnDataManager.java"
+public class tschipp.carryon.common.carry.CarryOnDataManager {
+  public tschipp.carryon.common.carry.CarryOnDataManager();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static tschipp.carryon.common.carry.CarryOnData getCarryData(net.minecraft.world.entity.player.Player);
+    Code:
+       0: getstatic     #7                  // Field tschipp/carryon/platform/Services.PLATFORM:Ltschipp/carryon/platform/services/IPlatformHelper;
+       3: aload_0
+       4: invokeinterface #13,  2           // InterfaceMethod tschipp/carryon/platform/services/IPlatformHelper.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       9: areturn
+
+  public static void setCarryData(net.minecraft.world.entity.player.Player, tschipp.carryon.common.carry.CarryOnData);
+    Code:
+       0: aload_1
+       1: aload_0
+       2: invokevirtual #19                 // Method net/minecraft/world/entity/player/Player.getInventory:()Lnet/minecraft/world/entity/player/Inventory;
+       5: invokevirtual #25                 // Method net/minecraft/world/entity/player/Inventory.getSelectedSlot:()I
+       8: invokevirtual #31                 // Method tschipp/carryon/common/carry/CarryOnData.setSelected:(I)V
+      11: aload_1
+      12: aload_0
+      13: getfield      #37                 // Field net/minecraft/world/entity/player/Player.tickCount:I
+      16: invokevirtual #41                 // Method tschipp/carryon/common/carry/CarryOnData.setTick:(I)V
+      19: getstatic     #7                  // Field tschipp/carryon/platform/Services.PLATFORM:Ltschipp/carryon/platform/services/IPlatformHelper;
+      22: aload_0
+      23: aload_1
+      24: invokeinterface #44,  3           // InterfaceMethod tschipp/carryon/platform/services/IPlatformHelper.setCarryData:(Lnet/minecraft/world/entity/player/Player;Ltschipp/carryon/common/carry/CarryOnData;)V
+      29: return
+}

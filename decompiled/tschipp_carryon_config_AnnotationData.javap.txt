@@ -1,0 +1,130 @@
+Compiled from "AnnotationData.java"
+public final class tschipp.carryon.config.AnnotationData extends java.lang.Record {
+  private final tschipp.carryon.config.PropertyType type;
+
+  private final java.lang.String description;
+
+  private final int min;
+
+  private final int max;
+
+  private final double minD;
+
+  private final double maxD;
+
+  private final java.lang.String validationRegex;
+
+  public tschipp.carryon.config.AnnotationData(tschipp.carryon.config.PropertyType, java.lang.String, int, int, double, double, java.lang.String);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Record."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #7                  // Field type:Ltschipp/carryon/config/PropertyType;
+       9: aload_0
+      10: aload_2
+      11: putfield      #13                 // Field description:Ljava/lang/String;
+      14: aload_0
+      15: iload_3
+      16: putfield      #17                 // Field min:I
+      19: aload_0
+      20: iload         4
+      22: putfield      #21                 // Field max:I
+      25: aload_0
+      26: dload         5
+      28: putfield      #24                 // Field minD:D
+      31: aload_0
+      32: dload         7
+      34: putfield      #28                 // Field maxD:D
+      37: aload_0
+      38: aload         9
+      40: putfield      #31                 // Field validationRegex:Ljava/lang/String;
+      43: return
+
+  public static tschipp.carryon.config.AnnotationData getData(java.lang.reflect.Field);
+    Code:
+       0: aload_0
+       1: ldc           #34                 // class tschipp/carryon/config/annotations/Property
+       3: invokevirtual #36                 // Method java/lang/reflect/Field.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+       6: checkcast     #34                 // class tschipp/carryon/config/annotations/Property
+       9: astore_1
+      10: new           #8                  // class tschipp/carryon/config/AnnotationData
+      13: dup
+      14: aload_1
+      15: invokeinterface #42,  1           // InterfaceMethod tschipp/carryon/config/annotations/Property.type:()Ltschipp/carryon/config/PropertyType;
+      20: aload_1
+      21: invokeinterface #45,  1           // InterfaceMethod tschipp/carryon/config/annotations/Property.description:()Ljava/lang/String;
+      26: aload_1
+      27: invokeinterface #48,  1           // InterfaceMethod tschipp/carryon/config/annotations/Property.min:()I
+      32: aload_1
+      33: invokeinterface #51,  1           // InterfaceMethod tschipp/carryon/config/annotations/Property.max:()I
+      38: aload_1
+      39: invokeinterface #53,  1           // InterfaceMethod tschipp/carryon/config/annotations/Property.minD:()D
+      44: aload_1
+      45: invokeinterface #56,  1           // InterfaceMethod tschipp/carryon/config/annotations/Property.maxD:()D
+      50: aload_1
+      51: invokeinterface #58,  1           // InterfaceMethod tschipp/carryon/config/annotations/Property.validationRegex:()Ljava/lang/String;
+      56: invokespecial #60                 // Method "<init>":(Ltschipp/carryon/config/PropertyType;Ljava/lang/String;IIDDLjava/lang/String;)V
+      59: areturn
+
+  public final java.lang.String toString();
+    Code:
+       0: aload_0
+       1: invokedynamic #63,  0             // InvokeDynamic #0:toString:(Ltschipp/carryon/config/AnnotationData;)Ljava/lang/String;
+       6: areturn
+
+  public final int hashCode();
+    Code:
+       0: aload_0
+       1: invokedynamic #67,  0             // InvokeDynamic #0:hashCode:(Ltschipp/carryon/config/AnnotationData;)I
+       6: ireturn
+
+  public final boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokedynamic #71,  0             // InvokeDynamic #0:equals:(Ltschipp/carryon/config/AnnotationData;Ljava/lang/Object;)Z
+       7: ireturn
+
+  public tschipp.carryon.config.PropertyType type();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field type:Ltschipp/carryon/config/PropertyType;
+       4: areturn
+
+  public java.lang.String description();
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field description:Ljava/lang/String;
+       4: areturn
+
+  public int min();
+    Code:
+       0: aload_0
+       1: getfield      #17                 // Field min:I
+       4: ireturn
+
+  public int max();
+    Code:
+       0: aload_0
+       1: getfield      #21                 // Field max:I
+       4: ireturn
+
+  public double minD();
+    Code:
+       0: aload_0
+       1: getfield      #24                 // Field minD:D
+       4: dreturn
+
+  public double maxD();
+    Code:
+       0: aload_0
+       1: getfield      #28                 // Field maxD:D
+       4: dreturn
+
+  public java.lang.String validationRegex();
+    Code:
+       0: aload_0
+       1: getfield      #31                 // Field validationRegex:Ljava/lang/String;
+       4: areturn
+}

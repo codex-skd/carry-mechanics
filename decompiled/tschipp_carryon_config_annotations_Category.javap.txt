@@ -1,0 +1,6 @@
+Compiled from "Category.java"
+public interface tschipp.carryon.config.annotations.Category extends java.lang.annotation.Annotation {
+  public abstract java.lang.String value();
+
+  public abstract java.lang.String translation();
+}

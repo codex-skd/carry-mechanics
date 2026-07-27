@@ -1,0 +1,1013 @@
+Compiled from "CarryRenderHelper.java"
+public class tschipp.carryon.client.render.CarryRenderHelper {
+  public tschipp.carryon.client.render.CarryRenderHelper();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static net.minecraft.world.phys.Vec3 getExactPos(net.minecraft.world.entity.Entity, float);
+    Code:
+       0: new           #7                  // class net/minecraft/world/phys/Vec3
+       3: dup
+       4: aload_0
+       5: getfield      #9                  // Field net/minecraft/world/entity/Entity.xOld:D
+       8: aload_0
+       9: invokevirtual #15                 // Method net/minecraft/world/entity/Entity.getX:()D
+      12: aload_0
+      13: getfield      #9                  // Field net/minecraft/world/entity/Entity.xOld:D
+      16: dsub
+      17: fload_1
+      18: f2d
+      19: dmul
+      20: dadd
+      21: aload_0
+      22: getfield      #19                 // Field net/minecraft/world/entity/Entity.yOld:D
+      25: aload_0
+      26: invokevirtual #22                 // Method net/minecraft/world/entity/Entity.getY:()D
+      29: aload_0
+      30: getfield      #19                 // Field net/minecraft/world/entity/Entity.yOld:D
+      33: dsub
+      34: fload_1
+      35: f2d
+      36: dmul
+      37: dadd
+      38: aload_0
+      39: getfield      #25                 // Field net/minecraft/world/entity/Entity.zOld:D
+      42: aload_0
+      43: invokevirtual #28                 // Method net/minecraft/world/entity/Entity.getZ:()D
+      46: aload_0
+      47: getfield      #25                 // Field net/minecraft/world/entity/Entity.zOld:D
+      50: dsub
+      51: fload_1
+      52: f2d
+      53: dmul
+      54: dadd
+      55: invokespecial #31                 // Method net/minecraft/world/phys/Vec3."<init>":(DDD)V
+      58: areturn
+
+  public static float getExactBodyRotationDegrees(net.minecraft.world.entity.LivingEntity, float);
+    Code:
+       0: aload_0
+       1: invokevirtual #34                 // Method net/minecraft/world/entity/LivingEntity.getVehicle:()Lnet/minecraft/world/entity/Entity;
+       4: ifnull        75
+       7: aload_0
+       8: invokevirtual #34                 // Method net/minecraft/world/entity/LivingEntity.getVehicle:()Lnet/minecraft/world/entity/Entity;
+      11: astore        4
+      13: aload         4
+      15: instanceof    #35                 // class net/minecraft/world/entity/LivingEntity
+      18: ifeq          75
+      21: aload         4
+      23: checkcast     #35                 // class net/minecraft/world/entity/LivingEntity
+      26: astore_2
+      27: aload_2
+      28: instanceof    #40                 // class net/minecraft/world/entity/player/Player
+      31: ifeq          57
+      34: aload_2
+      35: checkcast     #40                 // class net/minecraft/world/entity/player/Player
+      38: astore_3
+      39: aload_3
+      40: getfield      #42                 // Field net/minecraft/world/entity/player/Player.yBodyRotO:F
+      43: aload_3
+      44: getfield      #46                 // Field net/minecraft/world/entity/player/Player.yBodyRot:F
+      47: aload_3
+      48: getfield      #42                 // Field net/minecraft/world/entity/player/Player.yBodyRotO:F
+      51: fsub
+      52: fload_1
+      53: fmul
+      54: fadd
+      55: fneg
+      56: freturn
+      57: aload_0
+      58: getfield      #49                 // Field net/minecraft/world/entity/LivingEntity.yHeadRotO:F
+      61: aload_0
+      62: getfield      #52                 // Field net/minecraft/world/entity/LivingEntity.yHeadRot:F
+      65: aload_0
+      66: getfield      #49                 // Field net/minecraft/world/entity/LivingEntity.yHeadRotO:F
+      69: fsub
+      70: fload_1
+      71: fmul
+      72: fadd
+      73: fneg
+      74: freturn
+      75: aload_0
+      76: getfield      #55                 // Field net/minecraft/world/entity/LivingEntity.yBodyRotO:F
+      79: aload_0
+      80: getfield      #56                 // Field net/minecraft/world/entity/LivingEntity.yBodyRot:F
+      83: aload_0
+      84: getfield      #55                 // Field net/minecraft/world/entity/LivingEntity.yBodyRotO:F
+      87: fsub
+      88: fload_1
+      89: fmul
+      90: fadd
+      91: fneg
+      92: freturn
+
+  public static org.joml.Quaternionf getExactBodyRotation(net.minecraft.world.entity.LivingEntity, float);
+    Code:
+       0: getstatic     #57                 // Field com/mojang/math/Axis.YP:Lcom/mojang/math/Axis;
+       3: aload_0
+       4: fload_1
+       5: invokestatic  #63                 // Method getExactBodyRotationDegrees:(Lnet/minecraft/world/entity/LivingEntity;F)F
+       8: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      13: areturn
+
+  public static void applyGeneralTransformations(net.minecraft.world.entity.player.Player, com.mojang.blaze3d.vertex.PoseStack);
+    Code:
+       0: aload_0
+       1: invokevirtual #73                 // Method net/minecraft/world/entity/player/Player.getPose:()Lnet/minecraft/world/entity/Pose;
+       4: astore_2
+       5: aload_1
+       6: invokevirtual #77                 // Method com/mojang/blaze3d/vertex/PoseStack.pushPose:()V
+       9: aload_1
+      10: ldc           #82                 // float 0.6f
+      12: ldc           #82                 // float 0.6f
+      14: ldc           #82                 // float 0.6f
+      16: invokevirtual #83                 // Method com/mojang/blaze3d/vertex/PoseStack.scale:(FFF)V
+      19: aload_1
+      20: dconst_0
+      21: dconst_0
+      22: ldc2_w        #87                 // double -1.35d
+      25: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+      28: aload_0
+      29: invokestatic  #92                 // Method doSneakCheck:(Lnet/minecraft/world/entity/player/Player;)Z
+      32: ifeq          44
+      35: aload_1
+      36: dconst_0
+      37: ldc2_w        #96                 // double -0.4d
+      40: dconst_0
+      41: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+      44: aload_2
+      45: getstatic     #98                 // Field net/minecraft/world/entity/Pose.SWIMMING:Lnet/minecraft/world/entity/Pose;
+      48: if_acmpeq     58
+      51: aload_2
+      52: getstatic     #104                // Field net/minecraft/world/entity/Pose.FALL_FLYING:Lnet/minecraft/world/entity/Pose;
+      55: if_acmpne     81
+      58: aload_1
+      59: dconst_0
+      60: dconst_0
+      61: ldc2_w        #107                // double 2.5d
+      64: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+      67: aload_1
+      68: getstatic     #109                // Field com/mojang/math/Axis.XP:Lcom/mojang/math/Axis;
+      71: ldc           #112                // float 90.0f
+      73: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      78: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+      81: aload_1
+      82: dconst_0
+      83: ldc2_w        #117                // double -0.5d
+      86: ldc2_w        #119                // double 0.65d
+      89: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+      92: return
+
+  public static com.mojang.blaze3d.vertex.PoseStack setupBlockTransformations(net.minecraft.world.entity.player.Player, com.mojang.blaze3d.vertex.PoseStack, tschipp.carryon.common.carry.CarryOnData, boolean);
+    Code:
+       0: iload_3
+       1: ifeq          104
+       4: aload_1
+       5: ldc           #121                // float 2.5f
+       7: ldc           #121                // float 2.5f
+       9: ldc           #121                // float 2.5f
+      11: invokevirtual #83                 // Method com/mojang/blaze3d/vertex/PoseStack.scale:(FFF)V
+      14: aload_1
+      15: dconst_0
+      16: ldc2_w        #117                // double -0.5d
+      19: ldc2_w        #122                // double -1.0d
+      22: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+      25: getstatic     #124                // Field tschipp/carryon/Constants.CLIENT_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Client;
+      28: getfield      #130                // Field tschipp/carryon/common/config/CarryConfig$Client.facePlayer:Z
+      31: aload_2
+      32: invokevirtual #136                // Method tschipp/carryon/common/carry/CarryOnData.getBlock:()Lnet/minecraft/world/level/block/state/BlockState;
+      35: invokevirtual #142                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+      38: invokestatic  #147                // Method isChest:(Lnet/minecraft/world/level/block/Block;)Z
+      41: if_icmpeq     75
+      44: aload_1
+      45: getstatic     #57                 // Field com/mojang/math/Axis.YP:Lcom/mojang/math/Axis;
+      48: ldc           #151                // float 180.0f
+      50: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      55: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+      58: aload_1
+      59: getstatic     #152                // Field com/mojang/math/Axis.XN:Lcom/mojang/math/Axis;
+      62: ldc           #155                // float 8.0f
+      64: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      69: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+      72: goto          89
+      75: aload_1
+      76: getstatic     #109                // Field com/mojang/math/Axis.XP:Lcom/mojang/math/Axis;
+      79: ldc           #155                // float 8.0f
+      81: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      86: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+      89: aload_2
+      90: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+      93: aload_1
+      94: invokedynamic #160,  0            // InvokeDynamic #0:accept:(Lcom/mojang/blaze3d/vertex/PoseStack;)Ljava/util/function/Consumer;
+      99: invokevirtual #164                // Method java/util/Optional.ifPresent:(Ljava/util/function/Consumer;)V
+     102: aload_1
+     103: areturn
+     104: aload_0
+     105: aload_1
+     106: aload_2
+     107: invokevirtual #136                // Method tschipp/carryon/common/carry/CarryOnData.getBlock:()Lnet/minecraft/world/level/block/state/BlockState;
+     110: invokevirtual #142                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+     113: invokestatic  #170                // Method applyBlockTransformations:(Lnet/minecraft/world/entity/player/Player;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/level/block/Block;)V
+     116: aload_2
+     117: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     120: aload_1
+     121: invokedynamic #174,  0            // InvokeDynamic #1:accept:(Lcom/mojang/blaze3d/vertex/PoseStack;)Ljava/util/function/Consumer;
+     126: invokevirtual #164                // Method java/util/Optional.ifPresent:(Ljava/util/function/Consumer;)V
+     129: aload_1
+     130: invokevirtual #175                // Method com/mojang/blaze3d/vertex/PoseStack.last:()Lcom/mojang/blaze3d/vertex/PoseStack$Pose;
+     133: astore        4
+     135: new           #78                 // class com/mojang/blaze3d/vertex/PoseStack
+     138: dup
+     139: invokespecial #179                // Method com/mojang/blaze3d/vertex/PoseStack."<init>":()V
+     142: astore        5
+     144: aload         5
+     146: aload         4
+     148: invokevirtual #180                // Method com/mojang/blaze3d/vertex/PoseStack$Pose.pose:()Lorg/joml/Matrix4f;
+     151: invokevirtual #186                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Matrix4fc;)V
+     154: aload_1
+     155: invokevirtual #189                // Method com/mojang/blaze3d/vertex/PoseStack.popPose:()V
+     158: aload         5
+     160: areturn
+
+  public static void applyBlockTransformations(net.minecraft.world.entity.player.Player, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.world.level.block.Block);
+    Code:
+       0: aload_1
+       1: getstatic     #192                // Field com/mojang/math/Axis.ZN:Lcom/mojang/math/Axis;
+       4: ldc           #151                // float 180.0f
+       6: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      11: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+      14: aload_0
+      15: aload_1
+      16: invokestatic  #195                // Method applyGeneralTransformations:(Lnet/minecraft/world/entity/player/Player;Lcom/mojang/blaze3d/vertex/PoseStack;)V
+      19: getstatic     #124                // Field tschipp/carryon/Constants.CLIENT_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Client;
+      22: getfield      #130                // Field tschipp/carryon/common/config/CarryConfig$Client.facePlayer:Z
+      25: aload_2
+      26: invokestatic  #147                // Method isChest:(Lnet/minecraft/world/level/block/Block;)Z
+      29: if_icmpeq     46
+      32: aload_1
+      33: getstatic     #57                 // Field com/mojang/math/Axis.YP:Lcom/mojang/math/Axis;
+      36: ldc           #151                // float 180.0f
+      38: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      43: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+      46: aload_0
+      47: invokestatic  #199                // Method getRenderHeight:(Lnet/minecraft/world/entity/player/Player;)F
+      50: fstore_3
+      51: fload_3
+      52: fconst_1
+      53: fsub
+      54: ldc           #203                // float 1.2f
+      56: fdiv
+      57: fstore        4
+      59: aload_1
+      60: fconst_0
+      61: fload         4
+      63: fneg
+      64: fconst_0
+      65: invokevirtual #204                // Method com/mojang/blaze3d/vertex/PoseStack.translate:(FFF)V
+      68: return
+
+  public static void setupEntityTransformations(net.minecraft.world.entity.player.Player, com.mojang.blaze3d.vertex.PoseStack, tschipp.carryon.common.carry.CarryOnData, boolean);
+    Code:
+       0: aload_2
+       1: aload_0
+       2: invokevirtual #206                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+       5: invokevirtual #210                // Method tschipp/carryon/common/carry/CarryOnData.getEntity:(Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
+       8: astore        4
+      10: aload         4
+      12: invokevirtual #214                // Method net/minecraft/world/entity/Entity.getBbHeight:()F
+      15: fstore        5
+      17: aload         4
+      19: invokevirtual #218                // Method net/minecraft/world/entity/Entity.getBbWidth:()F
+      22: fstore        6
+      24: iload_3
+      25: ifeq          115
+      28: aload_1
+      29: getstatic     #57                 // Field com/mojang/math/Axis.YP:Lcom/mojang/math/Axis;
+      32: ldc           #151                // float 180.0f
+      34: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      39: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+      42: aload_1
+      43: ldc           #221                // float 0.8f
+      45: ldc           #221                // float 0.8f
+      47: ldc           #221                // float 0.8f
+      49: invokevirtual #83                 // Method com/mojang/blaze3d/vertex/PoseStack.scale:(FFF)V
+      52: aload_1
+      53: dconst_0
+      54: fload         5
+      56: fneg
+      57: f2d
+      58: ldc2_w        #222                // double 0.2d
+      61: dsub
+      62: fload         6
+      64: f2d
+      65: ldc2_w        #224                // double 1.3d
+      68: dmul
+      69: ldc2_w        #226                // double 0.1d
+      72: dadd
+      73: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+      76: aload_2
+      77: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+      80: aload_1
+      81: invokedynamic #228,  0            // InvokeDynamic #2:accept:(Lcom/mojang/blaze3d/vertex/PoseStack;)Ljava/util/function/Consumer;
+      86: invokevirtual #164                // Method java/util/Optional.ifPresent:(Ljava/util/function/Consumer;)V
+      89: getstatic     #124                // Field tschipp/carryon/Constants.CLIENT_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Client;
+      92: getfield      #229                // Field tschipp/carryon/common/config/CarryConfig$Client.rotateEntitiesSideways:Z
+      95: ifeq          135
+      98: aload_1
+      99: getstatic     #57                 // Field com/mojang/math/Axis.YP:Lcom/mojang/math/Axis;
+     102: ldc           #112                // float 90.0f
+     104: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+     109: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+     112: goto          135
+     115: aload_0
+     116: aload_1
+     117: aload         4
+     119: invokestatic  #232                // Method applyEntityTransformations:(Lnet/minecraft/world/entity/player/Player;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/Entity;)V
+     122: aload_2
+     123: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     126: aload_1
+     127: invokedynamic #236,  0            // InvokeDynamic #3:accept:(Lcom/mojang/blaze3d/vertex/PoseStack;)Ljava/util/function/Consumer;
+     132: invokevirtual #164                // Method java/util/Optional.ifPresent:(Ljava/util/function/Consumer;)V
+     135: return
+
+  public static void applyEntityTransformations(net.minecraft.world.entity.player.Player, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.world.entity.Entity);
+    Code:
+       0: aload_0
+       1: invokevirtual #73                 // Method net/minecraft/world/entity/player/Player.getPose:()Lnet/minecraft/world/entity/Pose;
+       4: astore_3
+       5: aload_0
+       6: aload_1
+       7: invokestatic  #195                // Method applyGeneralTransformations:(Lnet/minecraft/world/entity/player/Player;Lcom/mojang/blaze3d/vertex/PoseStack;)V
+      10: aload_1
+      11: getstatic     #109                // Field com/mojang/math/Axis.XP:Lcom/mojang/math/Axis;
+      14: ldc           #151                // float 180.0f
+      16: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      21: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+      24: aload_1
+      25: dconst_0
+      26: ldc2_w        #237                // double -3.1d
+      29: ldc2_w        #239                // double -0.65d
+      32: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+      35: aload_1
+      36: ldc           #241                // float 1.666f
+      38: ldc           #241                // float 1.666f
+      40: ldc           #241                // float 1.666f
+      42: invokevirtual #83                 // Method com/mojang/blaze3d/vertex/PoseStack.scale:(FFF)V
+      45: aload_2
+      46: invokevirtual #214                // Method net/minecraft/world/entity/Entity.getBbHeight:()F
+      49: fstore        4
+      51: aload_2
+      52: invokevirtual #218                // Method net/minecraft/world/entity/Entity.getBbWidth:()F
+      55: fstore        5
+      57: ldc           #242                // float 9.9f
+      59: fload         4
+      61: fload         5
+      63: fmul
+      64: invokestatic  #243                // Method java/lang/Math.min:(FF)F
+      67: fstore        6
+      69: aload_2
+      70: dconst_0
+      71: putfield      #249                // Field net/minecraft/world/entity/Entity.yo:D
+      74: aload_2
+      75: fconst_0
+      76: putfield      #252                // Field net/minecraft/world/entity/Entity.yRotO:F
+      79: aload_2
+      80: fconst_0
+      81: invokevirtual #255                // Method net/minecraft/world/entity/Entity.setYHeadRot:(F)V
+      84: aload_2
+      85: dconst_0
+      86: putfield      #259                // Field net/minecraft/world/entity/Entity.xo:D
+      89: aload_2
+      90: fconst_0
+      91: putfield      #262                // Field net/minecraft/world/entity/Entity.xRotO:F
+      94: aload_1
+      95: ldc_w         #265                // float 10.0f
+      98: fload         6
+     100: fsub
+     101: ldc_w         #266                // float 0.08f
+     104: fmul
+     105: ldc_w         #265                // float 10.0f
+     108: fload         6
+     110: fsub
+     111: ldc_w         #266                // float 0.08f
+     114: fmul
+     115: ldc_w         #265                // float 10.0f
+     118: fload         6
+     120: fsub
+     121: ldc_w         #266                // float 0.08f
+     124: fmul
+     125: invokevirtual #83                 // Method com/mojang/blaze3d/vertex/PoseStack.scale:(FFF)V
+     128: aload_1
+     129: dconst_0
+     130: fload         4
+     132: fconst_2
+     133: fdiv
+     134: fload         4
+     136: ldc_w         #267                // float 4.0f
+     139: fdiv
+     140: fneg
+     141: fadd
+     142: fconst_1
+     143: fadd
+     144: f2d
+     145: fload         5
+     147: f2d
+     148: ldc2_w        #226                // double 0.1d
+     151: dsub
+     152: ldc2_w        #268                // double 0.7d
+     155: dcmpg
+     156: ifge          181
+     159: fload         5
+     161: f2d
+     162: ldc2_w        #226                // double 0.1d
+     165: dsub
+     166: ldc2_w        #268                // double 0.7d
+     169: fload         5
+     171: f2d
+     172: ldc2_w        #226                // double 0.1d
+     175: dsub
+     176: dsub
+     177: dadd
+     178: goto          188
+     181: fload         5
+     183: f2d
+     184: ldc2_w        #226                // double 0.1d
+     187: dsub
+     188: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+     191: aload_0
+     192: invokestatic  #92                 // Method doSneakCheck:(Lnet/minecraft/world/entity/player/Player;)Z
+     195: ifeq          207
+     198: aload_1
+     199: dconst_0
+     200: ldc2_w        #96                 // double -0.4d
+     203: dconst_0
+     204: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+     207: aload_3
+     208: getstatic     #98                 // Field net/minecraft/world/entity/Pose.SWIMMING:Lnet/minecraft/world/entity/Pose;
+     211: if_acmpeq     221
+     214: aload_3
+     215: getstatic     #104                // Field net/minecraft/world/entity/Pose.FALL_FLYING:Lnet/minecraft/world/entity/Pose;
+     218: if_acmpne     254
+     221: aload_1
+     222: getstatic     #152                // Field com/mojang/math/Axis.XN:Lcom/mojang/math/Axis;
+     225: ldc           #151                // float 180.0f
+     227: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+     232: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+     235: aload_1
+     236: dconst_0
+     237: ldc2_w        #222                // double 0.2d
+     240: fload         4
+     242: f2d
+     243: dmul
+     244: ldc2_w        #270                // double 2.0d
+     247: dsub
+     248: ldc2_w        #117                // double -0.5d
+     251: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+     254: getstatic     #124                // Field tschipp/carryon/Constants.CLIENT_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Client;
+     257: getfield      #229                // Field tschipp/carryon/common/config/CarryConfig$Client.rotateEntitiesSideways:Z
+     260: ifeq          277
+     263: aload_1
+     264: getstatic     #57                 // Field com/mojang/math/Axis.YP:Lcom/mojang/math/Axis;
+     267: ldc           #112                // float 90.0f
+     269: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+     274: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+     277: return
+
+  public static void performScriptTransformation(com.mojang.blaze3d.vertex.PoseStack, tschipp.carryon.common.scripting.CarryOnScript);
+    Code:
+       0: invokestatic  #272                // Method getPerspective:()I
+       3: istore_2
+       4: aload_1
+       5: invokevirtual #276                // Method tschipp/carryon/common/scripting/CarryOnScript.scriptRender:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+       8: astore_3
+       9: aload_3
+      10: invokevirtual #282                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderTranslation:()Ltschipp/carryon/common/scripting/Matchables$OptionalVec3;
+      13: invokevirtual #288                // Method tschipp/carryon/common/scripting/Matchables$OptionalVec3.getVec:()Lnet/minecraft/world/phys/Vec3;
+      16: astore        4
+      18: aload_3
+      19: invokevirtual #294                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderRotation:()Ltschipp/carryon/common/scripting/Matchables$OptionalVec3;
+      22: invokevirtual #288                // Method tschipp/carryon/common/scripting/Matchables$OptionalVec3.getVec:()Lnet/minecraft/world/phys/Vec3;
+      25: astore        5
+      27: aload_3
+      28: invokevirtual #297                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderscale:()Ltschipp/carryon/common/scripting/Matchables$OptionalVec3;
+      31: dconst_1
+      32: dconst_1
+      33: dconst_1
+      34: invokevirtual #300                // Method tschipp/carryon/common/scripting/Matchables$OptionalVec3.getVec:(DDD)Lnet/minecraft/world/phys/Vec3;
+      37: astore        6
+      39: getstatic     #109                // Field com/mojang/math/Axis.XP:Lcom/mojang/math/Axis;
+      42: aload         5
+      44: getfield      #303                // Field net/minecraft/world/phys/Vec3.x:D
+      47: d2f
+      48: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      53: astore        7
+      55: aload         7
+      57: getstatic     #57                 // Field com/mojang/math/Axis.YP:Lcom/mojang/math/Axis;
+      60: aload         5
+      62: getfield      #306                // Field net/minecraft/world/phys/Vec3.y:D
+      65: d2f
+      66: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      71: invokevirtual #309                // Method org/joml/Quaternionf.mul:(Lorg/joml/Quaternionfc;)Lorg/joml/Quaternionf;
+      74: pop
+      75: aload         7
+      77: getstatic     #315                // Field com/mojang/math/Axis.ZP:Lcom/mojang/math/Axis;
+      80: aload         5
+      82: getfield      #318                // Field net/minecraft/world/phys/Vec3.z:D
+      85: d2f
+      86: invokeinterface #69,  2           // InterfaceMethod com/mojang/math/Axis.rotationDegrees:(F)Lorg/joml/Quaternionf;
+      91: invokevirtual #309                // Method org/joml/Quaternionf.mul:(Lorg/joml/Quaternionfc;)Lorg/joml/Quaternionf;
+      94: pop
+      95: aload_0
+      96: aload         7
+      98: invokevirtual #113                // Method com/mojang/blaze3d/vertex/PoseStack.mulPose:(Lorg/joml/Quaternionfc;)V
+     101: aload_0
+     102: aload         4
+     104: getfield      #303                // Field net/minecraft/world/phys/Vec3.x:D
+     107: aload         4
+     109: getfield      #306                // Field net/minecraft/world/phys/Vec3.y:D
+     112: iload_2
+     113: iconst_1
+     114: if_icmpne     133
+     117: aload_1
+     118: invokevirtual #321                // Method tschipp/carryon/common/scripting/CarryOnScript.isBlock:()Z
+     121: ifeq          133
+     124: aload         4
+     126: getfield      #318                // Field net/minecraft/world/phys/Vec3.z:D
+     129: dneg
+     130: goto          138
+     133: aload         4
+     135: getfield      #318                // Field net/minecraft/world/phys/Vec3.z:D
+     138: invokevirtual #89                 // Method com/mojang/blaze3d/vertex/PoseStack.translate:(DDD)V
+     141: aload_0
+     142: aload         6
+     144: getfield      #303                // Field net/minecraft/world/phys/Vec3.x:D
+     147: d2f
+     148: aload         6
+     150: getfield      #306                // Field net/minecraft/world/phys/Vec3.y:D
+     153: d2f
+     154: aload         6
+     156: getfield      #318                // Field net/minecraft/world/phys/Vec3.z:D
+     159: d2f
+     160: invokevirtual #83                 // Method com/mojang/blaze3d/vertex/PoseStack.scale:(FFF)V
+     163: return
+
+  public static net.minecraft.world.item.ItemStack getRenderItemStack(net.minecraft.world.entity.player.Player);
+    Code:
+       0: aload_0
+       1: invokestatic  #325                // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       4: astore_1
+       5: aload_1
+       6: invokevirtual #136                // Method tschipp/carryon/common/carry/CarryOnData.getBlock:()Lnet/minecraft/world/level/block/state/BlockState;
+       9: invokevirtual #142                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+      12: invokevirtual #331                // Method net/minecraft/world/level/block/Block.defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+      15: astore_2
+      16: aload_1
+      17: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+      20: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      23: ifeq          84
+      26: aload_1
+      27: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+      30: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      33: checkcast     #277                // class tschipp/carryon/common/scripting/CarryOnScript
+      36: invokevirtual #276                // Method tschipp/carryon/common/scripting/CarryOnScript.scriptRender:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+      39: astore_3
+      40: aload_3
+      41: invokevirtual #343                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderNameBlock:()Ljava/util/Optional;
+      44: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      47: ifeq          84
+      50: getstatic     #346                // Field net/minecraft/core/registries/BuiltInRegistries.BLOCK:Lnet/minecraft/core/DefaultedRegistry;
+      53: aload_3
+      54: invokevirtual #343                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderNameBlock:()Ljava/util/Optional;
+      57: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      60: checkcast     #352                // class net/minecraft/resources/ResourceKey
+      63: invokeinterface #354,  2          // InterfaceMethod net/minecraft/core/DefaultedRegistry.get:(Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+      68: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      71: checkcast     #359                // class net/minecraft/core/Holder$Reference
+      74: invokevirtual #361                // Method net/minecraft/core/Holder$Reference.value:()Ljava/lang/Object;
+      77: checkcast     #332                // class net/minecraft/world/level/block/Block
+      80: invokevirtual #331                // Method net/minecraft/world/level/block/Block.defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+      83: astore_2
+      84: getstatic     #364                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      87: astore_3
+      88: aload_2
+      89: aload_1
+      90: invokevirtual #370                // Method tschipp/carryon/common/carry/CarryOnData.getContentNbt:()Lnet/minecraft/nbt/CompoundTag;
+      93: invokestatic  #374                // Method tschipp/carryon/client/modeloverride/ModelOverrideHandler.getModelOverride:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
+      96: astore        4
+      98: aload         4
+     100: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+     103: ifeq          168
+     106: aload         4
+     108: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+     111: checkcast     #380                // class tschipp/carryon/client/modeloverride/ModelOverride
+     114: invokevirtual #382                // Method tschipp/carryon/client/modeloverride/ModelOverride.getRenderObject:()Lcom/mojang/datafixers/util/Either;
+     117: astore        5
+     119: aload         5
+     121: invokevirtual #386                // Method com/mojang/datafixers/util/Either.right:()Ljava/util/Optional;
+     124: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+     127: ifeq          145
+     130: aload         5
+     132: invokevirtual #386                // Method com/mojang/datafixers/util/Either.right:()Ljava/util/Optional;
+     135: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+     138: checkcast     #143                // class net/minecraft/world/level/block/state/BlockState
+     141: astore_2
+     142: goto          168
+     145: aload         5
+     147: invokevirtual #391                // Method com/mojang/datafixers/util/Either.left:()Ljava/util/Optional;
+     150: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+     153: ifeq          168
+     156: aload         5
+     158: invokevirtual #391                // Method com/mojang/datafixers/util/Either.left:()Ljava/util/Optional;
+     161: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+     164: checkcast     #365                // class net/minecraft/world/item/ItemStack
+     167: astore_3
+     168: aload_3
+     169: invokevirtual #394                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+     172: ifeq          187
+     175: new           #365                // class net/minecraft/world/item/ItemStack
+     178: dup
+     179: aload_2
+     180: invokevirtual #142                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+     183: invokespecial #397                // Method net/minecraft/world/item/ItemStack."<init>":(Lnet/minecraft/world/level/ItemLike;)V
+     186: astore_3
+     187: aload_3
+     188: areturn
+
+  public static net.minecraft.world.level.block.state.BlockState getRenderState(net.minecraft.world.entity.player.Player);
+    Code:
+       0: aload_0
+       1: invokestatic  #325                // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       4: astore_1
+       5: aload_1
+       6: invokevirtual #136                // Method tschipp/carryon/common/carry/CarryOnData.getBlock:()Lnet/minecraft/world/level/block/state/BlockState;
+       9: invokevirtual #142                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+      12: invokevirtual #331                // Method net/minecraft/world/level/block/Block.defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+      15: astore_2
+      16: aload_1
+      17: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+      20: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      23: ifeq          84
+      26: aload_1
+      27: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+      30: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      33: checkcast     #277                // class tschipp/carryon/common/scripting/CarryOnScript
+      36: invokevirtual #276                // Method tschipp/carryon/common/scripting/CarryOnScript.scriptRender:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+      39: astore_3
+      40: aload_3
+      41: invokevirtual #343                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderNameBlock:()Ljava/util/Optional;
+      44: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      47: ifeq          84
+      50: getstatic     #346                // Field net/minecraft/core/registries/BuiltInRegistries.BLOCK:Lnet/minecraft/core/DefaultedRegistry;
+      53: aload_3
+      54: invokevirtual #343                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderNameBlock:()Ljava/util/Optional;
+      57: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      60: checkcast     #352                // class net/minecraft/resources/ResourceKey
+      63: invokeinterface #354,  2          // InterfaceMethod net/minecraft/core/DefaultedRegistry.get:(Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+      68: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      71: checkcast     #359                // class net/minecraft/core/Holder$Reference
+      74: invokevirtual #361                // Method net/minecraft/core/Holder$Reference.value:()Ljava/lang/Object;
+      77: checkcast     #332                // class net/minecraft/world/level/block/Block
+      80: invokevirtual #331                // Method net/minecraft/world/level/block/Block.defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+      83: astore_2
+      84: aload_2
+      85: aload_1
+      86: invokevirtual #370                // Method tschipp/carryon/common/carry/CarryOnData.getContentNbt:()Lnet/minecraft/nbt/CompoundTag;
+      89: invokestatic  #374                // Method tschipp/carryon/client/modeloverride/ModelOverrideHandler.getModelOverride:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
+      92: astore_3
+      93: aload_3
+      94: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      97: ifeq          135
+     100: aload_3
+     101: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+     104: checkcast     #380                // class tschipp/carryon/client/modeloverride/ModelOverride
+     107: invokevirtual #382                // Method tschipp/carryon/client/modeloverride/ModelOverride.getRenderObject:()Lcom/mojang/datafixers/util/Either;
+     110: astore        4
+     112: aload         4
+     114: invokevirtual #386                // Method com/mojang/datafixers/util/Either.right:()Ljava/util/Optional;
+     117: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+     120: ifeq          135
+     123: aload         4
+     125: invokevirtual #386                // Method com/mojang/datafixers/util/Either.right:()Ljava/util/Optional;
+     128: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+     131: checkcast     #143                // class net/minecraft/world/level/block/state/BlockState
+     134: astore_2
+     135: aload_2
+     136: areturn
+
+  public static net.minecraft.world.entity.Entity getRenderEntity(net.minecraft.world.entity.player.Player);
+    Code:
+       0: aload_0
+       1: invokestatic  #325                // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       4: astore_1
+       5: aload_1
+       6: aload_0
+       7: invokevirtual #206                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+      10: invokevirtual #210                // Method tschipp/carryon/common/carry/CarryOnData.getEntity:(Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
+      13: astore_2
+      14: aload_1
+      15: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+      18: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      21: ifeq          141
+      24: aload_1
+      25: invokevirtual #156                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+      28: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      31: checkcast     #277                // class tschipp/carryon/common/scripting/CarryOnScript
+      34: astore_3
+      35: aload_3
+      36: invokevirtual #276                // Method tschipp/carryon/common/scripting/CarryOnScript.scriptRender:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+      39: astore        4
+      41: aload         4
+      43: invokevirtual #400                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderNameEntity:()Ljava/util/Optional;
+      46: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      49: ifeq          94
+      52: getstatic     #403                // Field net/minecraft/core/registries/BuiltInRegistries.ENTITY_TYPE:Lnet/minecraft/core/DefaultedRegistry;
+      55: aload         4
+      57: invokevirtual #400                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderNameEntity:()Ljava/util/Optional;
+      60: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      63: checkcast     #352                // class net/minecraft/resources/ResourceKey
+      66: invokeinterface #354,  2          // InterfaceMethod net/minecraft/core/DefaultedRegistry.get:(Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+      71: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      74: checkcast     #359                // class net/minecraft/core/Holder$Reference
+      77: invokevirtual #361                // Method net/minecraft/core/Holder$Reference.value:()Ljava/lang/Object;
+      80: checkcast     #406                // class net/minecraft/world/entity/EntityType
+      83: aload_0
+      84: invokevirtual #206                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+      87: getstatic     #408                // Field net/minecraft/world/entity/EntitySpawnReason.EVENT:Lnet/minecraft/world/entity/EntitySpawnReason;
+      90: invokevirtual #414                // Method net/minecraft/world/entity/EntityType.create:(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/EntitySpawnReason;)Lnet/minecraft/world/entity/Entity;
+      93: astore_2
+      94: aload         4
+      96: invokevirtual #418                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderNBT:()Ljava/util/Optional;
+      99: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+     102: ifeq          141
+     105: new           #421                // class net/minecraft/util/ProblemReporter$ScopedCollector
+     108: dup
+     109: getstatic     #423                // Field tschipp/carryon/Constants.LOG:Lorg/slf4j/Logger;
+     112: invokespecial #427                // Method net/minecraft/util/ProblemReporter$ScopedCollector."<init>":(Lorg/slf4j/Logger;)V
+     115: aload_0
+     116: invokevirtual #430                // Method net/minecraft/world/entity/player/Player.registryAccess:()Lnet/minecraft/core/RegistryAccess;
+     119: aload         4
+     121: invokevirtual #418                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderNBT:()Ljava/util/Optional;
+     124: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+     127: checkcast     #434                // class net/minecraft/nbt/CompoundTag
+     130: invokestatic  #436                // Method net/minecraft/world/level/storage/TagValueInput.create:(Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/storage/ValueInput;
+     133: astore        5
+     135: aload_2
+     136: aload         5
+     138: invokevirtual #441                // Method net/minecraft/world/entity/Entity.load:(Lnet/minecraft/world/level/storage/ValueInput;)V
+     141: aload_2
+     142: areturn
+
+  public static float getRenderWidth(net.minecraft.world.entity.player.Player);
+    Code:
+       0: aload_0
+       1: invokestatic  #325                // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       4: astore_1
+       5: aload_1
+       6: getstatic     #445                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.BLOCK:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+       9: invokevirtual #450                // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      12: ifeq          115
+      15: aload_0
+      16: invokestatic  #454                // Method getRenderState:(Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/level/block/state/BlockState;
+      19: astore_2
+      20: aload_2
+      21: aload_0
+      22: invokevirtual #206                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+      25: aload_0
+      26: invokevirtual #458                // Method net/minecraft/world/entity/player/Player.blockPosition:()Lnet/minecraft/core/BlockPos;
+      29: invokevirtual #462                // Method net/minecraft/world/level/block/state/BlockState.getShape:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+      32: astore_3
+      33: aload_3
+      34: ifnull        44
+      37: aload_3
+      38: invokevirtual #466                // Method net/minecraft/world/phys/shapes/VoxelShape.isEmpty:()Z
+      41: ifeq          46
+      44: fconst_1
+      45: freturn
+      46: aload_2
+      47: aload_1
+      48: invokevirtual #370                // Method tschipp/carryon/common/carry/CarryOnData.getContentNbt:()Lnet/minecraft/nbt/CompoundTag;
+      51: invokestatic  #374                // Method tschipp/carryon/client/modeloverride/ModelOverrideHandler.getModelOverride:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
+      54: astore        4
+      56: aload         4
+      58: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      61: ifeq          91
+      64: aload         4
+      66: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      69: checkcast     #380                // class tschipp/carryon/client/modeloverride/ModelOverride
+      72: invokevirtual #382                // Method tschipp/carryon/client/modeloverride/ModelOverride.getRenderObject:()Lcom/mojang/datafixers/util/Either;
+      75: astore        5
+      77: aload         5
+      79: invokevirtual #391                // Method com/mojang/datafixers/util/Either.left:()Ljava/util/Optional;
+      82: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      85: ifeq          91
+      88: ldc           #221                // float 0.8f
+      90: freturn
+      91: aload_3
+      92: invokevirtual #469                // Method net/minecraft/world/phys/shapes/VoxelShape.bounds:()Lnet/minecraft/world/phys/AABB;
+      95: getfield      #473                // Field net/minecraft/world/phys/AABB.maxX:D
+      98: aload_3
+      99: invokevirtual #469                // Method net/minecraft/world/phys/shapes/VoxelShape.bounds:()Lnet/minecraft/world/phys/AABB;
+     102: getfield      #478                // Field net/minecraft/world/phys/AABB.minX:D
+     105: dsub
+     106: invokestatic  #481                // Method java/lang/Math.abs:(D)D
+     109: d2f
+     110: fstore        5
+     112: fload         5
+     114: freturn
+     115: aload_1
+     116: getstatic     #485                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.ENTITY:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+     119: invokevirtual #450                // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+     122: ifeq          160
+     125: aload_0
+     126: invokestatic  #488                // Method getRenderEntity:(Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/entity/Entity;
+     129: astore_2
+     130: aload_2
+     131: invokevirtual #218                // Method net/minecraft/world/entity/Entity.getBbWidth:()F
+     134: fstore_3
+     135: getstatic     #124                // Field tschipp/carryon/Constants.CLIENT_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Client;
+     138: getfield      #229                // Field tschipp/carryon/common/config/CarryConfig$Client.rotateEntitiesSideways:Z
+     141: ifeq          154
+     144: fload_3
+     145: fload_3
+     146: fload_3
+     147: fmul
+     148: ldc_w         #492                // float 0.35f
+     151: fmul
+     152: fsub
+     153: freturn
+     154: fload_3
+     155: ldc_w         #493                // float 0.9f
+     158: fmul
+     159: freturn
+     160: fconst_1
+     161: freturn
+
+  public static float getRenderHeight(net.minecraft.world.entity.player.Player);
+    Code:
+       0: aload_0
+       1: invokestatic  #325                // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       4: astore_1
+       5: aload_1
+       6: getstatic     #445                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.BLOCK:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+       9: invokevirtual #450                // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      12: ifeq          116
+      15: aload_0
+      16: invokestatic  #454                // Method getRenderState:(Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/level/block/state/BlockState;
+      19: astore_2
+      20: aload_2
+      21: aload_0
+      22: invokevirtual #206                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+      25: aload_0
+      26: invokevirtual #458                // Method net/minecraft/world/entity/player/Player.blockPosition:()Lnet/minecraft/core/BlockPos;
+      29: invokevirtual #462                // Method net/minecraft/world/level/block/state/BlockState.getShape:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+      32: astore_3
+      33: aload_3
+      34: ifnull        44
+      37: aload_3
+      38: invokevirtual #466                // Method net/minecraft/world/phys/shapes/VoxelShape.isEmpty:()Z
+      41: ifeq          46
+      44: fconst_1
+      45: freturn
+      46: aload_2
+      47: aload_1
+      48: invokevirtual #370                // Method tschipp/carryon/common/carry/CarryOnData.getContentNbt:()Lnet/minecraft/nbt/CompoundTag;
+      51: invokestatic  #374                // Method tschipp/carryon/client/modeloverride/ModelOverrideHandler.getModelOverride:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
+      54: astore        4
+      56: aload         4
+      58: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      61: ifeq          92
+      64: aload         4
+      66: invokevirtual #339                // Method java/util/Optional.get:()Ljava/lang/Object;
+      69: checkcast     #380                // class tschipp/carryon/client/modeloverride/ModelOverride
+      72: invokevirtual #382                // Method tschipp/carryon/client/modeloverride/ModelOverride.getRenderObject:()Lcom/mojang/datafixers/util/Either;
+      75: astore        5
+      77: aload         5
+      79: invokevirtual #391                // Method com/mojang/datafixers/util/Either.left:()Ljava/util/Optional;
+      82: invokevirtual #336                // Method java/util/Optional.isPresent:()Z
+      85: ifeq          92
+      88: ldc_w         #494                // float 0.5f
+      91: freturn
+      92: aload_3
+      93: invokevirtual #469                // Method net/minecraft/world/phys/shapes/VoxelShape.bounds:()Lnet/minecraft/world/phys/AABB;
+      96: getfield      #495                // Field net/minecraft/world/phys/AABB.maxY:D
+      99: aload_3
+     100: invokevirtual #469                // Method net/minecraft/world/phys/shapes/VoxelShape.bounds:()Lnet/minecraft/world/phys/AABB;
+     103: getfield      #498                // Field net/minecraft/world/phys/AABB.minY:D
+     106: dsub
+     107: invokestatic  #481                // Method java/lang/Math.abs:(D)D
+     110: d2f
+     111: fstore        5
+     113: fload         5
+     115: freturn
+     116: aload_1
+     117: getstatic     #485                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.ENTITY:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+     120: invokevirtual #450                // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+     123: ifeq          136
+     126: aload_0
+     127: invokestatic  #488                // Method getRenderEntity:(Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/entity/Entity;
+     130: astore_2
+     131: aload_2
+     132: invokevirtual #214                // Method net/minecraft/world/entity/Entity.getBbHeight:()F
+     135: freturn
+     136: fconst_1
+     137: freturn
+
+  public static int getPerspective();
+    Code:
+       0: invokestatic  #501                // Method net/minecraft/client/Minecraft.getInstance:()Lnet/minecraft/client/Minecraft;
+       3: getfield      #507                // Field net/minecraft/client/Minecraft.options:Lnet/minecraft/client/Options;
+       6: invokevirtual #511                // Method net/minecraft/client/Options.getCameraType:()Lnet/minecraft/client/CameraType;
+       9: invokevirtual #517                // Method net/minecraft/client/CameraType.isFirstPerson:()Z
+      12: ifne          19
+      15: iconst_1
+      16: goto          20
+      19: iconst_0
+      20: istore_0
+      21: invokestatic  #501                // Method net/minecraft/client/Minecraft.getInstance:()Lnet/minecraft/client/Minecraft;
+      24: getfield      #507                // Field net/minecraft/client/Minecraft.options:Lnet/minecraft/client/Options;
+      27: invokevirtual #511                // Method net/minecraft/client/Options.getCameraType:()Lnet/minecraft/client/CameraType;
+      30: invokevirtual #522                // Method net/minecraft/client/CameraType.isMirrored:()Z
+      33: istore_1
+      34: iload_0
+      35: ifne          44
+      38: iload_1
+      39: ifne          44
+      42: iconst_0
+      43: ireturn
+      44: iload_0
+      45: ifeq          54
+      48: iload_1
+      49: ifne          54
+      52: iconst_1
+      53: ireturn
+      54: iconst_2
+      55: ireturn
+
+  public static boolean doSneakCheck(net.minecraft.world.entity.player.Player);
+    Code:
+       0: aload_0
+       1: invokevirtual #525                // Method net/minecraft/world/entity/player/Player.getAbilities:()Lnet/minecraft/world/entity/player/Abilities;
+       4: getfield      #529                // Field net/minecraft/world/entity/player/Abilities.flying:Z
+       7: ifeq          12
+      10: iconst_0
+      11: ireturn
+      12: aload_0
+      13: invokevirtual #534                // Method net/minecraft/world/entity/player/Player.isShiftKeyDown:()Z
+      16: ifne          26
+      19: aload_0
+      20: invokevirtual #537                // Method net/minecraft/world/entity/player/Player.isCrouching:()Z
+      23: ifeq          30
+      26: iconst_1
+      27: goto          31
+      30: iconst_0
+      31: ireturn
+
+  public static boolean isChest(net.minecraft.world.level.block.Block);
+    Code:
+       0: aload_0
+       1: getstatic     #540                // Field net/minecraft/world/level/block/Blocks.CHEST:Lnet/minecraft/world/level/block/Block;
+       4: if_acmpeq     28
+       7: aload_0
+       8: getstatic     #546                // Field net/minecraft/world/level/block/Blocks.ENDER_CHEST:Lnet/minecraft/world/level/block/Block;
+      11: if_acmpeq     28
+      14: aload_0
+      15: getstatic     #549                // Field net/minecraft/world/level/block/Blocks.TRAPPED_CHEST:Lnet/minecraft/world/level/block/Block;
+      18: if_acmpeq     28
+      21: aload_0
+      22: instanceof    #552                // class net/minecraft/world/level/block/ChestBlock
+      25: ifeq          32
+      28: iconst_1
+      29: goto          33
+      32: iconst_0
+      33: ireturn
+
+  private static void lambda$setupEntityTransformations$3(com.mojang.blaze3d.vertex.PoseStack, tschipp.carryon.common.scripting.CarryOnScript);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #554                // Method performScriptTransformation:(Lcom/mojang/blaze3d/vertex/PoseStack;Ltschipp/carryon/common/scripting/CarryOnScript;)V
+       5: return
+
+  private static void lambda$setupEntityTransformations$2(com.mojang.blaze3d.vertex.PoseStack, tschipp.carryon.common.scripting.CarryOnScript);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #554                // Method performScriptTransformation:(Lcom/mojang/blaze3d/vertex/PoseStack;Ltschipp/carryon/common/scripting/CarryOnScript;)V
+       5: return
+
+  private static void lambda$setupBlockTransformations$1(com.mojang.blaze3d.vertex.PoseStack, tschipp.carryon.common.scripting.CarryOnScript);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #554                // Method performScriptTransformation:(Lcom/mojang/blaze3d/vertex/PoseStack;Ltschipp/carryon/common/scripting/CarryOnScript;)V
+       5: return
+
+  private static void lambda$setupBlockTransformations$0(com.mojang.blaze3d.vertex.PoseStack, tschipp.carryon.common.scripting.CarryOnScript);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #554                // Method performScriptTransformation:(Lcom/mojang/blaze3d/vertex/PoseStack;Ltschipp/carryon/common/scripting/CarryOnScript;)V
+       5: return
+}

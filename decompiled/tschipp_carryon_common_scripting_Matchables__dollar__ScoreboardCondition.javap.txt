@@ -1,0 +1,166 @@
+Compiled from "Matchables.java"
+public final class tschipp.carryon.common.scripting.Matchables$ScoreboardCondition extends java.lang.Record implements tschipp.carryon.common.scripting.Matchables$Matchable<net.minecraft.server.level.ServerPlayer> {
+  private final java.lang.String cond;
+
+  public static final com.mojang.serialization.Codec<tschipp.carryon.common.scripting.Matchables$ScoreboardCondition> CODEC;
+
+  public static final tschipp.carryon.common.scripting.Matchables$ScoreboardCondition NONE;
+
+  public tschipp.carryon.common.scripting.Matchables$ScoreboardCondition(java.lang.String);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Record."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #7                  // Field cond:Ljava/lang/String;
+       9: return
+
+  public boolean matches(net.minecraft.server.level.ServerPlayer);
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field cond:Ljava/lang/String;
+       4: ifnull        17
+       7: aload_0
+       8: getfield      #7                  // Field cond:Ljava/lang/String;
+      11: invokevirtual #13                 // Method java/lang/String.isEmpty:()Z
+      14: ifeq          19
+      17: iconst_1
+      18: ireturn
+      19: aload_1
+      20: invokevirtual #19                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+      23: invokevirtual #25                 // Method net/minecraft/server/level/ServerLevel.getScoreboard:()Lnet/minecraft/server/ServerScoreboard;
+      26: astore_2
+      27: aload_0
+      28: getfield      #7                  // Field cond:Ljava/lang/String;
+      31: ldc           #31                 // String =
+      33: invokevirtual #33                 // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+      36: istore        5
+      38: aload_0
+      39: getfield      #7                  // Field cond:Ljava/lang/String;
+      42: ldc           #37                 // String >
+      44: invokevirtual #33                 // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+      47: istore        6
+      49: aload_0
+      50: getfield      #7                  // Field cond:Ljava/lang/String;
+      53: ldc           #39                 // String <
+      55: invokevirtual #33                 // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+      58: istore        7
+      60: iload         6
+      62: iconst_m1
+      63: if_icmpeq     92
+      66: iload         5
+      68: iload         6
+      70: if_icmpge     79
+      73: iload         7
+      75: iconst_m1
+      76: if_icmpeq     92
+      79: iload         5
+      81: iload         7
+      83: if_icmpge     105
+      86: iload         5
+      88: iconst_m1
+      89: if_icmpeq     105
+      92: aload_0
+      93: getfield      #7                  // Field cond:Ljava/lang/String;
+      96: iload         5
+      98: invokevirtual #41                 // Method java/lang/String.substring:(I)Ljava/lang/String;
+     101: astore_3
+     102: goto          160
+     105: iload         5
+     107: iconst_m1
+     108: if_icmpeq     137
+     111: iload         6
+     113: iload         5
+     115: if_icmpge     124
+     118: iload         7
+     120: iconst_m1
+     121: if_icmpeq     137
+     124: iload         6
+     126: iload         7
+     128: if_icmpge     150
+     131: iload         6
+     133: iconst_m1
+     134: if_icmpeq     150
+     137: aload_0
+     138: getfield      #7                  // Field cond:Ljava/lang/String;
+     141: iload         6
+     143: invokevirtual #41                 // Method java/lang/String.substring:(I)Ljava/lang/String;
+     146: astore_3
+     147: goto          160
+     150: aload_0
+     151: getfield      #7                  // Field cond:Ljava/lang/String;
+     154: iload         7
+     156: invokevirtual #41                 // Method java/lang/String.substring:(I)Ljava/lang/String;
+     159: astore_3
+     160: aload_0
+     161: getfield      #7                  // Field cond:Ljava/lang/String;
+     164: aload_3
+     165: ldc           #45                 // String
+     167: invokevirtual #47                 // Method java/lang/String.replace:(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+     170: astore        4
+     172: aload_2
+     173: aload_1
+     174: invokevirtual #51                 // Method net/minecraft/world/scores/Scoreboard.listPlayerScores:(Lnet/minecraft/world/scores/ScoreHolder;)Lit/unimi/dsi/fastutil/objects/Object2IntMap;
+     177: astore        8
+     179: aload         8
+     181: aload_2
+     182: aload         4
+     184: invokevirtual #57                 // Method net/minecraft/world/scores/Scoreboard.getObjective:(Ljava/lang/String;)Lnet/minecraft/world/scores/Objective;
+     187: invokeinterface #61,  2           // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap.getInt:(Ljava/lang/Object;)I
+     192: istore        9
+     194: new           #67                 // class tschipp/carryon/common/scripting/Matchables$NumberBoundCondition
+     197: dup
+     198: aload_3
+     199: invokespecial #69                 // Method tschipp/carryon/common/scripting/Matchables$NumberBoundCondition."<init>":(Ljava/lang/String;)V
+     202: iload         9
+     204: invokestatic  #72                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     207: invokevirtual #78                 // Method tschipp/carryon/common/scripting/Matchables$NumberBoundCondition.matches:(Ljava/lang/Number;)Z
+     210: ireturn
+
+  public final java.lang.String toString();
+    Code:
+       0: aload_0
+       1: invokedynamic #85,  0             // InvokeDynamic #0:toString:(Ltschipp/carryon/common/scripting/Matchables$ScoreboardCondition;)Ljava/lang/String;
+       6: areturn
+
+  public final int hashCode();
+    Code:
+       0: aload_0
+       1: invokedynamic #89,  0             // InvokeDynamic #0:hashCode:(Ltschipp/carryon/common/scripting/Matchables$ScoreboardCondition;)I
+       6: ireturn
+
+  public final boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokedynamic #93,  0             // InvokeDynamic #0:equals:(Ltschipp/carryon/common/scripting/Matchables$ScoreboardCondition;Ljava/lang/Object;)Z
+       7: ireturn
+
+  public java.lang.String cond();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field cond:Ljava/lang/String;
+       4: areturn
+
+  public boolean matches(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #20                 // class net/minecraft/server/level/ServerPlayer
+       5: invokevirtual #82                 // Method matches:(Lnet/minecraft/server/level/ServerPlayer;)Z
+       8: ireturn
+
+  static {};
+    Code:
+       0: getstatic     #97                 // Field com/mojang/serialization/Codec.STRING:Lcom/mojang/serialization/codecs/PrimitiveCodec;
+       3: invokedynamic #103,  0            // InvokeDynamic #1:apply:()Ljava/util/function/Function;
+       8: invokedynamic #107,  0            // InvokeDynamic #2:apply:()Ljava/util/function/Function;
+      13: invokeinterface #108,  3          // InterfaceMethod com/mojang/serialization/codecs/PrimitiveCodec.xmap:(Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+      18: putstatic     #114                // Field CODEC:Lcom/mojang/serialization/Codec;
+      21: new           #8                  // class tschipp/carryon/common/scripting/Matchables$ScoreboardCondition
+      24: dup
+      25: ldc           #45                 // String
+      27: invokespecial #118                // Method "<init>":(Ljava/lang/String;)V
+      30: putstatic     #119                // Field NONE:Ltschipp/carryon/common/scripting/Matchables$ScoreboardCondition;
+      33: return
+}

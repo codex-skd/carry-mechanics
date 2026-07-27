@@ -1,0 +1,87 @@
+Compiled from "BuiltCategory.java"
+public class tschipp.carryon.config.BuiltCategory {
+  public final java.util.List<tschipp.carryon.config.PropertyData> properties;
+
+  public final java.util.List<tschipp.carryon.config.BuiltCategory> categories;
+
+  public final java.lang.String categoryDesc;
+
+  public final java.lang.String category;
+
+  public final java.lang.String translation;
+
+  public tschipp.carryon.config.BuiltCategory(java.lang.String, java.lang.String, java.lang.String);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: new           #7                  // class java/util/ArrayList
+       8: dup
+       9: invokespecial #9                  // Method java/util/ArrayList."<init>":()V
+      12: putfield      #10                 // Field properties:Ljava/util/List;
+      15: aload_0
+      16: new           #7                  // class java/util/ArrayList
+      19: dup
+      20: invokespecial #9                  // Method java/util/ArrayList."<init>":()V
+      23: putfield      #16                 // Field categories:Ljava/util/List;
+      26: aload_0
+      27: aload_1
+      28: putfield      #19                 // Field categoryDesc:Ljava/lang/String;
+      31: aload_0
+      32: aload_2
+      33: putfield      #23                 // Field category:Ljava/lang/String;
+      36: aload_0
+      37: aload_3
+      38: putfield      #26                 // Field translation:Ljava/lang/String;
+      41: return
+
+  public java.util.Optional<tschipp.carryon.config.PropertyData> getProperty(java.lang.String);
+    Code:
+       0: aload_0
+       1: getfield      #10                 // Field properties:Ljava/util/List;
+       4: invokeinterface #29,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       9: astore_2
+      10: aload_2
+      11: invokeinterface #35,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      16: ifeq          48
+      19: aload_2
+      20: invokeinterface #41,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      25: checkcast     #45                 // class tschipp/carryon/config/PropertyData
+      28: astore_3
+      29: aload_3
+      30: invokevirtual #47                 // Method tschipp/carryon/config/PropertyData.getId:()Ljava/lang/String;
+      33: aload_1
+      34: invokevirtual #51                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      37: ifeq          45
+      40: aload_3
+      41: invokestatic  #57                 // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      44: areturn
+      45: goto          10
+      48: invokestatic  #63                 // Method java/util/Optional.empty:()Ljava/util/Optional;
+      51: areturn
+
+  public java.util.Optional<tschipp.carryon.config.BuiltCategory> getCategory(java.lang.String);
+    Code:
+       0: aload_0
+       1: getfield      #16                 // Field categories:Ljava/util/List;
+       4: invokeinterface #29,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       9: astore_2
+      10: aload_2
+      11: invokeinterface #35,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      16: ifeq          48
+      19: aload_2
+      20: invokeinterface #41,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      25: checkcast     #11                 // class tschipp/carryon/config/BuiltCategory
+      28: astore_3
+      29: aload_3
+      30: getfield      #23                 // Field category:Ljava/lang/String;
+      33: aload_1
+      34: invokevirtual #51                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      37: ifeq          45
+      40: aload_3
+      41: invokestatic  #57                 // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      44: areturn
+      45: goto          10
+      48: invokestatic  #63                 // Method java/util/Optional.empty:()Ljava/util/Optional;
+      51: areturn
+}

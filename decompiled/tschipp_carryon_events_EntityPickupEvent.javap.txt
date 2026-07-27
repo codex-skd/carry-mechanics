@@ -1,0 +1,18 @@
+Compiled from "EntityPickupEvent.java"
+public class tschipp.carryon.events.EntityPickupEvent extends net.neoforged.bus.api.Event implements net.neoforged.bus.api.ICancellableEvent {
+  public final net.minecraft.server.level.ServerPlayer player;
+
+  public final net.minecraft.world.entity.Entity target;
+
+  public tschipp.carryon.events.EntityPickupEvent(net.minecraft.server.level.ServerPlayer, net.minecraft.world.entity.Entity);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method net/neoforged/bus/api/Event."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #7                  // Field player:Lnet/minecraft/server/level/ServerPlayer;
+       9: aload_0
+      10: aload_2
+      11: putfield      #13                 // Field target:Lnet/minecraft/world/entity/Entity;
+      14: return
+}

@@ -1,0 +1,265 @@
+Compiled from "ModelOverride.java"
+public class tschipp.carryon.client.modeloverride.ModelOverride {
+  private net.minecraft.commands.arguments.blocks.BlockStateParser$BlockResult parsedBlock;
+
+  private com.mojang.datafixers.util.Either<net.minecraft.world.item.ItemStack, net.minecraft.world.level.block.state.BlockState> renderObject;
+
+  private tschipp.carryon.client.modeloverride.ModelOverride(java.lang.String, net.minecraft.commands.arguments.blocks.BlockStateParser$BlockResult, tschipp.carryon.client.modeloverride.ModelOverride$Type, com.mojang.datafixers.util.Either<net.minecraft.commands.arguments.item.ItemParser$ItemResult, net.minecraft.commands.arguments.blocks.BlockStateParser$BlockResult>);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_2
+       6: putfield      #7                  // Field parsedBlock:Lnet/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult;
+       9: aload         4
+      11: aload_0
+      12: invokedynamic #13,  0             // InvokeDynamic #0:accept:(Ltschipp/carryon/client/modeloverride/ModelOverride;)Ljava/util/function/Consumer;
+      17: invokevirtual #17                 // Method com/mojang/datafixers/util/Either.ifLeft:(Ljava/util/function/Consumer;)Lcom/mojang/datafixers/util/Either;
+      20: pop
+      21: aload         4
+      23: aload_0
+      24: invokedynamic #23,  0             // InvokeDynamic #1:accept:(Ltschipp/carryon/client/modeloverride/ModelOverride;)Ljava/util/function/Consumer;
+      29: invokevirtual #24                 // Method com/mojang/datafixers/util/Either.ifRight:(Ljava/util/function/Consumer;)Lcom/mojang/datafixers/util/Either;
+      32: pop
+      33: return
+
+  public static com.mojang.serialization.DataResult<tschipp.carryon.client.modeloverride.ModelOverride> of(java.lang.String, net.minecraft.core.HolderLookup$Provider);
+    Code:
+       0: aload_0
+       1: ldc           #27                 // String ->
+       3: invokevirtual #29                 // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+       6: ifne          19
+       9: aload_0
+      10: invokedynamic #35,  0             // InvokeDynamic #2:get:(Ljava/lang/String;)Ljava/util/function/Supplier;
+      15: invokestatic  #39                 // InterfaceMethod com/mojang/serialization/DataResult.error:(Ljava/util/function/Supplier;)Lcom/mojang/serialization/DataResult;
+      18: areturn
+      19: aload_0
+      20: ldc           #27                 // String ->
+      22: invokevirtual #45                 // Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+      25: astore_2
+      26: aload_2
+      27: iconst_0
+      28: aaload
+      29: astore_3
+      30: aload_2
+      31: iconst_1
+      32: aaload
+      33: astore        4
+      35: getstatic     #49                 // Field net/minecraft/core/registries/BuiltInRegistries.BLOCK:Lnet/minecraft/core/DefaultedRegistry;
+      38: aload_3
+      39: iconst_1
+      40: invokestatic  #55                 // Method net/minecraft/commands/arguments/blocks/BlockStateParser.parseForBlock:(Lnet/minecraft/core/HolderLookup;Ljava/lang/String;Z)Lnet/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult;
+      43: astore        5
+      45: goto          62
+      48: astore        6
+      50: aload_3
+      51: aload         6
+      53: invokedynamic #63,  0             // InvokeDynamic #3:get:(Ljava/lang/String;Ljava/lang/Exception;)Ljava/util/function/Supplier;
+      58: invokestatic  #39                 // InterfaceMethod com/mojang/serialization/DataResult.error:(Ljava/util/function/Supplier;)Lcom/mojang/serialization/DataResult;
+      61: areturn
+      62: getstatic     #66                 // Field tschipp/carryon/client/modeloverride/ModelOverride$Type.ITEM:Ltschipp/carryon/client/modeloverride/ModelOverride$Type;
+      65: astore        6
+      67: aload         4
+      69: ldc           #72                 // String (
+      71: invokevirtual #29                 // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+      74: ifeq          141
+      77: aload         4
+      79: ldc           #74                 // String )
+      81: invokevirtual #29                 // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+      84: ifeq          141
+      87: aload         4
+      89: aload         4
+      91: ldc           #72                 // String (
+      93: invokevirtual #76                 // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+      96: iconst_1
+      97: iadd
+      98: aload         4
+     100: ldc           #74                 // String )
+     102: invokevirtual #76                 // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+     105: invokevirtual #80                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+     108: astore        7
+     110: aload         7
+     112: ldc           #84                 // String block
+     114: invokevirtual #86                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     117: ifeq          125
+     120: getstatic     #90                 // Field tschipp/carryon/client/modeloverride/ModelOverride$Type.BLOCK:Ltschipp/carryon/client/modeloverride/ModelOverride$Type;
+     123: astore        6
+     125: aload         4
+     127: aload         4
+     129: ldc           #74                 // String )
+     131: invokevirtual #76                 // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+     134: iconst_1
+     135: iadd
+     136: invokevirtual #92                 // Method java/lang/String.substring:(I)Ljava/lang/String;
+     139: astore        4
+     141: aload         6
+     143: getstatic     #66                 // Field tschipp/carryon/client/modeloverride/ModelOverride$Type.ITEM:Ltschipp/carryon/client/modeloverride/ModelOverride$Type;
+     146: if_acmpne     177
+     149: new           #95                 // class net/minecraft/commands/arguments/item/ItemParser
+     152: dup
+     153: aload_1
+     154: invokespecial #97                 // Method net/minecraft/commands/arguments/item/ItemParser."<init>":(Lnet/minecraft/core/HolderLookup$Provider;)V
+     157: new           #100                // class com/mojang/brigadier/StringReader
+     160: dup
+     161: aload         4
+     163: invokespecial #102                // Method com/mojang/brigadier/StringReader."<init>":(Ljava/lang/String;)V
+     166: invokevirtual #105                // Method net/minecraft/commands/arguments/item/ItemParser.parse:(Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/commands/arguments/item/ItemParser$ItemResult;
+     169: invokestatic  #109                // Method com/mojang/datafixers/util/Either.left:(Ljava/lang/Object;)Lcom/mojang/datafixers/util/Either;
+     172: astore        7
+     174: goto          191
+     177: getstatic     #49                 // Field net/minecraft/core/registries/BuiltInRegistries.BLOCK:Lnet/minecraft/core/DefaultedRegistry;
+     180: aload         4
+     182: iconst_1
+     183: invokestatic  #55                 // Method net/minecraft/commands/arguments/blocks/BlockStateParser.parseForBlock:(Lnet/minecraft/core/HolderLookup;Ljava/lang/String;Z)Lnet/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult;
+     186: invokestatic  #113                // Method com/mojang/datafixers/util/Either.right:(Ljava/lang/Object;)Lcom/mojang/datafixers/util/Either;
+     189: astore        7
+     191: goto          213
+     194: astore        8
+     196: aload         4
+     198: astore        9
+     200: aload         9
+     202: aload         8
+     204: invokedynamic #118,  0            // InvokeDynamic #4:get:(Ljava/lang/String;Lcom/mojang/brigadier/exceptions/CommandSyntaxException;)Ljava/util/function/Supplier;
+     209: invokestatic  #39                 // InterfaceMethod com/mojang/serialization/DataResult.error:(Ljava/util/function/Supplier;)Lcom/mojang/serialization/DataResult;
+     212: areturn
+     213: new           #8                  // class tschipp/carryon/client/modeloverride/ModelOverride
+     216: dup
+     217: aload_0
+     218: aload         5
+     220: aload         6
+     222: aload         7
+     224: invokespecial #121                // Method "<init>":(Ljava/lang/String;Lnet/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult;Ltschipp/carryon/client/modeloverride/ModelOverride$Type;Lcom/mojang/datafixers/util/Either;)V
+     227: invokestatic  #124                // InterfaceMethod com/mojang/serialization/DataResult.success:(Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+     230: areturn
+    Exception table:
+       from    to  target type
+          35    45    48   Class java/lang/Exception
+         141   191   194   Class com/mojang/brigadier/exceptions/CommandSyntaxException
+
+  public boolean matches(net.minecraft.world.level.block.state.BlockState, net.minecraft.nbt.CompoundTag);
+    Code:
+       0: aload_1
+       1: invokevirtual #128                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+       4: aload_0
+       5: getfield      #7                  // Field parsedBlock:Lnet/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult;
+       8: invokevirtual #134                // Method net/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult.blockState:()Lnet/minecraft/world/level/block/state/BlockState;
+      11: invokevirtual #128                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+      14: if_acmpne     69
+      17: aload_0
+      18: aload_1
+      19: aload_0
+      20: getfield      #7                  // Field parsedBlock:Lnet/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult;
+      23: invokevirtual #140                // Method net/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult.properties:()Ljava/util/Map;
+      26: invokevirtual #144                // Method matchesProperties:(Lnet/minecraft/world/level/block/state/BlockState;Ljava/util/Map;)Z
+      29: ifeq          69
+      32: aload_2
+      33: ifnull        46
+      36: aload_0
+      37: getfield      #7                  // Field parsedBlock:Lnet/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult;
+      40: invokevirtual #148                // Method net/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult.nbt:()Lnet/minecraft/nbt/CompoundTag;
+      43: ifnonnull     48
+      46: iconst_1
+      47: ireturn
+      48: new           #152                // class tschipp/carryon/common/scripting/Matchables$NBTCondition
+      51: dup
+      52: aload_0
+      53: getfield      #7                  // Field parsedBlock:Lnet/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult;
+      56: invokevirtual #148                // Method net/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult.nbt:()Lnet/minecraft/nbt/CompoundTag;
+      59: invokespecial #154                // Method tschipp/carryon/common/scripting/Matchables$NBTCondition."<init>":(Lnet/minecraft/nbt/CompoundTag;)V
+      62: astore_3
+      63: aload_3
+      64: aload_2
+      65: invokevirtual #157                // Method tschipp/carryon/common/scripting/Matchables$NBTCondition.matches:(Lnet/minecraft/nbt/CompoundTag;)Z
+      68: ireturn
+      69: iconst_0
+      70: ireturn
+
+  public com.mojang.datafixers.util.Either<net.minecraft.world.item.ItemStack, net.minecraft.world.level.block.state.BlockState> getRenderObject();
+    Code:
+       0: aload_0
+       1: getfield      #161                // Field renderObject:Lcom/mojang/datafixers/util/Either;
+       4: areturn
+
+  private boolean matchesProperties(net.minecraft.world.level.block.state.BlockState, java.util.Map<net.minecraft.world.level.block.state.properties.Property<?>, java.lang.Comparable<?>>);
+    Code:
+       0: aload_2
+       1: invokeinterface #165,  1          // InterfaceMethod java/util/Map.entrySet:()Ljava/util/Set;
+       6: invokeinterface #171,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+      11: astore_3
+      12: aload_3
+      13: invokeinterface #177,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      18: ifeq          65
+      21: aload_3
+      22: invokeinterface #183,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      27: checkcast     #187                // class java/util/Map$Entry
+      30: astore        4
+      32: aload_1
+      33: aload         4
+      35: invokeinterface #189,  1          // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+      40: checkcast     #192                // class net/minecraft/world/level/block/state/properties/Property
+      43: invokevirtual #194                // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+      46: astore        5
+      48: aload         5
+      50: aload         4
+      52: invokeinterface #198,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+      57: if_acmpeq     62
+      60: iconst_0
+      61: ireturn
+      62: goto          12
+      65: iconst_1
+      66: ireturn
+
+  private static java.lang.String lambda$of$4(java.lang.String, com.mojang.brigadier.exceptions.CommandSyntaxException);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #200                // Method com/mojang/brigadier/exceptions/CommandSyntaxException.getMessage:()Ljava/lang/String;
+       5: invokedynamic #204,  0            // InvokeDynamic #5:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      10: areturn
+
+  private static java.lang.String lambda$of$3(java.lang.String, java.lang.Exception);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #208                // Method java/lang/Exception.getMessage:()Ljava/lang/String;
+       5: invokedynamic #204,  0            // InvokeDynamic #5:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      10: areturn
+
+  private static java.lang.String lambda$of$2(java.lang.String);
+    Code:
+       0: aload_0
+       1: invokedynamic #209,  0            // InvokeDynamic #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       6: areturn
+
+  private void lambda$new$1(net.minecraft.commands.arguments.blocks.BlockStateParser$BlockResult);
+    Code:
+       0: aload_1
+       1: invokevirtual #134                // Method net/minecraft/commands/arguments/blocks/BlockStateParser$BlockResult.blockState:()Lnet/minecraft/world/level/block/state/BlockState;
+       4: astore_2
+       5: aload_0
+       6: aload_2
+       7: invokestatic  #113                // Method com/mojang/datafixers/util/Either.right:(Ljava/lang/Object;)Lcom/mojang/datafixers/util/Either;
+      10: putfield      #161                // Field renderObject:Lcom/mojang/datafixers/util/Either;
+      13: return
+
+  private void lambda$new$0(net.minecraft.commands.arguments.item.ItemParser$ItemResult);
+    Code:
+       0: new           #212                // class net/minecraft/world/item/ItemStack
+       3: dup
+       4: aload_1
+       5: invokevirtual #214                // Method net/minecraft/commands/arguments/item/ItemParser$ItemResult.item:()Lnet/minecraft/core/Holder;
+       8: invokespecial #220                // Method net/minecraft/world/item/ItemStack."<init>":(Lnet/minecraft/core/Holder;)V
+      11: astore_2
+      12: aload_1
+      13: invokevirtual #223                // Method net/minecraft/commands/arguments/item/ItemParser$ItemResult.components:()Lnet/minecraft/core/component/DataComponentPatch;
+      16: ifnull        27
+      19: aload_2
+      20: aload_1
+      21: invokevirtual #223                // Method net/minecraft/commands/arguments/item/ItemParser$ItemResult.components:()Lnet/minecraft/core/component/DataComponentPatch;
+      24: invokevirtual #227                // Method net/minecraft/world/item/ItemStack.applyComponents:(Lnet/minecraft/core/component/DataComponentPatch;)V
+      27: aload_0
+      28: aload_2
+      29: invokestatic  #109                // Method com/mojang/datafixers/util/Either.left:(Ljava/lang/Object;)Lcom/mojang/datafixers/util/Either;
+      32: putfield      #161                // Field renderObject:Lcom/mojang/datafixers/util/Either;
+      35: return
+}

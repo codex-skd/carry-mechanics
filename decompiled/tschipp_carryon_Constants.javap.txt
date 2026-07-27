@@ -1,0 +1,63 @@
+Compiled from "Constants.java"
+public class tschipp.carryon.Constants {
+  public static final java.lang.String MOD_ID = "carryon";
+
+  public static final java.lang.String MOD_NAME = "Carry On";
+
+  public static final org.slf4j.Logger LOG;
+
+  public static final tschipp.carryon.common.config.CarryConfig$Common COMMON_CONFIG;
+
+  public static final tschipp.carryon.common.config.CarryConfig$Client CLIENT_CONFIG;
+
+  public static final net.minecraft.resources.Identifier PACKET_ID_KEY_PRESSED;
+
+  public static final net.minecraft.resources.Identifier PACKET_ID_START_RIDING;
+
+  public static final net.minecraft.resources.Identifier PACKET_ID_SYNC_SCRIPTS;
+
+  public static final net.minecraft.resources.Identifier PACKET_ID_START_RIDING_OTHER;
+
+  public static final net.minecraft.resources.Identifier PACKET_ID_SYNC_CARRY_ON_DATA;
+
+  public tschipp.carryon.Constants();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  static {};
+    Code:
+       0: ldc           #9                  // String Carry On
+       2: invokestatic  #11                 // Method org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+       5: putstatic     #17                 // Field LOG:Lorg/slf4j/Logger;
+       8: new           #21                 // class tschipp/carryon/common/config/CarryConfig$Common
+      11: dup
+      12: invokespecial #23                 // Method tschipp/carryon/common/config/CarryConfig$Common."<init>":()V
+      15: putstatic     #24                 // Field COMMON_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Common;
+      18: new           #28                 // class tschipp/carryon/common/config/CarryConfig$Client
+      21: dup
+      22: invokespecial #30                 // Method tschipp/carryon/common/config/CarryConfig$Client."<init>":()V
+      25: putstatic     #31                 // Field CLIENT_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Client;
+      28: ldc           #35                 // String carryon
+      30: ldc           #37                 // String key_pressed
+      32: invokestatic  #39                 // Method net/minecraft/resources/Identifier.fromNamespaceAndPath:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/Identifier;
+      35: putstatic     #45                 // Field PACKET_ID_KEY_PRESSED:Lnet/minecraft/resources/Identifier;
+      38: ldc           #35                 // String carryon
+      40: ldc           #49                 // String start_riding
+      42: invokestatic  #39                 // Method net/minecraft/resources/Identifier.fromNamespaceAndPath:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/Identifier;
+      45: putstatic     #51                 // Field PACKET_ID_START_RIDING:Lnet/minecraft/resources/Identifier;
+      48: ldc           #35                 // String carryon
+      50: ldc           #54                 // String sync_scripts
+      52: invokestatic  #39                 // Method net/minecraft/resources/Identifier.fromNamespaceAndPath:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/Identifier;
+      55: putstatic     #56                 // Field PACKET_ID_SYNC_SCRIPTS:Lnet/minecraft/resources/Identifier;
+      58: ldc           #35                 // String carryon
+      60: ldc           #59                 // String start_riding_other
+      62: invokestatic  #39                 // Method net/minecraft/resources/Identifier.fromNamespaceAndPath:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/Identifier;
+      65: putstatic     #61                 // Field PACKET_ID_START_RIDING_OTHER:Lnet/minecraft/resources/Identifier;
+      68: ldc           #35                 // String carryon
+      70: ldc           #64                 // String sync_carry_data
+      72: invokestatic  #39                 // Method net/minecraft/resources/Identifier.fromNamespaceAndPath:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/Identifier;
+      75: putstatic     #66                 // Field PACKET_ID_SYNC_CARRY_ON_DATA:Lnet/minecraft/resources/Identifier;
+      78: return
+}

@@ -1,0 +1,244 @@
+Compiled from "CarryOnScript.java"
+public final class tschipp.carryon.common.scripting.CarryOnScript extends java.lang.Record {
+  private final long priority;
+
+  private final tschipp.carryon.common.scripting.CarryOnScript$ScriptObject scriptObject;
+
+  private final tschipp.carryon.common.scripting.CarryOnScript$ScriptConditions scriptConditions;
+
+  private final tschipp.carryon.common.scripting.CarryOnScript$ScriptRender scriptRender;
+
+  private final tschipp.carryon.common.scripting.CarryOnScript$ScriptEffects scriptEffects;
+
+  public static final com.mojang.serialization.Codec<tschipp.carryon.common.scripting.CarryOnScript> CODEC;
+
+  public tschipp.carryon.common.scripting.CarryOnScript(long, tschipp.carryon.common.scripting.CarryOnScript$ScriptObject, tschipp.carryon.common.scripting.CarryOnScript$ScriptConditions, tschipp.carryon.common.scripting.CarryOnScript$ScriptRender, tschipp.carryon.common.scripting.CarryOnScript$ScriptEffects);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Record."<init>":()V
+       4: aload_0
+       5: lload_1
+       6: putfield      #7                  // Field priority:J
+       9: aload_0
+      10: aload_3
+      11: putfield      #13                 // Field scriptObject:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject;
+      14: aload_0
+      15: aload         4
+      17: putfield      #17                 // Field scriptConditions:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptConditions;
+      20: aload_0
+      21: aload         5
+      23: putfield      #21                 // Field scriptRender:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+      26: aload_0
+      27: aload         6
+      29: putfield      #25                 // Field scriptEffects:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptEffects;
+      32: return
+
+  public boolean isValid();
+    Code:
+       0: aload_0
+       1: invokevirtual #29                 // Method isBlock:()Z
+       4: aload_0
+       5: invokevirtual #33                 // Method isEntity:()Z
+       8: ixor
+       9: ifeq          46
+      12: aload_0
+      13: getfield      #17                 // Field scriptConditions:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptConditions;
+      16: getstatic     #36                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptConditions;
+      19: if_acmpne     42
+      22: aload_0
+      23: getfield      #21                 // Field scriptRender:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+      26: getstatic     #41                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+      29: if_acmpne     42
+      32: aload_0
+      33: getfield      #25                 // Field scriptEffects:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptEffects;
+      36: getstatic     #45                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptEffects.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptEffects;
+      39: if_acmpeq     46
+      42: iconst_1
+      43: goto          47
+      46: iconst_0
+      47: ireturn
+
+  public boolean isBlock();
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field scriptObject:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject;
+       4: invokevirtual #49                 // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject.block:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock;
+       7: getstatic     #55                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock;
+      10: if_acmpeq     17
+      13: iconst_1
+      14: goto          18
+      17: iconst_0
+      18: ireturn
+
+  public boolean isEntity();
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field scriptObject:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject;
+       4: invokevirtual #60                 // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject.entity:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity;
+       7: getstatic     #64                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity;
+      10: if_acmpeq     17
+      13: iconst_1
+      14: goto          18
+      17: iconst_0
+      18: ireturn
+
+  public boolean fulfillsConditions(net.minecraft.server.level.ServerPlayer);
+    Code:
+       0: aload_0
+       1: invokevirtual #69                 // Method scriptConditions:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptConditions;
+       4: astore_2
+       5: aload_2
+       6: getfield      #72                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.conditionAchievement:Ltschipp/carryon/common/scripting/Matchables$AdvancementCondition;
+       9: aload_1
+      10: invokevirtual #76                 // Method tschipp/carryon/common/scripting/Matchables$AdvancementCondition.matches:(Lnet/minecraft/server/level/ServerPlayer;)Z
+      13: istore_3
+      14: aload_2
+      15: getfield      #82                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.conditionGamemode:Ltschipp/carryon/common/scripting/Matchables$NumberBoundCondition;
+      18: aload_1
+      19: getfield      #86                 // Field net/minecraft/server/level/ServerPlayer.gameMode:Lnet/minecraft/server/level/ServerPlayerGameMode;
+      22: invokevirtual #92                 // Method net/minecraft/server/level/ServerPlayerGameMode.getGameModeForPlayer:()Lnet/minecraft/world/level/GameType;
+      25: invokevirtual #98                 // Method net/minecraft/world/level/GameType.getId:()I
+      28: invokestatic  #104                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      31: invokevirtual #110                // Method tschipp/carryon/common/scripting/Matchables$NumberBoundCondition.matches:(Ljava/lang/Number;)Z
+      34: istore        4
+      36: aload_2
+      37: getfield      #115                // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.conditionGamestage:Ltschipp/carryon/common/scripting/Matchables$GamestageCondition;
+      40: aload_1
+      41: invokevirtual #119                // Method tschipp/carryon/common/scripting/Matchables$GamestageCondition.matches:(Lnet/minecraft/server/level/ServerPlayer;)Z
+      44: istore        5
+      46: aload_2
+      47: getfield      #122                // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.conditionPosition:Ltschipp/carryon/common/scripting/Matchables$PositionCondition;
+      50: aload_1
+      51: invokevirtual #126                // Method tschipp/carryon/common/scripting/Matchables$PositionCondition.matches:(Lnet/minecraft/server/level/ServerPlayer;)Z
+      54: istore        6
+      56: aload_2
+      57: getfield      #129                // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.conditionXp:Ltschipp/carryon/common/scripting/Matchables$NumberBoundCondition;
+      60: aload_1
+      61: getfield      #132                // Field net/minecraft/server/level/ServerPlayer.experienceLevel:I
+      64: invokestatic  #104                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      67: invokevirtual #110                // Method tschipp/carryon/common/scripting/Matchables$NumberBoundCondition.matches:(Ljava/lang/Number;)Z
+      70: istore        7
+      72: aload_2
+      73: getfield      #136                // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.conditionScoreboard:Ltschipp/carryon/common/scripting/Matchables$ScoreboardCondition;
+      76: aload_1
+      77: invokevirtual #140                // Method tschipp/carryon/common/scripting/Matchables$ScoreboardCondition.matches:(Lnet/minecraft/server/level/ServerPlayer;)Z
+      80: istore        8
+      82: aload_2
+      83: getfield      #143                // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.conditionEffects:Ltschipp/carryon/common/scripting/Matchables$EffectsCondition;
+      86: aload_1
+      87: invokevirtual #147                // Method tschipp/carryon/common/scripting/Matchables$EffectsCondition.matches:(Lnet/minecraft/server/level/ServerPlayer;)Z
+      90: istore        9
+      92: iload_3
+      93: ifeq          130
+      96: iload         4
+      98: ifeq          130
+     101: iload         5
+     103: ifeq          130
+     106: iload         6
+     108: ifeq          130
+     111: iload         7
+     113: ifeq          130
+     116: iload         8
+     118: ifeq          130
+     121: iload         9
+     123: ifeq          130
+     126: iconst_1
+     127: goto          131
+     130: iconst_0
+     131: ireturn
+
+  public final java.lang.String toString();
+    Code:
+       0: aload_0
+       1: invokedynamic #216,  0            // InvokeDynamic #6:toString:(Ltschipp/carryon/common/scripting/CarryOnScript;)Ljava/lang/String;
+       6: areturn
+
+  public final int hashCode();
+    Code:
+       0: aload_0
+       1: invokedynamic #220,  0            // InvokeDynamic #6:hashCode:(Ltschipp/carryon/common/scripting/CarryOnScript;)I
+       6: ireturn
+
+  public final boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokedynamic #224,  0            // InvokeDynamic #6:equals:(Ltschipp/carryon/common/scripting/CarryOnScript;Ljava/lang/Object;)Z
+       7: ireturn
+
+  public long priority();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field priority:J
+       4: lreturn
+
+  public tschipp.carryon.common.scripting.CarryOnScript$ScriptObject scriptObject();
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field scriptObject:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject;
+       4: areturn
+
+  public tschipp.carryon.common.scripting.CarryOnScript$ScriptConditions scriptConditions();
+    Code:
+       0: aload_0
+       1: getfield      #17                 // Field scriptConditions:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptConditions;
+       4: areturn
+
+  public tschipp.carryon.common.scripting.CarryOnScript$ScriptRender scriptRender();
+    Code:
+       0: aload_0
+       1: getfield      #21                 // Field scriptRender:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+       4: areturn
+
+  public tschipp.carryon.common.scripting.CarryOnScript$ScriptEffects scriptEffects();
+    Code:
+       0: aload_0
+       1: getfield      #25                 // Field scriptEffects:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptEffects;
+       4: areturn
+
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+    Code:
+       0: aload_0
+       1: getstatic     #150                // Field com/mojang/serialization/Codec.LONG:Lcom/mojang/serialization/codecs/PrimitiveCodec;
+       4: ldc           #156                // String priority
+       6: lconst_0
+       7: invokestatic  #157                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+      10: invokeinterface #162,  3          // InterfaceMethod com/mojang/serialization/codecs/PrimitiveCodec.optionalFieldOf:(Ljava/lang/String;Ljava/lang/Object;)Lcom/mojang/serialization/MapCodec;
+      15: invokedynamic #168,  0            // InvokeDynamic #0:apply:()Ljava/util/function/Function;
+      20: invokevirtual #172                // Method com/mojang/serialization/MapCodec.forGetter:(Ljava/util/function/Function;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
+      23: getstatic     #178                // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptObject.CODEC:Lcom/mojang/serialization/Codec;
+      26: ldc           #182                // String object
+      28: invokeinterface #184,  2          // InterfaceMethod com/mojang/serialization/Codec.fieldOf:(Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+      33: invokedynamic #188,  0            // InvokeDynamic #1:apply:()Ljava/util/function/Function;
+      38: invokevirtual #172                // Method com/mojang/serialization/MapCodec.forGetter:(Ljava/util/function/Function;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
+      41: getstatic     #189                // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.CODEC:Lcom/mojang/serialization/Codec;
+      44: ldc           #190                // String conditions
+      46: getstatic     #36                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptConditions.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptConditions;
+      49: invokeinterface #192,  3          // InterfaceMethod com/mojang/serialization/Codec.optionalFieldOf:(Ljava/lang/String;Ljava/lang/Object;)Lcom/mojang/serialization/MapCodec;
+      54: invokedynamic #193,  0            // InvokeDynamic #2:apply:()Ljava/util/function/Function;
+      59: invokevirtual #172                // Method com/mojang/serialization/MapCodec.forGetter:(Ljava/util/function/Function;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
+      62: getstatic     #194                // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.CODEC:Lcom/mojang/serialization/Codec;
+      65: ldc           #195                // String render
+      67: getstatic     #41                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+      70: invokeinterface #192,  3          // InterfaceMethod com/mojang/serialization/Codec.optionalFieldOf:(Ljava/lang/String;Ljava/lang/Object;)Lcom/mojang/serialization/MapCodec;
+      75: invokedynamic #197,  0            // InvokeDynamic #3:apply:()Ljava/util/function/Function;
+      80: invokevirtual #172                // Method com/mojang/serialization/MapCodec.forGetter:(Ljava/util/function/Function;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
+      83: getstatic     #198                // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptEffects.CODEC:Lcom/mojang/serialization/Codec;
+      86: ldc           #199                // String effects
+      88: getstatic     #45                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptEffects.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptEffects;
+      91: invokeinterface #192,  3          // InterfaceMethod com/mojang/serialization/Codec.optionalFieldOf:(Ljava/lang/String;Ljava/lang/Object;)Lcom/mojang/serialization/MapCodec;
+      96: invokedynamic #201,  0            // InvokeDynamic #4:apply:()Ljava/util/function/Function;
+     101: invokevirtual #172                // Method com/mojang/serialization/MapCodec.forGetter:(Ljava/util/function/Function;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
+     104: invokevirtual #202                // Method com/mojang/serialization/codecs/RecordCodecBuilder$Instance.group:(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P5;
+     107: aload_0
+     108: invokedynamic #208,  0            // InvokeDynamic #5:apply:()Lcom/mojang/datafixers/util/Function5;
+     113: invokevirtual #211                // Method com/mojang/datafixers/Products$P5.apply:(Lcom/mojang/datafixers/kinds/Applicative;Lcom/mojang/datafixers/util/Function5;)Lcom/mojang/datafixers/kinds/App;
+     116: areturn
+
+  static {};
+    Code:
+       0: invokedynamic #228,  0            // InvokeDynamic #7:apply:()Ljava/util/function/Function;
+       5: invokestatic  #229                // Method com/mojang/serialization/codecs/RecordCodecBuilder.create:(Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+       8: putstatic     #235                // Field CODEC:Lcom/mojang/serialization/Codec;
+      11: return
+}

@@ -1,0 +1,62 @@
+Compiled from "PlayerRenderStateMixin.java"
+public class tschipp.carryon.mixin.PlayerRenderStateMixin implements tschipp.carryon.client.render.ICarryOnRenderState {
+  public tschipp.carryon.common.carry.CarryOnData carryOnData;
+
+  public float renderWidth;
+
+  public net.minecraft.world.entity.player.Player player;
+
+  public tschipp.carryon.mixin.PlayerRenderStateMixin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aconst_null
+       6: putfield      #7                  // Field carryOnData:Ltschipp/carryon/common/carry/CarryOnData;
+       9: aload_0
+      10: fconst_0
+      11: putfield      #13                 // Field renderWidth:F
+      14: aload_0
+      15: aconst_null
+      16: putfield      #17                 // Field player:Lnet/minecraft/world/entity/player/Player;
+      19: return
+
+  public tschipp.carryon.common.carry.CarryOnData getCarryOnData();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field carryOnData:Ltschipp/carryon/common/carry/CarryOnData;
+       4: areturn
+
+  public void setCarryOnData(tschipp.carryon.common.carry.CarryOnData);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #7                  // Field carryOnData:Ltschipp/carryon/common/carry/CarryOnData;
+       5: return
+
+  public float getRenderWidth();
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field renderWidth:F
+       4: freturn
+
+  public void setRenderWidth(float);
+    Code:
+       0: aload_0
+       1: fload_1
+       2: putfield      #13                 // Field renderWidth:F
+       5: return
+
+  public net.minecraft.world.entity.player.Player getPlayer();
+    Code:
+       0: aload_0
+       1: getfield      #17                 // Field player:Lnet/minecraft/world/entity/player/Player;
+       4: areturn
+
+  public void setPlayer(net.minecraft.world.entity.player.Player);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #17                 // Field player:Lnet/minecraft/world/entity/player/Player;
+       5: return
+}

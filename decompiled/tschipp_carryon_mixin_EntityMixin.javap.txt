@@ -1,0 +1,206 @@
+Compiled from "EntityMixin.java"
+public abstract class tschipp.carryon.mixin.EntityMixin {
+  public tschipp.carryon.mixin.EntityMixin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public boolean hasPassenger(net.minecraft.world.entity.Entity);
+    Code:
+       0: new           #7                  // class java/lang/IllegalStateException
+       3: dup
+       4: ldc           #9                  // String EntityMixin application failed
+       6: invokespecial #11                 // Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+       9: athrow
+
+  private boolean onStartRidingCheck(boolean, net.minecraft.world.entity.Entity, boolean);
+    Code:
+       0: iload_3
+       1: ifeq          13
+       4: aload_2
+       5: instanceof    #14                 // class net/minecraft/world/entity/player/Player
+       8: ifeq          13
+      11: iconst_1
+      12: ireturn
+      13: iload_1
+      14: ireturn
+
+  public abstract void onPassengerTurned(net.minecraft.world.entity.Entity);
+
+  private void onPositionPassenger(net.minecraft.world.entity.Entity, net.minecraft.world.entity.Entity$MoveFunction, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    Code:
+       0: aload_0
+       1: astore        6
+       3: aload         6
+       5: instanceof    #14                 // class net/minecraft/world/entity/player/Player
+       8: ifeq          142
+      11: aload         6
+      13: checkcast     #14                 // class net/minecraft/world/entity/player/Player
+      16: astore        4
+      18: aload_1
+      19: instanceof    #14                 // class net/minecraft/world/entity/player/Player
+      22: ifeq          142
+      25: aload_1
+      26: checkcast     #14                 // class net/minecraft/world/entity/player/Player
+      29: astore        5
+      31: aload_0
+      32: aload         5
+      34: invokevirtual #16                 // Method hasPassenger:(Lnet/minecraft/world/entity/Entity;)Z
+      37: ifeq          142
+      40: aload         4
+      42: invokestatic  #22                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+      45: getstatic     #28                 // Field tschipp/carryon/common/carry/CarryOnData$CarryType.PLAYER:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      48: invokevirtual #34                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      51: ifeq          142
+      54: new           #40                 // class net/minecraft/world/phys/Vec3
+      57: dup
+      58: dconst_0
+      59: dconst_0
+      60: ldc2_w        #42                 // double 0.6d
+      63: invokespecial #44                 // Method net/minecraft/world/phys/Vec3."<init>":(DDD)V
+      66: astore        6
+      68: aload         4
+      70: invokevirtual #47                 // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+      73: aload         6
+      75: aload         4
+      77: getfield      #51                 // Field net/minecraft/world/entity/player/Player.yBodyRot:F
+      80: fneg
+      81: f2d
+      82: invokestatic  #55                 // Method java/lang/Math.toRadians:(D)D
+      85: d2f
+      86: invokevirtual #61                 // Method net/minecraft/world/phys/Vec3.yRot:(F)Lnet/minecraft/world/phys/Vec3;
+      89: invokevirtual #65                 // Method net/minecraft/world/phys/Vec3.add:(Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
+      92: astore        7
+      94: aload         7
+      96: dconst_0
+      97: ldc2_w        #69                 // double 0.4d
+     100: dconst_0
+     101: invokevirtual #71                 // Method net/minecraft/world/phys/Vec3.add:(DDD)Lnet/minecraft/world/phys/Vec3;
+     104: astore        7
+     106: aload_2
+     107: aload         5
+     109: aload         7
+     111: getfield      #74                 // Field net/minecraft/world/phys/Vec3.x:D
+     114: aload         7
+     116: getfield      #78                 // Field net/minecraft/world/phys/Vec3.y:D
+     119: aload         7
+     121: getfield      #81                 // Field net/minecraft/world/phys/Vec3.z:D
+     124: invokeinterface #84,  8           // InterfaceMethod net/minecraft/world/entity/Entity$MoveFunction.accept:(Lnet/minecraft/world/entity/Entity;DDD)V
+     129: aload_0
+     130: checkcast     #90                 // class net/minecraft/world/entity/Entity
+     133: aload         5
+     135: invokevirtual #92                 // Method net/minecraft/world/entity/Entity.onPassengerTurned:(Lnet/minecraft/world/entity/Entity;)V
+     138: aload_3
+     139: invokevirtual #96                 // Method org/spongepowered/asm/mixin/injection/callback/CallbackInfo.cancel:()V
+     142: return
+
+  private void onDismountPassenger(net.minecraft.world.entity.LivingEntity, org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable<net.minecraft.world.phys.Vec3>);
+    Code:
+       0: aload_0
+       1: astore        5
+       3: aload         5
+       5: instanceof    #14                 // class net/minecraft/world/entity/player/Player
+       8: ifeq          86
+      11: aload         5
+      13: checkcast     #14                 // class net/minecraft/world/entity/player/Player
+      16: astore_3
+      17: aload_1
+      18: instanceof    #14                 // class net/minecraft/world/entity/player/Player
+      21: ifeq          86
+      24: aload_1
+      25: checkcast     #14                 // class net/minecraft/world/entity/player/Player
+      28: astore        4
+      30: aload_3
+      31: invokestatic  #22                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+      34: astore        5
+      36: aload         5
+      38: getstatic     #28                 // Field tschipp/carryon/common/carry/CarryOnData$CarryType.PLAYER:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      41: invokevirtual #34                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      44: ifeq          86
+      47: aload         5
+      49: invokevirtual #101                // Method tschipp/carryon/common/carry/CarryOnData.clear:()V
+      52: aload_3
+      53: aload         5
+      55: invokestatic  #104                // Method tschipp/carryon/common/carry/CarryOnDataManager.setCarryData:(Lnet/minecraft/world/entity/player/Player;Ltschipp/carryon/common/carry/CarryOnData;)V
+      58: getstatic     #108                // Field tschipp/carryon/platform/Services.PLATFORM:Ltschipp/carryon/platform/services/IPlatformHelper;
+      61: getstatic     #114                // Field tschipp/carryon/Constants.PACKET_ID_START_RIDING:Lnet/minecraft/resources/Identifier;
+      64: new           #120                // class tschipp/carryon/networking/clientbound/ClientboundStartRidingPacket
+      67: dup
+      68: aload         4
+      70: invokevirtual #122                // Method net/minecraft/world/entity/player/Player.getId:()I
+      73: iconst_0
+      74: invokespecial #126                // Method tschipp/carryon/networking/clientbound/ClientboundStartRidingPacket."<init>":(IZ)V
+      77: aload_3
+      78: checkcast     #129                // class net/minecraft/server/level/ServerPlayer
+      81: invokeinterface #131,  4          // InterfaceMethod tschipp/carryon/platform/services/IPlatformHelper.sendPacketToPlayer:(Lnet/minecraft/resources/Identifier;Ltschipp/carryon/networking/PacketBase;Lnet/minecraft/server/level/ServerPlayer;)V
+      86: return
+
+  private void onPassengerTurned(net.minecraft.world.entity.Entity, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    Code:
+       0: aload_0
+       1: astore        4
+       3: aload         4
+       5: instanceof    #14                 // class net/minecraft/world/entity/player/Player
+       8: ifeq          46
+      11: aload         4
+      13: checkcast     #14                 // class net/minecraft/world/entity/player/Player
+      16: astore_3
+      17: aload_1
+      18: instanceof    #14                 // class net/minecraft/world/entity/player/Player
+      21: ifeq          46
+      24: aload_3
+      25: invokestatic  #22                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+      28: astore        4
+      30: aload         4
+      32: getstatic     #28                 // Field tschipp/carryon/common/carry/CarryOnData$CarryType.PLAYER:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      35: invokevirtual #34                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      38: ifeq          46
+      41: aload_0
+      42: aload_1
+      43: invokevirtual #137                // Method clampRotation:(Lnet/minecraft/world/entity/Entity;)V
+      46: return
+
+  private void clampRotation(net.minecraft.world.entity.Entity);
+    Code:
+       0: aload_0
+       1: checkcast     #90                 // class net/minecraft/world/entity/Entity
+       4: astore_2
+       5: aload_1
+       6: aload_2
+       7: invokevirtual #140                // Method net/minecraft/world/entity/Entity.getYRot:()F
+      10: invokevirtual #144                // Method net/minecraft/world/entity/Entity.setYBodyRot:(F)V
+      13: aload_1
+      14: invokevirtual #140                // Method net/minecraft/world/entity/Entity.getYRot:()F
+      17: aload_2
+      18: invokevirtual #140                // Method net/minecraft/world/entity/Entity.getYRot:()F
+      21: fsub
+      22: invokestatic  #148                // Method net/minecraft/util/Mth.wrapDegrees:(F)F
+      25: fstore_3
+      26: fload_3
+      27: ldc           #154                // float -30.0f
+      29: ldc           #155                // float 30.0f
+      31: invokestatic  #156                // Method net/minecraft/util/Mth.clamp:(FFF)F
+      34: fstore        4
+      36: aload_1
+      37: dup
+      38: getfield      #160                // Field net/minecraft/world/entity/Entity.yRotO:F
+      41: fload         4
+      43: fload_3
+      44: fsub
+      45: fadd
+      46: putfield      #160                // Field net/minecraft/world/entity/Entity.yRotO:F
+      49: aload_1
+      50: aload_1
+      51: invokevirtual #140                // Method net/minecraft/world/entity/Entity.getYRot:()F
+      54: fload         4
+      56: fadd
+      57: fload_3
+      58: fsub
+      59: invokevirtual #163                // Method net/minecraft/world/entity/Entity.setYRot:(F)V
+      62: aload_1
+      63: aload_1
+      64: invokevirtual #140                // Method net/minecraft/world/entity/Entity.getYRot:()F
+      67: invokevirtual #166                // Method net/minecraft/world/entity/Entity.setYHeadRot:(F)V
+      70: return
+}

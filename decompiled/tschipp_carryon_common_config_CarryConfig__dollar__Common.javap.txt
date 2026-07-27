@@ -1,0 +1,36 @@
+Compiled from "CarryConfig.java"
+public class tschipp.carryon.common.config.CarryConfig$Common {
+  public tschipp.carryon.common.config.CarryConfig$Common$Settings settings;
+
+  public tschipp.carryon.common.config.CarryConfig$Common$Whitelist whitelist;
+
+  public tschipp.carryon.common.config.CarryConfig$Common$Blacklist blacklist;
+
+  public tschipp.carryon.common.config.CarryConfig$Common$CustomPickupConditions customPickupConditions;
+
+  public tschipp.carryon.common.config.CarryConfig$Common();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: new           #7                  // class tschipp/carryon/common/config/CarryConfig$Common$Settings
+       8: dup
+       9: invokespecial #9                  // Method tschipp/carryon/common/config/CarryConfig$Common$Settings."<init>":()V
+      12: putfield      #10                 // Field settings:Ltschipp/carryon/common/config/CarryConfig$Common$Settings;
+      15: aload_0
+      16: new           #16                 // class tschipp/carryon/common/config/CarryConfig$Common$Whitelist
+      19: dup
+      20: invokespecial #18                 // Method tschipp/carryon/common/config/CarryConfig$Common$Whitelist."<init>":()V
+      23: putfield      #19                 // Field whitelist:Ltschipp/carryon/common/config/CarryConfig$Common$Whitelist;
+      26: aload_0
+      27: new           #23                 // class tschipp/carryon/common/config/CarryConfig$Common$Blacklist
+      30: dup
+      31: invokespecial #25                 // Method tschipp/carryon/common/config/CarryConfig$Common$Blacklist."<init>":()V
+      34: putfield      #26                 // Field blacklist:Ltschipp/carryon/common/config/CarryConfig$Common$Blacklist;
+      37: aload_0
+      38: new           #30                 // class tschipp/carryon/common/config/CarryConfig$Common$CustomPickupConditions
+      41: dup
+      42: invokespecial #32                 // Method tschipp/carryon/common/config/CarryConfig$Common$CustomPickupConditions."<init>":()V
+      45: putfield      #33                 // Field customPickupConditions:Ltschipp/carryon/common/config/CarryConfig$Common$CustomPickupConditions;
+      48: return
+}

@@ -1,0 +1,71 @@
+Compiled from "ClothConfigCompatNeo.java"
+public final class tschipp.carryon.compat.ClothConfigCompatNeo extends java.lang.Record implements net.neoforged.neoforge.client.gui.IConfigScreenFactory {
+  private final tschipp.carryon.config.BuiltConfig client;
+
+  private final tschipp.carryon.config.BuiltConfig common;
+
+  public tschipp.carryon.compat.ClothConfigCompatNeo(tschipp.carryon.config.BuiltConfig, tschipp.carryon.config.BuiltConfig);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Record."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #7                  // Field client:Ltschipp/carryon/config/BuiltConfig;
+       9: aload_0
+      10: aload_2
+      11: putfield      #13                 // Field common:Ltschipp/carryon/config/BuiltConfig;
+      14: return
+
+  public net.minecraft.client.gui.screens.Screen createScreen(net.neoforged.fml.ModContainer, net.minecraft.client.gui.screens.Screen);
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field client:Ltschipp/carryon/config/BuiltConfig;
+       4: aload_0
+       5: getfield      #13                 // Field common:Ltschipp/carryon/config/BuiltConfig;
+       8: aload_2
+       9: aload_0
+      10: invokedynamic #16,  0             // InvokeDynamic #0:run:(Ltschipp/carryon/compat/ClothConfigCompatNeo;)Ljava/lang/Runnable;
+      15: invokestatic  #20                 // Method tschipp/carryon/compat/ClothConfigCompat.getConfigScreen:(Ltschipp/carryon/config/BuiltConfig;Ltschipp/carryon/config/BuiltConfig;Lnet/minecraft/client/gui/screens/Screen;Ljava/lang/Runnable;)Lnet/minecraft/client/gui/screens/Screen;
+      18: areturn
+
+  public final java.lang.String toString();
+    Code:
+       0: aload_0
+       1: invokedynamic #32,  0             // InvokeDynamic #1:toString:(Ltschipp/carryon/compat/ClothConfigCompatNeo;)Ljava/lang/String;
+       6: areturn
+
+  public final int hashCode();
+    Code:
+       0: aload_0
+       1: invokedynamic #36,  0             // InvokeDynamic #1:hashCode:(Ltschipp/carryon/compat/ClothConfigCompatNeo;)I
+       6: ireturn
+
+  public final boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokedynamic #40,  0             // InvokeDynamic #1:equals:(Ltschipp/carryon/compat/ClothConfigCompatNeo;Ljava/lang/Object;)Z
+       7: ireturn
+
+  public tschipp.carryon.config.BuiltConfig client();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field client:Ltschipp/carryon/config/BuiltConfig;
+       4: areturn
+
+  public tschipp.carryon.config.BuiltConfig common();
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field common:Ltschipp/carryon/config/BuiltConfig;
+       4: areturn
+
+  private void lambda$createScreen$0();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field client:Ltschipp/carryon/config/BuiltConfig;
+       4: invokestatic  #26                 // Method tschipp/carryon/config/neoforge/ConfigLoaderImpl.saveConfig:(Ltschipp/carryon/config/BuiltConfig;)V
+       7: aload_0
+       8: getfield      #13                 // Field common:Ltschipp/carryon/config/BuiltConfig;
+      11: invokestatic  #26                 // Method tschipp/carryon/config/neoforge/ConfigLoaderImpl.saveConfig:(Ltschipp/carryon/config/BuiltConfig;)V
+      14: return
+}

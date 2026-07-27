@@ -1,0 +1,22 @@
+Compiled from "AvatarRendererMixin.java"
+public abstract class tschipp.carryon.mixin.AvatarRendererMixin<AvatarlikeEntity extends net.minecraft.world.entity.Avatar & net.minecraft.client.entity.ClientAvatarEntity> extends net.minecraft.client.renderer.entity.LivingEntityRenderer<AvatarlikeEntity, net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.client.model.player.PlayerModel> {
+  public tschipp.carryon.mixin.AvatarRendererMixin(net.minecraft.client.renderer.entity.EntityRendererProvider$Context, net.minecraft.client.model.player.PlayerModel, float);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: fload_3
+       4: invokespecial #1                  // Method net/minecraft/client/renderer/entity/LivingEntityRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/model/EntityModel;F)V
+       7: return
+
+  public void init(net.minecraft.client.renderer.entity.EntityRendererProvider$Context, boolean, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    Code:
+       0: aload_0
+       1: new           #7                  // class tschipp/carryon/client/render/CarryingItemRenderLayer
+       4: dup
+       5: aload_0
+       6: invokespecial #9                  // Method tschipp/carryon/client/render/CarryingItemRenderLayer."<init>":(Lnet/minecraft/client/renderer/entity/RenderLayerParent;)V
+       9: invokevirtual #12                 // Method addLayer:(Lnet/minecraft/client/renderer/entity/layers/RenderLayer;)Z
+      12: pop
+      13: return
+}

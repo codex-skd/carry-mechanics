@@ -1,0 +1,4 @@
+Compiled from "PacketBase.java"
+public interface tschipp.carryon.networking.PacketBase extends net.minecraft.network.protocol.common.custom.CustomPacketPayload {
+  public abstract void handle(net.minecraft.world.entity.player.Player);
+}

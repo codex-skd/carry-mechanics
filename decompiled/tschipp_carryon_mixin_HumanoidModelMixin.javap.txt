@@ -1,0 +1,173 @@
+Compiled from "HumanoidModelMixin.java"
+public class tschipp.carryon.mixin.HumanoidModelMixin {
+  public net.minecraft.client.model.geom.ModelPart rightArm;
+
+  public net.minecraft.client.model.geom.ModelPart leftArm;
+
+  public tschipp.carryon.mixin.HumanoidModelMixin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  private void onSetupAnimations(net.minecraft.client.renderer.entity.state.HumanoidRenderState, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    Code:
+       0: aload_1
+       1: instanceof    #7                  // class tschipp/carryon/client/render/ICarryOnRenderState
+       4: ifeq          301
+       7: aload_1
+       8: checkcast     #7                  // class tschipp/carryon/client/render/ICarryOnRenderState
+      11: astore_3
+      12: getstatic     #9                  // Field tschipp/carryon/Constants.CLIENT_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Client;
+      15: getfield      #15                 // Field tschipp/carryon/common/config/CarryConfig$Client.renderArms:Z
+      18: ifeq          301
+      21: aload_3
+      22: invokeinterface #21,  1           // InterfaceMethod tschipp/carryon/client/render/ICarryOnRenderState.getCarryOnData:()Ltschipp/carryon/common/carry/CarryOnData;
+      27: astore        4
+      29: aload         4
+      31: ifnull        301
+      34: aload         4
+      36: invokevirtual #25                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:()Z
+      39: ifeq          301
+      42: aload_1
+      43: getfield      #31                 // Field net/minecraft/client/renderer/entity/state/HumanoidRenderState.isVisuallySwimming:Z
+      46: ifne          301
+      49: aload_1
+      50: getfield      #36                 // Field net/minecraft/client/renderer/entity/state/HumanoidRenderState.isFallFlying:Z
+      53: ifne          301
+      56: aload_1
+      57: getfield      #39                 // Field net/minecraft/client/renderer/entity/state/HumanoidRenderState.isCrouching:Z
+      60: istore        5
+      62: fconst_1
+      63: iload         5
+      65: ifeq          73
+      68: ldc           #42                 // float 0.2f
+      70: goto          74
+      73: fconst_0
+      74: fadd
+      75: aload         4
+      77: getstatic     #43                 // Field tschipp/carryon/common/carry/CarryOnData$CarryType.BLOCK:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      80: invokevirtual #49                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      83: ifeq          90
+      86: fconst_0
+      87: goto          92
+      90: ldc           #52                 // float 0.3f
+      92: fadd
+      93: fstore        6
+      95: ldc           #53                 // float 0.05f
+      97: fstore        7
+      99: aload_3
+     100: invokeinterface #54,  1           // InterfaceMethod tschipp/carryon/client/render/ICarryOnRenderState.getRenderWidth:()F
+     105: fstore        8
+     107: fload         8
+     109: fconst_1
+     110: fsub
+     111: ldc           #58                 // float 1.5f
+     113: fdiv
+     114: ldc           #42                 // float 0.2f
+     116: invokestatic  #59                 // Method java/lang/Math.min:(FF)F
+     119: fstore        9
+     121: aload         4
+     123: invokevirtual #65                 // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     126: invokevirtual #69                 // Method java/util/Optional.isPresent:()Z
+     129: ifeq          269
+     132: aload         4
+     134: invokevirtual #65                 // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     137: invokevirtual #74                 // Method java/util/Optional.get:()Ljava/lang/Object;
+     140: checkcast     #78                 // class tschipp/carryon/common/scripting/CarryOnScript
+     143: invokevirtual #80                 // Method tschipp/carryon/common/scripting/CarryOnScript.scriptRender:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptRender;
+     146: astore        10
+     148: aload         10
+     150: invokevirtual #84                 // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderLeftArm:()Z
+     153: istore        11
+     155: aload         10
+     157: invokevirtual #89                 // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderRightArm:()Z
+     160: istore        12
+     162: aload         10
+     164: invokevirtual #92                 // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderRotationLeftArm:()Ltschipp/carryon/common/scripting/Matchables$OptionalVec3;
+     167: fload         6
+     169: fneg
+     170: f2d
+     171: fload         9
+     173: fneg
+     174: f2d
+     175: fload         7
+     177: f2d
+     178: invokevirtual #96                 // Method tschipp/carryon/common/scripting/Matchables$OptionalVec3.getVec:(DDD)Lnet/minecraft/world/phys/Vec3;
+     181: astore        13
+     183: aload         10
+     185: invokevirtual #102                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptRender.renderRotationRightArm:()Ltschipp/carryon/common/scripting/Matchables$OptionalVec3;
+     188: fload         6
+     190: fneg
+     191: f2d
+     192: fload         9
+     194: f2d
+     195: fload         7
+     197: fneg
+     198: f2d
+     199: invokevirtual #96                 // Method tschipp/carryon/common/scripting/Matchables$OptionalVec3.getVec:(DDD)Lnet/minecraft/world/phys/Vec3;
+     202: astore        14
+     204: iload         11
+     206: ifeq          235
+     209: aload_0
+     210: aload_0
+     211: getfield      #105                // Field leftArm:Lnet/minecraft/client/model/geom/ModelPart;
+     214: aload         13
+     216: getfield      #111                // Field net/minecraft/world/phys/Vec3.x:D
+     219: d2f
+     220: aload         13
+     222: getfield      #117                // Field net/minecraft/world/phys/Vec3.y:D
+     225: d2f
+     226: aload         13
+     228: getfield      #120                // Field net/minecraft/world/phys/Vec3.z:D
+     231: d2f
+     232: invokevirtual #123                // Method changeRotation:(Lnet/minecraft/client/model/geom/ModelPart;FFF)V
+     235: iload         12
+     237: ifeq          266
+     240: aload_0
+     241: aload_0
+     242: getfield      #127                // Field rightArm:Lnet/minecraft/client/model/geom/ModelPart;
+     245: aload         14
+     247: getfield      #111                // Field net/minecraft/world/phys/Vec3.x:D
+     250: d2f
+     251: aload         14
+     253: getfield      #117                // Field net/minecraft/world/phys/Vec3.y:D
+     256: d2f
+     257: aload         14
+     259: getfield      #120                // Field net/minecraft/world/phys/Vec3.z:D
+     262: d2f
+     263: invokevirtual #123                // Method changeRotation:(Lnet/minecraft/client/model/geom/ModelPart;FFF)V
+     266: goto          301
+     269: aload_0
+     270: aload_0
+     271: getfield      #127                // Field rightArm:Lnet/minecraft/client/model/geom/ModelPart;
+     274: fload         6
+     276: fneg
+     277: fload         9
+     279: fload         7
+     281: fneg
+     282: invokevirtual #123                // Method changeRotation:(Lnet/minecraft/client/model/geom/ModelPart;FFF)V
+     285: aload_0
+     286: aload_0
+     287: getfield      #105                // Field leftArm:Lnet/minecraft/client/model/geom/ModelPart;
+     290: fload         6
+     292: fneg
+     293: fload         9
+     295: fneg
+     296: fload         7
+     298: invokevirtual #123                // Method changeRotation:(Lnet/minecraft/client/model/geom/ModelPart;FFF)V
+     301: return
+
+  private void changeRotation(net.minecraft.client.model.geom.ModelPart, float, float, float);
+    Code:
+       0: aload_1
+       1: fload_2
+       2: putfield      #130                // Field net/minecraft/client/model/geom/ModelPart.xRot:F
+       5: aload_1
+       6: fload_3
+       7: putfield      #136                // Field net/minecraft/client/model/geom/ModelPart.yRot:F
+      10: aload_1
+      11: fload         4
+      13: putfield      #139                // Field net/minecraft/client/model/geom/ModelPart.zRot:F
+      16: return
+}

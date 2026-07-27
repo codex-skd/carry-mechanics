@@ -1,0 +1,8 @@
+Compiled from "CarryConfig.java"
+public class tschipp.carryon.common.config.CarryConfig {
+  public tschipp.carryon.common.config.CarryConfig();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+}

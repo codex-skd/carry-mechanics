@@ -1,0 +1,152 @@
+Compiled from "CarryConfig.java"
+public class tschipp.carryon.common.config.CarryConfig$Common$Settings {
+  public double maxDistance;
+
+  public double maxEntityWidth;
+
+  public double maxEntityHeight;
+
+  public double blockSlownessMultiplier;
+
+  public double entitySlownessMultiplier;
+
+  public int maxEntityStackLimit;
+
+  public boolean heavyTiles;
+
+  public boolean pickupAllBlocks;
+
+  public boolean slownessInCreative;
+
+  public boolean pickupHostileMobs;
+
+  public boolean heavyEntities;
+
+  public boolean allowBabies;
+
+  public boolean useWhitelistBlocks;
+
+  public boolean useWhitelistEntities;
+
+  public boolean useWhitelistStacking;
+
+  public boolean hitWhileCarrying;
+
+  public boolean dropCarriedWhenHit;
+
+  public boolean useScripts;
+
+  public boolean stackableEntities;
+
+  public boolean entitySizeMattersStacking;
+
+  public java.lang.String[] placementStateExceptions;
+
+  public boolean pickupPlayers;
+
+  public boolean pickupUnbreakableBlocks;
+
+  public tschipp.carryon.common.config.CarryConfig$Common$Settings();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: ldc2_w        #7                  // double 2.5d
+       8: putfield      #9                  // Field maxDistance:D
+      11: aload_0
+      12: ldc2_w        #15                 // double 1.5d
+      15: putfield      #17                 // Field maxEntityWidth:D
+      18: aload_0
+      19: ldc2_w        #7                  // double 2.5d
+      22: putfield      #20                 // Field maxEntityHeight:D
+      25: aload_0
+      26: dconst_1
+      27: putfield      #23                 // Field blockSlownessMultiplier:D
+      30: aload_0
+      31: dconst_1
+      32: putfield      #26                 // Field entitySlownessMultiplier:D
+      35: aload_0
+      36: bipush        10
+      38: putfield      #29                 // Field maxEntityStackLimit:I
+      41: aload_0
+      42: iconst_1
+      43: putfield      #33                 // Field heavyTiles:Z
+      46: aload_0
+      47: iconst_0
+      48: putfield      #37                 // Field pickupAllBlocks:Z
+      51: aload_0
+      52: iconst_1
+      53: putfield      #40                 // Field slownessInCreative:Z
+      56: aload_0
+      57: iconst_0
+      58: putfield      #43                 // Field pickupHostileMobs:Z
+      61: aload_0
+      62: iconst_1
+      63: putfield      #46                 // Field heavyEntities:Z
+      66: aload_0
+      67: iconst_0
+      68: putfield      #49                 // Field allowBabies:Z
+      71: aload_0
+      72: iconst_0
+      73: putfield      #52                 // Field useWhitelistBlocks:Z
+      76: aload_0
+      77: iconst_0
+      78: putfield      #55                 // Field useWhitelistEntities:Z
+      81: aload_0
+      82: iconst_0
+      83: putfield      #58                 // Field useWhitelistStacking:Z
+      86: aload_0
+      87: iconst_0
+      88: putfield      #61                 // Field hitWhileCarrying:Z
+      91: aload_0
+      92: iconst_0
+      93: putfield      #64                 // Field dropCarriedWhenHit:Z
+      96: aload_0
+      97: iconst_0
+      98: putfield      #67                 // Field useScripts:Z
+     101: aload_0
+     102: iconst_1
+     103: putfield      #70                 // Field stackableEntities:Z
+     106: aload_0
+     107: iconst_1
+     108: putfield      #73                 // Field entitySizeMattersStacking:Z
+     111: aload_0
+     112: bipush        7
+     114: anewarray     #76                 // class java/lang/String
+     117: dup
+     118: iconst_0
+     119: ldc           #78                 // String minecraft:chest[type]
+     121: aastore
+     122: dup
+     123: iconst_1
+     124: ldc           #80                 // String minecraft:stone_button[face]
+     126: aastore
+     127: dup
+     128: iconst_2
+     129: ldc           #82                 // String minecraft:vine[north,east,south,west,up]
+     131: aastore
+     132: dup
+     133: iconst_3
+     134: ldc           #84                 // String minecraft:creeper_head[rotation]
+     136: aastore
+     137: dup
+     138: iconst_4
+     139: ldc           #86                 // String minecraft:glow_lichen[north,east,south,west,up,down]
+     141: aastore
+     142: dup
+     143: iconst_5
+     144: ldc           #88                 // String minecraft:oak_sign[rotation]
+     146: aastore
+     147: dup
+     148: bipush        6
+     150: ldc           #90                 // String minecraft:oak_trapdoor[half]
+     152: aastore
+     153: putfield      #92                 // Field placementStateExceptions:[Ljava/lang/String;
+     156: aload_0
+     157: iconst_1
+     158: putfield      #96                 // Field pickupPlayers:Z
+     161: aload_0
+     162: iconst_0
+     163: putfield      #99                 // Field pickupUnbreakableBlocks:Z
+     166: return
+}

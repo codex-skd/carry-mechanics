@@ -1,0 +1,164 @@
+Compiled from "ConfigLoader.java"
+public class tschipp.carryon.config.ConfigLoader {
+  public tschipp.carryon.config.ConfigLoader();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void registerConfig(java.lang.Object);
+    Code:
+       0: aconst_null
+       1: aload_0
+       2: invokestatic  #7                  // Method buildCategory:(Ljava/lang/String;Ljava/lang/Object;)Ltschipp/carryon/config/BuiltCategory;
+       5: astore_1
+       6: goto          16
+       9: astore_2
+      10: aload_2
+      11: invokevirtual #15                 // Method java/lang/Exception.printStackTrace:()V
+      14: aconst_null
+      15: astore_1
+      16: aload_1
+      17: instanceof    #18                 // class tschipp/carryon/config/BuiltConfig
+      20: ifeq          35
+      23: aload_1
+      24: checkcast     #18                 // class tschipp/carryon/config/BuiltConfig
+      27: astore_2
+      28: aload_2
+      29: invokestatic  #20                 // Method registerConfig:(Ltschipp/carryon/config/BuiltConfig;)V
+      32: goto          45
+      35: new           #24                 // class java/lang/IllegalArgumentException
+      38: dup
+      39: ldc           #26                 // String Config supplied does not have a @Config annotation
+      41: invokespecial #28                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+      44: athrow
+      45: return
+    Exception table:
+       from    to  target type
+           0     6     9   Class java/lang/Exception
+
+  public static void registerConfig(tschipp.carryon.config.BuiltConfig);
+    Code:
+       0: getstatic     #31                 // Field tschipp/carryon/platform/Services.PLATFORM:Ltschipp/carryon/platform/services/IPlatformHelper;
+       3: aload_0
+       4: invokeinterface #37,  2           // InterfaceMethod tschipp/carryon/platform/services/IPlatformHelper.registerConfig:(Ltschipp/carryon/config/BuiltConfig;)V
+       9: return
+
+  public static void onConfigLoaded(net.minecraft.core.HolderLookup$Provider);
+    Code:
+       0: invokestatic  #40                 // Method tschipp/carryon/common/config/ListHandler.initConfigLists:()V
+       3: invokestatic  #45                 // Method tschipp/carryon/common/pickupcondition/PickupConditionHandler.initPickupConditions:()V
+       6: aload_0
+       7: invokestatic  #50                 // Method tschipp/carryon/client/modeloverride/ModelOverrideHandler.initModelOverrides:(Lnet/minecraft/core/HolderLookup$Provider;)V
+      10: return
+
+  public static tschipp.carryon.config.BuiltCategory buildCategory(java.lang.String, java.lang.Object) throws java.lang.IllegalAccessException;
+    Code:
+       0: aload_1
+       1: invokevirtual #56                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+       4: astore_2
+       5: aload_2
+       6: ldc           #60                 // class tschipp/carryon/config/annotations/Config
+       8: invokevirtual #62                 // Method java/lang/Class.isAnnotationPresent:(Ljava/lang/Class;)Z
+      11: ifeq          39
+      14: new           #18                 // class tschipp/carryon/config/BuiltConfig
+      17: dup
+      18: aload_2
+      19: ldc           #60                 // class tschipp/carryon/config/annotations/Config
+      21: invokevirtual #68                 // Method java/lang/Class.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+      24: checkcast     #60                 // class tschipp/carryon/config/annotations/Config
+      27: invokeinterface #72,  1           // InterfaceMethod tschipp/carryon/config/annotations/Config.value:()Ljava/lang/String;
+      32: invokespecial #76                 // Method tschipp/carryon/config/BuiltConfig."<init>":(Ljava/lang/String;)V
+      35: astore_3
+      36: goto          98
+      39: aload_2
+      40: ldc           #77                 // class tschipp/carryon/config/annotations/Category
+      42: invokevirtual #62                 // Method java/lang/Class.isAnnotationPresent:(Ljava/lang/Class;)Z
+      45: ifeq          88
+      48: new           #79                 // class tschipp/carryon/config/BuiltCategory
+      51: dup
+      52: aload_0
+      53: aload_2
+      54: ldc           #77                 // class tschipp/carryon/config/annotations/Category
+      56: invokevirtual #68                 // Method java/lang/Class.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+      59: checkcast     #77                 // class tschipp/carryon/config/annotations/Category
+      62: invokeinterface #81,  1           // InterfaceMethod tschipp/carryon/config/annotations/Category.value:()Ljava/lang/String;
+      67: aload_2
+      68: ldc           #77                 // class tschipp/carryon/config/annotations/Category
+      70: invokevirtual #68                 // Method java/lang/Class.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+      73: checkcast     #77                 // class tschipp/carryon/config/annotations/Category
+      76: invokeinterface #82,  1           // InterfaceMethod tschipp/carryon/config/annotations/Category.translation:()Ljava/lang/String;
+      81: invokespecial #85                 // Method tschipp/carryon/config/BuiltCategory."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+      84: astore_3
+      85: goto          98
+      88: new           #88                 // class java/lang/IllegalStateException
+      91: dup
+      92: ldc           #90                 // String Config does not contain any @Config annotation or @Category
+      94: invokespecial #92                 // Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+      97: athrow
+      98: aload_2
+      99: invokevirtual #93                 // Method java/lang/Class.getDeclaredFields:()[Ljava/lang/reflect/Field;
+     102: astore        4
+     104: aload         4
+     106: arraylength
+     107: istore        5
+     109: iconst_0
+     110: istore        6
+     112: iload         6
+     114: iload         5
+     116: if_icmpge     247
+     119: aload         4
+     121: iload         6
+     123: aaload
+     124: astore        7
+     126: aload         7
+     128: ldc           #97                 // class tschipp/carryon/config/annotations/Property
+     130: invokevirtual #99                 // Method java/lang/reflect/Field.isAnnotationPresent:(Ljava/lang/Class;)Z
+     133: ifeq          241
+     136: aload         7
+     138: aload_1
+     139: invokevirtual #102                // Method java/lang/reflect/Field.canAccess:(Ljava/lang/Object;)Z
+     142: ifeq          241
+     145: aload         7
+     147: ldc           #97                 // class tschipp/carryon/config/annotations/Property
+     149: invokevirtual #106                // Method java/lang/reflect/Field.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+     152: checkcast     #97                 // class tschipp/carryon/config/annotations/Property
+     155: invokeinterface #107,  1          // InterfaceMethod tschipp/carryon/config/annotations/Property.type:()Ltschipp/carryon/config/PropertyType;
+     160: astore        8
+     162: aload         8
+     164: getstatic     #111                // Field tschipp/carryon/config/PropertyType.CATEGORY:Ltschipp/carryon/config/PropertyType;
+     167: invokevirtual #117                // Method tschipp/carryon/config/PropertyType.equals:(Ljava/lang/Object;)Z
+     170: ifeq          210
+     173: aload_3
+     174: getfield      #120                // Field tschipp/carryon/config/BuiltCategory.categories:Ljava/util/List;
+     177: aload         7
+     179: ldc           #97                 // class tschipp/carryon/config/annotations/Property
+     181: invokevirtual #106                // Method java/lang/reflect/Field.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+     184: checkcast     #97                 // class tschipp/carryon/config/annotations/Property
+     187: invokeinterface #124,  1          // InterfaceMethod tschipp/carryon/config/annotations/Property.description:()Ljava/lang/String;
+     192: aload         7
+     194: aload_1
+     195: invokevirtual #127                // Method java/lang/reflect/Field.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     198: invokestatic  #7                  // Method buildCategory:(Ljava/lang/String;Ljava/lang/Object;)Ltschipp/carryon/config/BuiltCategory;
+     201: invokeinterface #131,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     206: pop
+     207: goto          241
+     210: aload_3
+     211: getfield      #136                // Field tschipp/carryon/config/BuiltCategory.properties:Ljava/util/List;
+     214: new           #139                // class tschipp/carryon/config/PropertyData
+     217: dup
+     218: aload_1
+     219: aload         7
+     221: aload         7
+     223: invokestatic  #141                // Method tschipp/carryon/config/AnnotationData.getData:(Ljava/lang/reflect/Field;)Ltschipp/carryon/config/AnnotationData;
+     226: aload         7
+     228: aload_1
+     229: invokevirtual #127                // Method java/lang/reflect/Field.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     232: invokespecial #147                // Method tschipp/carryon/config/PropertyData."<init>":(Ljava/lang/Object;Ljava/lang/reflect/Field;Ltschipp/carryon/config/AnnotationData;Ljava/lang/Object;)V
+     235: invokeinterface #131,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     240: pop
+     241: iinc          6, 1
+     244: goto          112
+     247: aload_3
+     248: areturn
+}

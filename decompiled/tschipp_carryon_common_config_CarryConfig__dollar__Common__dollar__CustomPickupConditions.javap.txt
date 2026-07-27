@@ -1,0 +1,20 @@
+Compiled from "CarryConfig.java"
+public class tschipp.carryon.common.config.CarryConfig$Common$CustomPickupConditions {
+  public java.lang.String[] customPickupConditionsBlocks;
+
+  public java.lang.String[] customPickupConditionsEntities;
+
+  public tschipp.carryon.common.config.CarryConfig$Common$CustomPickupConditions();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: iconst_0
+       6: anewarray     #7                  // class java/lang/String
+       9: putfield      #9                  // Field customPickupConditionsBlocks:[Ljava/lang/String;
+      12: aload_0
+      13: iconst_0
+      14: anewarray     #7                  // class java/lang/String
+      17: putfield      #15                 // Field customPickupConditionsEntities:[Ljava/lang/String;
+      20: return
+}

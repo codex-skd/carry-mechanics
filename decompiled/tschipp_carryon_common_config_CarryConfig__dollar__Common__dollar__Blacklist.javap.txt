@@ -1,0 +1,818 @@
+Compiled from "CarryConfig.java"
+public class tschipp.carryon.common.config.CarryConfig$Common$Blacklist {
+  public java.lang.String[] forbiddenTiles;
+
+  public java.lang.String[] forbiddenEntities;
+
+  public java.lang.String[] forbiddenStacking;
+
+  public tschipp.carryon.common.config.CarryConfig$Common$Blacklist();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: sipush        149
+       8: anewarray     #7                  // class java/lang/String
+      11: dup
+      12: iconst_0
+      13: ldc           #9                  // String #forge:immovable
+      15: aastore
+      16: dup
+      17: iconst_1
+      18: ldc           #11                 // String #forge:relocation_not_supported
+      20: aastore
+      21: dup
+      22: iconst_2
+      23: ldc           #13                 // String #neoforge:immovable
+      25: aastore
+      26: dup
+      27: iconst_3
+      28: ldc           #15                 // String #neoforge:relocation_not_supported
+      30: aastore
+      31: dup
+      32: iconst_4
+      33: ldc           #17                 // String minecraft:end_portal
+      35: aastore
+      36: dup
+      37: iconst_5
+      38: ldc           #19                 // String minecraft:piston_head
+      40: aastore
+      41: dup
+      42: bipush        6
+      44: ldc           #21                 // String #c:relocation_not_supported
+      46: aastore
+      47: dup
+      48: bipush        7
+      50: ldc           #23                 // String minecraft:end_gateway
+      52: aastore
+      53: dup
+      54: bipush        8
+      56: ldc           #25                 // String minecraft:tall_grass
+      58: aastore
+      59: dup
+      60: bipush        9
+      62: ldc           #27                 // String minecraft:large_fern
+      64: aastore
+      65: dup
+      66: bipush        10
+      68: ldc           #29                 // String minecraft:peony
+      70: aastore
+      71: dup
+      72: bipush        11
+      74: ldc           #31                 // String minecraft:rose_bush
+      76: aastore
+      77: dup
+      78: bipush        12
+      80: ldc           #33                 // String minecraft:lilac
+      82: aastore
+      83: dup
+      84: bipush        13
+      86: ldc           #35                 // String minecraft:sunflower
+      88: aastore
+      89: dup
+      90: bipush        14
+      92: ldc           #37                 // String minecraft:*_bed
+      94: aastore
+      95: dup
+      96: bipush        15
+      98: ldc           #39                 // String minecraft:*_door
+     100: aastore
+     101: dup
+     102: bipush        16
+     104: ldc           #41                 // String minecraft:big_dripleaf_stem
+     106: aastore
+     107: dup
+     108: bipush        17
+     110: ldc           #43                 // String minecraft:waterlily
+     112: aastore
+     113: dup
+     114: bipush        18
+     116: ldc           #45                 // String minecraft:cake
+     118: aastore
+     119: dup
+     120: bipush        19
+     122: ldc           #47                 // String minecraft:nether_portal
+     124: aastore
+     125: dup
+     126: bipush        20
+     128: ldc           #49                 // String minecraft:tall_seagrass
+     130: aastore
+     131: dup
+     132: bipush        21
+     134: ldc           #51                 // String animania:block_trough
+     136: aastore
+     137: dup
+     138: bipush        22
+     140: ldc           #53                 // String animania:block_invisiblock
+     142: aastore
+     143: dup
+     144: bipush        23
+     146: ldc           #55                 // String colossalchests:*
+     148: aastore
+     149: dup
+     150: bipush        24
+     152: ldc           #57                 // String ic2:*
+     154: aastore
+     155: dup
+     156: bipush        25
+     158: ldc           #59                 // String bigreactors:*
+     160: aastore
+     161: dup
+     162: bipush        26
+     164: ldc           #61                 // String forestry:*
+     166: aastore
+     167: dup
+     168: bipush        27
+     170: ldc           #63                 // String tconstruct:*
+     172: aastore
+     173: dup
+     174: bipush        28
+     176: ldc           #65                 // String rustic:*
+     178: aastore
+     179: dup
+     180: bipush        29
+     182: ldc           #67                 // String botania:*
+     184: aastore
+     185: dup
+     186: bipush        30
+     188: ldc           #69                 // String astralsorcery:*
+     190: aastore
+     191: dup
+     192: bipush        31
+     194: ldc           #71                 // String quark:colored_bed_*
+     196: aastore
+     197: dup
+     198: bipush        32
+     200: ldc           #73                 // String immersiveengineering:*
+     202: aastore
+     203: dup
+     204: bipush        33
+     206: ldc           #75                 // String embers:block_furnace
+     208: aastore
+     209: dup
+     210: bipush        34
+     212: ldc           #77                 // String embers:ember_bore
+     214: aastore
+     215: dup
+     216: bipush        35
+     218: ldc           #79                 // String embers:ember_activator
+     220: aastore
+     221: dup
+     222: bipush        36
+     224: ldc           #81                 // String embers:mixer
+     226: aastore
+     227: dup
+     228: bipush        37
+     230: ldc           #83                 // String embers:heat_coil
+     232: aastore
+     233: dup
+     234: bipush        38
+     236: ldc           #85                 // String embers:large_tank
+     238: aastore
+     239: dup
+     240: bipush        39
+     242: ldc           #87                 // String embers:crystal_cell
+     244: aastore
+     245: dup
+     246: bipush        40
+     248: ldc           #89                 // String embers:alchemy_pedestal
+     250: aastore
+     251: dup
+     252: bipush        41
+     254: ldc           #91                 // String embers:boiler
+     256: aastore
+     257: dup
+     258: bipush        42
+     260: ldc           #93                 // String embers:combustor
+     262: aastore
+     263: dup
+     264: bipush        43
+     266: ldc           #95                 // String embers:catalzyer
+     268: aastore
+     269: dup
+     270: bipush        44
+     272: ldc           #97                 // String embers:field_chart
+     274: aastore
+     275: dup
+     276: bipush        45
+     278: ldc           #99                 // String embers:inferno_forge
+     280: aastore
+     281: dup
+     282: bipush        46
+     284: ldc           #101                // String storagedrawers:framingtable
+     286: aastore
+     287: dup
+     288: bipush        47
+     290: ldc           #103                // String skyresources:*
+     292: aastore
+     293: dup
+     294: bipush        48
+     296: ldc           #105                // String lootbags:*
+     298: aastore
+     299: dup
+     300: bipush        49
+     302: ldc           #107                // String exsartagine:*
+     304: aastore
+     305: dup
+     306: bipush        50
+     308: ldc           #109                // String aquamunda:tank
+     310: aastore
+     311: dup
+     312: bipush        51
+     314: ldc           #111                // String opencomputers:*
+     316: aastore
+     317: dup
+     318: bipush        52
+     320: ldc           #113                // String malisisdoors:*
+     322: aastore
+     323: dup
+     324: bipush        53
+     326: ldc           #115                // String industrialforegoing:*
+     328: aastore
+     329: dup
+     330: bipush        54
+     332: ldc           #117                // String minecolonies:*
+     334: aastore
+     335: dup
+     336: bipush        55
+     338: ldc           #119                // String thaumcraft:pillar*
+     340: aastore
+     341: dup
+     342: bipush        56
+     344: ldc           #121                // String thaumcraft:infernal_furnace
+     346: aastore
+     347: dup
+     348: bipush        57
+     350: ldc           #123                // String thaumcraft:placeholder*
+     352: aastore
+     353: dup
+     354: bipush        58
+     356: ldc           #125                // String thaumcraft:infusion_matrix
+     358: aastore
+     359: dup
+     360: bipush        59
+     362: ldc           #127                // String thaumcraft:golem_builder
+     364: aastore
+     365: dup
+     366: bipush        60
+     368: ldc           #129                // String thaumcraft:thaumatorium*
+     370: aastore
+     371: dup
+     372: bipush        61
+     374: ldc           #131                // String magneticraft:oil_heater
+     376: aastore
+     377: dup
+     378: bipush        62
+     380: ldc           #133                // String magneticraft:solar_panel
+     382: aastore
+     383: dup
+     384: bipush        63
+     386: ldc           #135                // String magneticraft:steam_engine
+     388: aastore
+     389: dup
+     390: bipush        64
+     392: ldc           #137                // String magneticraft:shelving_unit
+     394: aastore
+     395: dup
+     396: bipush        65
+     398: ldc           #139                // String magneticraft:grinder
+     400: aastore
+     401: dup
+     402: bipush        66
+     404: ldc           #141                // String magneticraft:sieve
+     406: aastore
+     407: dup
+     408: bipush        67
+     410: ldc           #143                // String magneticraft:solar_tower
+     412: aastore
+     413: dup
+     414: bipush        68
+     416: ldc           #145                // String magneticraft:solar_mirror
+     418: aastore
+     419: dup
+     420: bipush        69
+     422: ldc           #147                // String magneticraft:container
+     424: aastore
+     425: dup
+     426: bipush        70
+     428: ldc           #149                // String magneticraft:pumpjack
+     430: aastore
+     431: dup
+     432: bipush        71
+     434: ldc           #133                // String magneticraft:solar_panel
+     436: aastore
+     437: dup
+     438: bipush        72
+     440: ldc           #151                // String magneticraft:refinery
+     442: aastore
+     443: dup
+     444: bipush        73
+     446: ldc           #131                // String magneticraft:oil_heater
+     448: aastore
+     449: dup
+     450: bipush        74
+     452: ldc           #153                // String magneticraft:hydraulic_press
+     454: aastore
+     455: dup
+     456: bipush        75
+     458: ldc           #155                // String magneticraft:multiblock_gap
+     460: aastore
+     461: dup
+     462: bipush        76
+     464: ldc           #157                // String refinedstorage:*
+     466: aastore
+     467: dup
+     468: bipush        77
+     470: ldc           #159                // String mcmultipart:*
+     472: aastore
+     473: dup
+     474: bipush        78
+     476: ldc           #161                // String enderstorage:*
+     478: aastore
+     479: dup
+     480: bipush        79
+     482: ldc           #163                // String betterstorage:*
+     484: aastore
+     485: dup
+     486: bipush        80
+     488: ldc           #165                // String practicallogistics2:*
+     490: aastore
+     491: dup
+     492: bipush        81
+     494: ldc           #167                // String wearablebackpacks:*
+     496: aastore
+     497: dup
+     498: bipush        82
+     500: ldc           #169                // String rftools:screen
+     502: aastore
+     503: dup
+     504: bipush        83
+     506: ldc           #171                // String rftools:creative_screen
+     508: aastore
+     509: dup
+     510: bipush        84
+     512: ldc           #173                // String create:*
+     514: aastore
+     515: dup
+     516: bipush        85
+     518: ldc           #175                // String magic_doorknob:*
+     520: aastore
+     521: dup
+     522: bipush        86
+     524: ldc           #177                // String iceandfire:*
+     526: aastore
+     527: dup
+     528: bipush        87
+     530: ldc           #179                // String ftbquests:*
+     532: aastore
+     533: dup
+     534: bipush        88
+     536: ldc           #181                // String waystones:*
+     538: aastore
+     539: dup
+     540: bipush        89
+     542: ldc           #183                // String contact:*
+     544: aastore
+     545: dup
+     546: bipush        90
+     548: ldc           #185                // String framedblocks:*
+     550: aastore
+     551: dup
+     552: bipush        91
+     554: ldc           #187                // String securitycraft:*
+     556: aastore
+     557: dup
+     558: bipush        92
+     560: ldc           #189                // String forgemultipartcbe:*
+     562: aastore
+     563: dup
+     564: bipush        93
+     566: ldc           #191                // String integrateddynamics:cable
+     568: aastore
+     569: dup
+     570: bipush        94
+     572: ldc           #193                // String mekanismgenerators:wind_generator
+     574: aastore
+     575: dup
+     576: bipush        95
+     578: ldc           #195                // String cookingforblockheads:cabinet
+     580: aastore
+     581: dup
+     582: bipush        96
+     584: ldc           #197                // String cookingforblockheads:corner
+     586: aastore
+     587: dup
+     588: bipush        97
+     590: ldc           #199                // String cookingforblockheads:counter
+     592: aastore
+     593: dup
+     594: bipush        98
+     596: ldc           #201                // String cookingforblockheads:oven
+     598: aastore
+     599: dup
+     600: bipush        99
+     602: ldc           #203                // String cookingforblockheads:toaster
+     604: aastore
+     605: dup
+     606: bipush        100
+     608: ldc           #205                // String cookingforblockheads:milk_jar
+     610: aastore
+     611: dup
+     612: bipush        101
+     614: ldc           #207                // String cookingforblockheads:cow_jar
+     616: aastore
+     617: dup
+     618: bipush        102
+     620: ldc           #209                // String cookingforblockheads:fruit_basket
+     622: aastore
+     623: dup
+     624: bipush        103
+     626: ldc           #211                // String cookingforblockheads:cooking_table
+     628: aastore
+     629: dup
+     630: bipush        104
+     632: ldc           #213                // String cookingforblockheads:fridge
+     634: aastore
+     635: dup
+     636: bipush        105
+     638: ldc           #215                // String cookingforblockheads:sink
+     640: aastore
+     641: dup
+     642: bipush        106
+     644: ldc           #217                // String chipped:*
+     646: aastore
+     647: dup
+     648: bipush        107
+     650: ldc           #219                // String irons_spellbooks:*
+     652: aastore
+     653: dup
+     654: bipush        108
+     656: ldc           #221                // String create*:*
+     658: aastore
+     659: dup
+     660: bipush        109
+     662: ldc           #223                // String simple_pipes:*
+     664: aastore
+     665: dup
+     666: bipush        110
+     668: ldc           #225                // String libmultipart:*
+     670: aastore
+     671: dup
+     672: bipush        111
+     674: ldc           #227                // String quark:tiny_potato
+     676: aastore
+     677: dup
+     678: bipush        112
+     680: ldc           #229                // String ait:*
+     682: aastore
+     683: dup
+     684: bipush        113
+     686: ldc           #231                // String vampirism:*
+     688: aastore
+     689: dup
+     690: bipush        114
+     692: ldc           #233                // String extrastorage:*
+     694: aastore
+     695: dup
+     696: bipush        115
+     698: ldc           #235                // String relics:researching_table
+     700: aastore
+     701: dup
+     702: bipush        116
+     704: ldc           #237                // String sophisticatedstorage:*chest
+     706: aastore
+     707: dup
+     708: bipush        117
+     710: ldc           #239                // String powah:*
+     712: aastore
+     713: dup
+     714: bipush        118
+     716: ldc           #241                // String advancementtrophies:trophy
+     718: aastore
+     719: dup
+     720: bipush        119
+     722: ldc           #243                // String mekanismgenerators:heat_generator
+     724: aastore
+     725: dup
+     726: bipush        120
+     728: ldc           #245                // String mna:filler_block
+     730: aastore
+     731: dup
+     732: bipush        121
+     734: ldc           #247                // String create_enchantment_industry:*
+     736: aastore
+     737: dup
+     738: bipush        122
+     740: ldc           #249                // String graveyard:*
+     742: aastore
+     743: dup
+     744: bipush        123
+     746: ldc           #251                // String immersivepetroleum:*
+     748: aastore
+     749: dup
+     750: bipush        124
+     752: ldc           #253                // String tardis:interior_door
+     754: aastore
+     755: dup
+     756: bipush        125
+     758: ldc           #255                // String cuffed:*
+     760: aastore
+     761: dup
+     762: bipush        126
+     764: ldc_w         #257                // String littletiles:*
+     767: aastore
+     768: dup
+     769: bipush        127
+     771: ldc_w         #259                // String butchersdelight:*
+     774: aastore
+     775: dup
+     776: sipush        128
+     779: ldc           #219                // String irons_spellbooks:*
+     781: aastore
+     782: dup
+     783: sipush        129
+     786: ldc_w         #261                // String extended_drawers:*
+     789: aastore
+     790: dup
+     791: sipush        130
+     794: ldc_w         #263                // String functionalstorage:*
+     797: aastore
+     798: dup
+     799: sipush        131
+     802: ldc_w         #265                // String sophisticatedstorage:*
+     805: aastore
+     806: dup
+     807: sipush        132
+     810: ldc_w         #267                // String farmersdelight:*
+     813: aastore
+     814: dup
+     815: sipush        133
+     818: ldc_w         #269                // String modern_industrialization:*_cable
+     821: aastore
+     822: dup
+     823: sipush        134
+     826: ldc_w         #271                // String modern_industrialization:item_pipe
+     829: aastore
+     830: dup
+     831: sipush        135
+     834: ldc_w         #273                // String modern_industrialization:*_item_pipe
+     837: aastore
+     838: dup
+     839: sipush        136
+     842: ldc_w         #275                // String modern_industrialization:fluid_pipe
+     845: aastore
+     846: dup
+     847: sipush        137
+     850: ldc_w         #277                // String modern_industrialization:*_fluid_pipe
+     853: aastore
+     854: dup
+     855: sipush        138
+     858: ldc_w         #279                // String yigd:*
+     861: aastore
+     862: dup
+     863: sipush        139
+     866: ldc_w         #281                // String domum_ornamentum:*
+     869: aastore
+     870: dup
+     871: sipush        140
+     874: ldc_w         #283                // String connectiblechains:*
+     877: aastore
+     878: dup
+     879: sipush        141
+     882: ldc_w         #285                // String cobblemon:*
+     885: aastore
+     886: dup
+     887: sipush        142
+     890: ldc_w         #287                // String snowrealmagic:*
+     893: aastore
+     894: dup
+     895: sipush        143
+     898: ldc_w         #289                // String forbidden_arcanus:black_hole
+     901: aastore
+     902: dup
+     903: sipush        144
+     906: ldc_w         #281                // String domum_ornamentum:*
+     909: aastore
+     910: dup
+     911: sipush        145
+     914: ldc_w         #291                // String sgjourney:*
+     917: aastore
+     918: dup
+     919: sipush        146
+     922: ldc_w         #293                // String copycats:*
+     925: aastore
+     926: dup
+     927: sipush        147
+     930: ldc_w         #295                // String expandedstorage:*
+     933: aastore
+     934: dup
+     935: sipush        148
+     938: ldc_w         #297                // String replication:*
+     941: aastore
+     942: putfield      #299                // Field forbiddenTiles:[Ljava/lang/String;
+     945: aload_0
+     946: bipush        47
+     948: anewarray     #7                  // class java/lang/String
+     951: dup
+     952: iconst_0
+     953: ldc_w         #305                // String #c:capturing_not_supported
+     956: aastore
+     957: dup
+     958: iconst_1
+     959: ldc_w         #307                // String #c:teleporting_not_supported
+     962: aastore
+     963: dup
+     964: iconst_2
+     965: ldc_w         #309                // String minecraft:end_crystal
+     968: aastore
+     969: dup
+     970: iconst_3
+     971: ldc_w         #311                // String minecraft:ender_dragon
+     974: aastore
+     975: dup
+     976: iconst_4
+     977: ldc_w         #313                // String minecraft:ghast
+     980: aastore
+     981: dup
+     982: iconst_5
+     983: ldc_w         #315                // String minecraft:fireball
+     986: aastore
+     987: dup
+     988: bipush        6
+     990: ldc_w         #317                // String minecraft:small_fireball
+     993: aastore
+     994: dup
+     995: bipush        7
+     997: ldc_w         #319                // String minecraft:whither_skull
+    1000: aastore
+    1001: dup
+    1002: bipush        8
+    1004: ldc_w         #321                // String minecraft:shulker
+    1007: aastore
+    1008: dup
+    1009: bipush        9
+    1011: ldc_w         #323                // String minecraft:leash_knot
+    1014: aastore
+    1015: dup
+    1016: bipush        10
+    1018: ldc_w         #325                // String minecraft:armor_stand
+    1021: aastore
+    1022: dup
+    1023: bipush        11
+    1025: ldc_w         #327                // String minecraft:whither_skull_dangerous
+    1028: aastore
+    1029: dup
+    1030: bipush        12
+    1032: ldc_w         #329                // String minecraft:dragon_fireball
+    1035: aastore
+    1036: dup
+    1037: bipush        13
+    1039: ldc_w         #331                // String minecraft:item_frame
+    1042: aastore
+    1043: dup
+    1044: bipush        14
+    1046: ldc_w         #333                // String minecraft:painting
+    1049: aastore
+    1050: dup
+    1051: bipush        15
+    1053: ldc_w         #335                // String minecraft:shulker_bullet
+    1056: aastore
+    1057: dup
+    1058: bipush        16
+    1060: ldc_w         #337                // String minecraft:evoker_fangs
+    1063: aastore
+    1064: dup
+    1065: bipush        17
+    1067: ldc_w         #339                // String minecraft:glow_item_frame
+    1070: aastore
+    1071: dup
+    1072: bipush        18
+    1074: ldc_w         #341                // String minecraft:tnt
+    1077: aastore
+    1078: dup
+    1079: bipush        19
+    1081: ldc_w         #343                // String minecraft:trident
+    1084: aastore
+    1085: dup
+    1086: bipush        20
+    1088: ldc_w         #345                // String minecraft:arrow
+    1091: aastore
+    1092: dup
+    1093: bipush        21
+    1095: ldc_w         #347                // String minecraft:spectral_arrow
+    1098: aastore
+    1099: dup
+    1100: bipush        22
+    1102: ldc_w         #349                // String minecraft:interaction
+    1105: aastore
+    1106: dup
+    1107: bipush        23
+    1109: ldc_w         #351                // String minecraft:marker
+    1112: aastore
+    1113: dup
+    1114: bipush        24
+    1116: ldc_w         #353                // String minecraft:block_display
+    1119: aastore
+    1120: dup
+    1121: bipush        25
+    1123: ldc_w         #355                // String minecraft:item_display
+    1126: aastore
+    1127: dup
+    1128: bipush        26
+    1130: ldc_w         #357                // String minecraft:text_display
+    1133: aastore
+    1134: dup
+    1135: bipush        27
+    1137: ldc_w         #359                // String animania:hamster
+    1140: aastore
+    1141: dup
+    1142: bipush        28
+    1144: ldc_w         #361                // String animania:ferret*
+    1147: aastore
+    1148: dup
+    1149: bipush        29
+    1151: ldc_w         #363                // String animania:hedgehog*
+    1154: aastore
+    1155: dup
+    1156: bipush        30
+    1158: ldc_w         #365                // String animania:cart
+    1161: aastore
+    1162: dup
+    1163: bipush        31
+    1165: ldc_w         #367                // String animania:wagon
+    1168: aastore
+    1169: dup
+    1170: bipush        32
+    1172: ldc_w         #369                // String mynko:*
+    1175: aastore
+    1176: dup
+    1177: bipush        33
+    1179: ldc_w         #371                // String pixelmon:*
+    1182: aastore
+    1183: dup
+    1184: bipush        34
+    1186: ldc_w         #373                // String mocreatures:*
+    1189: aastore
+    1190: dup
+    1191: bipush        35
+    1193: ldc_w         #375                // String quark:totem
+    1196: aastore
+    1197: dup
+    1198: bipush        36
+    1200: ldc_w         #377                // String vehicle:*
+    1203: aastore
+    1204: dup
+    1205: bipush        37
+    1207: ldc           #187                // String securitycraft:*
+    1209: aastore
+    1210: dup
+    1211: bipush        38
+    1213: ldc_w         #379                // String taterzens:npc
+    1216: aastore
+    1217: dup
+    1218: bipush        39
+    1220: ldc_w         #381                // String easy_npc:*
+    1223: aastore
+    1224: dup
+    1225: bipush        40
+    1227: ldc_w         #383                // String bodiesbodies:dead_body
+    1230: aastore
+    1231: dup
+    1232: bipush        41
+    1234: ldc_w         #257                // String littletiles:*
+    1237: aastore
+    1238: dup
+    1239: bipush        42
+    1241: ldc_w         #283                // String connectiblechains:*
+    1244: aastore
+    1245: dup
+    1246: bipush        43
+    1248: ldc_w         #285                // String cobblemon:*
+    1251: aastore
+    1252: dup
+    1253: bipush        44
+    1255: ldc           #173                // String create:*
+    1257: aastore
+    1258: dup
+    1259: bipush        45
+    1261: ldc_w         #385                // String swem:*
+    1264: aastore
+    1265: dup
+    1266: bipush        46
+    1268: ldc_w         #387                // String toms_mobs:*
+    1271: aastore
+    1272: putfield      #389                // Field forbiddenEntities:[Ljava/lang/String;
+    1275: aload_0
+    1276: iconst_2
+    1277: anewarray     #7                  // class java/lang/String
+    1280: dup
+    1281: iconst_0
+    1282: ldc_w         #392                // String minecraft:horse
+    1285: aastore
+    1286: dup
+    1287: iconst_1
+    1288: ldc_w         #311                // String minecraft:ender_dragon
+    1291: aastore
+    1292: putfield      #394                // Field forbiddenStacking:[Ljava/lang/String;
+    1295: return
+}

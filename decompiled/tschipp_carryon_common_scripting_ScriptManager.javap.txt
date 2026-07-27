@@ -1,0 +1,247 @@
+Compiled from "ScriptManager.java"
+public class tschipp.carryon.common.scripting.ScriptManager {
+  public static final java.util.List<tschipp.carryon.common.scripting.CarryOnScript> SCRIPTS;
+
+  public tschipp.carryon.common.scripting.ScriptManager();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static java.util.Optional<tschipp.carryon.common.scripting.CarryOnScript> inspectBlock(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.nbt.CompoundTag);
+    Code:
+       0: getstatic     #7                  // Field tschipp/carryon/Constants.COMMON_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Common;
+       3: getfield      #13                 // Field tschipp/carryon/common/config/CarryConfig$Common.settings:Ltschipp/carryon/common/config/CarryConfig$Common$Settings;
+       6: getfield      #19                 // Field tschipp/carryon/common/config/CarryConfig$Common$Settings.useScripts:Z
+       9: ifne          16
+      12: invokestatic  #25                 // Method java/util/Optional.empty:()Ljava/util/Optional;
+      15: areturn
+      16: aload_0
+      17: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+      20: astore        4
+      22: aload_0
+      23: aload_1
+      24: aload_2
+      25: invokevirtual #37                 // Method net/minecraft/world/level/block/state/BlockState.getDestroySpeed:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)F
+      28: fstore        5
+      30: aload         4
+      32: invokevirtual #41                 // Method net/minecraft/world/level/block/Block.getExplosionResistance:()F
+      35: fstore        6
+      37: getstatic     #47                 // Field SCRIPTS:Ljava/util/List;
+      40: invokeinterface #53,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+      45: astore        7
+      47: aload         7
+      49: invokeinterface #59,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      54: ifeq          101
+      57: aload         7
+      59: invokeinterface #65,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      64: checkcast     #69                 // class tschipp/carryon/common/scripting/CarryOnScript
+      67: astore        8
+      69: aload         8
+      71: invokevirtual #71                 // Method tschipp/carryon/common/scripting/CarryOnScript.isBlock:()Z
+      74: ifeq          98
+      77: aload         8
+      79: aload         4
+      81: fload         5
+      83: fload         6
+      85: aload_3
+      86: invokestatic  #74                 // Method matchesAll:(Ltschipp/carryon/common/scripting/CarryOnScript;Lnet/minecraft/world/level/block/Block;FFLnet/minecraft/nbt/CompoundTag;)Z
+      89: ifeq          98
+      92: aload         8
+      94: invokestatic  #78                 // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      97: areturn
+      98: goto          47
+     101: invokestatic  #25                 // Method java/util/Optional.empty:()Ljava/util/Optional;
+     104: areturn
+
+  public static java.util.Optional<tschipp.carryon.common.scripting.CarryOnScript> inspectEntity(net.minecraft.world.entity.Entity);
+    Code:
+       0: getstatic     #7                  // Field tschipp/carryon/Constants.COMMON_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Common;
+       3: getfield      #13                 // Field tschipp/carryon/common/config/CarryConfig$Common.settings:Ltschipp/carryon/common/config/CarryConfig$Common$Settings;
+       6: getfield      #19                 // Field tschipp/carryon/common/config/CarryConfig$Common$Settings.useScripts:Z
+       9: ifne          16
+      12: invokestatic  #25                 // Method java/util/Optional.empty:()Ljava/util/Optional;
+      15: areturn
+      16: aload_0
+      17: invokevirtual #82                 // Method net/minecraft/world/entity/Entity.getBbHeight:()F
+      20: fstore_1
+      21: aload_0
+      22: invokevirtual #87                 // Method net/minecraft/world/entity/Entity.getBbWidth:()F
+      25: fstore_2
+      26: aload_0
+      27: instanceof    #90                 // class net/minecraft/world/entity/LivingEntity
+      30: ifeq          43
+      33: aload_0
+      34: checkcast     #90                 // class net/minecraft/world/entity/LivingEntity
+      37: invokevirtual #92                 // Method net/minecraft/world/entity/LivingEntity.getHealth:()F
+      40: goto          44
+      43: fconst_0
+      44: fstore_3
+      45: new           #95                 // class net/minecraft/util/ProblemReporter$ScopedCollector
+      48: dup
+      49: getstatic     #97                 // Field tschipp/carryon/Constants.LOG:Lorg/slf4j/Logger;
+      52: invokespecial #101                // Method net/minecraft/util/ProblemReporter$ScopedCollector."<init>":(Lorg/slf4j/Logger;)V
+      55: aload_0
+      56: invokevirtual #104                // Method net/minecraft/world/entity/Entity.registryAccess:()Lnet/minecraft/core/RegistryAccess;
+      59: invokestatic  #108                // Method net/minecraft/world/level/storage/TagValueOutput.createWithContext:(Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/level/storage/TagValueOutput;
+      62: astore        4
+      64: aload_0
+      65: aload         4
+      67: invokevirtual #114                // Method net/minecraft/world/entity/Entity.save:(Lnet/minecraft/world/level/storage/ValueOutput;)Z
+      70: pop
+      71: aload         4
+      73: invokevirtual #118                // Method net/minecraft/world/level/storage/TagValueOutput.buildResult:()Lnet/minecraft/nbt/CompoundTag;
+      76: astore        5
+      78: getstatic     #47                 // Field SCRIPTS:Ljava/util/List;
+      81: invokeinterface #53,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+      86: astore        6
+      88: aload         6
+      90: invokeinterface #59,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      95: ifeq          141
+      98: aload         6
+     100: invokeinterface #65,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     105: checkcast     #69                 // class tschipp/carryon/common/scripting/CarryOnScript
+     108: astore        7
+     110: aload         7
+     112: invokevirtual #122                // Method tschipp/carryon/common/scripting/CarryOnScript.isEntity:()Z
+     115: ifeq          138
+     118: aload         7
+     120: aload_0
+     121: fload_1
+     122: fload_2
+     123: fload_3
+     124: aload         5
+     126: invokestatic  #125                // Method matchesAll:(Ltschipp/carryon/common/scripting/CarryOnScript;Lnet/minecraft/world/entity/Entity;FFFLnet/minecraft/nbt/CompoundTag;)Z
+     129: ifeq          138
+     132: aload         7
+     134: invokestatic  #78                 // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+     137: areturn
+     138: goto          88
+     141: invokestatic  #25                 // Method java/util/Optional.empty:()Ljava/util/Optional;
+     144: areturn
+
+  private static boolean matchesAll(tschipp.carryon.common.scripting.CarryOnScript, net.minecraft.world.entity.Entity, float, float, float, net.minecraft.nbt.CompoundTag);
+    Code:
+       0: aload_0
+       1: invokevirtual #128                // Method tschipp/carryon/common/scripting/CarryOnScript.scriptObject:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject;
+       4: invokevirtual #132                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject.entity:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity;
+       7: astore        6
+       9: iconst_1
+      10: istore        7
+      12: aload         6
+      14: invokevirtual #138                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity.typeNameEntity:()Ljava/util/Optional;
+      17: invokevirtual #143                // Method java/util/Optional.isPresent:()Z
+      20: ifeq          51
+      23: aload_1
+      24: invokevirtual #146                // Method net/minecraft/world/entity/Entity.getType:()Lnet/minecraft/world/entity/EntityType;
+      27: getstatic     #150                // Field net/minecraft/core/registries/BuiltInRegistries.ENTITY_TYPE:Lnet/minecraft/core/DefaultedRegistry;
+      30: aload         6
+      32: invokevirtual #138                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity.typeNameEntity:()Ljava/util/Optional;
+      35: invokevirtual #156                // Method java/util/Optional.get:()Ljava/lang/Object;
+      38: checkcast     #159                // class net/minecraft/resources/ResourceKey
+      41: invokeinterface #161,  2          // InterfaceMethod net/minecraft/core/DefaultedRegistry.get:(Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+      46: invokevirtual #166                // Method java/lang/Object.equals:(Ljava/lang/Object;)Z
+      49: istore        7
+      51: aload         6
+      53: invokevirtual #170                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity.typeHeight:()Ltschipp/carryon/common/scripting/Matchables$NumberBoundCondition;
+      56: fload_2
+      57: invokestatic  #174                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+      60: invokevirtual #180                // Method tschipp/carryon/common/scripting/Matchables$NumberBoundCondition.matches:(Ljava/lang/Number;)Z
+      63: istore        8
+      65: aload         6
+      67: invokevirtual #186                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity.typeWidth:()Ltschipp/carryon/common/scripting/Matchables$NumberBoundCondition;
+      70: fload_3
+      71: invokestatic  #174                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+      74: invokevirtual #180                // Method tschipp/carryon/common/scripting/Matchables$NumberBoundCondition.matches:(Ljava/lang/Number;)Z
+      77: istore        9
+      79: aload         6
+      81: invokevirtual #189                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity.typeHealth:()Ltschipp/carryon/common/scripting/Matchables$NumberBoundCondition;
+      84: fload         4
+      86: invokestatic  #174                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+      89: invokevirtual #180                // Method tschipp/carryon/common/scripting/Matchables$NumberBoundCondition.matches:(Ljava/lang/Number;)Z
+      92: istore        10
+      94: aload         6
+      96: invokevirtual #192                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity.typeEntityTag:()Ltschipp/carryon/common/scripting/Matchables$NBTCondition;
+      99: aload         5
+     101: invokevirtual #196                // Method tschipp/carryon/common/scripting/Matchables$NBTCondition.matches:(Lnet/minecraft/nbt/CompoundTag;)Z
+     104: istore        11
+     106: iload         7
+     108: ifeq          135
+     111: iload         8
+     113: ifeq          135
+     116: iload         9
+     118: ifeq          135
+     121: iload         10
+     123: ifeq          135
+     126: iload         11
+     128: ifeq          135
+     131: iconst_1
+     132: goto          136
+     135: iconst_0
+     136: ireturn
+
+  private static boolean matchesAll(tschipp.carryon.common.scripting.CarryOnScript, net.minecraft.world.level.block.Block, float, float, net.minecraft.nbt.CompoundTag);
+    Code:
+       0: aload_0
+       1: invokevirtual #128                // Method tschipp/carryon/common/scripting/CarryOnScript.scriptObject:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject;
+       4: invokevirtual #201                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject.block:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock;
+       7: astore        5
+       9: iconst_1
+      10: istore        6
+      12: aload         5
+      14: invokevirtual #205                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock.typeNameBlock:()Ljava/util/Optional;
+      17: invokevirtual #143                // Method java/util/Optional.isPresent:()Z
+      20: ifeq          62
+      23: aload_1
+      24: getstatic     #210                // Field net/minecraft/core/registries/BuiltInRegistries.BLOCK:Lnet/minecraft/core/DefaultedRegistry;
+      27: aload         5
+      29: invokevirtual #205                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock.typeNameBlock:()Ljava/util/Optional;
+      32: invokevirtual #156                // Method java/util/Optional.get:()Ljava/lang/Object;
+      35: checkcast     #159                // class net/minecraft/resources/ResourceKey
+      38: invokeinterface #161,  2          // InterfaceMethod net/minecraft/core/DefaultedRegistry.get:(Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+      43: invokevirtual #156                // Method java/util/Optional.get:()Ljava/lang/Object;
+      46: checkcast     #213                // class net/minecraft/core/Holder$Reference
+      49: invokevirtual #215                // Method net/minecraft/core/Holder$Reference.value:()Ljava/lang/Object;
+      52: if_acmpne     59
+      55: iconst_1
+      56: goto          60
+      59: iconst_0
+      60: istore        6
+      62: aload         5
+      64: invokevirtual #218                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock.typeBlockTag:()Ltschipp/carryon/common/scripting/Matchables$NBTCondition;
+      67: aload         4
+      69: invokevirtual #196                // Method tschipp/carryon/common/scripting/Matchables$NBTCondition.matches:(Lnet/minecraft/nbt/CompoundTag;)Z
+      72: istore        7
+      74: aload         5
+      76: invokevirtual #221                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock.typeHardness:()Ltschipp/carryon/common/scripting/Matchables$NumberBoundCondition;
+      79: fload_2
+      80: invokestatic  #174                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+      83: invokevirtual #180                // Method tschipp/carryon/common/scripting/Matchables$NumberBoundCondition.matches:(Ljava/lang/Number;)Z
+      86: istore        8
+      88: aload         5
+      90: invokevirtual #224                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock.typeResistance:()Ltschipp/carryon/common/scripting/Matchables$NumberBoundCondition;
+      93: fload_3
+      94: invokestatic  #174                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+      97: invokevirtual #180                // Method tschipp/carryon/common/scripting/Matchables$NumberBoundCondition.matches:(Ljava/lang/Number;)Z
+     100: istore        9
+     102: iload         7
+     104: ifeq          126
+     107: iload         6
+     109: ifeq          126
+     112: iload         8
+     114: ifeq          126
+     117: iload         9
+     119: ifeq          126
+     122: iconst_1
+     123: goto          127
+     126: iconst_0
+     127: ireturn
+
+  static {};
+    Code:
+       0: new           #227                // class java/util/ArrayList
+       3: dup
+       4: invokespecial #229                // Method java/util/ArrayList."<init>":()V
+       7: putstatic     #47                 // Field SCRIPTS:Ljava/util/List;
+      10: return
+}

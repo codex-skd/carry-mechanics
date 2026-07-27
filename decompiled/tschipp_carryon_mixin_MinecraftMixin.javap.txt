@@ -1,0 +1,28 @@
+Compiled from "MinecraftMixin.java"
+public class tschipp.carryon.mixin.MinecraftMixin {
+  public tschipp.carryon.mixin.MinecraftMixin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  private boolean allowSlotSelection(net.minecraft.world.entity.player.Inventory, int);
+    Code:
+       0: aload_1
+       1: getfield      #7                  // Field net/minecraft/world/entity/player/Inventory.player:Lnet/minecraft/world/entity/player/Player;
+       4: invokestatic  #13                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       7: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:()Z
+      10: istore_3
+      11: iload_3
+      12: ifne          17
+      15: iconst_1
+      16: ireturn
+      17: aload_1
+      18: invokevirtual #25                 // Method net/minecraft/world/entity/player/Inventory.getSelectedSlot:()I
+      21: iload_2
+      22: if_icmpne     29
+      25: iconst_1
+      26: goto          30
+      29: iconst_0
+      30: ireturn
+}

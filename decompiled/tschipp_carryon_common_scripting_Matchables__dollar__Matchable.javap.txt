@@ -1,0 +1,4 @@
+Compiled from "Matchables.java"
+public interface tschipp.carryon.common.scripting.Matchables$Matchable<T> {
+  public abstract boolean matches(T);
+}

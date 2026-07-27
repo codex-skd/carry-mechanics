@@ -1,0 +1,1123 @@
+Compiled from "PlacementHandler.java"
+public class tschipp.carryon.common.carry.PlacementHandler {
+  public tschipp.carryon.common.carry.PlacementHandler();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static boolean tryPlaceBlock(net.minecraft.server.level.ServerPlayer, net.minecraft.core.BlockPos, net.minecraft.core.Direction, java.util.function.BiFunction<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, java.lang.Boolean>);
+    Code:
+       0: aload_0
+       1: invokestatic  #7                  // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       4: astore        4
+       6: aload         4
+       8: getstatic     #13                 // Field tschipp/carryon/common/carry/CarryOnData$CarryType.BLOCK:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      11: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      14: ifne          19
+      17: iconst_0
+      18: ireturn
+      19: aload_0
+      20: getfield      #25                 // Field net/minecraft/server/level/ServerPlayer.tickCount:I
+      23: aload         4
+      25: invokevirtual #31                 // Method tschipp/carryon/common/carry/CarryOnData.getTick:()I
+      28: if_icmpne     33
+      31: iconst_0
+      32: ireturn
+      33: aload_0
+      34: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+      37: astore        5
+      39: aload         4
+      41: invokevirtual #39                 // Method tschipp/carryon/common/carry/CarryOnData.getBlock:()Lnet/minecraft/world/level/block/state/BlockState;
+      44: astore        6
+      46: new           #43                 // class net/minecraft/world/item/context/BlockPlaceContext
+      49: dup
+      50: aload_0
+      51: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+      54: getstatic     #51                 // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      57: aload_0
+      58: invokevirtual #57                 // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+      61: aload_2
+      62: aload_1
+      63: invokestatic  #61                 // Method net/minecraft/world/phys/BlockHitResult.miss:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/BlockHitResult;
+      66: invokespecial #67                 // Method net/minecraft/world/item/context/BlockPlaceContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V
+      69: astore        7
+      71: aload         5
+      73: aload_1
+      74: invokevirtual #70                 // Method net/minecraft/world/level/Level.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+      77: aload         7
+      79: invokevirtual #76                 // Method net/minecraft/world/level/block/state/BlockState.canBeReplaced:(Lnet/minecraft/world/item/context/BlockPlaceContext;)Z
+      82: ifne          91
+      85: aload_1
+      86: aload_2
+      87: invokevirtual #82                 // Method net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+      90: astore_1
+      91: new           #43                 // class net/minecraft/world/item/context/BlockPlaceContext
+      94: dup
+      95: aload_0
+      96: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+      99: getstatic     #51                 // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+     102: aload_0
+     103: invokevirtual #57                 // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+     106: aload_2
+     107: aload_1
+     108: invokestatic  #61                 // Method net/minecraft/world/phys/BlockHitResult.miss:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/BlockHitResult;
+     111: invokespecial #67                 // Method net/minecraft/world/item/context/BlockPlaceContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V
+     114: astore        7
+     116: aload         4
+     118: aload_1
+     119: aload         5
+     121: invokevirtual #88                 // Method net/minecraft/world/level/Level.registryAccess:()Lnet/minecraft/core/RegistryAccess;
+     124: invokevirtual #92                 // Method tschipp/carryon/common/carry/CarryOnData.getBlockEntity:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/level/block/entity/BlockEntity;
+     127: astore        8
+     129: aload         6
+     131: aload_0
+     132: aload         7
+     134: aload_1
+     135: invokestatic  #96                 // Method getPlacementState:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/item/context/BlockPlaceContext;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     138: astore        6
+     140: aload         6
+     142: aload         5
+     144: aload_1
+     145: invokevirtual #102                // Method net/minecraft/world/level/block/state/BlockState.canSurvive:(Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
+     148: ifeq          194
+     151: aload         5
+     153: aload_0
+     154: aload_1
+     155: invokevirtual #106                // Method net/minecraft/world/level/Level.mayInteract:(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;)Z
+     158: ifeq          194
+     161: aload         5
+     163: aload_1
+     164: invokevirtual #70                 // Method net/minecraft/world/level/Level.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     167: aload         7
+     169: invokevirtual #76                 // Method net/minecraft/world/level/block/state/BlockState.canBeReplaced:(Lnet/minecraft/world/item/context/BlockPlaceContext;)Z
+     172: ifeq          194
+     175: aload         5
+     177: aload         6
+     179: aload_1
+     180: aload_0
+     181: invokestatic  #110                // InterfaceMethod net/minecraft/world/phys/shapes/CollisionContext.of:(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/shapes/CollisionContext;
+     184: invokevirtual #116                // Method net/minecraft/world/level/Level.isUnobstructed:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Z
+     187: ifeq          194
+     190: iconst_1
+     191: goto          195
+     194: iconst_0
+     195: istore        9
+     197: iload         9
+     199: ifne          232
+     202: aload         5
+     204: aconst_null
+     205: aload_0
+     206: invokevirtual #120                // Method net/minecraft/server/level/ServerPlayer.getX:()D
+     209: aload_0
+     210: invokevirtual #124                // Method net/minecraft/server/level/ServerPlayer.getY:()D
+     213: aload_0
+     214: invokevirtual #127                // Method net/minecraft/server/level/ServerPlayer.getZ:()D
+     217: getstatic     #130                // Field net/minecraft/sounds/SoundEvents.LAVA_POP:Lnet/minecraft/sounds/SoundEvent;
+     220: getstatic     #136                // Field net/minecraft/sounds/SoundSource.PLAYERS:Lnet/minecraft/sounds/SoundSource;
+     223: ldc           #142                // float 0.5f
+     225: ldc           #142                // float 0.5f
+     227: invokevirtual #143                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/Entity;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+     230: iconst_0
+     231: ireturn
+     232: aload_3
+     233: ifnull        254
+     236: aload_3
+     237: aload_1
+     238: aload         6
+     240: invokeinterface #147,  3          // InterfaceMethod java/util/function/BiFunction.apply:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     245: checkcast     #153                // class java/lang/Boolean
+     248: invokevirtual #155                // Method java/lang/Boolean.booleanValue:()Z
+     251: ifeq          258
+     254: iconst_1
+     255: goto          259
+     258: iconst_0
+     259: istore        10
+     261: iload         10
+     263: ifne          268
+     266: iconst_0
+     267: ireturn
+     268: aload         5
+     270: aload_1
+     271: invokevirtual #159                // Method net/minecraft/world/level/Level.isOutsideBuildHeight:(Lnet/minecraft/core/BlockPos;)Z
+     274: ifeq          279
+     277: iconst_0
+     278: ireturn
+     279: aload         4
+     281: invokevirtual #163                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     284: invokevirtual #167                // Method java/util/Optional.isPresent:()Z
+     287: ifeq          358
+     290: aload         4
+     292: invokevirtual #163                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     295: invokevirtual #172                // Method java/util/Optional.get:()Ljava/lang/Object;
+     298: checkcast     #176                // class tschipp/carryon/common/scripting/CarryOnScript
+     301: invokevirtual #178                // Method tschipp/carryon/common/scripting/CarryOnScript.scriptEffects:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptEffects;
+     304: astore        11
+     306: aload         11
+     308: invokevirtual #182                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptEffects.commandPlace:()Ljava/lang/String;
+     311: astore        12
+     313: aload         12
+     315: invokevirtual #188                // Method java/lang/String.isEmpty:()Z
+     318: ifne          358
+     321: aload_0
+     322: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     325: invokevirtual #193                // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+     328: invokevirtual #199                // Method net/minecraft/server/MinecraftServer.getCommands:()Lnet/minecraft/commands/Commands;
+     331: aload_0
+     332: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     335: invokevirtual #193                // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+     338: invokevirtual #205                // Method net/minecraft/server/MinecraftServer.createCommandSourceStack:()Lnet/minecraft/commands/CommandSourceStack;
+     341: aload_0
+     342: invokevirtual #209                // Method net/minecraft/server/level/ServerPlayer.getGameProfile:()Lcom/mojang/authlib/GameProfile;
+     345: invokevirtual #213                // Method com/mojang/authlib/GameProfile.name:()Ljava/lang/String;
+     348: aload         12
+     350: invokedynamic #218,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     355: invokevirtual #222                // Method net/minecraft/commands/Commands.performPrefixedCommand:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     358: aload         5
+     360: aload_1
+     361: aload         6
+     363: invokevirtual #228                // Method net/minecraft/world/level/Level.setBlockAndUpdate:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+     366: pop
+     367: aload         8
+     369: ifnull        386
+     372: aload         8
+     374: aload         6
+     376: invokevirtual #232                // Method net/minecraft/world/level/block/entity/BlockEntity.setBlockState:(Lnet/minecraft/world/level/block/state/BlockState;)V
+     379: aload         5
+     381: aload         8
+     383: invokevirtual #238                // Method net/minecraft/world/level/Level.setBlockEntity:(Lnet/minecraft/world/level/block/entity/BlockEntity;)V
+     386: aload         5
+     388: aload_1
+     389: getstatic     #242                // Field net/minecraft/core/Direction.DOWN:Lnet/minecraft/core/Direction;
+     392: invokevirtual #82                 // Method net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+     395: aload         5
+     397: aload_1
+     398: getstatic     #242                // Field net/minecraft/core/Direction.DOWN:Lnet/minecraft/core/Direction;
+     401: invokevirtual #82                 // Method net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+     404: invokevirtual #70                 // Method net/minecraft/world/level/Level.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     407: invokevirtual #248                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+     410: invokevirtual #251                // Method net/minecraft/world/level/Level.updateNeighborsAt:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)V
+     413: aload         4
+     415: invokevirtual #255                // Method tschipp/carryon/common/carry/CarryOnData.clear:()V
+     418: aload_0
+     419: aload         4
+     421: invokestatic  #258                // Method tschipp/carryon/common/carry/CarryOnDataManager.setCarryData:(Lnet/minecraft/world/entity/player/Player;Ltschipp/carryon/common/carry/CarryOnData;)V
+     424: aload_0
+     425: aload         6
+     427: invokevirtual #262                // Method net/minecraft/world/level/block/state/BlockState.getSoundType:()Lnet/minecraft/world/level/block/SoundType;
+     430: invokevirtual #266                // Method net/minecraft/world/level/block/SoundType.getPlaceSound:()Lnet/minecraft/sounds/SoundEvent;
+     433: fconst_1
+     434: ldc           #142                // float 0.5f
+     436: invokevirtual #272                // Method net/minecraft/server/level/ServerPlayer.playSound:(Lnet/minecraft/sounds/SoundEvent;FF)V
+     439: aload         5
+     441: aconst_null
+     442: aload_1
+     443: aload         6
+     445: invokevirtual #262                // Method net/minecraft/world/level/block/state/BlockState.getSoundType:()Lnet/minecraft/world/level/block/SoundType;
+     448: invokevirtual #266                // Method net/minecraft/world/level/block/SoundType.getPlaceSound:()Lnet/minecraft/sounds/SoundEvent;
+     451: getstatic     #275                // Field net/minecraft/sounds/SoundSource.BLOCKS:Lnet/minecraft/sounds/SoundSource;
+     454: fconst_1
+     455: ldc           #142                // float 0.5f
+     457: invokevirtual #278                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+     460: aload_0
+     461: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+     464: iconst_1
+     465: invokevirtual #281                // Method net/minecraft/server/level/ServerPlayer.swing:(Lnet/minecraft/world/InteractionHand;Z)V
+     468: aload_0
+     469: getstatic     #285                // Field net/minecraft/world/effect/MobEffects.SLOWNESS:Lnet/minecraft/core/Holder;
+     472: invokevirtual #291                // Method net/minecraft/server/level/ServerPlayer.removeEffect:(Lnet/minecraft/core/Holder;)Z
+     475: pop
+     476: iconst_1
+     477: ireturn
+
+  private static net.minecraft.world.level.block.state.BlockState getPlacementState(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerPlayer, net.minecraft.world.item.context.BlockPlaceContext, net.minecraft.core.BlockPos);
+    Code:
+       0: aload_0
+       1: invokevirtual #248                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+       4: aload_2
+       5: invokevirtual #295                // Method net/minecraft/world/level/block/Block.getStateForPlacement:(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
+       8: astore        4
+      10: aload         4
+      12: ifnull        27
+      15: aload         4
+      17: invokevirtual #248                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+      20: aload_0
+      21: invokevirtual #248                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+      24: if_acmpeq     30
+      27: aload_0
+      28: astore        4
+      30: aload         4
+      32: invokevirtual #301                // Method net/minecraft/world/level/block/state/BlockState.getProperties:()Ljava/util/Collection;
+      35: invokeinterface #305,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+      40: astore        5
+      42: aload         5
+      44: invokeinterface #311,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      49: ifeq          123
+      52: aload         5
+      54: invokeinterface #316,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      59: checkcast     #319                // class net/minecraft/world/level/block/state/properties/Property
+      62: astore        6
+      64: aload         6
+      66: invokevirtual #321                // Method net/minecraft/world/level/block/state/properties/Property.getValueClass:()Ljava/lang/Class;
+      69: ldc           #243                // class net/minecraft/core/Direction
+      71: if_acmpne     83
+      74: aload_0
+      75: aload         4
+      77: aload         6
+      79: invokestatic  #325                // Method updateProperty:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/level/block/state/BlockState;
+      82: astore_0
+      83: aload         6
+      85: invokevirtual #321                // Method net/minecraft/world/level/block/state/properties/Property.getValueClass:()Ljava/lang/Class;
+      88: ldc_w         #329                // class net/minecraft/core/Direction$Axis
+      91: if_acmpne     103
+      94: aload_0
+      95: aload         4
+      97: aload         6
+      99: invokestatic  #325                // Method updateProperty:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/level/block/state/BlockState;
+     102: astore_0
+     103: aload         6
+     105: invokestatic  #331                // Method tschipp/carryon/common/config/ListHandler.isPropertyException:(Lnet/minecraft/world/level/block/state/properties/Property;)Z
+     108: ifeq          120
+     111: aload_0
+     112: aload         4
+     114: aload         6
+     116: invokestatic  #325                // Method updateProperty:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/level/block/state/BlockState;
+     119: astore_0
+     120: goto          42
+     123: aload_0
+     124: aload_1
+     125: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     128: aload_3
+     129: invokestatic  #337                // Method net/minecraft/world/level/block/Block.updateFromNeighbourShapes:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     132: astore        5
+     134: aload         5
+     136: invokevirtual #248                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+     139: aload_0
+     140: invokevirtual #248                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+     143: if_acmpne     149
+     146: aload         5
+     148: astore_0
+     149: aload         4
+     151: getstatic     #341                // Field net/minecraft/world/level/block/state/properties/BlockStateProperties.WATERLOGGED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+     154: invokevirtual #347                // Method net/minecraft/world/level/block/state/BlockState.hasProperty:(Lnet/minecraft/world/level/block/state/properties/Property;)Z
+     157: ifeq          192
+     160: aload_0
+     161: getstatic     #341                // Field net/minecraft/world/level/block/state/properties/BlockStateProperties.WATERLOGGED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+     164: invokevirtual #347                // Method net/minecraft/world/level/block/state/BlockState.hasProperty:(Lnet/minecraft/world/level/block/state/properties/Property;)Z
+     167: ifeq          192
+     170: aload_0
+     171: getstatic     #341                // Field net/minecraft/world/level/block/state/properties/BlockStateProperties.WATERLOGGED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+     174: aload         4
+     176: getstatic     #341                // Field net/minecraft/world/level/block/state/properties/BlockStateProperties.WATERLOGGED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+     179: invokevirtual #350                // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+     182: checkcast     #153                // class java/lang/Boolean
+     185: invokevirtual #354                // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+     188: checkcast     #77                 // class net/minecraft/world/level/block/state/BlockState
+     191: astore_0
+     192: aload_0
+     193: areturn
+
+  private static <T extends java.lang.Comparable<T>> net.minecraft.world.level.block.state.BlockState updateProperty(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.properties.Property<T>);
+    Code:
+       0: aload_1
+       1: aload_2
+       2: invokevirtual #350                // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+       5: astore_3
+       6: aload_0
+       7: aload_2
+       8: aload_3
+       9: invokevirtual #354                // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+      12: checkcast     #77                 // class net/minecraft/world/level/block/state/BlockState
+      15: areturn
+
+  public static boolean tryPlaceEntity(net.minecraft.server.level.ServerPlayer, net.minecraft.core.BlockPos, net.minecraft.core.Direction, java.util.function.BiFunction<net.minecraft.world.phys.Vec3, net.minecraft.world.entity.Entity, java.lang.Boolean>);
+    Code:
+       0: aload_0
+       1: invokestatic  #7                  // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       4: astore        4
+       6: aload         4
+       8: getstatic     #358                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.ENTITY:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      11: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      14: ifne          30
+      17: aload         4
+      19: getstatic     #361                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.PLAYER:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      22: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      25: ifne          30
+      28: iconst_0
+      29: ireturn
+      30: aload_0
+      31: getfield      #25                 // Field net/minecraft/server/level/ServerPlayer.tickCount:I
+      34: aload         4
+      36: invokevirtual #31                 // Method tschipp/carryon/common/carry/CarryOnData.getTick:()I
+      39: if_icmpne     44
+      42: iconst_0
+      43: ireturn
+      44: aload_0
+      45: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+      48: astore        5
+      50: new           #43                 // class net/minecraft/world/item/context/BlockPlaceContext
+      53: dup
+      54: aload_0
+      55: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+      58: getstatic     #51                 // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      61: aload_0
+      62: invokevirtual #57                 // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+      65: aload_2
+      66: aload_1
+      67: invokestatic  #61                 // Method net/minecraft/world/phys/BlockHitResult.miss:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/BlockHitResult;
+      70: invokespecial #67                 // Method net/minecraft/world/item/context/BlockPlaceContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V
+      73: astore        6
+      75: aload         5
+      77: aload_1
+      78: invokevirtual #70                 // Method net/minecraft/world/level/Level.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+      81: aload         6
+      83: invokevirtual #76                 // Method net/minecraft/world/level/block/state/BlockState.canBeReplaced:(Lnet/minecraft/world/item/context/BlockPlaceContext;)Z
+      86: ifne          120
+      89: aload_1
+      90: aload_2
+      91: invokevirtual #82                 // Method net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+      94: astore_1
+      95: new           #43                 // class net/minecraft/world/item/context/BlockPlaceContext
+      98: dup
+      99: aload_0
+     100: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+     103: getstatic     #51                 // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+     106: aload_0
+     107: invokevirtual #57                 // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+     110: aload_2
+     111: aload_1
+     112: invokestatic  #61                 // Method net/minecraft/world/phys/BlockHitResult.miss:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/BlockHitResult;
+     115: invokespecial #67                 // Method net/minecraft/world/item/context/BlockPlaceContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V
+     118: astore        6
+     120: aload         5
+     122: aload_1
+     123: invokevirtual #70                 // Method net/minecraft/world/level/Level.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     126: aload         6
+     128: invokevirtual #76                 // Method net/minecraft/world/level/block/state/BlockState.canBeReplaced:(Lnet/minecraft/world/item/context/BlockPlaceContext;)Z
+     131: ifne          164
+     134: aload         5
+     136: aconst_null
+     137: aload_0
+     138: invokevirtual #120                // Method net/minecraft/server/level/ServerPlayer.getX:()D
+     141: aload_0
+     142: invokevirtual #124                // Method net/minecraft/server/level/ServerPlayer.getY:()D
+     145: aload_0
+     146: invokevirtual #127                // Method net/minecraft/server/level/ServerPlayer.getZ:()D
+     149: getstatic     #130                // Field net/minecraft/sounds/SoundEvents.LAVA_POP:Lnet/minecraft/sounds/SoundEvent;
+     152: getstatic     #136                // Field net/minecraft/sounds/SoundSource.PLAYERS:Lnet/minecraft/sounds/SoundSource;
+     155: ldc           #142                // float 0.5f
+     157: ldc           #142                // float 0.5f
+     159: invokevirtual #143                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/Entity;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+     162: iconst_0
+     163: ireturn
+     164: aload_1
+     165: invokestatic  #364                // Method net/minecraft/world/phys/Vec3.atBottomCenterOf:(Lnet/minecraft/core/Vec3i;)Lnet/minecraft/world/phys/Vec3;
+     168: astore        7
+     170: aload         4
+     172: getstatic     #361                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.PLAYER:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+     175: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+     178: ifeq          275
+     181: aload         4
+     183: aload         5
+     185: invokevirtual #370                // Method tschipp/carryon/common/carry/CarryOnData.getCarryingPlayer:(Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/player/Player;
+     188: astore        8
+     190: aload_0
+     191: invokevirtual #374                // Method net/minecraft/server/level/ServerPlayer.ejectPassengers:()V
+     194: getstatic     #377                // Field tschipp/carryon/platform/Services.PLATFORM:Ltschipp/carryon/platform/services/IPlatformHelper;
+     197: getstatic     #383                // Field tschipp/carryon/Constants.PACKET_ID_START_RIDING_OTHER:Lnet/minecraft/resources/Identifier;
+     200: new           #389                // class tschipp/carryon/networking/clientbound/ClientboundStartRidingOtherPlayerPacket
+     203: dup
+     204: aload_0
+     205: invokevirtual #391                // Method net/minecraft/server/level/ServerPlayer.getId:()I
+     208: aload         8
+     210: invokevirtual #394                // Method net/minecraft/world/entity/Entity.getId:()I
+     213: iconst_0
+     214: invokespecial #397                // Method tschipp/carryon/networking/clientbound/ClientboundStartRidingOtherPlayerPacket."<init>":(IIZ)V
+     217: aload_0
+     218: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     221: invokeinterface #400,  4          // InterfaceMethod tschipp/carryon/platform/services/IPlatformHelper.sendPacketToAllPlayers:(Lnet/minecraft/resources/Identifier;Ltschipp/carryon/networking/PacketBase;Lnet/minecraft/server/level/ServerLevel;)V
+     226: aload         4
+     228: invokevirtual #255                // Method tschipp/carryon/common/carry/CarryOnData.clear:()V
+     231: aload_0
+     232: aload         4
+     234: invokestatic  #258                // Method tschipp/carryon/common/carry/CarryOnDataManager.setCarryData:(Lnet/minecraft/world/entity/player/Player;Ltschipp/carryon/common/carry/CarryOnData;)V
+     237: aload         8
+     239: aload         7
+     241: getfield      #406                // Field net/minecraft/world/phys/Vec3.x:D
+     244: aload         7
+     246: getfield      #410                // Field net/minecraft/world/phys/Vec3.y:D
+     249: aload         7
+     251: getfield      #413                // Field net/minecraft/world/phys/Vec3.z:D
+     254: invokevirtual #416                // Method net/minecraft/world/entity/Entity.teleportTo:(DDD)V
+     257: aload_0
+     258: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+     261: iconst_1
+     262: invokevirtual #281                // Method net/minecraft/server/level/ServerPlayer.swing:(Lnet/minecraft/world/InteractionHand;Z)V
+     265: aload_0
+     266: getstatic     #285                // Field net/minecraft/world/effect/MobEffects.SLOWNESS:Lnet/minecraft/core/Holder;
+     269: invokevirtual #291                // Method net/minecraft/server/level/ServerPlayer.removeEffect:(Lnet/minecraft/core/Holder;)Z
+     272: pop
+     273: iconst_1
+     274: ireturn
+     275: aload         4
+     277: aload         5
+     279: invokevirtual #420                // Method tschipp/carryon/common/carry/CarryOnData.getEntity:(Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
+     282: astore        8
+     284: aload         8
+     286: aload         7
+     288: invokevirtual #424                // Method net/minecraft/world/entity/Entity.setPos:(Lnet/minecraft/world/phys/Vec3;)V
+     291: aload_3
+     292: ifnull        314
+     295: aload_3
+     296: aload         7
+     298: aload         8
+     300: invokeinterface #147,  3          // InterfaceMethod java/util/function/BiFunction.apply:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     305: checkcast     #153                // class java/lang/Boolean
+     308: invokevirtual #155                // Method java/lang/Boolean.booleanValue:()Z
+     311: ifeq          318
+     314: iconst_1
+     315: goto          319
+     318: iconst_0
+     319: istore        9
+     321: iload         9
+     323: ifne          328
+     326: iconst_0
+     327: ireturn
+     328: aload         4
+     330: invokevirtual #163                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     333: invokevirtual #167                // Method java/util/Optional.isPresent:()Z
+     336: ifeq          407
+     339: aload         4
+     341: invokevirtual #163                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     344: invokevirtual #172                // Method java/util/Optional.get:()Ljava/lang/Object;
+     347: checkcast     #176                // class tschipp/carryon/common/scripting/CarryOnScript
+     350: invokevirtual #178                // Method tschipp/carryon/common/scripting/CarryOnScript.scriptEffects:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptEffects;
+     353: astore        10
+     355: aload         10
+     357: invokevirtual #182                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptEffects.commandPlace:()Ljava/lang/String;
+     360: astore        11
+     362: aload         11
+     364: invokevirtual #188                // Method java/lang/String.isEmpty:()Z
+     367: ifne          407
+     370: aload_0
+     371: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     374: invokevirtual #193                // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+     377: invokevirtual #199                // Method net/minecraft/server/MinecraftServer.getCommands:()Lnet/minecraft/commands/Commands;
+     380: aload_0
+     381: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     384: invokevirtual #193                // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+     387: invokevirtual #205                // Method net/minecraft/server/MinecraftServer.createCommandSourceStack:()Lnet/minecraft/commands/CommandSourceStack;
+     390: aload_0
+     391: invokevirtual #209                // Method net/minecraft/server/level/ServerPlayer.getGameProfile:()Lcom/mojang/authlib/GameProfile;
+     394: invokevirtual #213                // Method com/mojang/authlib/GameProfile.name:()Ljava/lang/String;
+     397: aload         11
+     399: invokedynamic #218,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     404: invokevirtual #222                // Method net/minecraft/commands/Commands.performPrefixedCommand:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     407: aload         5
+     409: aload         8
+     411: invokevirtual #428                // Method net/minecraft/world/level/Level.addFreshEntity:(Lnet/minecraft/world/entity/Entity;)Z
+     414: pop
+     415: aload         8
+     417: instanceof    #432                // class net/minecraft/world/entity/Mob
+     420: ifeq          435
+     423: aload         8
+     425: checkcast     #432                // class net/minecraft/world/entity/Mob
+     428: astore        10
+     430: aload         10
+     432: invokevirtual #434                // Method net/minecraft/world/entity/Mob.playAmbientSound:()V
+     435: aload_0
+     436: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+     439: iconst_1
+     440: invokevirtual #281                // Method net/minecraft/server/level/ServerPlayer.swing:(Lnet/minecraft/world/InteractionHand;Z)V
+     443: aload         4
+     445: invokevirtual #255                // Method tschipp/carryon/common/carry/CarryOnData.clear:()V
+     448: aload_0
+     449: aload         4
+     451: invokestatic  #258                // Method tschipp/carryon/common/carry/CarryOnDataManager.setCarryData:(Lnet/minecraft/world/entity/player/Player;Ltschipp/carryon/common/carry/CarryOnData;)V
+     454: aload_0
+     455: getstatic     #285                // Field net/minecraft/world/effect/MobEffects.SLOWNESS:Lnet/minecraft/core/Holder;
+     458: invokevirtual #291                // Method net/minecraft/server/level/ServerPlayer.removeEffect:(Lnet/minecraft/core/Holder;)Z
+     461: pop
+     462: iconst_1
+     463: ireturn
+
+  public static void tryStackEntity(net.minecraft.server.level.ServerPlayer, net.minecraft.world.entity.Entity);
+    Code:
+       0: getstatic     #437                // Field tschipp/carryon/Constants.COMMON_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Common;
+       3: getfield      #441                // Field tschipp/carryon/common/config/CarryConfig$Common.settings:Ltschipp/carryon/common/config/CarryConfig$Common$Settings;
+       6: getfield      #447                // Field tschipp/carryon/common/config/CarryConfig$Common$Settings.stackableEntities:Z
+       9: ifne          13
+      12: return
+      13: aload_0
+      14: invokestatic  #7                  // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+      17: astore_2
+      18: aload_2
+      19: getstatic     #358                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.ENTITY:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      22: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      25: ifne          39
+      28: aload_2
+      29: getstatic     #361                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.PLAYER:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      32: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      35: ifne          39
+      38: return
+      39: aload_0
+      40: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+      43: astore_3
+      44: aload_2
+      45: getstatic     #358                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.ENTITY:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      48: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      51: ifeq          64
+      54: aload_2
+      55: aload_3
+      56: invokevirtual #420                // Method tschipp/carryon/common/carry/CarryOnData.getEntity:(Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
+      59: astore        4
+      61: goto          70
+      64: aload_0
+      65: invokevirtual #453                // Method net/minecraft/server/level/ServerPlayer.getFirstPassenger:()Lnet/minecraft/world/entity/Entity;
+      68: astore        4
+      70: aload         4
+      72: ifnonnull     76
+      75: return
+      76: aload         4
+      78: invokevirtual #457                // Method net/minecraft/world/entity/Entity.getBbHeight:()F
+      81: aload         4
+      83: invokevirtual #461                // Method net/minecraft/world/entity/Entity.getBbWidth:()F
+      86: fmul
+      87: f2d
+      88: dstore        5
+      90: aload_1
+      91: invokevirtual #464                // Method net/minecraft/world/entity/Entity.blockPosition:()Lnet/minecraft/core/BlockPos;
+      94: aload_0
+      95: invokevirtual #468                // Method net/minecraft/server/level/ServerPlayer.blockPosition:()Lnet/minecraft/core/BlockPos;
+      98: invokevirtual #469                // Method net/minecraft/core/BlockPos.distSqr:(Lnet/minecraft/core/Vec3i;)D
+     101: dstore        7
+     103: aload_1
+     104: invokevirtual #473                // Method net/minecraft/world/entity/Entity.getRootVehicle:()Lnet/minecraft/world/entity/Entity;
+     107: astore        9
+     109: aload         9
+     111: invokestatic  #476                // Method getPassengerCount:(Lnet/minecraft/world/entity/Entity;)I
+     114: istore        10
+     116: iload         10
+     118: getstatic     #437                // Field tschipp/carryon/Constants.COMMON_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Common;
+     121: getfield      #441                // Field tschipp/carryon/common/config/CarryConfig$Common.settings:Ltschipp/carryon/common/config/CarryConfig$Common$Settings;
+     124: getfield      #480                // Field tschipp/carryon/common/config/CarryConfig$Common$Settings.maxEntityStackLimit:I
+     127: iconst_1
+     128: isub
+     129: if_icmpge     500
+     132: aload         9
+     134: invokestatic  #483                // Method getTopPassenger:(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
+     137: astore        11
+     139: aload         11
+     141: aload         4
+     143: if_acmpne     147
+     146: return
+     147: aload         11
+     149: invokestatic  #487                // Method tschipp/carryon/common/config/ListHandler.isStackingPermitted:(Lnet/minecraft/world/entity/Entity;)Z
+     152: ifeq          497
+     155: aload         11
+     157: invokevirtual #457                // Method net/minecraft/world/entity/Entity.getBbHeight:()F
+     160: aload         11
+     162: invokevirtual #461                // Method net/minecraft/world/entity/Entity.getBbWidth:()F
+     165: fmul
+     166: f2d
+     167: dstore        12
+     169: getstatic     #437                // Field tschipp/carryon/Constants.COMMON_CONFIG:Ltschipp/carryon/common/config/CarryConfig$Common;
+     172: getfield      #441                // Field tschipp/carryon/common/config/CarryConfig$Common.settings:Ltschipp/carryon/common/config/CarryConfig$Common$Settings;
+     175: getfield      #490                // Field tschipp/carryon/common/config/CarryConfig$Common$Settings.entitySizeMattersStacking:Z
+     178: ifeq          189
+     181: dload         5
+     183: dload         12
+     185: dcmpg
+     186: ifgt          470
+     189: aload         11
+     191: instanceof    #493                // class net/minecraft/world/entity/animal/equine/Horse
+     194: ifeq          210
+     197: aload         11
+     199: checkcast     #493                // class net/minecraft/world/entity/animal/equine/Horse
+     202: astore        14
+     204: aload         14
+     206: iconst_1
+     207: invokevirtual #495                // Method net/minecraft/world/entity/animal/equine/Horse.setTamed:(Z)V
+     210: dload         7
+     212: ldc2_w        #499                // double 6.0d
+     215: dcmpg
+     216: ifge          293
+     219: aload_1
+     220: invokevirtual #501                // Method net/minecraft/world/entity/Entity.getX:()D
+     223: dstore        14
+     225: aload_1
+     226: invokevirtual #502                // Method net/minecraft/world/entity/Entity.getY:()D
+     229: dstore        16
+     231: aload_1
+     232: invokevirtual #503                // Method net/minecraft/world/entity/Entity.getZ:()D
+     235: dstore        18
+     237: aload_2
+     238: getstatic     #358                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.ENTITY:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+     241: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+     244: ifeq          280
+     247: aload         4
+     249: dload         14
+     251: dload         16
+     253: ldc2_w        #504                // double 2.6d
+     256: dadd
+     257: dload         18
+     259: invokevirtual #506                // Method net/minecraft/world/entity/Entity.setPos:(DDD)V
+     262: aload_3
+     263: aload         4
+     265: invokevirtual #428                // Method net/minecraft/world/level/Level.addFreshEntity:(Lnet/minecraft/world/entity/Entity;)Z
+     268: pop
+     269: aload         4
+     271: dload         14
+     273: dload         16
+     275: dload         18
+     277: invokevirtual #416                // Method net/minecraft/world/entity/Entity.teleportTo:(DDD)V
+     280: aload         4
+     282: aload         11
+     284: iconst_0
+     285: iconst_0
+     286: invokevirtual #508                // Method net/minecraft/world/entity/Entity.startRiding:(Lnet/minecraft/world/entity/Entity;ZZ)Z
+     289: pop
+     290: goto          337
+     293: aload_2
+     294: getstatic     #358                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.ENTITY:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+     297: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+     300: ifeq          327
+     303: aload         4
+     305: aload_1
+     306: invokevirtual #501                // Method net/minecraft/world/entity/Entity.getX:()D
+     309: aload_1
+     310: invokevirtual #502                // Method net/minecraft/world/entity/Entity.getY:()D
+     313: aload_1
+     314: invokevirtual #503                // Method net/minecraft/world/entity/Entity.getZ:()D
+     317: invokevirtual #506                // Method net/minecraft/world/entity/Entity.setPos:(DDD)V
+     320: aload_3
+     321: aload         4
+     323: invokevirtual #428                // Method net/minecraft/world/level/Level.addFreshEntity:(Lnet/minecraft/world/entity/Entity;)Z
+     326: pop
+     327: aload         4
+     329: aload         11
+     331: iconst_0
+     332: iconst_0
+     333: invokevirtual #508                // Method net/minecraft/world/entity/Entity.startRiding:(Lnet/minecraft/world/entity/Entity;ZZ)Z
+     336: pop
+     337: aload_2
+     338: invokevirtual #163                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     341: invokevirtual #167                // Method java/util/Optional.isPresent:()Z
+     344: ifeq          414
+     347: aload_2
+     348: invokevirtual #163                // Method tschipp/carryon/common/carry/CarryOnData.getActiveScript:()Ljava/util/Optional;
+     351: invokevirtual #172                // Method java/util/Optional.get:()Ljava/lang/Object;
+     354: checkcast     #176                // class tschipp/carryon/common/scripting/CarryOnScript
+     357: invokevirtual #178                // Method tschipp/carryon/common/scripting/CarryOnScript.scriptEffects:()Ltschipp/carryon/common/scripting/CarryOnScript$ScriptEffects;
+     360: astore        14
+     362: aload         14
+     364: invokevirtual #182                // Method tschipp/carryon/common/scripting/CarryOnScript$ScriptEffects.commandPlace:()Ljava/lang/String;
+     367: astore        15
+     369: aload         15
+     371: invokevirtual #188                // Method java/lang/String.isEmpty:()Z
+     374: ifne          414
+     377: aload_0
+     378: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     381: invokevirtual #193                // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+     384: invokevirtual #199                // Method net/minecraft/server/MinecraftServer.getCommands:()Lnet/minecraft/commands/Commands;
+     387: aload_0
+     388: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     391: invokevirtual #193                // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+     394: invokevirtual #205                // Method net/minecraft/server/MinecraftServer.createCommandSourceStack:()Lnet/minecraft/commands/CommandSourceStack;
+     397: aload_0
+     398: invokevirtual #209                // Method net/minecraft/server/level/ServerPlayer.getGameProfile:()Lcom/mojang/authlib/GameProfile;
+     401: invokevirtual #213                // Method com/mojang/authlib/GameProfile.name:()Ljava/lang/String;
+     404: aload         15
+     406: invokedynamic #218,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     411: invokevirtual #222                // Method net/minecraft/commands/Commands.performPrefixedCommand:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     414: aload_0
+     415: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+     418: iconst_1
+     419: invokevirtual #281                // Method net/minecraft/server/level/ServerPlayer.swing:(Lnet/minecraft/world/InteractionHand;Z)V
+     422: aload_2
+     423: invokevirtual #255                // Method tschipp/carryon/common/carry/CarryOnData.clear:()V
+     426: aload_0
+     427: aload_2
+     428: invokestatic  #258                // Method tschipp/carryon/common/carry/CarryOnDataManager.setCarryData:(Lnet/minecraft/world/entity/player/Player;Ltschipp/carryon/common/carry/CarryOnData;)V
+     431: aload_3
+     432: aconst_null
+     433: aload_0
+     434: invokevirtual #120                // Method net/minecraft/server/level/ServerPlayer.getX:()D
+     437: aload_0
+     438: invokevirtual #124                // Method net/minecraft/server/level/ServerPlayer.getY:()D
+     441: aload_0
+     442: invokevirtual #127                // Method net/minecraft/server/level/ServerPlayer.getZ:()D
+     445: getstatic     #512                // Field net/minecraft/sounds/SoundEvents.HORSE_SADDLE:Lnet/minecraft/core/Holder$Reference;
+     448: getstatic     #136                // Field net/minecraft/sounds/SoundSource.PLAYERS:Lnet/minecraft/sounds/SoundSource;
+     451: ldc           #142                // float 0.5f
+     453: ldc_w         #516                // float 1.5f
+     456: invokevirtual #517                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/Entity;DDDLnet/minecraft/core/Holder;Lnet/minecraft/sounds/SoundSource;FF)V
+     459: aload_0
+     460: getstatic     #285                // Field net/minecraft/world/effect/MobEffects.SLOWNESS:Lnet/minecraft/core/Holder;
+     463: invokevirtual #291                // Method net/minecraft/server/level/ServerPlayer.removeEffect:(Lnet/minecraft/core/Holder;)Z
+     466: pop
+     467: goto          497
+     470: aload_3
+     471: aconst_null
+     472: aload_0
+     473: invokevirtual #120                // Method net/minecraft/server/level/ServerPlayer.getX:()D
+     476: aload_0
+     477: invokevirtual #124                // Method net/minecraft/server/level/ServerPlayer.getY:()D
+     480: aload_0
+     481: invokevirtual #127                // Method net/minecraft/server/level/ServerPlayer.getZ:()D
+     484: getstatic     #130                // Field net/minecraft/sounds/SoundEvents.LAVA_POP:Lnet/minecraft/sounds/SoundEvent;
+     487: getstatic     #136                // Field net/minecraft/sounds/SoundSource.PLAYERS:Lnet/minecraft/sounds/SoundSource;
+     490: ldc           #142                // float 0.5f
+     492: ldc           #142                // float 0.5f
+     494: invokevirtual #143                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/Entity;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+     497: goto          527
+     500: aload_3
+     501: aconst_null
+     502: aload_0
+     503: invokevirtual #120                // Method net/minecraft/server/level/ServerPlayer.getX:()D
+     506: aload_0
+     507: invokevirtual #124                // Method net/minecraft/server/level/ServerPlayer.getY:()D
+     510: aload_0
+     511: invokevirtual #127                // Method net/minecraft/server/level/ServerPlayer.getZ:()D
+     514: getstatic     #130                // Field net/minecraft/sounds/SoundEvents.LAVA_POP:Lnet/minecraft/sounds/SoundEvent;
+     517: getstatic     #136                // Field net/minecraft/sounds/SoundSource.PLAYERS:Lnet/minecraft/sounds/SoundSource;
+     520: ldc           #142                // float 0.5f
+     522: ldc           #142                // float 0.5f
+     524: invokevirtual #143                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/Entity;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+     527: return
+
+  public static void placeCarriedOnDeath(net.minecraft.server.level.ServerPlayer, net.minecraft.server.level.ServerPlayer, boolean);
+    Code:
+       0: aload_0
+       1: invokestatic  #7                  // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       4: astore_3
+       5: aload_0
+       6: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+       9: invokevirtual #520                // Method net/minecraft/server/level/ServerLevel.getGameRules:()Lnet/minecraft/world/level/gamerules/GameRules;
+      12: getstatic     #524                // Field net/minecraft/world/level/gamerules/GameRules.KEEP_INVENTORY:Lnet/minecraft/world/level/gamerules/GameRule;
+      15: invokevirtual #530                // Method net/minecraft/world/level/gamerules/GameRules.get:(Lnet/minecraft/world/level/gamerules/GameRule;)Ljava/lang/Object;
+      18: checkcast     #153                // class java/lang/Boolean
+      21: invokevirtual #155                // Method java/lang/Boolean.booleanValue:()Z
+      24: ifne          31
+      27: iload_2
+      28: ifne          61
+      31: aload_3
+      32: getstatic     #361                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.PLAYER:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      35: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      38: ifne          61
+      41: aload_1
+      42: aload_3
+      43: invokestatic  #258                // Method tschipp/carryon/common/carry/CarryOnDataManager.setCarryData:(Lnet/minecraft/world/entity/player/Player;Ltschipp/carryon/common/carry/CarryOnData;)V
+      46: aload_1
+      47: invokevirtual #533                // Method net/minecraft/server/level/ServerPlayer.getInventory:()Lnet/minecraft/world/entity/player/Inventory;
+      50: aload_0
+      51: invokevirtual #533                // Method net/minecraft/server/level/ServerPlayer.getInventory:()Lnet/minecraft/world/entity/player/Inventory;
+      54: invokevirtual #537                // Method net/minecraft/world/entity/player/Inventory.getSelectedSlot:()I
+      57: invokevirtual #542                // Method net/minecraft/world/entity/player/Inventory.setSelectedSlot:(I)V
+      60: return
+      61: aload_0
+      62: invokestatic  #546                // Method placeCarried:(Lnet/minecraft/server/level/ServerPlayer;)V
+      65: return
+
+  public static void placeCarried(net.minecraft.server.level.ServerPlayer);
+    Code:
+       0: aload_0
+       1: invokestatic  #7                  // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       4: astore_1
+       5: aload_1
+       6: getstatic     #358                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.ENTITY:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+       9: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      12: ifeq          44
+      15: aload_1
+      16: aload_0
+      17: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+      20: invokevirtual #420                // Method tschipp/carryon/common/carry/CarryOnData.getEntity:(Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
+      23: astore_2
+      24: aload_2
+      25: aload_0
+      26: invokevirtual #57                 // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+      29: invokevirtual #424                // Method net/minecraft/world/entity/Entity.setPos:(Lnet/minecraft/world/phys/Vec3;)V
+      32: aload_0
+      33: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+      36: aload_2
+      37: invokevirtual #550                // Method net/minecraft/server/level/ServerLevel.addFreshEntity:(Lnet/minecraft/world/entity/Entity;)Z
+      40: pop
+      41: goto          165
+      44: aload_1
+      45: getstatic     #13                 // Field tschipp/carryon/common/carry/CarryOnData$CarryType.BLOCK:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      48: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      51: ifeq          151
+      54: new           #43                 // class net/minecraft/world/item/context/BlockPlaceContext
+      57: dup
+      58: aload_0
+      59: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+      62: getstatic     #51                 // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      65: aload_0
+      66: invokevirtual #468                // Method net/minecraft/server/level/ServerPlayer.blockPosition:()Lnet/minecraft/core/BlockPos;
+      69: invokestatic  #551                // Method net/minecraft/world/phys/Vec3.atCenterOf:(Lnet/minecraft/core/Vec3i;)Lnet/minecraft/world/phys/Vec3;
+      72: getstatic     #242                // Field net/minecraft/core/Direction.DOWN:Lnet/minecraft/core/Direction;
+      75: aload_0
+      76: invokevirtual #468                // Method net/minecraft/server/level/ServerPlayer.blockPosition:()Lnet/minecraft/core/BlockPos;
+      79: invokestatic  #61                 // Method net/minecraft/world/phys/BlockHitResult.miss:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/BlockHitResult;
+      82: invokespecial #67                 // Method net/minecraft/world/item/context/BlockPlaceContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V
+      85: astore_2
+      86: aload_1
+      87: invokevirtual #39                 // Method tschipp/carryon/common/carry/CarryOnData.getBlock:()Lnet/minecraft/world/level/block/state/BlockState;
+      90: aload_0
+      91: aload_2
+      92: aload_0
+      93: invokevirtual #468                // Method net/minecraft/server/level/ServerPlayer.blockPosition:()Lnet/minecraft/core/BlockPos;
+      96: invokestatic  #96                 // Method getPlacementState:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/item/context/BlockPlaceContext;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+      99: astore_3
+     100: aload_3
+     101: aload_0
+     102: invokestatic  #554                // Method getDeathPlacementPos:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/core/BlockPos;
+     105: astore        4
+     107: aload_1
+     108: aload         4
+     110: aload_0
+     111: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     114: invokevirtual #558                // Method net/minecraft/server/level/ServerLevel.registryAccess:()Lnet/minecraft/core/RegistryAccess;
+     117: invokevirtual #92                 // Method tschipp/carryon/common/carry/CarryOnData.getBlockEntity:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/level/block/entity/BlockEntity;
+     120: astore        5
+     122: aload_0
+     123: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     126: aload         4
+     128: aload_3
+     129: iconst_3
+     130: invokevirtual #559                // Method net/minecraft/server/level/ServerLevel.setBlock:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+     133: pop
+     134: aload         5
+     136: ifnull        148
+     139: aload_0
+     140: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     143: aload         5
+     145: invokevirtual #563                // Method net/minecraft/server/level/ServerLevel.setBlockEntity:(Lnet/minecraft/world/level/block/entity/BlockEntity;)V
+     148: goto          165
+     151: aload_1
+     152: getstatic     #361                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.PLAYER:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+     155: invokevirtual #19                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+     158: ifeq          165
+     161: aload_0
+     162: invokevirtual #374                // Method net/minecraft/server/level/ServerPlayer.ejectPassengers:()V
+     165: aload_1
+     166: invokevirtual #255                // Method tschipp/carryon/common/carry/CarryOnData.clear:()V
+     169: aload_0
+     170: aload_1
+     171: invokestatic  #258                // Method tschipp/carryon/common/carry/CarryOnDataManager.setCarryData:(Lnet/minecraft/world/entity/player/Player;Ltschipp/carryon/common/carry/CarryOnData;)V
+     174: aload_0
+     175: getstatic     #285                // Field net/minecraft/world/effect/MobEffects.SLOWNESS:Lnet/minecraft/core/Holder;
+     178: invokevirtual #291                // Method net/minecraft/server/level/ServerPlayer.removeEffect:(Lnet/minecraft/core/Holder;)Z
+     181: pop
+     182: return
+
+  private static net.minecraft.core.BlockPos getDeathPlacementPos(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerPlayer);
+    Code:
+       0: aload_1
+       1: invokevirtual #468                // Method net/minecraft/server/level/ServerPlayer.blockPosition:()Lnet/minecraft/core/BlockPos;
+       4: astore_2
+       5: bipush        15
+       7: istore_3
+       8: new           #564                // class java/util/ArrayList
+      11: dup
+      12: invokespecial #566                // Method java/util/ArrayList."<init>":()V
+      15: astore        4
+      17: iconst_0
+      18: istore        5
+      20: iload         5
+      22: iload_3
+      23: iconst_2
+      24: imul
+      25: if_icmpge     167
+      28: iconst_0
+      29: istore        6
+      31: iload         6
+      33: iload_3
+      34: iconst_2
+      35: imul
+      36: if_icmpge     161
+      39: iconst_0
+      40: istore        7
+      42: iload         7
+      44: iload_3
+      45: iconst_2
+      46: imul
+      47: if_icmpge     155
+      50: iload         6
+      52: iconst_2
+      53: irem
+      54: ifne          64
+      57: iload         6
+      59: iconst_2
+      60: idiv
+      61: goto          69
+      64: iload         6
+      66: iconst_2
+      67: idiv
+      68: ineg
+      69: istore        8
+      71: iload         5
+      73: iconst_2
+      74: irem
+      75: ifne          85
+      78: iload         5
+      80: iconst_2
+      81: idiv
+      82: goto          90
+      85: iload         5
+      87: iconst_2
+      88: idiv
+      89: ineg
+      90: istore        9
+      92: iload         7
+      94: iconst_2
+      95: irem
+      96: ifne          106
+      99: iload         7
+     101: iconst_2
+     102: idiv
+     103: goto          111
+     106: iload         7
+     108: iconst_2
+     109: idiv
+     110: ineg
+     111: istore        10
+     113: aload         4
+     115: new           #83                 // class net/minecraft/core/BlockPos
+     118: dup
+     119: aload_2
+     120: invokevirtual #567                // Method net/minecraft/core/BlockPos.getX:()I
+     123: iload         8
+     125: iadd
+     126: aload_2
+     127: invokevirtual #569                // Method net/minecraft/core/BlockPos.getY:()I
+     130: iload         9
+     132: iadd
+     133: aload_2
+     134: invokevirtual #571                // Method net/minecraft/core/BlockPos.getZ:()I
+     137: iload         10
+     139: iadd
+     140: invokespecial #573                // Method net/minecraft/core/BlockPos."<init>":(III)V
+     143: invokeinterface #576,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     148: pop
+     149: iinc          7, 1
+     152: goto          42
+     155: iinc          6, 1
+     158: goto          31
+     161: iinc          5, 1
+     164: goto          20
+     167: aload         4
+     169: aload_1
+     170: invokedynamic #582,  0            // InvokeDynamic #1:applyAsDouble:(Lnet/minecraft/server/level/ServerPlayer;)Ljava/util/function/ToDoubleFunction;
+     175: invokestatic  #586                // InterfaceMethod java/util/Comparator.comparingDouble:(Ljava/util/function/ToDoubleFunction;)Ljava/util/Comparator;
+     178: invokeinterface #592,  2          // InterfaceMethod java/util/List.sort:(Ljava/util/Comparator;)V
+     183: aload         4
+     185: invokeinterface #596,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+     190: astore        5
+     192: aload         5
+     194: invokeinterface #311,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     199: ifeq          308
+     202: aload         5
+     204: invokeinterface #316,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     209: checkcast     #83                 // class net/minecraft/core/BlockPos
+     212: astore        6
+     214: new           #43                 // class net/minecraft/world/item/context/BlockPlaceContext
+     217: dup
+     218: aload_1
+     219: getstatic     #45                 // Field net/minecraft/world/InteractionHand.MAIN_HAND:Lnet/minecraft/world/InteractionHand;
+     222: getstatic     #51                 // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+     225: aload         6
+     227: invokestatic  #551                // Method net/minecraft/world/phys/Vec3.atCenterOf:(Lnet/minecraft/core/Vec3i;)Lnet/minecraft/world/phys/Vec3;
+     230: getstatic     #242                // Field net/minecraft/core/Direction.DOWN:Lnet/minecraft/core/Direction;
+     233: aload         6
+     235: invokestatic  #61                 // Method net/minecraft/world/phys/BlockHitResult.miss:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/BlockHitResult;
+     238: invokespecial #67                 // Method net/minecraft/world/item/context/BlockPlaceContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V
+     241: astore        7
+     243: aload_0
+     244: aload_1
+     245: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     248: aload         6
+     250: invokevirtual #102                // Method net/minecraft/world/level/block/state/BlockState.canSurvive:(Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
+     253: ifeq          294
+     256: aload_1
+     257: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     260: aload         6
+     262: invokevirtual #597                // Method net/minecraft/server/level/ServerLevel.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     265: aload         7
+     267: invokevirtual #76                 // Method net/minecraft/world/level/block/state/BlockState.canBeReplaced:(Lnet/minecraft/world/item/context/BlockPlaceContext;)Z
+     270: ifeq          294
+     273: aload_1
+     274: invokevirtual #35                 // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     277: aload_0
+     278: aload         6
+     280: aload_1
+     281: invokestatic  #110                // InterfaceMethod net/minecraft/world/phys/shapes/CollisionContext.of:(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/shapes/CollisionContext;
+     284: invokevirtual #598                // Method net/minecraft/server/level/ServerLevel.isUnobstructed:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Z
+     287: ifeq          294
+     290: iconst_1
+     291: goto          295
+     294: iconst_0
+     295: istore        8
+     297: iload         8
+     299: ifeq          305
+     302: aload         6
+     304: areturn
+     305: goto          192
+     308: aload_2
+     309: areturn
+
+  private static int getPassengerCount(net.minecraft.world.entity.Entity);
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: aload_0
+       3: invokevirtual #599                // Method net/minecraft/world/entity/Entity.isVehicle:()Z
+       6: ifeq          40
+       9: aload_0
+      10: invokevirtual #602                // Method net/minecraft/world/entity/Entity.getPassengers:()Ljava/util/List;
+      13: astore_2
+      14: aload_2
+      15: invokeinterface #606,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+      20: ifne          37
+      23: aload_2
+      24: iconst_0
+      25: invokeinterface #607,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+      30: checkcast     #395                // class net/minecraft/world/entity/Entity
+      33: astore_0
+      34: iinc          1, 1
+      37: goto          2
+      40: iload_1
+      41: ireturn
+
+  private static net.minecraft.world.entity.Entity getTopPassenger(net.minecraft.world.entity.Entity);
+    Code:
+       0: aload_0
+       1: astore_1
+       2: aload_0
+       3: invokevirtual #599                // Method net/minecraft/world/entity/Entity.isVehicle:()Z
+       6: ifeq          39
+       9: aload_0
+      10: invokevirtual #602                // Method net/minecraft/world/entity/Entity.getPassengers:()Ljava/util/List;
+      13: astore_2
+      14: aload_2
+      15: invokeinterface #606,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+      20: ifne          36
+      23: aload_2
+      24: iconst_0
+      25: invokeinterface #607,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+      30: checkcast     #395                // class net/minecraft/world/entity/Entity
+      33: astore_0
+      34: aload_0
+      35: astore_1
+      36: goto          2
+      39: aload_1
+      40: areturn
+
+  private static double lambda$getDeathPlacementPos$0(net.minecraft.server.level.ServerPlayer, net.minecraft.core.BlockPos);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #610                // Method net/minecraft/core/BlockPos.getCenter:()Lnet/minecraft/world/phys/Vec3;
+       5: invokevirtual #613                // Method net/minecraft/server/level/ServerPlayer.distanceToSqr:(Lnet/minecraft/world/phys/Vec3;)D
+       8: dreturn
+}

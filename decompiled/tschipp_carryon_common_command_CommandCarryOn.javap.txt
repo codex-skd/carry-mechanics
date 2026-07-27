@@ -1,0 +1,405 @@
+Compiled from "CommandCarryOn.java"
+public class tschipp.carryon.common.command.CommandCarryOn {
+  public tschipp.carryon.common.command.CommandCarryOn();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void register(com.mojang.brigadier.CommandDispatcher<net.minecraft.commands.CommandSourceStack>);
+    Code:
+       0: ldc           #7                  // String carryon
+       2: invokestatic  #9                  // Method net/minecraft/commands/Commands.literal:(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
+       5: ldc           #15                 // String debug
+       7: invokestatic  #9                  // Method net/minecraft/commands/Commands.literal:(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
+      10: invokedynamic #17,  0             // InvokeDynamic #0:run:()Lcom/mojang/brigadier/Command;
+      15: invokevirtual #21                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.executes:(Lcom/mojang/brigadier/Command;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+      18: invokevirtual #27                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.then:(Lcom/mojang/brigadier/builder/ArgumentBuilder;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+      21: checkcast     #22                 // class com/mojang/brigadier/builder/LiteralArgumentBuilder
+      24: ldc           #31                 // String clear
+      26: invokestatic  #9                  // Method net/minecraft/commands/Commands.literal:(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
+      29: invokedynamic #33,  0             // InvokeDynamic #1:run:()Lcom/mojang/brigadier/Command;
+      34: invokevirtual #21                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.executes:(Lcom/mojang/brigadier/Command;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+      37: invokevirtual #27                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.then:(Lcom/mojang/brigadier/builder/ArgumentBuilder;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+      40: checkcast     #22                 // class com/mojang/brigadier/builder/LiteralArgumentBuilder
+      43: ldc           #31                 // String clear
+      45: invokestatic  #9                  // Method net/minecraft/commands/Commands.literal:(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
+      48: ldc           #34                 // String target
+      50: invokestatic  #36                 // Method net/minecraft/commands/arguments/EntityArgument.players:()Lnet/minecraft/commands/arguments/EntityArgument;
+      53: invokestatic  #42                 // Method net/minecraft/commands/Commands.argument:(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder;
+      56: invokedynamic #46,  0             // InvokeDynamic #2:test:()Ljava/util/function/Predicate;
+      61: invokevirtual #50                 // Method com/mojang/brigadier/builder/RequiredArgumentBuilder.requires:(Ljava/util/function/Predicate;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+      64: checkcast     #51                 // class com/mojang/brigadier/builder/RequiredArgumentBuilder
+      67: invokedynamic #56,  0             // InvokeDynamic #3:run:()Lcom/mojang/brigadier/Command;
+      72: invokevirtual #57                 // Method com/mojang/brigadier/builder/RequiredArgumentBuilder.executes:(Lcom/mojang/brigadier/Command;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+      75: invokevirtual #27                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.then:(Lcom/mojang/brigadier/builder/ArgumentBuilder;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+      78: invokevirtual #27                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.then:(Lcom/mojang/brigadier/builder/ArgumentBuilder;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+      81: checkcast     #22                 // class com/mojang/brigadier/builder/LiteralArgumentBuilder
+      84: ldc           #58                 // String place
+      86: invokestatic  #9                  // Method net/minecraft/commands/Commands.literal:(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
+      89: invokedynamic #60,  0             // InvokeDynamic #4:test:()Ljava/util/function/Predicate;
+      94: invokevirtual #61                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.requires:(Ljava/util/function/Predicate;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+      97: checkcast     #22                 // class com/mojang/brigadier/builder/LiteralArgumentBuilder
+     100: invokedynamic #62,  0             // InvokeDynamic #5:run:()Lcom/mojang/brigadier/Command;
+     105: invokevirtual #21                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.executes:(Lcom/mojang/brigadier/Command;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+     108: invokevirtual #27                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.then:(Lcom/mojang/brigadier/builder/ArgumentBuilder;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+     111: checkcast     #22                 // class com/mojang/brigadier/builder/LiteralArgumentBuilder
+     114: ldc           #58                 // String place
+     116: invokestatic  #9                  // Method net/minecraft/commands/Commands.literal:(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
+     119: ldc           #34                 // String target
+     121: invokestatic  #36                 // Method net/minecraft/commands/arguments/EntityArgument.players:()Lnet/minecraft/commands/arguments/EntityArgument;
+     124: invokestatic  #42                 // Method net/minecraft/commands/Commands.argument:(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder;
+     127: invokedynamic #63,  0             // InvokeDynamic #6:test:()Ljava/util/function/Predicate;
+     132: invokevirtual #50                 // Method com/mojang/brigadier/builder/RequiredArgumentBuilder.requires:(Ljava/util/function/Predicate;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+     135: checkcast     #51                 // class com/mojang/brigadier/builder/RequiredArgumentBuilder
+     138: invokedynamic #64,  0             // InvokeDynamic #7:run:()Lcom/mojang/brigadier/Command;
+     143: invokevirtual #57                 // Method com/mojang/brigadier/builder/RequiredArgumentBuilder.executes:(Lcom/mojang/brigadier/Command;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+     146: invokevirtual #27                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.then:(Lcom/mojang/brigadier/builder/ArgumentBuilder;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+     149: invokevirtual #27                 // Method com/mojang/brigadier/builder/LiteralArgumentBuilder.then:(Lcom/mojang/brigadier/builder/ArgumentBuilder;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+     152: checkcast     #22                 // class com/mojang/brigadier/builder/LiteralArgumentBuilder
+     155: astore_1
+     156: aload_0
+     157: aload_1
+     158: invokevirtual #65                 // Method com/mojang/brigadier/CommandDispatcher.register:(Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;)Lcom/mojang/brigadier/tree/LiteralCommandNode;
+     161: pop
+     162: return
+
+  private static int handleDebug(net.minecraft.commands.CommandSourceStack);
+    Code:
+       0: aload_0
+       1: invokevirtual #71                 // Method net/minecraft/commands/CommandSourceStack.getEntityOrException:()Lnet/minecraft/world/entity/Entity;
+       4: ifnull        270
+       7: aload_0
+       8: invokevirtual #77                 // Method net/minecraft/commands/CommandSourceStack.getPlayerOrException:()Lnet/minecraft/server/level/ServerPlayer;
+      11: astore_1
+      12: aload_1
+      13: invokestatic  #81                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+      16: astore_2
+      17: aload_2
+      18: getstatic     #87                 // Field tschipp/carryon/common/carry/CarryOnData$CarryType.BLOCK:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+      21: invokevirtual #93                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+      24: ifeq          154
+      27: aload_2
+      28: invokevirtual #99                 // Method tschipp/carryon/common/carry/CarryOnData.getBlock:()Lnet/minecraft/world/level/block/state/BlockState;
+      31: astore_3
+      32: aload_0
+      33: aload_3
+      34: invokevirtual #103                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+      37: invokestatic  #108                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+      40: invokedynamic #114,  0            // InvokeDynamic #8:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+      45: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+      48: aload_0
+      49: aload_3
+      50: invokestatic  #108                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+      53: invokedynamic #124,  0            // InvokeDynamic #9:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+      58: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+      61: aload_0
+      62: aload_2
+      63: invokevirtual #125                // Method tschipp/carryon/common/carry/CarryOnData.getNbt:()Lnet/minecraft/nbt/CompoundTag;
+      66: invokestatic  #108                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+      69: invokedynamic #129,  0            // InvokeDynamic #10:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+      74: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+      77: aload_3
+      78: aload_2
+      79: invokevirtual #130                // Method tschipp/carryon/common/carry/CarryOnData.getContentNbt:()Lnet/minecraft/nbt/CompoundTag;
+      82: invokestatic  #133                // Method tschipp/carryon/client/modeloverride/ModelOverrideHandler.getModelOverride:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
+      85: astore        4
+      87: aload         4
+      89: invokevirtual #139                // Method java/util/Optional.isPresent:()Z
+      92: ifeq          118
+      95: aload_0
+      96: aload         4
+      98: invokevirtual #145                // Method java/util/Optional.get:()Ljava/lang/Object;
+     101: checkcast     #149                // class tschipp/carryon/client/modeloverride/ModelOverride
+     104: invokevirtual #151                // Method tschipp/carryon/client/modeloverride/ModelOverride.getRenderObject:()Lcom/mojang/datafixers/util/Either;
+     107: invokestatic  #108                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+     110: invokedynamic #155,  0            // InvokeDynamic #11:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+     115: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     118: aload_3
+     119: invokestatic  #156                // Method tschipp/carryon/common/pickupcondition/PickupConditionHandler.getPickupCondition:(Lnet/minecraft/world/level/block/state/BlockState;)Ljava/util/Optional;
+     122: astore        5
+     124: aload         5
+     126: invokevirtual #139                // Method java/util/Optional.isPresent:()Z
+     129: ifeq          152
+     132: aload_0
+     133: aload         5
+     135: invokevirtual #145                // Method java/util/Optional.get:()Ljava/lang/Object;
+     138: checkcast     #162                // class tschipp/carryon/common/pickupcondition/PickupCondition
+     141: invokevirtual #164                // Method tschipp/carryon/common/pickupcondition/PickupCondition.getCondition:()Ljava/lang/String;
+     144: invokedynamic #168,  0            // InvokeDynamic #12:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+     149: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     152: iconst_1
+     153: ireturn
+     154: aload_2
+     155: getstatic     #169                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.ENTITY:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+     158: invokevirtual #93                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+     161: ifeq          254
+     164: aload_2
+     165: aload_1
+     166: invokevirtual #172                // Method net/minecraft/server/level/ServerPlayer.level:()Lnet/minecraft/server/level/ServerLevel;
+     169: invokevirtual #178                // Method tschipp/carryon/common/carry/CarryOnData.getEntity:(Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
+     172: astore_3
+     173: aload_0
+     174: aload_3
+     175: invokestatic  #108                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+     178: invokedynamic #182,  0            // InvokeDynamic #13:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+     183: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     186: aload_0
+     187: aload_3
+     188: invokevirtual #183                // Method net/minecraft/world/entity/Entity.getType:()Lnet/minecraft/world/entity/EntityType;
+     191: invokestatic  #108                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+     194: invokedynamic #189,  0            // InvokeDynamic #14:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+     199: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     202: aload_0
+     203: aload_2
+     204: invokevirtual #125                // Method tschipp/carryon/common/carry/CarryOnData.getNbt:()Lnet/minecraft/nbt/CompoundTag;
+     207: invokestatic  #108                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+     210: invokedynamic #129,  0            // InvokeDynamic #10:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+     215: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     218: aload_3
+     219: invokestatic  #190                // Method tschipp/carryon/common/pickupcondition/PickupConditionHandler.getPickupCondition:(Lnet/minecraft/world/entity/Entity;)Ljava/util/Optional;
+     222: astore        4
+     224: aload         4
+     226: invokevirtual #139                // Method java/util/Optional.isPresent:()Z
+     229: ifeq          252
+     232: aload_0
+     233: aload         4
+     235: invokevirtual #145                // Method java/util/Optional.get:()Ljava/lang/Object;
+     238: checkcast     #162                // class tschipp/carryon/common/pickupcondition/PickupCondition
+     241: invokevirtual #164                // Method tschipp/carryon/common/pickupcondition/PickupCondition.getCondition:()Ljava/lang/String;
+     244: invokedynamic #168,  0            // InvokeDynamic #12:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+     249: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     252: iconst_1
+     253: ireturn
+     254: aload_2
+     255: getstatic     #193                // Field tschipp/carryon/common/carry/CarryOnData$CarryType.PLAYER:Ltschipp/carryon/common/carry/CarryOnData$CarryType;
+     258: invokevirtual #93                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:(Ltschipp/carryon/common/carry/CarryOnData$CarryType;)Z
+     261: ifeq          270
+     264: aload_0
+     265: ldc           #196                // String Carrying Player.
+     267: invokestatic  #118                // Method log:(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;)V
+     270: goto          274
+     273: astore_1
+     274: iconst_0
+     275: ireturn
+    Exception table:
+       from    to  target type
+           0   153   273   Class com/mojang/brigadier/exceptions/CommandSyntaxException
+         154   253   273   Class com/mojang/brigadier/exceptions/CommandSyntaxException
+         254   270   273   Class com/mojang/brigadier/exceptions/CommandSyntaxException
+
+  private static int handleClear(net.minecraft.commands.CommandSourceStack, java.util.Collection<net.minecraft.server.level.ServerPlayer>);
+    Code:
+       0: iconst_0
+       1: istore_2
+       2: aload_1
+       3: invokeinterface #200,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+       8: astore_3
+       9: aload_3
+      10: invokeinterface #206,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      15: ifeq          54
+      18: aload_3
+      19: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      24: checkcast     #173                // class net/minecraft/server/level/ServerPlayer
+      27: astore        4
+      29: aload         4
+      31: invokestatic  #81                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+      34: astore        5
+      36: aload         5
+      38: invokevirtual #214                // Method tschipp/carryon/common/carry/CarryOnData.clear:()V
+      41: aload         4
+      43: aload         5
+      45: invokestatic  #216                // Method tschipp/carryon/common/carry/CarryOnDataManager.setCarryData:(Lnet/minecraft/world/entity/player/Player;Ltschipp/carryon/common/carry/CarryOnData;)V
+      48: iinc          2, 1
+      51: goto          9
+      54: iload_2
+      55: istore_3
+      56: iload_2
+      57: iconst_1
+      58: if_icmpeq     75
+      61: aload_0
+      62: iload_3
+      63: invokedynamic #220,  0            // InvokeDynamic #15:get:(I)Ljava/util/function/Supplier;
+      68: iconst_1
+      69: invokevirtual #223                // Method net/minecraft/commands/CommandSourceStack.sendSuccess:(Ljava/util/function/Supplier;Z)V
+      72: goto          86
+      75: aload_0
+      76: iload_3
+      77: invokedynamic #227,  0            // InvokeDynamic #16:get:(I)Ljava/util/function/Supplier;
+      82: iconst_1
+      83: invokevirtual #223                // Method net/minecraft/commands/CommandSourceStack.sendSuccess:(Ljava/util/function/Supplier;Z)V
+      86: iconst_1
+      87: ireturn
+
+  private static int handlePlace(net.minecraft.commands.CommandSourceStack, java.util.Collection<net.minecraft.server.level.ServerPlayer>);
+    Code:
+       0: iconst_0
+       1: istore_2
+       2: aload_1
+       3: invokeinterface #200,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+       8: astore_3
+       9: aload_3
+      10: invokeinterface #206,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      15: ifeq          40
+      18: aload_3
+      19: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      24: checkcast     #173                // class net/minecraft/server/level/ServerPlayer
+      27: astore        4
+      29: aload         4
+      31: invokestatic  #228                // Method tschipp/carryon/common/carry/PlacementHandler.placeCarried:(Lnet/minecraft/server/level/ServerPlayer;)V
+      34: iinc          2, 1
+      37: goto          9
+      40: iload_2
+      41: istore_3
+      42: iload_2
+      43: iconst_1
+      44: if_icmpeq     61
+      47: aload_0
+      48: iload_3
+      49: invokedynamic #234,  0            // InvokeDynamic #17:get:(I)Ljava/util/function/Supplier;
+      54: iconst_1
+      55: invokevirtual #223                // Method net/minecraft/commands/CommandSourceStack.sendSuccess:(Ljava/util/function/Supplier;Z)V
+      58: goto          72
+      61: aload_0
+      62: iload_3
+      63: invokedynamic #235,  0            // InvokeDynamic #18:get:(I)Ljava/util/function/Supplier;
+      68: iconst_1
+      69: invokevirtual #223                // Method net/minecraft/commands/CommandSourceStack.sendSuccess:(Ljava/util/function/Supplier;Z)V
+      72: iconst_1
+      73: ireturn
+
+  private static void log(net.minecraft.commands.CommandSourceStack, java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokedynamic #236,  0            // InvokeDynamic #19:get:(Ljava/lang/String;)Ljava/util/function/Supplier;
+       7: iconst_1
+       8: invokevirtual #223                // Method net/minecraft/commands/CommandSourceStack.sendSuccess:(Ljava/util/function/Supplier;Z)V
+      11: getstatic     #239                // Field tschipp/carryon/Constants.LOG:Lorg/slf4j/Logger;
+      14: aload_1
+      15: invokeinterface #245,  2          // InterfaceMethod org/slf4j/Logger.info:(Ljava/lang/String;)V
+      20: return
+
+  private static net.minecraft.network.chat.Component lambda$log$12(java.lang.String);
+    Code:
+       0: aload_0
+       1: invokestatic  #251                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       4: areturn
+
+  private static net.minecraft.network.chat.Component lambda$handlePlace$11(int);
+    Code:
+       0: iload_0
+       1: invokedynamic #256,  0            // InvokeDynamic #20:makeConcatWithConstants:(I)Ljava/lang/String;
+       6: invokestatic  #251                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       9: areturn
+
+  private static net.minecraft.network.chat.Component lambda$handlePlace$10(int);
+    Code:
+       0: iload_0
+       1: invokedynamic #259,  0            // InvokeDynamic #21:makeConcatWithConstants:(I)Ljava/lang/String;
+       6: invokestatic  #251                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       9: areturn
+
+  private static net.minecraft.network.chat.Component lambda$handleClear$9(int);
+    Code:
+       0: iload_0
+       1: invokedynamic #260,  0            // InvokeDynamic #22:makeConcatWithConstants:(I)Ljava/lang/String;
+       6: invokestatic  #251                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       9: areturn
+
+  private static net.minecraft.network.chat.Component lambda$handleClear$8(int);
+    Code:
+       0: iload_0
+       1: invokedynamic #261,  0            // InvokeDynamic #23:makeConcatWithConstants:(I)Ljava/lang/String;
+       6: invokestatic  #251                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       9: areturn
+
+  private static int lambda$register$7(com.mojang.brigadier.context.CommandContext) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+    Code:
+       0: aload_0
+       1: invokevirtual #262                // Method com/mojang/brigadier/context/CommandContext.getSource:()Ljava/lang/Object;
+       4: checkcast     #72                 // class net/minecraft/commands/CommandSourceStack
+       7: aload_0
+       8: ldc           #34                 // String target
+      10: invokestatic  #267                // Method net/minecraft/commands/arguments/EntityArgument.getPlayers:(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/Collection;
+      13: invokestatic  #271                // Method handlePlace:(Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
+      16: ireturn
+
+  private static boolean lambda$register$6(net.minecraft.commands.CommandSourceStack);
+    Code:
+       0: aload_0
+       1: invokevirtual #275                // Method net/minecraft/commands/CommandSourceStack.permissions:()Lnet/minecraft/server/permissions/PermissionSet;
+       4: new           #279                // class net/minecraft/server/permissions/Permission$HasCommandLevel
+       7: dup
+       8: getstatic     #281                // Field net/minecraft/server/permissions/PermissionLevel.GAMEMASTERS:Lnet/minecraft/server/permissions/PermissionLevel;
+      11: invokespecial #287                // Method net/minecraft/server/permissions/Permission$HasCommandLevel."<init>":(Lnet/minecraft/server/permissions/PermissionLevel;)V
+      14: invokeinterface #290,  2          // InterfaceMethod net/minecraft/server/permissions/PermissionSet.hasPermission:(Lnet/minecraft/server/permissions/Permission;)Z
+      19: ireturn
+
+  private static int lambda$register$5(com.mojang.brigadier.context.CommandContext) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+    Code:
+       0: aload_0
+       1: invokevirtual #262                // Method com/mojang/brigadier/context/CommandContext.getSource:()Ljava/lang/Object;
+       4: checkcast     #72                 // class net/minecraft/commands/CommandSourceStack
+       7: aload_0
+       8: invokevirtual #262                // Method com/mojang/brigadier/context/CommandContext.getSource:()Ljava/lang/Object;
+      11: checkcast     #72                 // class net/minecraft/commands/CommandSourceStack
+      14: invokevirtual #77                 // Method net/minecraft/commands/CommandSourceStack.getPlayerOrException:()Lnet/minecraft/server/level/ServerPlayer;
+      17: invokestatic  #296                // Method java/util/Collections.singleton:(Ljava/lang/Object;)Ljava/util/Set;
+      20: invokestatic  #271                // Method handlePlace:(Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
+      23: ireturn
+
+  private static boolean lambda$register$4(net.minecraft.commands.CommandSourceStack);
+    Code:
+       0: aload_0
+       1: invokevirtual #275                // Method net/minecraft/commands/CommandSourceStack.permissions:()Lnet/minecraft/server/permissions/PermissionSet;
+       4: new           #279                // class net/minecraft/server/permissions/Permission$HasCommandLevel
+       7: dup
+       8: getstatic     #281                // Field net/minecraft/server/permissions/PermissionLevel.GAMEMASTERS:Lnet/minecraft/server/permissions/PermissionLevel;
+      11: invokespecial #287                // Method net/minecraft/server/permissions/Permission$HasCommandLevel."<init>":(Lnet/minecraft/server/permissions/PermissionLevel;)V
+      14: invokeinterface #290,  2          // InterfaceMethod net/minecraft/server/permissions/PermissionSet.hasPermission:(Lnet/minecraft/server/permissions/Permission;)Z
+      19: ireturn
+
+  private static int lambda$register$3(com.mojang.brigadier.context.CommandContext) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+    Code:
+       0: aload_0
+       1: invokevirtual #262                // Method com/mojang/brigadier/context/CommandContext.getSource:()Ljava/lang/Object;
+       4: checkcast     #72                 // class net/minecraft/commands/CommandSourceStack
+       7: aload_0
+       8: ldc           #34                 // String target
+      10: invokestatic  #267                // Method net/minecraft/commands/arguments/EntityArgument.getPlayers:(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/Collection;
+      13: invokestatic  #302                // Method handleClear:(Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
+      16: ireturn
+
+  private static boolean lambda$register$2(net.minecraft.commands.CommandSourceStack);
+    Code:
+       0: aload_0
+       1: invokevirtual #275                // Method net/minecraft/commands/CommandSourceStack.permissions:()Lnet/minecraft/server/permissions/PermissionSet;
+       4: new           #279                // class net/minecraft/server/permissions/Permission$HasCommandLevel
+       7: dup
+       8: getstatic     #281                // Field net/minecraft/server/permissions/PermissionLevel.GAMEMASTERS:Lnet/minecraft/server/permissions/PermissionLevel;
+      11: invokespecial #287                // Method net/minecraft/server/permissions/Permission$HasCommandLevel."<init>":(Lnet/minecraft/server/permissions/PermissionLevel;)V
+      14: invokeinterface #290,  2          // InterfaceMethod net/minecraft/server/permissions/PermissionSet.hasPermission:(Lnet/minecraft/server/permissions/Permission;)Z
+      19: ireturn
+
+  private static int lambda$register$1(com.mojang.brigadier.context.CommandContext) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+    Code:
+       0: aload_0
+       1: invokevirtual #262                // Method com/mojang/brigadier/context/CommandContext.getSource:()Ljava/lang/Object;
+       4: checkcast     #72                 // class net/minecraft/commands/CommandSourceStack
+       7: aload_0
+       8: invokevirtual #262                // Method com/mojang/brigadier/context/CommandContext.getSource:()Ljava/lang/Object;
+      11: checkcast     #72                 // class net/minecraft/commands/CommandSourceStack
+      14: invokevirtual #77                 // Method net/minecraft/commands/CommandSourceStack.getPlayerOrException:()Lnet/minecraft/server/level/ServerPlayer;
+      17: invokestatic  #296                // Method java/util/Collections.singleton:(Ljava/lang/Object;)Ljava/util/Set;
+      20: invokestatic  #302                // Method handleClear:(Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
+      23: ireturn
+
+  private static int lambda$register$0(com.mojang.brigadier.context.CommandContext) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+    Code:
+       0: aload_0
+       1: invokevirtual #262                // Method com/mojang/brigadier/context/CommandContext.getSource:()Ljava/lang/Object;
+       4: checkcast     #72                 // class net/minecraft/commands/CommandSourceStack
+       7: invokestatic  #305                // Method handleDebug:(Lnet/minecraft/commands/CommandSourceStack;)I
+      10: ireturn
+}

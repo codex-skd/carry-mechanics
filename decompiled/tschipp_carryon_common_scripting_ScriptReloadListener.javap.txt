@@ -1,0 +1,87 @@
+Compiled from "ScriptReloadListener.java"
+public class tschipp.carryon.common.scripting.ScriptReloadListener extends net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener<tschipp.carryon.common.scripting.CarryOnScript> {
+  public tschipp.carryon.common.scripting.ScriptReloadListener();
+    Code:
+       0: aload_0
+       1: getstatic     #1                  // Field tschipp/carryon/common/scripting/CarryOnScript.CODEC:Lcom/mojang/serialization/Codec;
+       4: ldc           #7                  // String carryon/scripts
+       6: invokestatic  #9                  // Method net/minecraft/resources/FileToIdConverter.json:(Ljava/lang/String;)Lnet/minecraft/resources/FileToIdConverter;
+       9: invokespecial #15                 // Method net/minecraft/server/packs/resources/SimpleJsonResourceReloadListener."<init>":(Lcom/mojang/serialization/Codec;Lnet/minecraft/resources/FileToIdConverter;)V
+      12: return
+
+  protected void apply(java.util.Map<net.minecraft.resources.Identifier, tschipp.carryon.common.scripting.CarryOnScript>, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+    Code:
+       0: getstatic     #21                 // Field tschipp/carryon/common/scripting/ScriptManager.SCRIPTS:Ljava/util/List;
+       3: invokeinterface #27,  1           // InterfaceMethod java/util/List.clear:()V
+       8: aload_1
+       9: invokedynamic #33,  0             // InvokeDynamic #0:accept:()Ljava/util/function/BiConsumer;
+      14: invokeinterface #37,  2           // InterfaceMethod java/util/Map.forEach:(Ljava/util/function/BiConsumer;)V
+      19: getstatic     #21                 // Field tschipp/carryon/common/scripting/ScriptManager.SCRIPTS:Ljava/util/List;
+      22: invokedynamic #43,  0             // InvokeDynamic #1:compare:()Ljava/util/Comparator;
+      27: invokeinterface #47,  2           // InterfaceMethod java/util/List.sort:(Ljava/util/Comparator;)V
+      32: return
+
+  public static void syncScriptsWithClient(net.minecraft.server.level.ServerPlayer);
+    Code:
+       0: aload_0
+       1: ifnull        57
+       4: getstatic     #1                  // Field tschipp/carryon/common/scripting/CarryOnScript.CODEC:Lcom/mojang/serialization/Codec;
+       7: invokestatic  #51                 // InterfaceMethod com/mojang/serialization/Codec.list:(Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
+      10: getstatic     #57                 // Field net/minecraft/nbt/NbtOps.INSTANCE:Lnet/minecraft/nbt/NbtOps;
+      13: getstatic     #21                 // Field tschipp/carryon/common/scripting/ScriptManager.SCRIPTS:Ljava/util/List;
+      16: invokeinterface #63,  3           // InterfaceMethod com/mojang/serialization/Codec.encodeStart:(Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+      21: astore_1
+      22: aload_1
+      23: invokedynamic #67,  0             // InvokeDynamic #2:apply:()Ljava/util/function/Function;
+      28: invokeinterface #71,  2           // InterfaceMethod com/mojang/serialization/DataResult.getOrThrow:(Ljava/util/function/Function;)Ljava/lang/Object;
+      33: checkcast     #77                 // class net/minecraft/nbt/Tag
+      36: astore_2
+      37: getstatic     #79                 // Field tschipp/carryon/platform/Services.PLATFORM:Ltschipp/carryon/platform/services/IPlatformHelper;
+      40: getstatic     #85                 // Field tschipp/carryon/Constants.PACKET_ID_SYNC_SCRIPTS:Lnet/minecraft/resources/Identifier;
+      43: new           #91                 // class tschipp/carryon/networking/clientbound/ClientboundSyncScriptsPacket
+      46: dup
+      47: aload_2
+      48: invokespecial #93                 // Method tschipp/carryon/networking/clientbound/ClientboundSyncScriptsPacket."<init>":(Lnet/minecraft/nbt/Tag;)V
+      51: aload_0
+      52: invokeinterface #96,  4           // InterfaceMethod tschipp/carryon/platform/services/IPlatformHelper.sendPacketToPlayer:(Lnet/minecraft/resources/Identifier;Ltschipp/carryon/networking/PacketBase;Lnet/minecraft/server/level/ServerPlayer;)V
+      57: return
+
+  protected void apply(java.lang.Object, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #38                 // class java/util/Map
+       5: aload_2
+       6: aload_3
+       7: invokevirtual #102                // Method apply:(Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)V
+      10: return
+
+  private static java.lang.RuntimeException lambda$syncScriptsWithClient$2(java.lang.String);
+    Code:
+       0: new           #107                // class java/lang/RuntimeException
+       3: dup
+       4: aload_0
+       5: invokedynamic #109,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+      10: invokespecial #113                // Method java/lang/RuntimeException."<init>":(Ljava/lang/String;)V
+      13: athrow
+
+  private static int lambda$apply$1(tschipp.carryon.common.scripting.CarryOnScript, tschipp.carryon.common.scripting.CarryOnScript);
+    Code:
+       0: aload_1
+       1: invokevirtual #116                // Method tschipp/carryon/common/scripting/CarryOnScript.priority:()J
+       4: aload_0
+       5: invokevirtual #116                // Method tschipp/carryon/common/scripting/CarryOnScript.priority:()J
+       8: invokestatic  #120                // Method java/lang/Long.compare:(JJ)I
+      11: ireturn
+
+  private static void lambda$apply$0(net.minecraft.resources.Identifier, tschipp.carryon.common.scripting.CarryOnScript);
+    Code:
+       0: aload_1
+       1: invokevirtual #125                // Method tschipp/carryon/common/scripting/CarryOnScript.isValid:()Z
+       4: ifeq          17
+       7: getstatic     #21                 // Field tschipp/carryon/common/scripting/ScriptManager.SCRIPTS:Ljava/util/List;
+      10: aload_1
+      11: invokeinterface #129,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      16: pop
+      17: return
+}

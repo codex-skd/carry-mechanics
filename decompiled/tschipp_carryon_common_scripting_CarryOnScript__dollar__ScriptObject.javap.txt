@@ -1,0 +1,79 @@
+Compiled from "CarryOnScript.java"
+public final class tschipp.carryon.common.scripting.CarryOnScript$ScriptObject extends java.lang.Record {
+  private final tschipp.carryon.common.scripting.CarryOnScript$ScriptObject$ScriptObjectBlock block;
+
+  private final tschipp.carryon.common.scripting.CarryOnScript$ScriptObject$ScriptObjectEntity entity;
+
+  public static final com.mojang.serialization.Codec<tschipp.carryon.common.scripting.CarryOnScript$ScriptObject> CODEC;
+
+  public tschipp.carryon.common.scripting.CarryOnScript$ScriptObject(tschipp.carryon.common.scripting.CarryOnScript$ScriptObject$ScriptObjectBlock, tschipp.carryon.common.scripting.CarryOnScript$ScriptObject$ScriptObjectEntity);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Record."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #7                  // Field block:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock;
+       9: aload_0
+      10: aload_2
+      11: putfield      #13                 // Field entity:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity;
+      14: return
+
+  public final java.lang.String toString();
+    Code:
+       0: aload_0
+       1: invokedynamic #64,  0             // InvokeDynamic #3:toString:(Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject;)Ljava/lang/String;
+       6: areturn
+
+  public final int hashCode();
+    Code:
+       0: aload_0
+       1: invokedynamic #68,  0             // InvokeDynamic #3:hashCode:(Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject;)I
+       6: ireturn
+
+  public final boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokedynamic #72,  0             // InvokeDynamic #3:equals:(Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject;Ljava/lang/Object;)Z
+       7: ireturn
+
+  public tschipp.carryon.common.scripting.CarryOnScript$ScriptObject$ScriptObjectBlock block();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field block:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock;
+       4: areturn
+
+  public tschipp.carryon.common.scripting.CarryOnScript$ScriptObject$ScriptObjectEntity entity();
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field entity:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity;
+       4: areturn
+
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+    Code:
+       0: aload_0
+       1: getstatic     #17                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock.CODEC:Lcom/mojang/serialization/Codec;
+       4: ldc           #23                 // String block
+       6: getstatic     #24                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectBlock;
+       9: invokeinterface #27,  3           // InterfaceMethod com/mojang/serialization/Codec.optionalFieldOf:(Ljava/lang/String;Ljava/lang/Object;)Lcom/mojang/serialization/MapCodec;
+      14: invokedynamic #33,  0             // InvokeDynamic #0:apply:()Ljava/util/function/Function;
+      19: invokevirtual #37                 // Method com/mojang/serialization/MapCodec.forGetter:(Ljava/util/function/Function;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
+      22: getstatic     #43                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity.CODEC:Lcom/mojang/serialization/Codec;
+      25: ldc           #46                 // String entity
+      27: getstatic     #47                 // Field tschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity.EMPTY:Ltschipp/carryon/common/scripting/CarryOnScript$ScriptObject$ScriptObjectEntity;
+      30: invokeinterface #27,  3           // InterfaceMethod com/mojang/serialization/Codec.optionalFieldOf:(Ljava/lang/String;Ljava/lang/Object;)Lcom/mojang/serialization/MapCodec;
+      35: invokedynamic #49,  0             // InvokeDynamic #1:apply:()Ljava/util/function/Function;
+      40: invokevirtual #37                 // Method com/mojang/serialization/MapCodec.forGetter:(Ljava/util/function/Function;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
+      43: invokevirtual #50                 // Method com/mojang/serialization/codecs/RecordCodecBuilder$Instance.group:(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P2;
+      46: aload_0
+      47: invokedynamic #56,  0             // InvokeDynamic #2:apply:()Ljava/util/function/BiFunction;
+      52: invokevirtual #59                 // Method com/mojang/datafixers/Products$P2.apply:(Lcom/mojang/datafixers/kinds/Applicative;Ljava/util/function/BiFunction;)Lcom/mojang/datafixers/kinds/App;
+      55: areturn
+
+  static {};
+    Code:
+       0: invokedynamic #76,  0             // InvokeDynamic #4:apply:()Ljava/util/function/Function;
+       5: invokestatic  #77                 // Method com/mojang/serialization/codecs/RecordCodecBuilder.create:(Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+       8: putstatic     #83                 // Field CODEC:Lcom/mojang/serialization/Codec;
+      11: return
+}

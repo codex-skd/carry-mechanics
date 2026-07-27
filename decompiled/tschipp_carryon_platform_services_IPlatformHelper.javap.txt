@@ -1,0 +1,43 @@
+Compiled from "IPlatformHelper.java"
+public interface tschipp.carryon.platform.services.IPlatformHelper {
+  public abstract java.lang.String getPlatformName();
+
+  public abstract boolean isModLoaded(java.lang.String);
+
+  public abstract boolean isDevelopmentEnvironment();
+
+  public abstract void registerConfig(tschipp.carryon.config.BuiltConfig);
+
+  public abstract <T extends tschipp.carryon.networking.PacketBase, B extends net.minecraft.network.FriendlyByteBuf> void registerServerboundPacket(net.minecraft.network.protocol.common.custom.CustomPacketPayload$Type<T>, java.lang.Class<T>, net.minecraft.network.codec.StreamCodec<B, T>, java.util.function.BiConsumer<T, net.minecraft.world.entity.player.Player>, java.lang.Object...);
+
+  public abstract <T extends tschipp.carryon.networking.PacketBase, B extends net.minecraft.network.FriendlyByteBuf> void registerClientboundPacket(net.minecraft.network.protocol.common.custom.CustomPacketPayload$Type<T>, java.lang.Class<T>, net.minecraft.network.codec.StreamCodec<B, T>, java.util.function.BiConsumer<T, net.minecraft.world.entity.player.Player>, java.lang.Object...);
+
+  public abstract void sendPacketToServer(net.minecraft.resources.Identifier, tschipp.carryon.networking.PacketBase);
+
+  public abstract void sendPacketToPlayer(net.minecraft.resources.Identifier, tschipp.carryon.networking.PacketBase, net.minecraft.server.level.ServerPlayer);
+
+  public default void sendPacketToAllPlayers(net.minecraft.resources.Identifier, tschipp.carryon.networking.PacketBase, net.minecraft.server.level.ServerLevel);
+    Code:
+       0: aload_3
+       1: invokevirtual #1                  // Method net/minecraft/server/level/ServerLevel.players:()Ljava/util/List;
+       4: invokeinterface #7,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       9: astore        4
+      11: aload         4
+      13: invokeinterface #13,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      18: ifeq          46
+      21: aload         4
+      23: invokeinterface #19,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      28: checkcast     #23                 // class net/minecraft/server/level/ServerPlayer
+      31: astore        5
+      33: aload_0
+      34: aload_1
+      35: aload_2
+      36: aload         5
+      38: invokeinterface #25,  4           // InterfaceMethod sendPacketToPlayer:(Lnet/minecraft/resources/Identifier;Ltschipp/carryon/networking/PacketBase;Lnet/minecraft/server/level/ServerPlayer;)V
+      43: goto          11
+      46: return
+
+  public abstract tschipp.carryon.common.carry.CarryOnData getCarryData(net.minecraft.world.entity.player.Player);
+
+  public abstract void setCarryData(net.minecraft.world.entity.player.Player, tschipp.carryon.common.carry.CarryOnData);
+}

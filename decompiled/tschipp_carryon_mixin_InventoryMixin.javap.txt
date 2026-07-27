@@ -1,0 +1,93 @@
+Compiled from "InventoryMixin.java"
+public class tschipp.carryon.mixin.InventoryMixin {
+  private static final net.minecraft.world.item.ItemStack DUMMY_STACK;
+
+  public net.minecraft.world.entity.player.Player player;
+
+  public int selected;
+
+  public net.minecraft.core.NonNullList<net.minecraft.world.item.ItemStack> items;
+
+  public tschipp.carryon.mixin.InventoryMixin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  private java.lang.Object getFreeSlotEmptyCheck(net.minecraft.core.NonNullList<java.lang.Object>, int, com.llamalad7.mixinextras.injector.wrapoperation.Operation<java.lang.Object>);
+    Code:
+       0: iload_2
+       1: aload_0
+       2: getfield      #7                  // Field selected:I
+       5: if_icmpne     25
+       8: aload_0
+       9: getfield      #13                 // Field player:Lnet/minecraft/world/entity/player/Player;
+      12: invokestatic  #17                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+      15: invokevirtual #23                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:()Z
+      18: ifeq          25
+      21: getstatic     #29                 // Field DUMMY_STACK:Lnet/minecraft/world/item/ItemStack;
+      24: areturn
+      25: aload_3
+      26: iconst_2
+      27: anewarray     #2                  // class java/lang/Object
+      30: dup
+      31: iconst_0
+      32: aload_1
+      33: aastore
+      34: dup
+      35: iconst_1
+      36: iload_2
+      37: invokestatic  #33                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      40: aastore
+      41: invokeinterface #39,  2           // InterfaceMethod com/llamalad7/mixinextras/injector/wrapoperation/Operation.call:([Ljava/lang/Object;)Ljava/lang/Object;
+      46: areturn
+
+  private void onPickBlock(org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field player:Lnet/minecraft/world/entity/player/Player;
+       4: invokestatic  #17                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       7: invokevirtual #23                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:()Z
+      10: ifeq          17
+      13: aload_1
+      14: invokevirtual #45                 // Method org/spongepowered/asm/mixin/injection/callback/CallbackInfo.cancel:()V
+      17: return
+
+  private void onPickSlot(int, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field player:Lnet/minecraft/world/entity/player/Player;
+       4: invokestatic  #17                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       7: invokevirtual #23                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:()Z
+      10: ifeq          17
+      13: aload_2
+      14: invokevirtual #45                 // Method org/spongepowered/asm/mixin/injection/callback/CallbackInfo.cancel:()V
+      17: return
+
+  private void onSwapPaint(int, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field player:Lnet/minecraft/world/entity/player/Player;
+       4: invokestatic  #17                 // Method tschipp/carryon/common/carry/CarryOnDataManager.getCarryData:(Lnet/minecraft/world/entity/player/Player;)Ltschipp/carryon/common/carry/CarryOnData;
+       7: astore_3
+       8: aload_3
+       9: invokevirtual #23                 // Method tschipp/carryon/common/carry/CarryOnData.isCarrying:()Z
+      12: ifeq          27
+      15: aload_3
+      16: invokevirtual #50                 // Method tschipp/carryon/common/carry/CarryOnData.getSelected:()I
+      19: iload_1
+      20: if_icmpeq     27
+      23: aload_2
+      24: invokevirtual #45                 // Method org/spongepowered/asm/mixin/injection/callback/CallbackInfo.cancel:()V
+      27: return
+
+  static {};
+    Code:
+       0: new           #54                 // class net/minecraft/world/item/ItemStack
+       3: dup
+       4: getstatic     #56                 // Field net/minecraft/world/level/block/Blocks.COBBLESTONE:Lnet/minecraft/world/level/block/Block;
+       7: iconst_1
+       8: invokespecial #62                 // Method net/minecraft/world/item/ItemStack."<init>":(Lnet/minecraft/world/level/ItemLike;I)V
+      11: putstatic     #29                 // Field DUMMY_STACK:Lnet/minecraft/world/item/ItemStack;
+      14: return
+}

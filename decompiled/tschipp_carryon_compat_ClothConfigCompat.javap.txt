@@ -1,0 +1,328 @@
+Compiled from "ClothConfigCompat.java"
+public final class tschipp.carryon.compat.ClothConfigCompat extends java.lang.Record {
+  private final tschipp.carryon.config.BuiltConfig client;
+
+  private final tschipp.carryon.config.BuiltConfig common;
+
+  private final java.lang.Runnable onSave;
+
+  public tschipp.carryon.compat.ClothConfigCompat(tschipp.carryon.config.BuiltConfig, tschipp.carryon.config.BuiltConfig, java.lang.Runnable);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Record."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #7                  // Field client:Ltschipp/carryon/config/BuiltConfig;
+       9: aload_0
+      10: aload_2
+      11: putfield      #13                 // Field common:Ltschipp/carryon/config/BuiltConfig;
+      14: aload_0
+      15: aload_3
+      16: putfield      #16                 // Field onSave:Ljava/lang/Runnable;
+      19: return
+
+  public static net.minecraft.client.gui.screens.Screen getConfigScreen(tschipp.carryon.config.BuiltConfig, tschipp.carryon.config.BuiltConfig, net.minecraft.client.gui.screens.Screen, java.lang.Runnable);
+    Code:
+       0: invokestatic  #20                 // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigBuilder.create:()Lme/shedaniel/clothconfig2/api/ConfigBuilder;
+       3: aload_2
+       4: invokeinterface #26,  2           // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigBuilder.setParentScreen:(Lnet/minecraft/client/gui/screens/Screen;)Lme/shedaniel/clothconfig2/api/ConfigBuilder;
+       9: ldc           #30                 // String key.category.carryon.key.carry.category
+      11: invokestatic  #32                 // InterfaceMethod net/minecraft/network/chat/Component.translatable:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+      14: invokeinterface #38,  2           // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigBuilder.setTitle:(Lnet/minecraft/network/chat/Component;)Lme/shedaniel/clothconfig2/api/ConfigBuilder;
+      19: astore        4
+      21: aload_0
+      22: aload         4
+      24: ldc           #42                 // String Client Config
+      26: invokestatic  #44                 // Method buildConfigType:(Ltschipp/carryon/config/BuiltConfig;Lme/shedaniel/clothconfig2/api/ConfigBuilder;Ljava/lang/String;)V
+      29: aload_1
+      30: aload         4
+      32: ldc           #48                 // String Common Config
+      34: invokestatic  #44                 // Method buildConfigType:(Ltschipp/carryon/config/BuiltConfig;Lme/shedaniel/clothconfig2/api/ConfigBuilder;Ljava/lang/String;)V
+      37: aload         4
+      39: aload_3
+      40: invokeinterface #50,  2           // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigBuilder.setSavingRunnable:(Ljava/lang/Runnable;)Lme/shedaniel/clothconfig2/api/ConfigBuilder;
+      45: pop
+      46: aload         4
+      48: invokeinterface #54,  1           // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigBuilder.build:()Lnet/minecraft/client/gui/screens/Screen;
+      53: areturn
+
+  private static void buildConfigType(tschipp.carryon.config.BuiltConfig, me.shedaniel.clothconfig2.api.ConfigBuilder, java.lang.String);
+    Code:
+       0: aload_1
+       1: aload_2
+       2: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       5: invokeinterface #61,  2           // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigBuilder.getOrCreateCategory:(Lnet/minecraft/network/chat/Component;)Lme/shedaniel/clothconfig2/api/ConfigCategory;
+      10: astore_3
+      11: aload_0
+      12: aload_3
+      13: aload_1
+      14: aconst_null
+      15: invokestatic  #65                 // Method buildProperties:(Ltschipp/carryon/config/BuiltCategory;Lme/shedaniel/clothconfig2/api/ConfigCategory;Lme/shedaniel/clothconfig2/api/ConfigBuilder;Lme/shedaniel/clothconfig2/impl/builders/SubCategoryBuilder;)V
+      18: return
+
+  private static void buildCategory(tschipp.carryon.config.BuiltCategory, me.shedaniel.clothconfig2.api.ConfigCategory, me.shedaniel.clothconfig2.api.ConfigBuilder);
+    Code:
+       0: aload_2
+       1: invokeinterface #69,  1           // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigBuilder.entryBuilder:()Lme/shedaniel/clothconfig2/api/ConfigEntryBuilder;
+       6: astore_3
+       7: aload_3
+       8: aload_0
+       9: getfield      #73                 // Field tschipp/carryon/config/BuiltCategory.translation:Ljava/lang/String;
+      12: invokestatic  #32                 // InterfaceMethod net/minecraft/network/chat/Component.translatable:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+      15: invokeinterface #79,  2           // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigEntryBuilder.startSubCategory:(Lnet/minecraft/network/chat/Component;)Lme/shedaniel/clothconfig2/impl/builders/SubCategoryBuilder;
+      20: astore        4
+      22: aload_0
+      23: aload_1
+      24: aload_2
+      25: aload         4
+      27: invokestatic  #65                 // Method buildProperties:(Ltschipp/carryon/config/BuiltCategory;Lme/shedaniel/clothconfig2/api/ConfigCategory;Lme/shedaniel/clothconfig2/api/ConfigBuilder;Lme/shedaniel/clothconfig2/impl/builders/SubCategoryBuilder;)V
+      30: return
+
+  private static void buildProperties(tschipp.carryon.config.BuiltCategory, me.shedaniel.clothconfig2.api.ConfigCategory, me.shedaniel.clothconfig2.api.ConfigBuilder, me.shedaniel.clothconfig2.impl.builders.SubCategoryBuilder);
+    Code:
+       0: aload_0
+       1: getfield      #85                 // Field tschipp/carryon/config/BuiltCategory.categories:Ljava/util/List;
+       4: aload_1
+       5: aload_2
+       6: invokedynamic #89,  0             // InvokeDynamic #0:accept:(Lme/shedaniel/clothconfig2/api/ConfigCategory;Lme/shedaniel/clothconfig2/api/ConfigBuilder;)Ljava/util/function/Consumer;
+      11: invokeinterface #93,  2           // InterfaceMethod java/util/List.forEach:(Ljava/util/function/Consumer;)V
+      16: aload_2
+      17: invokeinterface #69,  1           // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigBuilder.entryBuilder:()Lme/shedaniel/clothconfig2/api/ConfigEntryBuilder;
+      22: astore        4
+      24: aload_0
+      25: getfield      #99                 // Field tschipp/carryon/config/BuiltCategory.properties:Ljava/util/List;
+      28: aload         4
+      30: aload_3
+      31: aload_1
+      32: invokedynamic #102,  0            // InvokeDynamic #1:accept:(Lme/shedaniel/clothconfig2/api/ConfigEntryBuilder;Lme/shedaniel/clothconfig2/impl/builders/SubCategoryBuilder;Lme/shedaniel/clothconfig2/api/ConfigCategory;)Ljava/util/function/Consumer;
+      37: invokeinterface #93,  2           // InterfaceMethod java/util/List.forEach:(Ljava/util/function/Consumer;)V
+      42: aload_3
+      43: ifnull        57
+      46: aload_1
+      47: aload_3
+      48: invokevirtual #105                // Method me/shedaniel/clothconfig2/impl/builders/SubCategoryBuilder.build:()Lme/shedaniel/clothconfig2/gui/entries/SubCategoryListEntry;
+      51: invokeinterface #110,  2          // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigCategory.addEntry:(Lme/shedaniel/clothconfig2/api/AbstractConfigListEntry;)Lme/shedaniel/clothconfig2/api/ConfigCategory;
+      56: pop
+      57: return
+
+  public final java.lang.String toString();
+    Code:
+       0: aload_0
+       1: invokedynamic #330,  0            // InvokeDynamic #3:toString:(Ltschipp/carryon/compat/ClothConfigCompat;)Ljava/lang/String;
+       6: areturn
+
+  public final int hashCode();
+    Code:
+       0: aload_0
+       1: invokedynamic #334,  0            // InvokeDynamic #3:hashCode:(Ltschipp/carryon/compat/ClothConfigCompat;)I
+       6: ireturn
+
+  public final boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokedynamic #338,  0            // InvokeDynamic #3:equals:(Ltschipp/carryon/compat/ClothConfigCompat;Ljava/lang/Object;)Z
+       7: ireturn
+
+  public tschipp.carryon.config.BuiltConfig client();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field client:Ltschipp/carryon/config/BuiltConfig;
+       4: areturn
+
+  public tschipp.carryon.config.BuiltConfig common();
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field common:Ltschipp/carryon/config/BuiltConfig;
+       4: areturn
+
+  public java.lang.Runnable onSave();
+    Code:
+       0: aload_0
+       1: getfield      #16                 // Field onSave:Ljava/lang/Runnable;
+       4: areturn
+
+  private static void lambda$buildProperties$2(me.shedaniel.clothconfig2.api.ConfigEntryBuilder, me.shedaniel.clothconfig2.impl.builders.SubCategoryBuilder, me.shedaniel.clothconfig2.api.ConfigCategory, tschipp.carryon.config.PropertyData);
+    Code:
+       0: aload_3
+       1: invokevirtual #116                // Method tschipp/carryon/config/PropertyData.getData:()Ltschipp/carryon/config/AnnotationData;
+       4: astore        4
+       6: getstatic     #122                // Field tschipp/carryon/compat/ClothConfigCompat$1.$SwitchMap$tschipp$carryon$config$PropertyType:[I
+       9: aload         4
+      11: invokevirtual #128                // Method tschipp/carryon/config/AnnotationData.type:()Ltschipp/carryon/config/PropertyType;
+      14: invokevirtual #134                // Method tschipp/carryon/config/PropertyType.ordinal:()I
+      17: iaload
+      18: tableswitch   { // 1 to 4
+
+                     1: 48
+
+                     2: 106
+
+                     3: 180
+
+                     4: 254
+               default: 332
+          }
+      48: aload_0
+      49: aload_3
+      50: invokevirtual #140                // Method tschipp/carryon/config/PropertyData.getField:()Ljava/lang/reflect/Field;
+      53: invokevirtual #144                // Method java/lang/reflect/Field.getName:()Ljava/lang/String;
+      56: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+      59: aload_3
+      60: invokevirtual #150                // Method tschipp/carryon/config/PropertyData.getBoolean:()Z
+      63: invokeinterface #154,  3          // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigEntryBuilder.startBooleanToggle:(Lnet/minecraft/network/chat/Component;Z)Lme/shedaniel/clothconfig2/impl/builders/BooleanToggleBuilder;
+      68: iconst_1
+      69: anewarray     #33                 // class net/minecraft/network/chat/Component
+      72: dup
+      73: iconst_0
+      74: aload         4
+      76: invokevirtual #158                // Method tschipp/carryon/config/AnnotationData.description:()Ljava/lang/String;
+      79: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+      82: aastore
+      83: invokevirtual #161                // Method me/shedaniel/clothconfig2/impl/builders/BooleanToggleBuilder.setTooltip:([Lnet/minecraft/network/chat/Component;)Lme/shedaniel/clothconfig2/impl/builders/BooleanToggleBuilder;
+      86: aload_3
+      87: invokevirtual #167                // Method tschipp/carryon/config/PropertyData.getDefaultBoolean:()Z
+      90: invokevirtual #170                // Method me/shedaniel/clothconfig2/impl/builders/BooleanToggleBuilder.setDefaultValue:(Z)Lme/shedaniel/clothconfig2/impl/builders/BooleanToggleBuilder;
+      93: aload_3
+      94: invokevirtual #174                // Method tschipp/carryon/config/PropertyData.getSetter:()Ljava/util/function/Consumer;
+      97: invokevirtual #178                // Method me/shedaniel/clothconfig2/impl/builders/BooleanToggleBuilder.setSaveConsumer:(Ljava/util/function/Consumer;)Lme/shedaniel/clothconfig2/impl/builders/BooleanToggleBuilder;
+     100: invokevirtual #182                // Method me/shedaniel/clothconfig2/impl/builders/BooleanToggleBuilder.build:()Lme/shedaniel/clothconfig2/gui/entries/BooleanListEntry;
+     103: goto          333
+     106: aload_0
+     107: aload_3
+     108: invokevirtual #140                // Method tschipp/carryon/config/PropertyData.getField:()Ljava/lang/reflect/Field;
+     111: invokevirtual #144                // Method java/lang/reflect/Field.getName:()Ljava/lang/String;
+     114: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+     117: aload_3
+     118: invokevirtual #185                // Method tschipp/carryon/config/PropertyData.getInt:()I
+     121: invokeinterface #188,  3          // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigEntryBuilder.startIntField:(Lnet/minecraft/network/chat/Component;I)Lme/shedaniel/clothconfig2/impl/builders/IntFieldBuilder;
+     126: iconst_1
+     127: anewarray     #33                 // class net/minecraft/network/chat/Component
+     130: dup
+     131: iconst_0
+     132: aload         4
+     134: invokevirtual #158                // Method tschipp/carryon/config/AnnotationData.description:()Ljava/lang/String;
+     137: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+     140: aastore
+     141: invokevirtual #192                // Method me/shedaniel/clothconfig2/impl/builders/IntFieldBuilder.setTooltip:([Lnet/minecraft/network/chat/Component;)Lme/shedaniel/clothconfig2/impl/builders/IntFieldBuilder;
+     144: aload_3
+     145: invokevirtual #197                // Method tschipp/carryon/config/PropertyData.getDefaultInt:()I
+     148: invokevirtual #200                // Method me/shedaniel/clothconfig2/impl/builders/IntFieldBuilder.setDefaultValue:(I)Lme/shedaniel/clothconfig2/impl/builders/IntFieldBuilder;
+     151: aload         4
+     153: invokevirtual #203                // Method tschipp/carryon/config/AnnotationData.min:()I
+     156: invokevirtual #206                // Method me/shedaniel/clothconfig2/impl/builders/IntFieldBuilder.setMin:(I)Lme/shedaniel/clothconfig2/impl/builders/IntFieldBuilder;
+     159: aload         4
+     161: invokevirtual #209                // Method tschipp/carryon/config/AnnotationData.max:()I
+     164: invokevirtual #212                // Method me/shedaniel/clothconfig2/impl/builders/IntFieldBuilder.setMax:(I)Lme/shedaniel/clothconfig2/impl/builders/IntFieldBuilder;
+     167: aload_3
+     168: invokevirtual #174                // Method tschipp/carryon/config/PropertyData.getSetter:()Ljava/util/function/Consumer;
+     171: invokevirtual #215                // Method me/shedaniel/clothconfig2/impl/builders/IntFieldBuilder.setSaveConsumer:(Ljava/util/function/Consumer;)Lme/shedaniel/clothconfig2/impl/builders/IntFieldBuilder;
+     174: invokevirtual #218                // Method me/shedaniel/clothconfig2/impl/builders/IntFieldBuilder.build:()Lme/shedaniel/clothconfig2/gui/entries/IntegerListEntry;
+     177: goto          333
+     180: aload_0
+     181: aload_3
+     182: invokevirtual #140                // Method tschipp/carryon/config/PropertyData.getField:()Ljava/lang/reflect/Field;
+     185: invokevirtual #144                // Method java/lang/reflect/Field.getName:()Ljava/lang/String;
+     188: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+     191: aload_3
+     192: invokevirtual #221                // Method tschipp/carryon/config/PropertyData.getDouble:()D
+     195: invokeinterface #225,  4          // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigEntryBuilder.startDoubleField:(Lnet/minecraft/network/chat/Component;D)Lme/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder;
+     200: iconst_1
+     201: anewarray     #33                 // class net/minecraft/network/chat/Component
+     204: dup
+     205: iconst_0
+     206: aload         4
+     208: invokevirtual #158                // Method tschipp/carryon/config/AnnotationData.description:()Ljava/lang/String;
+     211: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+     214: aastore
+     215: invokevirtual #229                // Method me/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder.setTooltip:([Lnet/minecraft/network/chat/Component;)Lme/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder;
+     218: aload_3
+     219: invokevirtual #234                // Method tschipp/carryon/config/PropertyData.getDefaultDouble:()D
+     222: invokevirtual #237                // Method me/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder.setDefaultValue:(D)Lme/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder;
+     225: aload         4
+     227: invokevirtual #240                // Method tschipp/carryon/config/AnnotationData.minD:()D
+     230: invokevirtual #243                // Method me/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder.setMin:(D)Lme/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder;
+     233: aload         4
+     235: invokevirtual #245                // Method tschipp/carryon/config/AnnotationData.maxD:()D
+     238: invokevirtual #248                // Method me/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder.setMax:(D)Lme/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder;
+     241: aload_3
+     242: invokevirtual #174                // Method tschipp/carryon/config/PropertyData.getSetter:()Ljava/util/function/Consumer;
+     245: invokevirtual #250                // Method me/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder.setSaveConsumer:(Ljava/util/function/Consumer;)Lme/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder;
+     248: invokevirtual #253                // Method me/shedaniel/clothconfig2/impl/builders/DoubleFieldBuilder.build:()Lme/shedaniel/clothconfig2/gui/entries/DoubleListEntry;
+     251: goto          333
+     254: aload_0
+     255: aload_3
+     256: invokevirtual #140                // Method tschipp/carryon/config/PropertyData.getField:()Ljava/lang/reflect/Field;
+     259: invokevirtual #144                // Method java/lang/reflect/Field.getName:()Ljava/lang/String;
+     262: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+     265: aload_3
+     266: invokevirtual #256                // Method tschipp/carryon/config/PropertyData.getStringArray:()[Ljava/lang/String;
+     269: invokestatic  #260                // InterfaceMethod java/util/List.of:([Ljava/lang/Object;)Ljava/util/List;
+     272: invokeinterface #264,  3          // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigEntryBuilder.startStrList:(Lnet/minecraft/network/chat/Component;Ljava/util/List;)Lme/shedaniel/clothconfig2/impl/builders/StringListBuilder;
+     277: iconst_1
+     278: anewarray     #33                 // class net/minecraft/network/chat/Component
+     281: dup
+     282: iconst_0
+     283: aload         4
+     285: invokevirtual #158                // Method tschipp/carryon/config/AnnotationData.description:()Ljava/lang/String;
+     288: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+     291: aastore
+     292: invokevirtual #268                // Method me/shedaniel/clothconfig2/impl/builders/StringListBuilder.setTooltip:([Lnet/minecraft/network/chat/Component;)Lme/shedaniel/clothconfig2/impl/builders/StringListBuilder;
+     295: iconst_1
+     296: invokevirtual #273                // Method me/shedaniel/clothconfig2/impl/builders/StringListBuilder.setInsertInFront:(Z)Lme/shedaniel/clothconfig2/impl/builders/StringListBuilder;
+     299: aload_3
+     300: invokevirtual #277                // Method tschipp/carryon/config/PropertyData.getDefaultStringArray:()[Ljava/lang/String;
+     303: invokestatic  #260                // InterfaceMethod java/util/List.of:([Ljava/lang/Object;)Ljava/util/List;
+     306: invokevirtual #280                // Method me/shedaniel/clothconfig2/impl/builders/StringListBuilder.setDefaultValue:(Ljava/util/List;)Lme/shedaniel/clothconfig2/impl/builders/StringListBuilder;
+     309: aload         4
+     311: invokedynamic #283,  0            // InvokeDynamic #2:apply:(Ltschipp/carryon/config/AnnotationData;)Ljava/util/function/Function;
+     316: invokevirtual #287                // Method me/shedaniel/clothconfig2/impl/builders/StringListBuilder.setCellErrorSupplier:(Ljava/util/function/Function;)Lme/shedaniel/clothconfig2/impl/builders/StringListBuilder;
+     319: aload_3
+     320: invokevirtual #174                // Method tschipp/carryon/config/PropertyData.getSetter:()Ljava/util/function/Consumer;
+     323: invokevirtual #291                // Method me/shedaniel/clothconfig2/impl/builders/StringListBuilder.setSaveConsumer:(Ljava/util/function/Consumer;)Lme/shedaniel/clothconfig2/impl/builders/StringListBuilder;
+     326: invokevirtual #294                // Method me/shedaniel/clothconfig2/impl/builders/StringListBuilder.build:()Lme/shedaniel/clothconfig2/gui/entries/StringListListEntry;
+     329: goto          333
+     332: aconst_null
+     333: astore        5
+     335: aload_1
+     336: ifnonnull     351
+     339: aload_2
+     340: aload         5
+     342: invokeinterface #110,  2          // InterfaceMethod me/shedaniel/clothconfig2/api/ConfigCategory.addEntry:(Lme/shedaniel/clothconfig2/api/AbstractConfigListEntry;)Lme/shedaniel/clothconfig2/api/ConfigCategory;
+     347: pop
+     348: goto          358
+     351: aload_1
+     352: aload         5
+     354: invokevirtual #297                // Method me/shedaniel/clothconfig2/impl/builders/SubCategoryBuilder.add:(Lme/shedaniel/clothconfig2/api/AbstractConfigListEntry;)Z
+     357: pop
+     358: goto          368
+     361: astore        4
+     363: aload         4
+     365: invokevirtual #303                // Method java/lang/IllegalAccessException.printStackTrace:()V
+     368: return
+    Exception table:
+       from    to  target type
+           0   358   361   Class java/lang/IllegalAccessException
+
+  private static java.util.Optional lambda$buildProperties$1(tschipp.carryon.config.AnnotationData, java.lang.String);
+    Code:
+       0: aload_1
+       1: aload_0
+       2: invokevirtual #306                // Method tschipp/carryon/config/AnnotationData.validationRegex:()Ljava/lang/String;
+       5: invokevirtual #309                // Method java/lang/String.matches:(Ljava/lang/String;)Z
+       8: ifeq          17
+      11: invokestatic  #315                // Method java/util/Optional.empty:()Ljava/util/Optional;
+      14: goto          26
+      17: ldc_w         #321                // String Invalid Format
+      20: invokestatic  #58                 // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+      23: invokestatic  #323                // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      26: areturn
+
+  private static void lambda$buildProperties$0(me.shedaniel.clothconfig2.api.ConfigCategory, me.shedaniel.clothconfig2.api.ConfigBuilder, tschipp.carryon.config.BuiltCategory);
+    Code:
+       0: aload_2
+       1: aload_0
+       2: aload_1
+       3: invokestatic  #326                // Method buildCategory:(Ltschipp/carryon/config/BuiltCategory;Lme/shedaniel/clothconfig2/api/ConfigCategory;Lme/shedaniel/clothconfig2/api/ConfigBuilder;)V
+       6: return
+}

@@ -1,0 +1,93 @@
+Compiled from "CarryOnNeoForge.java"
+public class tschipp.carryon.CarryOnNeoForge {
+  private static final net.neoforged.neoforge.registries.DeferredRegister<net.neoforged.neoforge.attachment.AttachmentType<?>> ATTACHMENT_TYPES;
+
+  public static final java.util.function.Supplier<net.neoforged.neoforge.attachment.AttachmentType<tschipp.carryon.common.carry.CarryOnData>> CARRY_ON_DATA_ATTACHMENT;
+
+  public tschipp.carryon.CarryOnNeoForge(net.neoforged.fml.ModContainer);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: invokestatic  #7                  // Method tschipp/carryon/CarryOnCommon.registerConfig:()V
+       7: aload_1
+       8: invokevirtual #12                 // Method net/neoforged/fml/ModContainer.getEventBus:()Lnet/neoforged/bus/api/IEventBus;
+      11: aload_0
+      12: invokedynamic #18,  0             // InvokeDynamic #0:accept:(Ltschipp/carryon/CarryOnNeoForge;)Ljava/util/function/Consumer;
+      17: invokeinterface #22,  2           // InterfaceMethod net/neoforged/bus/api/IEventBus.addListener:(Ljava/util/function/Consumer;)V
+      22: aload_1
+      23: invokevirtual #12                 // Method net/neoforged/fml/ModContainer.getEventBus:()Lnet/neoforged/bus/api/IEventBus;
+      26: aload_0
+      27: invokedynamic #28,  0             // InvokeDynamic #1:accept:(Ltschipp/carryon/CarryOnNeoForge;)Ljava/util/function/Consumer;
+      32: invokeinterface #22,  2           // InterfaceMethod net/neoforged/bus/api/IEventBus.addListener:(Ljava/util/function/Consumer;)V
+      37: aload_1
+      38: invokestatic  #29                 // Method tschipp/carryon/config/neoforge/ConfigLoaderImpl.initialize:(Lnet/neoforged/fml/ModContainer;)V
+      41: getstatic     #35                 // Field ATTACHMENT_TYPES:Lnet/neoforged/neoforge/registries/DeferredRegister;
+      44: aload_1
+      45: invokevirtual #12                 // Method net/neoforged/fml/ModContainer.getEventBus:()Lnet/neoforged/bus/api/IEventBus;
+      48: invokevirtual #41                 // Method net/neoforged/neoforge/registries/DeferredRegister.register:(Lnet/neoforged/bus/api/IEventBus;)V
+      51: return
+
+  private void setup(net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent);
+    Code:
+       0: return
+
+  public void registerPackets(net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent);
+    Code:
+       0: aload_1
+       1: ldc           #47                 // String 1.0.0
+       3: invokevirtual #49                 // Method net/neoforged/neoforge/network/event/RegisterPayloadHandlersEvent.registrar:(Ljava/lang/String;)Lnet/neoforged/neoforge/network/registration/PayloadRegistrar;
+       6: astore_2
+       7: iconst_1
+       8: anewarray     #2                  // class java/lang/Object
+      11: dup
+      12: iconst_0
+      13: aload_2
+      14: aastore
+      15: invokestatic  #55                 // Method tschipp/carryon/CarryOnCommon.registerServerPackets:([Ljava/lang/Object;)V
+      18: iconst_1
+      19: anewarray     #2                  // class java/lang/Object
+      22: dup
+      23: iconst_0
+      24: aload_2
+      25: aastore
+      26: invokestatic  #59                 // Method tschipp/carryon/CarryOnCommon.registerClientPackets:([Ljava/lang/Object;)V
+      29: return
+
+  private static net.neoforged.neoforge.attachment.AttachmentType lambda$static$1();
+    Code:
+       0: invokedynamic #62,  0             // InvokeDynamic #2:get:()Ljava/util/function/Supplier;
+       5: invokestatic  #66                 // Method net/neoforged/neoforge/attachment/AttachmentType.builder:(Ljava/util/function/Supplier;)Lnet/neoforged/neoforge/attachment/AttachmentType$Builder;
+       8: new           #72                 // class tschipp/carryon/carry/CarryOnDataSyncHandler
+      11: dup
+      12: invokespecial #74                 // Method tschipp/carryon/carry/CarryOnDataSyncHandler."<init>":()V
+      15: invokevirtual #75                 // Method net/neoforged/neoforge/attachment/AttachmentType$Builder.sync:(Lnet/neoforged/neoforge/attachment/AttachmentSyncHandler;)Lnet/neoforged/neoforge/attachment/AttachmentType$Builder;
+      18: getstatic     #81                 // Field tschipp/carryon/common/carry/CarryOnData.CODEC:Lcom/mojang/serialization/Codec;
+      21: ldc           #87                 // String CarryOnData
+      23: invokeinterface #89,  2           // InterfaceMethod com/mojang/serialization/Codec.fieldOf:(Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+      28: invokevirtual #95                 // Method net/neoforged/neoforge/attachment/AttachmentType$Builder.serialize:(Lcom/mojang/serialization/MapCodec;)Lnet/neoforged/neoforge/attachment/AttachmentType$Builder;
+      31: invokevirtual #99                 // Method net/neoforged/neoforge/attachment/AttachmentType$Builder.build:()Lnet/neoforged/neoforge/attachment/AttachmentType;
+      34: areturn
+
+  private static tschipp.carryon.common.carry.CarryOnData lambda$static$0();
+    Code:
+       0: new           #82                 // class tschipp/carryon/common/carry/CarryOnData
+       3: dup
+       4: new           #103                // class net/minecraft/nbt/CompoundTag
+       7: dup
+       8: invokespecial #105                // Method net/minecraft/nbt/CompoundTag."<init>":()V
+      11: invokespecial #106                // Method tschipp/carryon/common/carry/CarryOnData."<init>":(Lnet/minecraft/nbt/CompoundTag;)V
+      14: areturn
+
+  static {};
+    Code:
+       0: getstatic     #109                // Field net/neoforged/neoforge/registries/NeoForgeRegistries.ATTACHMENT_TYPES:Lnet/minecraft/core/Registry;
+       3: ldc           #116                // String carryon
+       5: invokestatic  #118                // Method net/neoforged/neoforge/registries/DeferredRegister.create:(Lnet/minecraft/core/Registry;Ljava/lang/String;)Lnet/neoforged/neoforge/registries/DeferredRegister;
+       8: putstatic     #35                 // Field ATTACHMENT_TYPES:Lnet/neoforged/neoforge/registries/DeferredRegister;
+      11: getstatic     #35                 // Field ATTACHMENT_TYPES:Lnet/neoforged/neoforge/registries/DeferredRegister;
+      14: ldc           #122                // String carry_on_data
+      16: invokedynamic #124,  0            // InvokeDynamic #3:get:()Ljava/util/function/Supplier;
+      21: invokevirtual #125                // Method net/neoforged/neoforge/registries/DeferredRegister.register:(Ljava/lang/String;Ljava/util/function/Supplier;)Lnet/neoforged/neoforge/registries/DeferredHolder;
+      24: putstatic     #128                // Field CARRY_ON_DATA_ATTACHMENT:Ljava/util/function/Supplier;
+      27: return
+}

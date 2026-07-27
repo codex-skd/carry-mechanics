@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.0-beta.36] - 2026-07-27
+
+### Fixed
+- Orientación del bloque: ahora se renderiza con la cara correcta hacia arriba (rotación Y 180°)
+- Posición: bloque centrado sobre la cabeza sin separación
+- Scale reducido a 0.5 para mejor proporción
+
 ## [0.0.0-beta.35] - 2026-07-25
 
 ### Fixed

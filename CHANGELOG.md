@@ -1,11 +1,16 @@
 # Changelog
 
-## [0.0.0-beta.39] - 2026-07-28
+## [0.0.0-beta.40] - 2026-07-28
 
 ### Fixed
-- Posición: bloque ahora sobre la cabeza directamente (sin separación)
+- Posición del bloque: corregida fórmula Y (negativa) para el RenderLayer del avatar. Ahora usa `-(boundingBoxHeight + 0.2)` para poner el bloque sobre la cabeza
 - Orientación: eliminada rotación Y 180° que invertía el frente del bloque
 - Otros jugadores: añadida escala 0.5 en LivingEntityRendererMixin para consistencia visual
+
+### Feat
+- El personaje ahora se muestra agachado (visualmente) mientras carga un bloque. Implementado vía mixin en `Player.isCrouching()`
+
+## [0.0.0-beta.39] - 2026-07-28
 
 ## [0.0.0-beta.38] - 2026-07-27
 

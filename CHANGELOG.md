@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.0-beta.39] - 2026-07-28
+
+### Fixed
+- Posición: bloque ahora sobre la cabeza directamente (sin separación)
+- Orientación: eliminada rotación Y 180° que invertía el frente del bloque
+- Otros jugadores: añadida escala 0.5 en LivingEntityRendererMixin para consistencia visual
+
 ## [0.0.0-beta.38] - 2026-07-27
 
 ### Fixed

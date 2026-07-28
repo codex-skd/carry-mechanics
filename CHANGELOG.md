@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.41] - 2026-07-28
+
+### Fix
+- Crash al iniciar: el mixin `Player.isCrouching()` no existe en esta versión de MC. Reemplazado por override directo de `state.pose = Pose.CROUCHING` en la extracción del render state
+- Personaje agachado visualmente al cargar implementado correctamente vía `state.pose` en AvatarRenderer y LivingEntityRenderer
+
 ## [0.0.0-beta.40] - 2026-07-28
 
 ### Fixed

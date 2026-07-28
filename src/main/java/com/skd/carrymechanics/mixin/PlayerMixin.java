@@ -22,4 +22,13 @@ public abstract class PlayerMixin {
             cir.setReturnValue(null);
         }
     }
+
+    @Inject(method = "isCrouching", at = @At("HEAD"), cancellable = true)
+    private void forceCrouchWhenCarrying(CallbackInfoReturnable<Boolean> cir) {
+        Player self = (Player) (Object) this;
+        CarryData data = CarryDataManager.getCarryData(self);
+        if (data.isCarrying()) {
+            cir.setReturnValue(true);
+        }
+    }
 }

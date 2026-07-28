@@ -1,15 +1,16 @@
-# Graph Report - .  (2026-07-27)
+# Graph Report - 26.1.2  (2026-07-28)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 82 files · ~127,942 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 375 nodes · 752 edges · 34 communities (23 shown, 11 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 48 edges (avg confidence: 0.8)
+- 557 nodes · 615 edges · 191 communities (46 shown, 145 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 52 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e23035ab`
+- Built from commit: `af0b82b1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -36,6 +37,7 @@
 - CarryDataSyncHandler
 - gradlew
 - GamestageCompat
+- settings.gradle
 - AvatarRenderState
 - Logger
 - Override
@@ -46,139 +48,290 @@
 - Inject
 - Logger
 - Mixin
+- [0.0.0-beta.10] - 2026-07-13
+- [0.0.0-beta.12] - 2026-07-13
+- [0.0.0-beta.13] - 2026-07-13
+- [0.0.0-beta.14] - 2026-07-13
+- [0.0.0-beta.17] - 2026-07-13
+- [0.0.0-beta.18] - 2026-07-13
+- [0.0.0-beta.19] - 2026-07-17
+- [0.0.0-beta.1] - 2026-07-13
+- [0.0.0-beta.20] - 2026-07-17
+- [0.0.0-beta.21] - 2026-07-17
+- [0.0.0-beta.23] - 2026-07-17
+- [0.0.0-beta.27] - 2026-07-18
+- [0.0.0-beta.28] - 2026-07-23
+- [0.0.0-beta.29] - 2026-07-23
+- [0.0.0-beta.2] - 2026-07-13
+- [0.0.0-beta.30] - 2026-07-23
+- [0.0.0-beta.31] - 2026-07-24
+- [0.0.0-beta.32] - 2026-07-25
+- [0.0.0-beta.33] - 2026-07-25
+- [0.0.0-beta.34] - 2026-07-25
+- [0.0.0-beta.37] - 2026-07-27
+- [0.0.0-beta.38] - 2026-07-27
+- [0.0.0-beta.3] - 2026-07-13
+- [0.0.0-beta.4] - 2026-07-13
+- [0.0.0-beta.5] - 2026-07-13
+- [0.0.0-beta.6] - 2026-07-13
+- [0.0.0-beta.7] - 2026-07-13
+- [0.0.0-beta.8] - 2026-07-13
+- [0.0.0-beta.9] - 2026-07-13
+- BlockPos
+- BlockState
+- Codec
+- CompoundTag
+- Entity
+- Level
+- Player
+- RegistryFriendlyByteBuf
+- ServerPlayer
+- StreamCodec
+- Player
+- StreamCodec
+- AttachmentType
+- Logger
+- BooleanValue
+- DoubleValue
+- IntValue
+- Block
+- Entity
+- EntityType
+- Block
+- ItemStack
+- BlockPos
+- BlockState
+- Entity
+- Level
+- Property
+- ServerPlayer
+- Vec3
+- BlockPos
+- BlockState
+- Entity
+- Property
+- ServerPlayer
+- Vec3
+- AttachmentType
+- Logger
+- Mod
+- ModContainer
+- SubscribeEvent
+- EventBusSubscriber
+- Mod
+- ModContainer
+- SubscribeEvent
+- EventBusSubscriber
+- SubscribeEvent
+- BooleanValue
+- DoubleValue
+- IntValue
+- EventBusSubscriber
+- SubscribeEvent
+- EventBusSubscriber
+- SubscribeEvent
+- AvatarRenderState
+- CallbackInfo
+- Inject
+- Mixin
+- CallbackInfo
+- Inject
+- Mixin
+- CallbackInfoReturnable
+- Inject
+- Mixin
+- CallbackInfoReturnable
+- Entity
+- Inject
+- Mixin
+- CallbackInfo
+- Inject
+- Mixin
+- Player
+- CallbackInfoReturnable
+- Inject
+- ItemStack
+- Mixin
+- Mixin
+- Override
+- IPayloadContext
+- Override
+- RegistryFriendlyByteBuf
+- StreamCodec
+- Type
+- IPayloadContext
+- Override
+- RegistryFriendlyByteBuf
+- StreamCodec
+- Type
+- IPayloadContext
+- Override
+- RegistryFriendlyByteBuf
+- StreamCodec
+- Type
+- CustomPacketPayload
+- Type
+- BlockState
+- EntityType
+- ServerPlayer
+- BlockState
+- Entity
+- EntityType
+- Codec
+- ServerPlayer
+- BlockPos
+- BlockState
+- CompoundTag
+- Entity
+- Level
+- ServerPlayer
 
 ## God Nodes (most connected - your core abstractions)
-1. `CarryData` - 38 edges
-2. `CarryScript` - 16 edges
-3. `ClientboundStartRidingOtherPlayerPacket` - 14 edges
-4. `ClientboundSyncScriptsPacket` - 13 edges
+1. `Changelog` - 35 edges
+2. `CarryData` - 24 edges
+3. `Flujo de trabajo — Carry Mechanics (NeoForge)` - 14 edges
+4. `ClientboundStartRidingOtherPlayerPacket` - 11 edges
 5. `PlacementHandler` - 10 edges
-6. `ClientboundStartRidingPacket` - 10 edges
-7. `CarryMechanics` - 9 edges
+6. `ClientboundSyncScriptsPacket` - 10 edges
+7. `Carry Mechanics` - 10 edges
 8. `PickupHandler` - 9 edges
-9. `CommonEvents` - 9 edges
-10. `PickupCondition` - 9 edges
+9. `PickupCondition` - 9 edges
+10. `CarryType` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `CarryMechanics` --references--> `CarryData`  [EXTRACTED]
-  src/main/java/com/skd/carrymechanics/CarryMechanics.java → src/main/java/com/skd/carrymechanics/carry/CarryData.java
-- `CarryData` --references--> `CarryScript`  [EXTRACTED]
-  src/main/java/com/skd/carrymechanics/carry/CarryData.java → src/main/java/com/skd/carrymechanics/scripting/CarryScript.java
-- `CarryDataSyncHandler` --references--> `CarryData`  [EXTRACTED]
-  src/main/java/com/skd/carrymechanics/carry/CarryDataSyncHandler.java → src/main/java/com/skd/carrymechanics/carry/CarryData.java
 - `PacketIds` --references--> `ClientboundStartRidingOtherPlayerPacket`  [EXTRACTED]
   src/main/java/com/skd/carrymechanics/PacketIds.java → src/main/java/com/skd/carrymechanics/networking/ClientboundStartRidingOtherPlayerPacket.java
 - `PacketIds` --references--> `ClientboundStartRidingPacket`  [EXTRACTED]
   src/main/java/com/skd/carrymechanics/PacketIds.java → src/main/java/com/skd/carrymechanics/networking/ClientboundStartRidingPacket.java
+- `PacketIds` --references--> `ClientboundSyncScriptsPacket`  [EXTRACTED]
+  src/main/java/com/skd/carrymechanics/PacketIds.java → src/main/java/com/skd/carrymechanics/networking/ClientboundSyncScriptsPacket.java
+- `PlayerRenderStateMixin` --implements--> `ICarryOnRenderState`  [EXTRACTED]
+  src/main/java/com/skd/carrymechanics/mixin/PlayerRenderStateMixin.java → src/main/java/com/skd/carrymechanics/client/render/ICarryOnRenderState.java
+- `CarryConfig` --references--> `ConfigData`  [EXTRACTED]
+  src/main/java/com/skd/carrymechanics/config/CarryConfig.java → src/main/java/com/skd/carrymechanics/config/ConfigData.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (34 total, 11 thin omitted)
+## Communities (191 total, 145 thin omitted)
 
 ### Community 0 - ".getCarryData"
-Cohesion: 0.08
-Nodes (24): AttackEntityEvent, BreakSpeed, CommandDispatcher, CommandSourceStack, EntityInteract, EntityLeaveLevelEvent, Post, Pre (+16 more)
+Cohesion: 0.05
+Nodes (26): BlockEntity, BlockPlaceContext, CommandDispatcher, CommandSourceStack, Direction, EntityInteract, CarryData, CarryType (+18 more)
 
 ### Community 1 - "ClientboundStartRidingOtherPlayerPacket"
-Cohesion: 0.09
-Nodes (25): CustomPacketPayload, ResourceManager, ClientboundStartRidingOtherPlayerPacket, IPayloadContext, Override, RegistryFriendlyByteBuf, StreamCodec, Type (+17 more)
-
-### Community 2 - "CarryData"
-Cohesion: 0.10
-Nodes (19): BlockEntity, MapCodec, Provider, CarryData, CarryType, BLOCK, ENTITY, INVALID (+11 more)
+Cohesion: 0.04
+Nodes (44): 0. Determinar alcance de versión, 1. Desarrollo, 2. Copiar a instancia de pruebas, 3. Probar en instancia, 4. Preparar versión para CurseForge, 5. Release estable, 6. Actualizar Knowledge Graph (Graphify), Archivos de CurseForge (+36 more)
 
 ### Community 3 - ".tryPickUpBlock"
-Cohesion: 0.19
-Nodes (11): ServerLevel, BlockPos, BlockState, Entity, Level, Property, ServerPlayer, Vec3 (+3 more)
+Cohesion: 0.18
+Nodes (10): Carry Mechanics, Commands, Configuration, Controls, Features, Installation, License, Overview (+2 more)
 
 ### Community 4 - "CarryScript"
-Cohesion: 0.17
-Nodes (16): CarryScript, Codec, ServerPlayer, ObjectType, BLOCK, ENTITY, ScriptConditions, ScriptEffects (+8 more)
+Cohesion: 0.27
+Nodes (5): AttackEntityEvent, BreakSpeed, EntityLeaveLevelEvent, CommonEvents, RegisterCommandsEvent
 
 ### Community 5 - "AvatarExtractorMixin.java"
-Cohesion: 0.17
-Nodes (12): Avatar, ICarryOnRenderState, CarryData, AvatarExtractorMixin, AvatarRenderState, CallbackInfo, Inject, Mixin (+4 more)
+Cohesion: 0.20
+Nodes (4): Avatar, ICarryOnRenderState, AvatarExtractorMixin, PlayerRenderStateMixin
 
 ### Community 6 - ".tryPlaceEntity"
-Cohesion: 0.27
-Nodes (10): BlockPlaceContext, Direction, BlockPos, BlockState, Entity, Property, ServerPlayer, Vec3 (+2 more)
+Cohesion: 0.20
+Nodes (9): [0.0.0-beta.15] - 2026-07-13, [0.0.0-beta.16] - 2026-07-13, [0.0.0-beta.22] - 2026-07-17, [0.0.0-beta.35] - 2026-07-25, Changelog, Docs, Fix, Fix (+1 more)
 
 ### Community 7 - "CarryMechanics.java"
-Cohesion: 0.16
-Nodes (13): DeferredRegister, IEventBus, RegisterPayloadHandlersEvent, ServerStartingEvent, CarryMechanicsAccess, AttachmentType, Logger, CarryMechanics (+5 more)
+Cohesion: 0.09
+Nodes (15): CustomPacketPayload, DeferredRegister, CarryMechanics, ClientboundStartRidingOtherPlayerPacket, ClientboundStartRidingPacket, ClientboundSyncScriptsPacket, NetworkHelper, PacketIds (+7 more)
 
 ### Community 8 - "CarryingItemRenderLayer.java"
-Cohesion: 0.19
-Nodes (13): AvatarRenderState, Context, Override, PlayerModel, PoseStack, RenderLayer, RenderLayerParent, CarryingItemRenderLayer (+5 more)
+Cohesion: 0.22
+Nodes (10): Context, AvatarRendererMixin, PlayerModel, RenderLayer, RenderLayerParent, CarryingItemRenderLayer, AvatarRenderState, Override (+2 more)
 
 ### Community 9 - "PickupCondition"
-Cohesion: 0.19
-Nodes (8): BlockState, EntityType, ServerPlayer, PickupCondition, BlockState, Entity, EntityType, PickupConditionHandler
+Cohesion: 0.31
+Nodes (8): CarryScript, ObjectType, BLOCK, ENTITY, ScriptConditions, ScriptEffects, ScriptObject, ScriptRender
 
 ### Community 10 - "CarryConfig"
-Cohesion: 0.17
-Nodes (11): Builder, ModConfigSpec, ConfigAccess, BooleanValue, DoubleValue, IntValue, CarryConfig, ConfigData (+3 more)
+Cohesion: 0.31
+Nodes (5): Builder, ConfigAccess, CarryConfig, ConfigData, ModConfigSpec
 
 ### Community 11 - "LivingEntityRendererMixin.java"
 Cohesion: 0.31
-Nodes (10): CallbackInfo, CameraRenderState, Entity, Inject, LivingEntity, LivingEntityRenderState, Mixin, PoseStack (+2 more)
+Nodes (10): CameraRenderState, LivingEntity, LivingEntityRenderState, CallbackInfo, Entity, Inject, Mixin, PoseStack (+2 more)
 
 ### Community 12 - "ModelOverrideHandler.java"
 Cohesion: 0.31
-Nodes (6): Item, Block, ItemStack, ModelOverride, ModelOverrideHandler, ModCompat
-
-### Community 13 - "ListHandler"
-Cohesion: 0.42
-Nodes (5): Block, Entity, EntityType, ListHandler, TagKey
-
-### Community 14 - "CarryMechanicsClient.java"
-Cohesion: 0.36
-Nodes (6): FMLClientSetupEvent, CarryMechanicsClient, EventBusSubscriber, Mod, ModContainer, SubscribeEvent
-
-### Community 15 - "PlayerMixin.java"
-Cohesion: 0.43
-Nodes (6): ItemEntity, CallbackInfoReturnable, Inject, ItemStack, Mixin, PlayerMixin
+Nodes (4): ModelOverride, ModelOverrideHandler, ModCompat, Item
 
 ### Community 16 - "CarryKeybinds.java"
-Cohesion: 0.48
-Nodes (5): KeyMapping, RegisterKeyMappingsEvent, CarryKeybinds, EventBusSubscriber, SubscribeEvent
+Cohesion: 0.60
+Nodes (3): CarryKeybinds, KeyMapping, RegisterKeyMappingsEvent
 
 ### Community 17 - "InventoryMixin.java"
-Cohesion: 0.48
-Nodes (5): InventoryMixin, CallbackInfo, Inject, Mixin, Player
+Cohesion: 0.25
+Nodes (7): CurseForge, Game Versions (IDs), Mod, Project Variables — Carry Mechanics, Rama, Token de subida (Python), Versiones
 
 ### Community 18 - "EntityMixin.java"
-Cohesion: 0.53
-Nodes (4): EntityMixin, CallbackInfoReturnable, Inject, Mixin
-
-### Community 19 - "CarryDataSyncHandler"
-Cohesion: 0.83
-Nodes (3): FriendlyByteBuf, CarryDataSyncHandler, StreamCodec
+Cohesion: 0.33
+Nodes (5): Changes, How to use, Known issues, Requirements, v0.0.0-beta.8
 
 ### Community 20 - "gradlew"
+Cohesion: 0.40
+Nodes (4): Changes, Known issues, Requirements, v0.0.0-beta.10
+
+### Community 21 - "GamestageCompat"
+Cohesion: 0.40
+Nodes (4): Changes, Known issues, Requirements, v0.0.0-beta.9
+
+### Community 24 - "AvatarRenderState"
+Cohesion: 0.50
+Nodes (3): Changes, Requirements, v0.0.0-beta.11
+
+### Community 25 - "Logger"
+Cohesion: 0.50
+Nodes (3): Changes, Requirements, v0.0.0-beta.12
+
+### Community 26 - "Override"
+Cohesion: 0.50
+Nodes (3): Changes, Requirements, v0.0.0-beta.13
+
+### Community 27 - "PoseStack"
+Cohesion: 0.50
+Nodes (3): Changes, Requirements, v0.0.0-beta.14
+
+### Community 28 - "SubmitNodeCollector"
+Cohesion: 0.50
+Nodes (3): Changes, Requirements, v0.0.0-beta.15
+
+### Community 29 - "CallbackInfo"
+Cohesion: 0.50
+Nodes (3): Changes, Requirements, v0.0.0-beta.16
+
+### Community 30 - "Entity"
 Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
+### Community 32 - "Logger"
+Cohesion: 0.67
+Nodes (3): [0.0.0-beta.11] - 2026-07-13, Feat, Fix
+
 ## Knowledge Gaps
-- **6 isolated node(s):** `INVALID`, `BLOCK`, `ENTITY`, `PLAYER`, `BLOCK` (+1 more)
+- **113 isolated node(s):** `INVALID`, `BLOCK`, `ENTITY`, `PLAYER`, `ConfigAccess` (+108 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **145 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `CarryData` connect `CarryData` to `.getCarryData`, `.tryPickUpBlock`, `CarryScript`, `.tryPlaceEntity`, `CarryMechanics.java`, `CarryDataSyncHandler`?**
-  _High betweenness centrality (0.183) - this node is a cross-community bridge._
-- **Why does `ClientboundStartRidingOtherPlayerPacket` connect `ClientboundStartRidingOtherPlayerPacket` to `.tryPickUpBlock`, `.tryPlaceEntity`, `CarryMechanics.java`?**
-  _High betweenness centrality (0.079) - this node is a cross-community bridge._
-- **Why does `CarryScript` connect `CarryScript` to `.getCarryData`, `ClientboundStartRidingOtherPlayerPacket`, `CarryData`, `.tryPickUpBlock`?**
-  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+- **Why does `ClientboundStartRidingOtherPlayerPacket` connect `CarryMechanics.java` to `.getCarryData`?**
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+- **Why does `Changelog` connect `.tryPlaceEntity` to `Logger`, `[0.0.0-beta.10] - 2026-07-13`, `[0.0.0-beta.12] - 2026-07-13`, `[0.0.0-beta.13] - 2026-07-13`, `[0.0.0-beta.14] - 2026-07-13`, `[0.0.0-beta.17] - 2026-07-13`, `[0.0.0-beta.18] - 2026-07-13`, `[0.0.0-beta.19] - 2026-07-17`, `[0.0.0-beta.1] - 2026-07-13`, `[0.0.0-beta.20] - 2026-07-17`, `[0.0.0-beta.21] - 2026-07-17`, `[0.0.0-beta.23] - 2026-07-17`, `[0.0.0-beta.27] - 2026-07-18`, `[0.0.0-beta.28] - 2026-07-23`, `[0.0.0-beta.29] - 2026-07-23`, `[0.0.0-beta.2] - 2026-07-13`, `[0.0.0-beta.30] - 2026-07-23`, `[0.0.0-beta.31] - 2026-07-24`, `[0.0.0-beta.32] - 2026-07-25`, `[0.0.0-beta.33] - 2026-07-25`, `[0.0.0-beta.34] - 2026-07-25`, `[0.0.0-beta.37] - 2026-07-27`, `[0.0.0-beta.38] - 2026-07-27`, `[0.0.0-beta.3] - 2026-07-13`, `[0.0.0-beta.4] - 2026-07-13`, `[0.0.0-beta.5] - 2026-07-13`, `[0.0.0-beta.6] - 2026-07-13`, `[0.0.0-beta.7] - 2026-07-13`, `[0.0.0-beta.8] - 2026-07-13`, `[0.0.0-beta.9] - 2026-07-13`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **What connects `INVALID`, `BLOCK`, `ENTITY` to the rest of the system?**
-  _6 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _113 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.getCarryData` be split into smaller, more focused modules?**
-  _Cohesion score 0.07878787878787878 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.052100840336134456 - nodes in this community are weakly interconnected._
 - **Should `ClientboundStartRidingOtherPlayerPacket` be split into smaller, more focused modules?**
-  _Cohesion score 0.09146341463414634 - nodes in this community are weakly interconnected._
-- **Should `CarryData` be split into smaller, more focused modules?**
-  _Cohesion score 0.10420168067226891 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
+- **Should `CarryMechanics.java` be split into smaller, more focused modules?**
+  _Cohesion score 0.09103840682788052 - nodes in this community are weakly interconnected._

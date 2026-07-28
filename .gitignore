@@ -46,3 +46,6 @@ temp/
 temp_extract/
 build_errors.txt
 upload.ps1
+
+# Graphify - solo el snapshot actual, sin copias fechadas
+graphify-out/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/

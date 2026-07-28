@@ -45,6 +45,7 @@ public class LivingEntityRendererMixin {
 
             poseStack.pushPose();
             poseStack.translate(0.0, state.boundingBoxHeight, 0.0);
+            poseStack.scale(0.5f, 0.5f, 0.5f);
 
             var resolver = Minecraft.getInstance().getBlockModelResolver();
             var blockRenderState = new BlockModelRenderState();

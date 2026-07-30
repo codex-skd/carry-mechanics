@@ -105,9 +105,9 @@
     "semantic_hash": "395a8efc75c94f233bb66a887177e476"
   },
   "src/main/java/com/skd/carrymechanics/events/ClientEvents.java": {
-    "mtime": 1783996606.8659759,
-    "ast_hash": "cae70fa202bf3c1f375e3ad4445209da",
-    "semantic_hash": "cae70fa202bf3c1f375e3ad4445209da"
+    "mtime": 1785432245.2799537,
+    "ast_hash": "6cd70475f82db7697afab8e1854ef482",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/events/CommonEvents.java": {
     "mtime": 1784297142.6125064,
@@ -130,12 +130,12 @@
     "semantic_hash": "ec0112c8d42dae7aa3d087063e73b1e8"
   },
   "src/main/java/com/skd/carrymechanics/mixin/LivingEntityRendererMixin.java": {
-    "mtime": 1785197763.0655897,
-    "ast_hash": "260d55ceb6e9ff5eb862d25aea0ba2d0",
+    "mtime": 1785374708.3317568,
+    "ast_hash": "1cf9ce03768944acac68be453c84ecc5",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/mixin/PlayerMixin.java": {
-    "mtime": 1783941233.819846,
+    "mtime": 1785238094.9920447,
     "ast_hash": "f706c2b8c71c69bad146f2892ea88043",
     "semantic_hash": "f706c2b8c71c69bad146f2892ea88043"
   },
@@ -190,9 +190,9 @@
     "semantic_hash": "3816faa2b364f9494b923fbfbf6d5c8c"
   },
   "src/main/resources/carry_mechanics.mixins.json": {
-    "mtime": 1784902757.7487803,
-    "ast_hash": "01405a10f9b869adc9ff0c6389fb3b7e",
-    "semantic_hash": "01405a10f9b869adc9ff0c6389fb3b7e"
+    "mtime": 1785432264.2706964,
+    "ast_hash": "e4b28546278af244ce4ac17de260645c",
+    "semantic_hash": ""
   },
   "src/main/resources/data/carry_mechanics/tags/block/block_blacklist.json": {
     "mtime": 1783892890.375702,
@@ -225,19 +225,19 @@
     "semantic_hash": "14b9fbaef63fffc640e886e452e03f0d"
   },
   "src/main/java/com/skd/carrymechanics/client/render/CarryingItemRenderLayer.java": {
-    "mtime": 1785197759.9845505,
-    "ast_hash": "ebfa709f62774fef3eceec8161151b25",
+    "mtime": 1785424586.1647432,
+    "ast_hash": "341462dc572ff1a1de3ec39d72a6f379",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/client/render/ICarryOnRenderState.java": {
-    "mtime": 1784902734.882865,
-    "ast_hash": "3b4619d908ba18170c1d66b499c8f9e7",
-    "semantic_hash": "3b4619d908ba18170c1d66b499c8f9e7"
+    "mtime": 1785424563.556388,
+    "ast_hash": "94541f45dca4935046fa60c0a9cd3378",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/mixin/AvatarExtractorMixin.java": {
-    "mtime": 1784902728.7182665,
-    "ast_hash": "b97cdf516eb40b82ac93c3f967c071dc",
-    "semantic_hash": "b97cdf516eb40b82ac93c3f967c071dc"
+    "mtime": 1785424579.3293781,
+    "ast_hash": "0a5b46ca0fec0798288472b5260cb038",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/mixin/AvatarRendererMixin.java": {
     "mtime": 1784902745.7953851,
@@ -245,9 +245,9 @@
     "semantic_hash": "547c312f561f182dd6a23b9931495594"
   },
   "src/main/java/com/skd/carrymechanics/mixin/PlayerRenderStateMixin.java": {
-    "mtime": 1784902739.9753506,
-    "ast_hash": "52af651487aec814e1eb9f57cb6d6701",
-    "semantic_hash": "52af651487aec814e1eb9f57cb6d6701"
+    "mtime": 1785424570.4570634,
+    "ast_hash": "e63d198e8b1ea3e4983216d2e9118800",
+    "semantic_hash": ""
   },
   ".gitlab-ci.yml": {
     "mtime": 1785150497.0835216,
@@ -255,8 +255,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785179790.5683577,
-    "ast_hash": "d4f93120ebdb810ed5a39f9ebe699abd",
+    "mtime": 1785432335.4773219,
+    "ast_hash": "f88707d56941bce7e45e35e4b589486d",
     "semantic_hash": ""
   },
   "README.md": {
@@ -275,8 +275,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1784283526.4656856,
-    "ast_hash": "1ff1051792d880460b52ec837b9ba978",
+    "mtime": 1785375266.7035284,
+    "ast_hash": "da9fa55007aea12865a668cb0e692c27",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.10.md": {
@@ -427,6 +427,56 @@
   "src/main/resources/logo.png": {
     "mtime": 1783908745.009783,
     "ast_hash": "b12b2c96d95e52e99ee392e597bdf4ea",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/client/render/CarriedObjectRender.java": {
+    "mtime": 1785424556.9315546,
+    "ast_hash": "bb97c44f98f1b5b63b41b6505c9cdb2d",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/client/render/CarryRenderHelper.java": {
+    "mtime": 1785424548.725541,
+    "ast_hash": "33523300ccc87188090ab2c40820257e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/LivingEntityMixin.java": {
+    "mtime": 1785373157.9679046,
+    "ast_hash": "a1590544edb5c76b5e942e55d99a2e4a",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1785251971.5237267,
+    "ast_hash": "1639888045c2e22894c877a015aa739b",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.39.md": {
+    "mtime": 1785199100.2493894,
+    "ast_hash": "5bcf1c3447a78bec35e47a7553e09bb5",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.40.md": {
+    "mtime": 1785234952.1606712,
+    "ast_hash": "cf646afb7e2040b53ad36de45cf12a2a",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.41.md": {
+    "mtime": 1785238230.4375894,
+    "ast_hash": "d35c7fbfa2f36fb43029fbded146f7a1",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.42.md": {
+    "mtime": 1785375116.3120842,
+    "ast_hash": "ca1ab880ed0114cd506583d230aca599",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.43.md": {
+    "mtime": 1785414839.0291517,
+    "ast_hash": "f2a6d927d50d7b8c6d8bd18a2a20eed1",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.44.md": {
+    "mtime": 1785432325.491402,
+    "ast_hash": "7193d6fbbbc93c5bb3c21263ab281d82",
     "semantic_hash": ""
   }
 }

@@ -60,6 +60,14 @@ public final class CarryRenderHelper {
         return 1.0F;
     }
 
+    public static float getRenderWidth(Player player, BlockState state) {
+        VoxelShape shape = state.getShape(player.level(), player.blockPosition());
+        if (shape != null && !shape.isEmpty()) {
+            return (float) Math.abs(shape.bounds().maxX - shape.bounds().minX);
+        }
+        return 1.0F;
+    }
+
     public static boolean doSneakCheck(Player player) {
         return !player.getAbilities().flying && (player.isShiftKeyDown() || player.isCrouching());
     }

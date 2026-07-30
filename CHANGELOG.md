@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.45] - 2026-07-30
+
+### Fix
+- Brazos colgando con normalidad mientras se carga un bloque, dando sensación de que flotaba en vez de estar sujeto. Portado el mixin de pose de brazos de Carry On: `HumanoidModel#setupAnim` ahora rota ambos brazos hacia arriba/adentro alrededor del bloque cargado, ajustado según el ancho del bloque y si el jugador está agachado
+
 ## [0.0.0-beta.44] - 2026-07-30
 
 ### Fix

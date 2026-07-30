@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.0-beta.42] - 2026-07-30
+
+### Fix
+- Primera persona: no se renderizaba el bloque cargado en la vista propia. Añadido hook de render en `ItemInHandRenderer`
+- Bloque duplicado/flotando sobre la cabeza y saltando al hombro: había dos rutas de render disparándose a la vez (`AvatarRenderer` extiende `LivingEntityRenderer`), cada una con un offset fijo distinto. Eliminada la ruta duplicada y anclado el bloque restante a la mano del modelo (`PlayerModel.translateToHand`)
+- Salto no bloqueado al cargar: cancelado tanto `setJumping(true)` (input cliente) como `jumpFromGround()` (servidor) mientras se está cargando
+- Agachado no visible: `state.pose = Pose.CROUCHING` no bastaba porque la animación del modelo humanoide lee `isCrouching`, no `pose`. Ahora se fijan ambos campos
+
 ## [0.0.0-beta.41] - 2026-07-28
 
 ### Fix

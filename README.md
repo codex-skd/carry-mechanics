@@ -4,7 +4,7 @@ Pick up, carry, and place blocks and entities with your bare hands!
 
 ![minecraft](https://img.shields.io/badge/Minecraft-26.1.2-blue)
 ![neoforge](https://img.shields.io/badge/NeoForge-26.1.2.78-orange)
-![version](https://img.shields.io/badge/version-0.0.0--beta.27-green)
+![version](https://img.shields.io/badge/version-0.0.0--beta.44-green)
 
 ## Overview
 
@@ -27,15 +27,6 @@ Inspired by the classic Carry On mod, rewritten from scratch for modern NeoForge
 4. Launch Minecraft
 
 ## Features
-
-- **Pick up blocks** — Grab any block with a tile entity (chests, furnaces, spawners, etc.) by right-clicking while holding Shift
-- **Pick up entities** — Carry mobs, animals, and even other players
-- **Place anywhere** — Right-click on any surface to place what you're carrying
-- **Entity stacking** — Stack carried entities on top of other entities
-- **Fully configurable** — Whitelist/blacklist via datapack tags, 25+ config options
-- **Scripting support** — Datapack-powered scripts with conditions and custom commands
-- **Carry players** — Pick up and carry other players (with config option)
-- **Slowness effects** — Heavier objects slow you down more, configurable per type
 
 - **Pick up blocks** — Grab any block with a tile entity (chests, furnaces, spawners, etc.) by right-clicking while holding Shift
 - **Pick up entities** — Carry mobs, animals, and even other players

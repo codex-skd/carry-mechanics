@@ -1,6 +1,6 @@
 # Flujo de trabajo — Carry Mechanics (NeoForge)
 
-> **Versión del workflow**: 1.8.0 (codex-docs)
+> **Versión del workflow**: 1.12.0 (codex-docs)
 > Este archivo pertenece al proyecto **Carry Mechanics**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -563,21 +563,26 @@ git push origin 26.1.2-neoforge-1.0.0
 
 ### 6. Actualizar Knowledge Graph (Graphify)
 
-Después de cada push a remoto, actualizar el grafo de conocimiento:
+Después de cada push a remoto, actualizar el grafo de conocimiento. **`build` no es un comando válido** (versión instalada: 0.9.12) — usar `extract` (primera vez) o `update --force` (actualización, sin LLM):
 
 ```bash
-# 1. Regenerar el grafo del mod
-"C:\Users\llagu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\graphify.exe" build .
+GRAPHIFY="C:\Users\llagu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\graphify.exe"
 
-# 2. Commit del grafo actualizado
+# 1. Regenerar el grafo del mod (graphify-out/ ya existe en este proyecto → update)
+"$GRAPHIFY" update . --force
+
+# 2. Si graphify crea graphify-out/<YYYY-MM-DD>/ como backup automático, borrarla:
+#    nunca se versionan copias fechadas (el historial ya vive en git log -- graphify-out/)
+
+# 3. Commit del grafo actualizado
 git add graphify-out/
 git commit -m "chore: update knowledge graph"
 
-# 3. Push
+# 4. Push
 git push
 ```
 
-> **Nota**: El grafo permite a los asistentes de IA entender la arquitectura del mod sin leer todo el código fuente, reduciendo el consumo de tokens hasta 71×.
+> **Nota**: El grafo permite a los asistentes de IA entender la arquitectura del mod sin leer todo el código fuente, reduciendo el consumo de tokens hasta 71×. Detalle completo del comando y del backend Ollama en `codex-docs/WORKFLOW_GENERIC.md`.
 
 ---
 
@@ -627,6 +632,7 @@ El código, los logs y los commits siguen el estándar internacional de programa
 
 | Versión | Fecha | Cambios |
 |---|---|---|
+| 1.12.0 | 2026-07-30 | Sincronizado con genérico v1.12.0. Comando de Graphify corregido (`build` → `extract`/`update --force`), regla de no versionar copias fechadas de `graphify-out/` |
 | 1.8.0 | 2026-07-27 | Sincronizado con genérico v1.8.0. Fix: exclude templates/ del build. Añadido paso 0 (alcance de versión) |
 | 1.6.0 | 2026-07-23 | Organización en workspace: todos los mods usan `<mod_id>/<mc-version>/` tengan 1 o N versiones |
 | 1.3.0 | 2026-07-23 | Nueva sección: organización multi-versión con estructura `<mod_id>/<mc-version>/` |

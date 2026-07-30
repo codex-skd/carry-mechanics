@@ -25,6 +25,7 @@ public class AvatarExtractorMixin {
             }
             if (data.isCarrying()) {
                 state.pose = Pose.CROUCHING;
+                state.isCrouching = true;
             }
         }
     }

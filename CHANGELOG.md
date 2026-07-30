@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.43] - 2026-07-30
+
+### Fix
+- Causa raíz real del bloque mal renderizado: se dibujaba como `BlockModelRenderState` crudo vía `BlockDisplayContext.create()`, que en esta versión de MC no lleva ningún transform de "sujeto en mano" (confirmado leyendo fuentes decompiladas). Por eso el posicionamiento anterior (beta.42) dependía de offsets manuales que nunca encajaban con la mano real
+- Ahora el bloque cargado se resuelve y dibuja como `ItemStack` del bloque vía `ItemModelResolver`, con `ItemDisplayContext.FIRST_PERSON_RIGHT_HAND` en primera persona y `ItemDisplayContext.THIRD_PERSON_RIGHT_HAND` en tercera — el mismo mecanismo que usa el propio juego para cualquier item sujeto en la mano, sin offsets inventados a ojo
+
 ## [0.0.0-beta.42] - 2026-07-30
 
 ### Fix

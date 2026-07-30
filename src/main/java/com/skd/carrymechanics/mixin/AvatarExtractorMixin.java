@@ -1,12 +1,14 @@
 package com.skd.carrymechanics.mixin;
 
 import com.skd.carrymechanics.carry.CarryDataManager;
+import com.skd.carrymechanics.client.render.CarriedBlockRenderer;
 import com.skd.carrymechanics.client.render.ICarryOnRenderState;
 import net.minecraft.client.renderer.entity.player.AvatarRenderer;
 import net.minecraft.client.renderer.entity.state.AvatarRenderState;
 import net.minecraft.world.entity.Avatar;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemDisplayContext;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -22,6 +24,8 @@ public class AvatarExtractorMixin {
             var data = CarryDataManager.getCarryData(player);
             if (state instanceof ICarryOnRenderState carryState) {
                 carryState.carry_mechanics$setCarryData(data);
+                CarriedBlockRenderer.resolve(carryState.carry_mechanics$getCarriedBlockItemState(), data,
+                        ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, player);
             }
             if (data.isCarrying()) {
                 state.pose = Pose.CROUCHING;

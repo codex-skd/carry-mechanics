@@ -13,7 +13,6 @@
     "AvatarExtractorMixin",
     "AvatarRendererMixin",
     "EntityRendererMixin",
-    "ItemInHandRendererMixin",
     "LivingEntityRendererMixin",
     "PlayerRenderStateMixin"
   ],

@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.0-beta.44] - 2026-07-30
+
+### Fix
+- El bloque ya no se ancla a una sola mano (seguía pareciendo "sujetar un item con una mano" en vez de cargarlo). Portada la lógica de posicionamiento real del mod de referencia (Carry On): transform fijo relativo al torso del jugador (escalado, delante del cuerpo, ligeramente abajo), estable en cualquier ángulo de cámara en vez de seguir la animación de balanceo del brazo
+- En primera persona ya no se dibuja el bloque junto a las manos vanilla: ahora se cancela el render de manos por completo (`RenderHandEvent` de NeoForge) mientras se carga un bloque y se dibuja el bloque en su lugar — mismo enfoque que usa Carry On para dar la sensación de llevarlo con ambos brazos
+
 ## [0.0.0-beta.43] - 2026-07-30
 
 ### Fix

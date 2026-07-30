@@ -48,6 +48,15 @@
 | branch | `minecraft/26.1.2/neoforge-26.1.2.78/production` |
 | tag_prefix | `26.1.2-neoforge-` |
 
+## Variables para el script de subida (curseforge-upload.ps1)
+
+<!-- Formato clave = valor requerido por Get-VarFromMd en codex-docs/scripts/curseforge-upload.ps1 -->
+
+project_id = 1608286
+api_token = ee776b0a-ee95-4850-b554-06be02a8657f
+game_versions = 16082,9638,9639,10150
+release_type = beta
+
 ## Token de subida (Python)
 
 ```python

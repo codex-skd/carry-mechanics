@@ -1,14 +1,11 @@
 package com.skd.carrymechanics.carry;
 
-import com.skd.carrymechanics.networking.ClientboundStartRidingOtherPlayerPacket;
-import com.skd.carrymechanics.networking.NetworkHelper;
 import com.skd.carrymechanics.scripting.CarryScript;
 import com.skd.carrymechanics.scripting.ScriptManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerPlayerGameMode;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ProblemReporter;
@@ -17,6 +14,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
@@ -110,6 +108,7 @@ public class PickupHandler {
 
         if (entity.invulnerableTime != 0) return false;
         if (entity.isRemoved()) return false;
+        if (entity instanceof Player) return false;
 
         if (entity instanceof TamableAnimal tamable) {
             var owner = tamable.getOwnerReference();
@@ -124,7 +123,7 @@ public class PickupHandler {
         }
 
         if (!player.isCreative() && !ConfigAccess.PICKUP_HOSTILE_MOBS.get()
-                && entity.getType().getCategory() == MobCategory.MONSTER) return false;
+                && (entity instanceof Enemy || entity.getType().getCategory() == MobCategory.MONSTER)) return false;
 
         if (ConfigAccess.MAX_ENTITY_HEIGHT.get() < entity.getBbHeight()
                 || ConfigAccess.MAX_ENTITY_WIDTH.get() < entity.getBbWidth()) return false;
@@ -145,35 +144,18 @@ public class PickupHandler {
             }
         }
 
-        if (entity instanceof Player targetPlayer) {
-            if (!ConfigAccess.PICKUP_PLAYERS.get()) return false;
-            if (!player.isCreative() && targetPlayer.isCreative()) return false;
+        entity.ejectPassengers();
+        entity.stopRiding();
 
-            targetPlayer.ejectPassengers();
-            targetPlayer.stopRiding();
+        if (entity instanceof Animal anim) anim.dropLeash();
 
-            targetPlayer.startRiding(player, true, false);
-            var pkt = new ClientboundStartRidingOtherPlayerPacket(
-                    player.getId(), targetPlayer.getId(), true);
-            NetworkHelper.sendToAllPlayers(serverLevel, pkt);
-
-            data.setCarryingPlayer(targetPlayer);
-        } else {
-            entity.ejectPassengers();
-            entity.stopRiding();
-
-            if (entity instanceof Animal anim) anim.dropLeash();
-
-            data.setEntity(entity);
-            entity.remove(Entity.RemovalReason.UNLOADED_WITH_PLAYER);
-        }
+        data.setEntity(entity);
+        entity.remove(Entity.RemovalReason.UNLOADED_WITH_PLAYER);
 
         player.swing(InteractionHand.MAIN_HAND, true);
 
-        if (!(entity instanceof Player)) {
-            serverLevel.playSound(null, player.getOnPos(), SoundEvents.ARMOR_EQUIP_GENERIC.value(),
-                    SoundSource.AMBIENT, 1.0f, 0.5f);
-        }
+        serverLevel.playSound(null, player.getOnPos(), SoundEvents.ARMOR_EQUIP_GENERIC.value(),
+                SoundSource.AMBIENT, 1.0f, 0.5f);
 
         CarryDataManager.setCarryData(player, data);
         applySlowness(player, data);

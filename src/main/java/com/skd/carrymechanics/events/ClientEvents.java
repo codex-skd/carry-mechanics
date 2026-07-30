@@ -34,7 +34,7 @@ public class ClientEvents {
         if (player == null) return;
 
         CarryData data = CarryDataManager.getCarryData(player);
-        if (!data.isCarrying(CarryData.CarryType.BLOCK)) return;
+        if (!data.isCarrying()) return;
 
         if (event.getHand() == InteractionHand.MAIN_HAND) {
             CarriedObjectRender.draw(player, event.getPoseStack(), event.getPackedLight(), event.getSubmitNodeCollector(), true);

@@ -12,7 +12,6 @@ public class ConfigData {
     public static ModConfigSpec.BooleanValue COMMON_HEAVY_ENTITIES;
     public static ModConfigSpec.BooleanValue COMMON_PICKUP_ALL_BLOCKS;
     public static ModConfigSpec.BooleanValue COMMON_PICKUP_HOSTILE_MOBS;
-    public static ModConfigSpec.BooleanValue COMMON_PICKUP_PLAYERS;
     public static ModConfigSpec.BooleanValue COMMON_SLOWNESS_IN_CREATIVE;
     public static ModConfigSpec.BooleanValue COMMON_ALLOW_BABIES;
     public static ModConfigSpec.BooleanValue COMMON_STACKABLE_ENTITIES;

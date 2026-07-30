@@ -53,9 +53,7 @@ public class CarryConfig {
         ConfigData.COMMON_PICKUP_HOSTILE_MOBS = builder
                 .comment("Allow picking up hostile mobs")
                 .define("pickupHostileMobs", false);
-        ConfigData.COMMON_PICKUP_PLAYERS = builder
-                .comment("Allow picking up other players")
-                .define("pickupPlayers", true);
+
         ConfigData.COMMON_SLOWNESS_IN_CREATIVE = builder
                 .comment("Apply slowness in creative mode")
                 .define("slownessInCreative", true);

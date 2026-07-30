@@ -122,10 +122,5 @@ public class CommonEvents {
 
     @SubscribeEvent
     public static void onEntityLeave(EntityLeaveLevelEvent event) {
-        Entity entity = event.getEntity();
-        if (entity instanceof Player player && player.getVehicle() instanceof ServerPlayer carrier) {
-            if (CarryDataManager.getCarryData(carrier).isCarrying(CarryData.CarryType.PLAYER))
-                PlacementHandler.placeCarried(carrier);
-        }
     }
 }

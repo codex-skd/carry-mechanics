@@ -14,7 +14,6 @@ public class ConfigAccess {
 
     public static net.neoforged.neoforge.common.ModConfigSpec.BooleanValue PICKUP_ALL_BLOCKS = ConfigData.COMMON_PICKUP_ALL_BLOCKS;
     public static net.neoforged.neoforge.common.ModConfigSpec.BooleanValue PICKUP_HOSTILE_MOBS = ConfigData.COMMON_PICKUP_HOSTILE_MOBS;
-    public static net.neoforged.neoforge.common.ModConfigSpec.BooleanValue PICKUP_PLAYERS = ConfigData.COMMON_PICKUP_PLAYERS;
     public static net.neoforged.neoforge.common.ModConfigSpec.BooleanValue ALLOW_BABIES = ConfigData.COMMON_ALLOW_BABIES;
     public static net.neoforged.neoforge.common.ModConfigSpec.BooleanValue SLOWNESS_IN_CREATIVE = ConfigData.COMMON_SLOWNESS_IN_CREATIVE;
     public static net.neoforged.neoforge.common.ModConfigSpec.BooleanValue HEAVY_TILES = ConfigData.COMMON_HEAVY_TILES;

@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.0-beta.46] - 2026-07-31
+
+### Feat
+- **Render de animales/aldeanos cargados**: ahora se dibujan en primera y tercera persona, visibles al llevarlos a cuestas (parte trasera hacia el jugador, cabeza mirando hacia donde camina)
+- **Bloqueo de mobs hostiles por interfaz `Enemy`**: ademas del chequeo por `MobCategory.MONSTER`, se usa `entity instanceof Enemy` como criterio mas robusto para impedir cargar zombis, esqueletos, creepers y cualquier otro mob que implemente la interfaz marcadora de hostil
+
+### Removed
+- **Recogida de jugadores eliminada por completo**: eliminado el config option `pickupPlayers`, la rama de codigo asociada en `PickupHandler` y `PlacementHandler`, y la entrada correspondiente en el README. Los paquetes de red `ClientboundStartRidingOtherPlayerPacket` y `ClientboundStartRidingPacket` se mantienen registrados pero nunca se envian
+
 ## [0.0.0-beta.45] - 2026-07-30
 
 ### Fix

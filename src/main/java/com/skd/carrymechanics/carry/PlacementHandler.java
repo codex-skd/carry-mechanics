@@ -1,7 +1,5 @@
 package com.skd.carrymechanics.carry;
 
-import com.skd.carrymechanics.networking.ClientboundStartRidingOtherPlayerPacket;
-import com.skd.carrymechanics.networking.NetworkHelper;
 import com.skd.carrymechanics.scripting.CarryScript;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -14,7 +12,6 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.equine.Horse;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
@@ -102,7 +99,7 @@ public class PlacementHandler {
     public static boolean tryPlaceEntity(ServerPlayer player, BlockPos pos, Direction face,
                                          BiFunction<Vec3, Entity, Boolean> customHook) {
         CarryData data = CarryDataManager.getCarryData(player);
-        if (!(data.isCarrying(CarryData.CarryType.ENTITY) || data.isCarrying(CarryData.CarryType.PLAYER)))
+        if (!data.isCarrying(CarryData.CarryType.ENTITY))
             return false;
         if (player.tickCount == data.getTick()) return false;
 
@@ -124,29 +121,6 @@ public class PlacementHandler {
         }
 
         Vec3 placementPos = Vec3.atBottomCenterOf(pos);
-
-        if (data.isCarrying(CarryData.CarryType.PLAYER)) {
-            Player carriedPlayer = data.getCarryingPlayer(level);
-            if (carriedPlayer == null) {
-                data.clear();
-                CarryDataManager.setCarryData(player, data);
-                return false;
-            }
-
-            player.ejectPassengers();
-
-            var pkt = new ClientboundStartRidingOtherPlayerPacket(
-                    player.getId(), carriedPlayer.getId(), false);
-            NetworkHelper.sendToAllPlayers(level, pkt);
-
-            data.clear();
-            CarryDataManager.setCarryData(player, data);
-
-            carriedPlayer.teleportTo(placementPos.x, placementPos.y, placementPos.z);
-            player.swing(InteractionHand.MAIN_HAND, true);
-            player.removeEffect(MobEffects.SLOWNESS);
-            return true;
-        }
 
         Entity entity = data.getEntity(level);
         if (entity == null) {
@@ -176,15 +150,10 @@ public class PlacementHandler {
         if (!ConfigAccess.STACKABLE_ENTITIES.get()) return;
 
         CarryData data = CarryDataManager.getCarryData(player);
-        if (!data.isCarrying(CarryData.CarryType.ENTITY) && !data.isCarrying(CarryData.CarryType.PLAYER)) return;
+        if (!data.isCarrying(CarryData.CarryType.ENTITY)) return;
 
         ServerLevel level = (ServerLevel) player.level();
-        Entity carriedEntity;
-        if (data.isCarrying(CarryData.CarryType.ENTITY)) {
-            carriedEntity = data.getEntity(level);
-        } else {
-            carriedEntity = player.getFirstPassenger();
-        }
+        Entity carriedEntity = data.getEntity(level);
         if (carriedEntity == null) return;
 
         double carriedSize = carriedEntity.getBbHeight() * carriedEntity.getBbWidth();
@@ -207,16 +176,12 @@ public class PlacementHandler {
         double distSq = targetEntity.blockPosition().distSqr(player.blockPosition());
 
         if (distSq < 6.0) {
-            if (data.isCarrying(CarryData.CarryType.ENTITY)) {
-                carriedEntity.setPos(targetEntity.getX(), targetEntity.getY() + 2.6, targetEntity.getZ());
-                level.addFreshEntity(carriedEntity);
-            }
+            carriedEntity.setPos(targetEntity.getX(), targetEntity.getY() + 2.6, targetEntity.getZ());
+            level.addFreshEntity(carriedEntity);
             carriedEntity.startRiding(topPassenger, true, false);
         } else {
-            if (data.isCarrying(CarryData.CarryType.ENTITY)) {
-                carriedEntity.setPos(targetEntity.getX(), targetEntity.getY(), targetEntity.getZ());
-                level.addFreshEntity(carriedEntity);
-            }
+            carriedEntity.setPos(targetEntity.getX(), targetEntity.getY(), targetEntity.getZ());
+            level.addFreshEntity(carriedEntity);
             carriedEntity.startRiding(topPassenger, true, false);
         }
 

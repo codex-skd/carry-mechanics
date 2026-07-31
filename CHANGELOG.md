@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.0] - 2026-08-01
+
+### Stable Release
+
+- Primera versión estable del mod para Minecraft 26.2 / NeoForge 26.2.0.37-beta
+- Sin cambios funcionales respecto a `0.0.0-beta.2`; solo bump de versión (`0.0.0-beta.2` → `1.0.0`) tras dar por estable el set de funcionalidades
+- Requisito de NeoForge: `26.2.0.37-beta`
+
 ## [0.0.0-beta.2] - 2026-07-31
 
 ### Fix

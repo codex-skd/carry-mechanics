@@ -2,9 +2,9 @@
 
 Pick up, carry, and place blocks and entities with your bare hands!
 
-![minecraft](https://img.shields.io/badge/Minecraft-26.1.2-blue)
-![neoforge](https://img.shields.io/badge/NeoForge-26.1.2.78-orange)
-![version](https://img.shields.io/badge/version-0.0.0--beta.45-green)
+![minecraft](https://img.shields.io/badge/Minecraft-26.2-blue)
+![neoforge](https://img.shields.io/badge/NeoForge-26.2.0.37--beta-orange)
+![version](https://img.shields.io/badge/version-1.0.0-green)
 
 ## Overview
 
@@ -16,12 +16,12 @@ Inspired by the classic Carry On mod, rewritten from scratch for modern NeoForge
 
 | Dependency | Version |
 |---|---|
-| Minecraft | 26.1.2 |
-| NeoForge | 26.1.2.78 |
+| Minecraft | 26.2 |
+| NeoForge | 26.2.0.37-beta |
 
 ## Installation
 
-1. Install NeoForge 26.1.2.78 for Minecraft 26.1.2
+1. Install NeoForge 26.2.0.37-beta for Minecraft 26.2
 2. Download the latest JAR from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/carry-mechanics)
 3. Place the JAR in your `mods/` folder
 4. Launch Minecraft

@@ -47,8 +47,8 @@
 <h2>📋 Requirements</h2>
 
 <table>
-<tr><td><strong>Minecraft</strong></td><td>26.1.2</td></tr>
-<tr><td><strong>NeoForge</strong></td><td>26.1.2.78</td></tr>
+<tr><td><strong>Minecraft</strong></td><td>26.2</td></tr>
+<tr><td><strong>NeoForge</strong></td><td>26.2.0.37-beta</td></tr>
 </table>
 
 <br>
@@ -65,7 +65,7 @@
 
 <br>
 
-<blockquote><strong>Note:</strong> This is an early beta. The visual rendering of carried objects is a work in progress.</blockquote>
+<blockquote><strong>Note:</strong> This is the first stable release of Carry Mechanics for Minecraft 26.2.</blockquote>
 
 <br>
 

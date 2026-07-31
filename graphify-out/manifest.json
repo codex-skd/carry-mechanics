@@ -50,9 +50,9 @@
     "semantic_hash": "9c6995baccc8ec762ddfa09d34f701dd"
   },
   "src/main/java/com/skd/carrymechanics/carry/ConfigAccess.java": {
-    "mtime": 1783905238.0372782,
-    "ast_hash": "108c5db4f10637b5d72d8550cb782abd",
-    "semantic_hash": "108c5db4f10637b5d72d8550cb782abd"
+    "mtime": 1785453913.7365358,
+    "ast_hash": "50466ef73cb7c1df05cd63dab8c938fa",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/carry/ListHandler.java": {
     "mtime": 1783905238.0379975,
@@ -65,14 +65,14 @@
     "semantic_hash": "7e9edc91d0a60f8f57dd4cbf46f3c4f3"
   },
   "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java": {
-    "mtime": 1784127595.2135825,
-    "ast_hash": "55f5cb3f7720b351451eec1d645a05e1",
-    "semantic_hash": "55f5cb3f7720b351451eec1d645a05e1"
+    "mtime": 1785454122.7191992,
+    "ast_hash": "b273ad1c7efce667e0ff50f24178dada",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/carry/PlacementHandler.java": {
-    "mtime": 1783905393.0286562,
-    "ast_hash": "59a94fe0c23b8565a3e17c604e89c224",
-    "semantic_hash": "59a94fe0c23b8565a3e17c604e89c224"
+    "mtime": 1785454001.7877858,
+    "ast_hash": "d1f3951d5f467284dac33c24a67798f7",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/client/keybinds/CarryKeybinds.java": {
     "mtime": 1783905640.9752562,
@@ -95,24 +95,24 @@
     "semantic_hash": "48627a542db514bef7b91e3ad815ee32"
   },
   "src/main/java/com/skd/carrymechanics/config/CarryConfig.java": {
-    "mtime": 1783905238.044566,
-    "ast_hash": "24b4c88c895fecaea9a110fc1c1fb8b9",
-    "semantic_hash": "24b4c88c895fecaea9a110fc1c1fb8b9"
+    "mtime": 1785453912.39114,
+    "ast_hash": "97f4e2336c56f0e19efe42856a9770b0",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/config/ConfigData.java": {
-    "mtime": 1783905238.0450833,
-    "ast_hash": "395a8efc75c94f233bb66a887177e476",
-    "semantic_hash": "395a8efc75c94f233bb66a887177e476"
+    "mtime": 1785453913.0479193,
+    "ast_hash": "b52905ced14c7e4cdae1d70ce7d91ac0",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/events/ClientEvents.java": {
-    "mtime": 1785432245.2799537,
-    "ast_hash": "6cd70475f82db7697afab8e1854ef482",
+    "mtime": 1785454092.9865787,
+    "ast_hash": "6e9a30360ffe5d2cfd93894ac978003b",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/events/CommonEvents.java": {
-    "mtime": 1784297142.6125064,
-    "ast_hash": "8ddc18f4fe5f154a424529f28d6462ea",
-    "semantic_hash": "8ddc18f4fe5f154a424529f28d6462ea"
+    "mtime": 1785453976.4959903,
+    "ast_hash": "596344c1463f5085cb83a19ba76e06dc",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/mixin/EntityMixin.java": {
     "mtime": 1783905238.047125,
@@ -190,8 +190,8 @@
     "semantic_hash": "3816faa2b364f9494b923fbfbf6d5c8c"
   },
   "src/main/resources/carry_mechanics.mixins.json": {
-    "mtime": 1785432264.2706964,
-    "ast_hash": "e4b28546278af244ce4ac17de260645c",
+    "mtime": 1785449606.6104853,
+    "ast_hash": "a8126d152c042a4ef7cae83dd6c5e259",
     "semantic_hash": ""
   },
   "src/main/resources/data/carry_mechanics/tags/block/block_blacklist.json": {
@@ -255,18 +255,18 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785432335.4773219,
-    "ast_hash": "f88707d56941bce7e45e35e4b589486d",
+    "mtime": 1785509627.9984653,
+    "ast_hash": "f2ff2e2d8de4c92dc7ba99bdc482ead3",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1784822970.1679313,
-    "ast_hash": "e14d49137209ea96f5c6e9008e3f269f",
+    "mtime": 1785453992.027285,
+    "ast_hash": "8f2e13e4df127b3231a13666457981b5",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_CARRY_MECHANICS_26-1-2.md": {
-    "mtime": 1785179753.9226184,
-    "ast_hash": "edb48f5a9b7dafb4351a07ce99689828",
+    "mtime": 1785489188.2143898,
+    "ast_hash": "8e449cbce76eb2f0382d5696c9015fd6",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
@@ -275,8 +275,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785375266.7035284,
-    "ast_hash": "da9fa55007aea12865a668cb0e692c27",
+    "mtime": 1785509885.9190462,
+    "ast_hash": "3433d4daf8ab0cac5d1bc836e4895f93",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.10.md": {
@@ -430,13 +430,13 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/client/render/CarriedObjectRender.java": {
-    "mtime": 1785424556.9315546,
-    "ast_hash": "bb97c44f98f1b5b63b41b6505c9cdb2d",
+    "mtime": 1785481932.9390943,
+    "ast_hash": "93d62208ce2a01c980427b02d95fbab6",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/client/render/CarryRenderHelper.java": {
-    "mtime": 1785424548.725541,
-    "ast_hash": "33523300ccc87188090ab2c40820257e",
+    "mtime": 1785454081.6934228,
+    "ast_hash": "5e54136d1aae9f03228d9349c46e4f93",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/mixin/LivingEntityMixin.java": {
@@ -445,8 +445,8 @@
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
-    "mtime": 1785251971.5237267,
-    "ast_hash": "1639888045c2e22894c877a015aa739b",
+    "mtime": 1785489188.2567577,
+    "ast_hash": "5cc9768cac6463b8057adeee79a79c4b",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.39.md": {
@@ -477,6 +477,31 @@
   "docs/curseforge/versions/0.0.0-beta.44.md": {
     "mtime": 1785432325.491402,
     "ast_hash": "7193d6fbbbc93c5bb3c21263ab281d82",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/HumanoidModelMixin.java": {
+    "mtime": 1785454098.7543948,
+    "ast_hash": "96e345f2f4dad485e92d22ff1a19e388",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.45.md": {
+    "mtime": 1785449655.0049489,
+    "ast_hash": "8b1593303311d16a3cfa53e604bf46ab",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.46.md": {
+    "mtime": 1785454208.2274117,
+    "ast_hash": "779ba3809bc2edf7dc6aaf0fce22e136",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.47.md": {
+    "mtime": 1785481996.6979382,
+    "ast_hash": "befe195cc954a94132ab37f7441645ca",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.0.0.md": {
+    "mtime": 1785509624.1156652,
+    "ast_hash": "214bc6a2297143be547969bcae8a4be1",
     "semantic_hash": ""
   }
 }

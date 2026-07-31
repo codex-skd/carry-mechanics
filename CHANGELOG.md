@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.0] - 2026-07-31
+
+### Release
+- Primera versión estable. Sin cambios funcionales respecto a `0.0.0-beta.47`; solo bump de versión tras dar por estable el set de funcionalidades
+
 ## [0.0.0-beta.47] - 2026-07-31
 
 ### Fix

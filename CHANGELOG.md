@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.2] - 2026-07-31
+
+### Fix
+- Requisito de NeoForge bajado de `26.2.0.41-beta` a `26.2.0.37-beta` (`neo_version` en gradle.properties) para que el mod funcione con la build de NeoForge realmente disponible/instalada en 26.2 a día de hoy. Sin cambios de código: compila igual contra ambas builds
+
 ## [0.0.0-beta.1] - 2026-07-31
 
 ### Initial Port

@@ -28,7 +28,7 @@
 | Recurso | Versión |
 |---------|---------|
 | Minecraft | `26.2` |
-| NeoForge | `26.2.0.41-beta` |
+| NeoForge | `26.2.0.37-beta` |
 | Java | `25` |
 | Mod loader | `neoforge` |
 

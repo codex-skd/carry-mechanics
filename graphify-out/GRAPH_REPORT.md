@@ -1,16 +1,16 @@
 # Graph Report - 26.2  (2026-07-31)
 
 ## Corpus Check
-- 60 files · ~122,598 words
+- 61 files · ~122,671 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 450 nodes · 802 edges · 65 communities (22 shown, 43 thin omitted)
+- 451 nodes · 802 edges · 66 communities (23 shown, 43 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 55 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `963381e6`
+- Built from commit: `f9a2a6b1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -105,7 +105,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (65 total, 43 thin omitted)
+## Communities (66 total, 43 thin omitted)
 
 ### Community 0 - ".getCarryData"
 Cohesion: 0.08
@@ -192,7 +192,7 @@ Nodes (4): ModelOverride, ModelOverrideHandler, ModCompat, Item
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `CarryData` connect `CarryDataSyncHandler` to `.getCarryData`, `CarryScript`, `PickupCondition`, `ModelOverrideHandler.java`, `CarryKeybinds.java`, `settings.gradle`?**
-  _High betweenness centrality (0.262) - this node is a cross-community bridge._
+  _High betweenness centrality (0.260) - this node is a cross-community bridge._
 - **Why does `CarryScript` connect `PickupCondition` to `.getCarryData`, `CarryDataSyncHandler`, `CarryMechanics.java`?**
   _High betweenness centrality (0.054) - this node is a cross-community bridge._
 - **Why does `CarryMechanics` connect `CarryKeybinds.java` to `CarryDataSyncHandler`?**

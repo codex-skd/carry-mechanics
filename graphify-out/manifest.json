@@ -270,8 +270,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785511207.8768916,
-    "ast_hash": "194ddb990d1ba346e053a9cc575e2d88",
+    "mtime": 1785512079.7624614,
+    "ast_hash": "50aa90e3ca6c4b0296596d829ad9c84b",
     "semantic_hash": ""
   },
   "src/main/resources/assets/carry_mechanics/icon.png": {
@@ -317,6 +317,11 @@
   "docs/WORKFLOW_CARRY_MECHANICS_26-2.md": {
     "mtime": 1785511175.062046,
     "ast_hash": "6c64e2c53c8fb388f4b5082fd69c0b4a",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.1.md": {
+    "mtime": 1785512436.1225579,
+    "ast_hash": "103b4208ec29c09209eb40f601ce94b9",
     "semantic_hash": ""
   }
 }

@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.0-beta.47] - 2026-07-31
+
+### Fix
+- Animales/aldeanos cargados temblaban y giraban en su sitio en vez de quedarse quietos. Causa: `drawEntity()` reseteaba `xRotO`/`yRotO` a 0 cada frame pero extraía el render state con el partial tick real (fluctuante), interpolando cada frame entre el valor reseteado y uno desactualizado. Arreglado usando partial tick fijo `0.0F` en `dispatcher.extractEntity(...)`, igual que hace Carry On
+
 ## [0.0.0-beta.46] - 2026-07-31
 
 ### Feat

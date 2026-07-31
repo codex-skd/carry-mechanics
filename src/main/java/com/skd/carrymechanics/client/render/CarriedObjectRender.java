@@ -74,8 +74,7 @@ public final class CarriedObjectRender {
         }
 
         EntityRenderDispatcher dispatcher = Minecraft.getInstance().getEntityRenderDispatcher();
-        float partialTick = Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true);
-        EntityRenderState renderState = dispatcher.extractEntity(entity, partialTick);
+        EntityRenderState renderState = dispatcher.extractEntity(entity, 0.0F);
         renderState.shadowPieces.clear();
         renderState.lightCoords = light;
 

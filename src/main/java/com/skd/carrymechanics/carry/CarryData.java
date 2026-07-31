@@ -116,7 +116,7 @@ public class CarryData {
         if (type != CarryType.ENTITY) throw new IllegalStateException("Not entity: " + type);
         var reporter = new ProblemReporter.ScopedCollector(CarryMechanicsAccess.LOGGER);
         var input = TagValueInput.create(reporter, level.registryAccess(), nbt.getCompoundOrEmpty("entity"));
-        var entity = EntityType.create(input, level, EntitySpawnReason.BUCKET);
+        var entity = EntityType.create(input, level, new EntitySpawnRequest(EntitySpawnReason.BUCKET, false));
         if (entity.isPresent()) return entity.get();
         CarryMechanicsAccess.LOGGER.error("Failed to create entity from: {}", nbt);
         clear();

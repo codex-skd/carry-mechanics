@@ -716,7 +716,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setactivescript",
-      "community": 0,
+      "community": 37,
       "norm_label": ".setactivescript()"
     },
     {
@@ -1026,7 +1026,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted",
-      "community": 0,
+      "community": 37,
       "norm_label": ".ispermitted()"
     },
     {
@@ -1136,7 +1136,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
-      "community": 0,
+      "community": 37,
       "norm_label": "pickuphandler.java"
     },
     {
@@ -1146,7 +1146,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "community": 0,
+      "community": 37,
       "norm_label": "pickuphandler"
     },
     {
@@ -1156,7 +1156,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
-      "community": 0,
+      "community": 37,
       "norm_label": ".cancarrygeneral()"
     },
     {
@@ -1166,7 +1166,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
-      "community": 0,
+      "community": 37,
       "norm_label": "serverplayer"
     },
     {
@@ -1176,7 +1176,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_vec3",
-      "community": 0,
+      "community": 37,
       "norm_label": "vec3"
     },
     {
@@ -1186,7 +1186,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "community": 0,
+      "community": 37,
       "norm_label": ".trypickupblock()"
     },
     {
@@ -1196,7 +1196,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockpos",
-      "community": 0,
+      "community": 37,
       "norm_label": "blockpos"
     },
     {
@@ -1206,7 +1206,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_level",
-      "community": 0,
+      "community": 37,
       "norm_label": "level"
     },
     {
@@ -1216,7 +1216,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockstate",
-      "community": 0,
+      "community": 37,
       "norm_label": "blockstate"
     },
     {
@@ -1226,7 +1226,7 @@
       "source_location": "L105",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "community": 0,
+      "community": 37,
       "norm_label": ".trypickupentity()"
     },
     {
@@ -1236,7 +1236,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_entity",
-      "community": 0,
+      "community": 37,
       "norm_label": "entity"
     },
     {
@@ -1246,7 +1246,7 @@
       "source_location": "L166",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
-      "community": 0,
+      "community": 37,
       "norm_label": ".applyslowness()"
     },
     {
@@ -1256,7 +1256,7 @@
       "source_location": "L174",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
-      "community": 0,
+      "community": 37,
       "norm_label": ".refreshslowness()"
     },
     {
@@ -1266,7 +1266,7 @@
       "source_location": "L183",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
-      "community": 0,
+      "community": 37,
       "norm_label": ".potionlevel()"
     },
     {
@@ -1276,7 +1276,7 @@
       "source_location": "L203",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
-      "community": 0,
+      "community": 37,
       "norm_label": ".executecommand()"
     },
     {
@@ -1286,7 +1286,7 @@
       "source_location": "L212",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
-      "community": 0,
+      "community": 37,
       "norm_label": ".haspropertyoftype()"
     },
     {
@@ -1296,7 +1296,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_property",
-      "community": 0,
+      "community": 37,
       "norm_label": "property"
     },
     {
@@ -1506,7 +1506,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds",
-      "community": 16,
+      "community": 40,
       "norm_label": "carrykeybinds.java"
     },
     {
@@ -1516,7 +1516,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds_carrykeybinds",
-      "community": 16,
+      "community": 40,
       "norm_label": "carrykeybinds"
     },
     {
@@ -1526,7 +1526,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds_java_eventbussubscriber",
-      "community": 16,
+      "community": 40,
       "norm_label": "eventbussubscriber"
     },
     {
@@ -1536,7 +1536,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "keymapping",
-      "community": 16,
+      "community": 40,
       "norm_label": "keymapping"
     },
     {
@@ -1546,7 +1546,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds_carrykeybinds_registerkeymappings",
-      "community": 16,
+      "community": 40,
       "norm_label": ".registerkeymappings()"
     },
     {
@@ -1556,7 +1556,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "registerkeymappingsevent",
-      "community": 16,
+      "community": 40,
       "norm_label": "registerkeymappingsevent"
     },
     {
@@ -1566,7 +1566,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_client_keybinds_carrykeybinds_java_subscribeevent",
-      "community": 16,
+      "community": 40,
       "norm_label": "subscribeevent"
     },
     {
@@ -2516,7 +2516,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_avatarextractormixin",
-      "community": 4,
+      "community": 39,
       "norm_label": "avatarextractormixin.java"
     },
     {
@@ -2526,7 +2526,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_avatarextractormixin_avatarextractormixin",
-      "community": 4,
+      "community": 39,
       "norm_label": "avatarextractormixin"
     },
     {
@@ -2536,7 +2536,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_avatarextractormixin_java_mixin",
-      "community": 4,
+      "community": 39,
       "norm_label": "mixin"
     },
     {
@@ -2546,7 +2546,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_avatarextractormixin_avatarextractormixin_onextractrenderstate",
-      "community": 4,
+      "community": 39,
       "norm_label": ".onextractrenderstate()"
     },
     {
@@ -2556,7 +2556,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "avatar",
-      "community": 4,
+      "community": 39,
       "norm_label": "avatar"
     },
     {
@@ -2566,7 +2566,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_avatarextractormixin_java_avatarrenderstate",
-      "community": 4,
+      "community": 39,
       "norm_label": "avatarrenderstate"
     },
     {
@@ -2576,7 +2576,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_avatarextractormixin_java_callbackinfo",
-      "community": 4,
+      "community": 39,
       "norm_label": "callbackinfo"
     },
     {
@@ -2586,7 +2586,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_avatarextractormixin_java_inject",
-      "community": 4,
+      "community": 39,
       "norm_label": "inject"
     },
     {
@@ -2726,7 +2726,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin",
-      "community": 19,
+      "community": 5,
       "norm_label": "entityrenderermixin.java"
     },
     {
@@ -2736,7 +2736,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_entityrenderermixin",
-      "community": 19,
+      "community": 5,
       "norm_label": "entityrenderermixin"
     },
     {
@@ -2746,7 +2746,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_mixin",
-      "community": 19,
+      "community": 5,
       "norm_label": "mixin"
     },
     {
@@ -2756,7 +2756,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_entityrenderermixin_onshouldshowname",
-      "community": 19,
+      "community": 5,
       "norm_label": ".onshouldshowname()"
     },
     {
@@ -2766,7 +2766,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_entity",
-      "community": 19,
+      "community": 5,
       "norm_label": "entity"
     },
     {
@@ -2776,7 +2776,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_callbackinforeturnable",
-      "community": 19,
+      "community": 5,
       "norm_label": "callbackinforeturnable"
     },
     {
@@ -2786,7 +2786,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_inject",
-      "community": 19,
+      "community": 5,
       "norm_label": "inject"
     },
     {
@@ -2796,7 +2796,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin",
-      "community": 11,
+      "community": 4,
       "norm_label": "humanoidmodelmixin.java"
     },
     {
@@ -2806,7 +2806,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_humanoidmodelmixin",
-      "community": 11,
+      "community": 4,
       "norm_label": "humanoidmodelmixin"
     },
     {
@@ -2816,7 +2816,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_java_mixin",
-      "community": 11,
+      "community": 4,
       "norm_label": "mixin"
     },
     {
@@ -2826,7 +2826,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "modelpart",
-      "community": 11,
+      "community": 4,
       "norm_label": "modelpart"
     },
     {
@@ -2836,7 +2836,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_humanoidmodelmixin_onsetupanim",
-      "community": 11,
+      "community": 4,
       "norm_label": ".onsetupanim()"
     },
     {
@@ -2846,7 +2846,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "humanoidrenderstate",
-      "community": 11,
+      "community": 4,
       "norm_label": "humanoidrenderstate"
     },
     {
@@ -2856,7 +2856,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_java_callbackinfo",
-      "community": 11,
+      "community": 4,
       "norm_label": "callbackinfo"
     },
     {
@@ -2866,7 +2866,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_java_inject",
-      "community": 11,
+      "community": 4,
       "norm_label": "inject"
     },
     {
@@ -2876,7 +2876,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_humanoidmodelmixin_changerotation",
-      "community": 11,
+      "community": 4,
       "norm_label": ".changerotation()"
     },
     {
@@ -2886,7 +2886,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "unique",
-      "community": 11,
+      "community": 4,
       "norm_label": "unique"
     },
     {
@@ -3556,7 +3556,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_clientboundsyncscriptspacket_handle",
-      "community": 7,
+      "community": 9,
       "norm_label": ".handle()"
     },
     {
@@ -3566,7 +3566,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_networking_clientboundsyncscriptspacket_java_ipayloadcontext",
-      "community": 7,
+      "community": 9,
       "norm_label": "ipayloadcontext"
     },
     {
@@ -3836,7 +3836,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_scripting_carryscript_carryscript_fulfillsconditions",
-      "community": 0,
+      "community": 37,
       "norm_label": ".fulfillsconditions()"
     },
     {
@@ -3956,7 +3956,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_setscripts",
-      "community": 7,
+      "community": 9,
       "norm_label": ".setscripts()"
     },
     {
@@ -4046,7 +4046,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener",
-      "community": 7,
+      "community": 16,
       "norm_label": "scriptreloadlistener.java"
     },
     {
@@ -4056,7 +4056,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_scriptreloadlistener",
-      "community": 7,
+      "community": 16,
       "norm_label": "scriptreloadlistener"
     },
     {
@@ -4066,7 +4066,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_scriptreloadlistener_register",
-      "community": 7,
+      "community": 16,
       "norm_label": ".register()"
     },
     {
@@ -4076,7 +4076,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_scriptreloadlistener_onresourcemanagerreload",
-      "community": 7,
+      "community": 16,
       "norm_label": ".onresourcemanagerreload()"
     },
     {
@@ -4086,7 +4086,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resourcemanager",
-      "community": 7,
+      "community": 16,
       "norm_label": "resourcemanager"
     },
     {
@@ -4096,7 +4096,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_scriptreloadlistener_synctoclient",
-      "community": 7,
+      "community": 16,
       "norm_label": ".synctoclient()"
     },
     {
@@ -4106,7 +4106,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_scripting_scriptreloadlistener_java_serverplayer",
-      "community": 7,
+      "community": 16,
       "norm_label": "serverplayer"
     },
     {
@@ -4170,10 +4170,30 @@
       "norm_label": "changelog"
     },
     {
-      "label": "[0.0.0-beta.1] - 2026-07-31",
+      "label": "[0.0.0-beta.2] - 2026-07-31",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
+      "_origin": "ast",
+      "id": "changelog_0_0_0_beta_2_2026_07_31",
+      "community": 6,
+      "norm_label": "[0.0.0-beta.2] - 2026-07-31"
+    },
+    {
+      "label": "Fix",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "changelog_fix",
+      "community": 6,
+      "norm_label": "fix"
+    },
+    {
+      "label": "[0.0.0-beta.1] - 2026-07-31",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_1_2026_07_31",
       "community": 6,
@@ -4183,7 +4203,7 @@
       "label": "Initial Port",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L5",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "changelog_initial_port",
       "community": 6,
@@ -4528,6 +4548,16 @@
       "id": "docs_curseforge_versions_0_0_0_beta_1",
       "community": 36,
       "norm_label": "0.0.0-beta.1.md"
+    },
+    {
+      "label": "0.0.0-beta.2.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/0.0.0-beta.2.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_0_0_0_beta_2",
+      "community": 41,
+      "norm_label": "0.0.0-beta.2.md"
     }
   ],
   "links": [
@@ -12824,7 +12854,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L3",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_0_0_0_beta_1_2026_07_31",
@@ -12834,7 +12864,27 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "changelog_changelog",
+      "target": "changelog_0_0_0_beta_2_2026_07_31",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
       "source_location": "L5",
+      "weight": 1.0,
+      "source": "changelog_0_0_0_beta_2_2026_07_31",
+      "target": "changelog_fix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_1_2026_07_31",
       "target": "changelog_initial_port",
@@ -13132,5 +13182,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f9a2a6b1c911a17adf8e199d5818472b6548ecf6"
+  "built_at_commit": "ce4fa9f2794dce5bd568f37d32526a48033873c8"
 }

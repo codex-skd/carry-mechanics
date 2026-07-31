@@ -16,19 +16,21 @@
 
 ## Game Versions (IDs)
 
+<!-- TODO: pendiente de consultar en la Core API de CurseForge antes de la primera subida a 26.2. Los IDs de 26.1.2 NO son válidos para 26.2 -->
+
 | Recurso | ID |
 |---------|----|
-| Minecraft 26.1.2 | `16082` |
+| Minecraft 26.2 | `TODO` |
 | Client | `9638` |
 | Server | `9639` |
-| NeoForge | `10150` |
+| NeoForge | `TODO` |
 
 ## Versiones
 
 | Recurso | Versión |
 |---------|---------|
-| Minecraft | `26.1.2` |
-| NeoForge | `26.1.2.78` |
+| Minecraft | `26.2` |
+| NeoForge | `26.2.0.41-beta` |
 | Java | `25` |
 | Mod loader | `neoforge` |
 
@@ -45,17 +47,17 @@
 
 | Variable | Valor |
 |----------|-------|
-| branch | `minecraft/26.1.2/neoforge-26.1.2.78/production` |
-| tag_prefix | `26.1.2-neoforge-` |
+| branch | `minecraft/26.2/neoforge-26.2.0.41-beta/production` |
+| tag_prefix | `26.2-neoforge-` |
 
 ## Variables para el script de subida (curseforge-upload.ps1)
 
-<!-- Formato clave = valor requerido por Get-VarFromMd en codex-docs/scripts/curseforge-upload.ps1 -->
+<!-- Formato clave = valor requerido por Get-VarFromMd en codex-docs/scripts/curseforge-upload.ps1. game_versions pendiente de completar (ver TODO arriba) antes de la primera subida -->
 
 project_id = 1608286
 api_token = ee776b0a-ee95-4850-b554-06be02a8657f
-game_versions = 16082,9638,9639,10150
-release_type = release
+game_versions = TODO,9638,9639,TODO
+release_type = beta
 
 ## Token de subida (Python)
 

@@ -12,8 +12,8 @@
 | Mod ID (`gradle.properties`) | `carry_mechanics` |
 | Clase principal | `CarryMechanics` |
 | Display name (Title Case) | `Carry Mechanics` |
-| Versiones de Minecraft | `26.1.2` |
-| Rama | `minecraft/26.1.2/neoforge-26.1.2.78/production` |
+| Versiones de Minecraft | `26.2` |
+| Rama | `minecraft/26.2/neoforge-26.2.0.41-beta/production` |
 
 ## Convenciones de nomenclatura
 
@@ -53,7 +53,7 @@ Cada subida a CurseForge crea tag: beta `<mc>-neoforge-beta.X` · release `<mc>-
 **1. Desarrollo**
 
 ```bash
-git checkout minecraft/26.1.2/neoforge-26.1.2.78/production
+git checkout minecraft/26.2/neoforge-26.2.0.41-beta/production
 ./gradlew.bat build
 git add -A
 git commit -m "feat: <descripción>

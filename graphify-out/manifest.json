@@ -255,23 +255,23 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785515856.9747195,
-    "ast_hash": "dc48ee073f5838b84c4b9a554efaf068",
+    "mtime": 1785542256.2772555,
+    "ast_hash": "2127bdd23687fd4e1d84b8d78fc87c20",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785511128.311786,
-    "ast_hash": "de52918c97288ffa0f2cce1bfc5f56b4",
+    "mtime": 1785542263.411059,
+    "ast_hash": "69f6e9f5f05afb6a53eadd806e853607",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785511128.3127801,
-    "ast_hash": "a8b8939f3afb8774b219c3051e62f3cd",
+    "mtime": 1785542268.3050642,
+    "ast_hash": "c7f1ae6ea40344bec81733d0abf273ac",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785515849.2380264,
-    "ast_hash": "ca440ebeb21fa81dc2958eb1e786796a",
+    "mtime": 1785542250.0944362,
+    "ast_hash": "faff6b8df29db1468f96bd0d922964de",
     "semantic_hash": ""
   },
   "src/main/resources/assets/carry_mechanics/icon.png": {
@@ -327,6 +327,11 @@
   "docs/curseforge/versions/0.0.0-beta.2.md": {
     "mtime": 1785515862.7341218,
     "ast_hash": "f140251cfe4094dbcae61ae551ac3e9e",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.0.0.md": {
+    "mtime": 1785542253.4840918,
+    "ast_hash": "5c3c68ef5bcea99e34983c4e09ebf314",
     "semantic_hash": ""
   }
 }

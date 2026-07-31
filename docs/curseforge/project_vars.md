@@ -16,14 +16,12 @@
 
 ## Game Versions (IDs)
 
-<!-- TODO: pendiente de consultar en la Core API de CurseForge antes de la primera subida a 26.2. Los IDs de 26.1.2 NO son válidos para 26.2 -->
-
-| Recurso | ID |
-|---------|----|
-| Minecraft 26.2 | `TODO` |
-| Client | `9638` |
-| Server | `9639` |
-| NeoForge | `TODO` |
+| Recurso | ID | gameVersionTypeId |
+|---------|----|----|
+| Minecraft 26.2 | `16498` | 86297 |
+| Client | `9638` | 75208 |
+| Server | `9639` | 75208 |
+| NeoForge | `10150` | 68441 |
 
 ## Versiones
 
@@ -52,11 +50,11 @@
 
 ## Variables para el script de subida (curseforge-upload.ps1)
 
-<!-- Formato clave = valor requerido por Get-VarFromMd en codex-docs/scripts/curseforge-upload.ps1. game_versions pendiente de completar (ver TODO arriba) antes de la primera subida -->
+<!-- Formato clave = valor requerido por Get-VarFromMd en codex-docs/scripts/curseforge-upload.ps1 -->
 
 project_id = 1608286
 api_token = ee776b0a-ee95-4850-b554-06be02a8657f
-game_versions = TODO,9638,9639,TODO
+game_versions = 16498,9638,9639,10150
 release_type = beta
 
 ## Token de subida (Python)
@@ -72,5 +70,5 @@ headers = {
 }
 
 # displayName debe seguir el formato: "Carry Mechanics (0.0.0-beta.X)"
-# gameVersions: [16082=Minecraft 26.1.2, 9638=Client, 9639=Server, 10150=NeoForge]
+# gameVersions: [16498=Minecraft 26.2, 9638=Client, 9639=Server, 10150=NeoForge]
 ```

@@ -34,6 +34,7 @@ public class CarryData {
     private boolean keyPressed;
     private int selectedSlot;
     private CarryScript dataActiveScript;
+    private Entity cachedEntity;
 
     public static final Codec<CarryData> FULL_CODEC = CompoundTag.CODEC.flatXmap(
             tag -> { try { return com.mojang.serialization.DataResult.success(new CarryData(tag)); }
@@ -82,6 +83,7 @@ public class CarryData {
 
     public void setBlock(BlockState state, BlockEntity blockEntity, ServerPlayer player, BlockPos pos) {
         this.type = CarryType.BLOCK;
+        cachedEntity = null;
         if (state.hasProperty(BlockStateProperties.WATERLOGGED))
             state = state.setValue(BlockStateProperties.WATERLOGGED, false);
         nbt.put("block", NbtUtils.writeBlockState(state));
@@ -106,6 +108,7 @@ public class CarryData {
 
     public void setEntity(Entity entity) {
         this.type = CarryType.ENTITY;
+        cachedEntity = null;
         var reporter = new ProblemReporter.ScopedCollector(CarryMechanicsAccess.LOGGER);
         var output = TagValueOutput.createWithContext(reporter, entity.registryAccess());
         entity.save(output);
@@ -114,10 +117,14 @@ public class CarryData {
 
     public Entity getEntity(Level level) {
         if (type != CarryType.ENTITY) throw new IllegalStateException("Not entity: " + type);
+        if (cachedEntity != null && cachedEntity.level() == level) return cachedEntity;
         var reporter = new ProblemReporter.ScopedCollector(CarryMechanicsAccess.LOGGER);
         var input = TagValueInput.create(reporter, level.registryAccess(), nbt.getCompoundOrEmpty("entity"));
         var entity = EntityType.create(input, level, new EntitySpawnRequest(EntitySpawnReason.BUCKET, false));
-        if (entity.isPresent()) return entity.get();
+        if (entity.isPresent()) {
+            cachedEntity = entity.get();
+            return cachedEntity;
+        }
         CarryMechanicsAccess.LOGGER.error("Failed to create entity from: {}", nbt);
         clear();
         return new AreaEffectCloud(level, 0, 0, 0);
@@ -149,6 +156,7 @@ public class CarryData {
         type = CarryType.INVALID;
         nbt = new CompoundTag();
         dataActiveScript = null;
+        cachedEntity = null;
     }
 
     public CarryData clone() { return new CarryData(nbt.copy()); }

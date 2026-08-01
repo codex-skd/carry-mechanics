@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.1] - 2026-08-01
+
+### Fix
+- Rendimiento: `CarryData.getEntity()` re-deserializaba el NBT completo de la entidad en cada llamada. En el cliente se ejecutaba dos veces por frame (render) y en el servidor una vez por tick (cálculo de lentitud), de modo que las entidades complejas (aldeanos con brain/inventario/ofertas, mobs de mods con IA pesada) saturaban el garbage collector y congelaban el juego. Ahora la entidad deserializada se cachea y se reutiliza hasta que cambia el NBT cargado o el nivel
+
 ## [1.0.0] - 2026-08-01
 
 ### Stable Release

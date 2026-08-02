@@ -1,16 +1,16 @@
 # Graph Report - 26.2  (2026-08-02)
 
 ## Corpus Check
-- 65 files · ~85,356 words
+- 66 files · ~85,501 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 446 nodes · 933 edges · 29 communities (28 shown, 1 thin omitted)
+- 449 nodes · 935 edges · 32 communities (31 shown, 1 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 54 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d076e4cf`
+- Built from commit: `56d1777a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -40,6 +40,8 @@
 - CLAUDE.md — carry_mechanics (26.2)
 - gradlew
 - GamestageCompat
+- .getCarryData
+- .broadcast
 
 ## God Nodes (most connected - your core abstractions)
 1. `CarryData` - 56 edges
@@ -54,8 +56,6 @@
 10. `Carry Mechanics` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `PlayerRenderStateMixin` --references--> `CarryData`  [EXTRACTED]
-  src/client/java/com/skd/carrymechanics/mixin/PlayerRenderStateMixin.java → src/main/java/com/skd/carrymechanics/carry/CarryData.java
 - `CarryData` --references--> `CarryScript`  [EXTRACTED]
   src/main/java/com/skd/carrymechanics/carry/CarryData.java → src/main/java/com/skd/carrymechanics/scripting/CarryScript.java
 - `CarryDataManager` --references--> `CarryData`  [EXTRACTED]
@@ -64,43 +64,45 @@
   src/main/java/com/skd/carrymechanics/networking/ClientboundSyncCarryDataPacket.java → src/main/java/com/skd/carrymechanics/carry/CarryData.java
 - `PlayerRenderStateMixin` --implements--> `ICarryOnRenderState`  [EXTRACTED]
   src/client/java/com/skd/carrymechanics/mixin/PlayerRenderStateMixin.java → src/client/java/com/skd/carrymechanics/client/render/ICarryOnRenderState.java
+- `PlayerRenderStateMixin` --references--> `CarryData`  [EXTRACTED]
+  src/client/java/com/skd/carrymechanics/mixin/PlayerRenderStateMixin.java → src/main/java/com/skd/carrymechanics/carry/CarryData.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (29 total, 1 thin omitted)
+## Communities (32 total, 1 thin omitted)
 
 ### Community 0 - ".getCarryData"
-Cohesion: 0.09
-Nodes (29): BlockHitResult, BlockPlaceContext, CommandDispatcher, CommandSourceStack, Direction, EntityHitResult, InteractionHand, InteractionResult (+21 more)
+Cohesion: 0.16
+Nodes (13): BlockPlaceContext, CommandDispatcher, CommandSourceStack, Direction, BlockPos, BlockState, Entity, Property (+5 more)
 
 ### Community 1 - "ClientboundSyncCarryDataPacket"
-Cohesion: 0.08
-Nodes (34): ClientModInitializer, CustomPacketPayload, KeyMapping, ModInitializer, ResourceManager, CarryMechanicsClient, CarryKeybinds, CarryMechanics (+26 more)
+Cohesion: 0.07
+Nodes (36): ClientModInitializer, CustomPacketPayload, KeyMapping, ModInitializer, ResourceManager, CarryMechanicsClient, Override, CarryKeybinds (+28 more)
 
 ### Community 2 - "CarryData"
-Cohesion: 0.08
-Nodes (24): MapCodec, Provider, CarriedObjectRender, Player, PoseStack, SubmitNodeCollector, ItemStack, CarryData (+16 more)
+Cohesion: 0.07
+Nodes (25): MapCodec, Provider, ICarryOnRenderState, Player, Mixin, Override, Player, PlayerRenderStateMixin (+17 more)
 
 ### Community 3 - ".tryPickUpBlock"
-Cohesion: 0.10
-Nodes (25): Override, BlockPos, BlockState, Entity, Level, Property, ServerPlayer, Vec3 (+17 more)
+Cohesion: 0.18
+Nodes (16): CarryScript, Codec, ServerPlayer, ObjectType, BLOCK, ENTITY, ScriptConditions, ScriptEffects (+8 more)
 
 ### Community 4 - "CarryRenderHelper"
 Cohesion: 0.19
 Nodes (12): HumanoidRenderState, ModelPart, CarryRenderHelper, BlockState, Entity, Player, PoseStack, HumanoidModelMixin (+4 more)
 
 ### Community 5 - "ICarryOnRenderState"
-Cohesion: 0.14
-Nodes (12): Avatar, ICarryOnRenderState, Player, AvatarExtractorMixin, AvatarRenderState, CallbackInfo, Inject, Mixin (+4 more)
+Cohesion: 0.43
+Nodes (6): Avatar, AvatarExtractorMixin, AvatarRenderState, CallbackInfo, Inject, Mixin
 
 ### Community 6 - "CarryDataManager.java"
-Cohesion: 0.15
-Nodes (11): Entry, LocalPlayer, ItemInHandRendererMixin, CallbackInfo, Inject, Mixin, PoseStack, SubmitNodeCollector (+3 more)
+Cohesion: 0.18
+Nodes (12): LocalPlayer, CarriedObjectRender, Player, PoseStack, SubmitNodeCollector, ItemStack, ItemInHandRendererMixin, CallbackInfo (+4 more)
 
 ### Community 7 - "CarryConfig"
-Cohesion: 0.14
-Nodes (7): Gson, CarryMechanicsAccess, Logger, ConfigAccess, Override, CarryConfig, ConfigData
+Cohesion: 0.19
+Nodes (6): Gson, CarryMechanicsAccess, Logger, ConfigAccess, CarryConfig, ConfigData
 
 ### Community 8 - "CarryingItemRenderLayer.java"
 Cohesion: 0.19
@@ -155,8 +157,8 @@ Cohesion: 0.53
 Nodes (4): EntityMixin, CallbackInfoReturnable, Inject, Mixin
 
 ### Community 21 - "[0.0.0-beta.1] - 2026-08-02"
-Cohesion: 0.50
-Nodes (3): [0.0.0-beta.1] - 2026-08-02, Changelog, Initial Fabric Port
+Cohesion: 0.33
+Nodes (5): [0.0.0-beta.1] - 2026-08-02, [1.0.0] - 2026-08-02, Changelog, Initial Fabric Port, Stable Release
 
 ### Community 22 - "CLAUDE.md — carry_mechanics (26.2)"
 Cohesion: 0.50
@@ -166,25 +168,33 @@ Nodes (3): CLAUDE.md — carry_mechanics (26.2), Prioridad de instrucciones, Wor
 Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
+### Community 29 - ".getCarryData"
+Cohesion: 0.10
+Nodes (25): BlockHitResult, EntityHitResult, InteractionHand, InteractionResult, MinecraftServer, ServerLevel, CarryDataManager, Player (+17 more)
+
+### Community 30 - ".broadcast"
+Cohesion: 0.32
+Nodes (3): Entry, CarryDataSyncHandler, ServerPlayer
+
 ## Knowledge Gaps
-- **35 isolated node(s):** `INVALID`, `BLOCK`, `ENTITY`, `PLAYER`, `ConfigAccess` (+30 more)
+- **36 isolated node(s):** `INVALID`, `BLOCK`, `ENTITY`, `PLAYER`, `ConfigAccess` (+31 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `CarryData` connect `CarryData` to `.getCarryData`, `ClientboundSyncCarryDataPacket`, `.tryPickUpBlock`, `CarryRenderHelper`, `ICarryOnRenderState`, `CarryDataManager.java`?**
-  _High betweenness centrality (0.260) - this node is a cross-community bridge._
-- **Why does `ClientboundSyncCarryDataPacket` connect `ClientboundSyncCarryDataPacket` to `CarryData`, `CarryDataManager.java`?**
-  _High betweenness centrality (0.066) - this node is a cross-community bridge._
-- **Why does `CarryScript` connect `.tryPickUpBlock` to `.getCarryData`, `CarryData`?**
-  _High betweenness centrality (0.052) - this node is a cross-community bridge._
+- **Why does `CarryData` connect `CarryData` to `.getCarryData`, `ClientboundSyncCarryDataPacket`, `.tryPickUpBlock`, `CarryRenderHelper`, `CarryDataManager.java`, `.getCarryData`, `.broadcast`?**
+  _High betweenness centrality (0.257) - this node is a cross-community bridge._
+- **Why does `ClientboundSyncCarryDataPacket` connect `ClientboundSyncCarryDataPacket` to `CarryData`, `.broadcast`?**
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
+- **Why does `CarryScript` connect `.tryPickUpBlock` to `.getCarryData`, `ClientboundSyncCarryDataPacket`, `CarryData`, `.getCarryData`?**
+  _High betweenness centrality (0.051) - this node is a cross-community bridge._
 - **What connects `INVALID`, `BLOCK`, `ENTITY` to the rest of the system?**
-  _35 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `.getCarryData` be split into smaller, more focused modules?**
-  _Cohesion score 0.09350649350649351 - nodes in this community are weakly interconnected._
+  _36 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ClientboundSyncCarryDataPacket` be split into smaller, more focused modules?**
-  _Cohesion score 0.0784313725490196 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06829573934837092 - nodes in this community are weakly interconnected._
 - **Should `CarryData` be split into smaller, more focused modules?**
-  _Cohesion score 0.08489795918367347 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06980392156862746 - nodes in this community are weakly interconnected._
+- **Should `.getCarryData` be split into smaller, more focused modules?**
+  _Cohesion score 0.10034013605442177 - nodes in this community are weakly interconnected._

@@ -305,13 +305,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785681497.7316413,
-    "ast_hash": "011a7e67417855d5bc500bd834b3f6ca",
+    "mtime": 1785686874.064846,
+    "ast_hash": "901ee788bbbb10f1cc882c8e1dd68e28",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785681467.6814039,
-    "ast_hash": "fd286fef5cf932cb18849bd3f9518753",
+    "mtime": 1785686884.7182477,
+    "ast_hash": "062b598da0cd4c7bcd31fdd26ecc46f8",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_CARRY_MECHANICS_26-2.md": {
@@ -325,8 +325,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785681489.9287727,
-    "ast_hash": "488b519cf2c223eb96f6dec2f4a697f0",
+    "mtime": 1785686896.2153912,
+    "ast_hash": "0f6ce9e3e853f2af43f991e1ca7286cc",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -342,6 +342,11 @@
   "src/main/resources/carry_mechanics.png": {
     "mtime": 1785680747.802867,
     "ast_hash": "b12b2c96d95e52e99ee392e597bdf4ea",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.0.0.md": {
+    "mtime": 1785686879.747929,
+    "ast_hash": "ffef1e2a1a1ae4f8a72d19f7343b8604",
     "semantic_hash": ""
   }
 }

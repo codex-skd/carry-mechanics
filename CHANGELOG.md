@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.2] - 2026-08-02
+
+### Fix
+- Crash/`Pose stack not empty` al alternar a tercera persona (F5) mientras se transporta un objeto: el render de lo que llevas (bloques y entidades) se ejecutaba sobre el pose stack compartido del `LevelRenderer`; si el render lanzaba una excepción (algo frecuente en beta con el render de mobs), el stack quedaba desbalanceado y el siguiente frame crasheaba el cliente. Ahora se renderiza sobre un `PoseStack` local desechable, de modo que un fallo de render ya no puede corromper el stack del juego
+- El error de render ya no se traga en silencio: se registra una vez por sesión en `logs/latest.log` con el stack trace real, para diagnosticar por qué un mob transportado no se dibuja
+
 ## [1.0.1] - 2026-08-01
 
 ### Fix

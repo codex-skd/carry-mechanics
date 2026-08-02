@@ -1,7 +1,7 @@
 package com.skd.carrymechanics.mixin;
 
 import com.skd.carrymechanics.carry.CarryDataManager;
-import com.skd.carrymechanics.client.render.ICarryOnRenderState;
+import com.skd.carrymechanics.client.render.CarryMechanicsRenderState;
 import net.minecraft.client.renderer.entity.player.AvatarRenderer;
 import net.minecraft.client.renderer.entity.state.AvatarRenderState;
 import net.minecraft.world.entity.Avatar;
@@ -20,7 +20,7 @@ public class AvatarExtractorMixin {
     private void onExtractRenderState(Avatar entity, AvatarRenderState state, float partialTicks, CallbackInfo ci) {
         if (entity instanceof Player player) {
             var data = CarryDataManager.getCarryData(player);
-            if (state instanceof ICarryOnRenderState carryState) {
+            if (state instanceof CarryMechanicsRenderState carryState) {
                 carryState.carry_mechanics$setCarryData(data);
                 carryState.carry_mechanics$setPlayer(player);
             }

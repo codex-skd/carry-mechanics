@@ -17,7 +17,7 @@ public class CarryingItemRenderLayer extends RenderLayer<AvatarRenderState, Play
     @Override
     public void submit(PoseStack poseStack, SubmitNodeCollector collector, int lightCoords,
                        AvatarRenderState renderState, float yRot, float xRot) {
-        if (!(renderState instanceof ICarryOnRenderState carryState)) return;
+        if (!(renderState instanceof CarryMechanicsRenderState carryState)) return;
         Player player = carryState.carry_mechanics$getPlayer();
         if (player == null) return;
 

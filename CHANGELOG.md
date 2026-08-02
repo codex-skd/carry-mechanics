@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.3] - 2026-08-02
+
+### Fix
+- Entidades transportadas invisibles: la entidad deserializada (oveja, vaca, aldeano…) es una copia desacoplada que nunca entra en el nivel y, por tanto, no tenía asignado el ID de entidad. Al extraer el render state, `ItemModelResolver.updateForLiving()` llama a `entity.getId()`, que lanzaba `IllegalStateException: Tried to access entity ID before ID assignment`; el mod la tragaba y la entidad nunca se dibujaba (ni en primera ni en tercera persona), con el consiguiente lag por excepción por frame. Ahora a la copia de render se le asigna un ID único no-cero, así el mob transportado se renderiza correctamente
+
 ## [1.0.2] - 2026-08-02
 
 ### Fix

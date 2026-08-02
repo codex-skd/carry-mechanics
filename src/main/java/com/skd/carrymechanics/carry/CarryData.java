@@ -36,6 +36,9 @@ public class CarryData {
     private CarryScript dataActiveScript;
     private Entity cachedEntity;
 
+    private static final java.util.concurrent.atomic.AtomicInteger NEXT_RENDER_ENTITY_ID =
+            new java.util.concurrent.atomic.AtomicInteger(1_000_000_000);
+
     public static final Codec<CarryData> FULL_CODEC = CompoundTag.CODEC.flatXmap(
             tag -> { try { return com.mojang.serialization.DataResult.success(new CarryData(tag)); }
                      catch (Exception e) { return com.mojang.serialization.DataResult.error(() -> "CarryData: " + e.getMessage()); }},
@@ -123,11 +126,30 @@ public class CarryData {
         var entity = EntityType.create(input, level, new EntitySpawnRequest(EntitySpawnReason.BUCKET, false));
         if (entity.isPresent()) {
             cachedEntity = entity.get();
+            assignRenderEntityId(cachedEntity);
             return cachedEntity;
         }
         CarryMechanicsAccess.LOGGER.error("Failed to create entity from: {}", nbt);
         clear();
-        return new AreaEffectCloud(level, 0, 0, 0);
+        return assignRenderEntityId(new AreaEffectCloud(level, 0, 0, 0));
+    }
+
+    /**
+     * A carried entity is deserialized as a detached copy and is never added to the
+     * level, so it has no entity id assigned (Entity.getId() throws until setId() is
+     * called). Client-side render state extraction calls Entity.getId() for living
+     * entities (e.g. ItemModelResolver.updateForLiving), which threw
+     * "Tried to access entity ID before ID assignment" and made the carried entity
+     * invisible. Assign a unique non-zero id so the copy can be rendered without
+     * ever being added to the level.
+     */
+    private static Entity assignRenderEntityId(Entity entity) {
+        try {
+            entity.getId();
+        } catch (IllegalStateException ignored) {
+            entity.setId(NEXT_RENDER_ENTITY_ID.incrementAndGet());
+        }
+        return entity;
     }
 
     public void setCarryingPlayer(Player player) {

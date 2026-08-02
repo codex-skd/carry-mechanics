@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.4] - 2026-08-02
+
+### Refactor
+- Interfaz `ICarryOnRenderState` → `CarryMechanicsRenderState` (residuo del fork "Carry On"). Sin cambios funcionales.
+
 ## [1.0.3] - 2026-08-02
 
 ### Fix

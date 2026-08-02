@@ -33,7 +33,7 @@ public class PickupHandler {
 
     public static boolean canCarryGeneral(ServerPlayer player, Vec3 targetPos) {
         if (!player.getMainHandItem().isEmpty() || !player.getOffhandItem().isEmpty()) return false;
-        if (player.position().distanceTo(targetPos) > ConfigAccess.MAX_DISTANCE.get()) return false;
+        if (player.position().distanceTo(targetPos) > ConfigAccess.MAX_DISTANCE) return false;
 
         CarryData data = CarryDataManager.getCarryData(player);
         if (data.isCarrying()) return false;
@@ -68,15 +68,15 @@ public class PickupHandler {
 
         float destroySpeed = state.getDestroySpeed(level, pos);
         if (destroySpeed == -1.0f && !player.isCreative()
-                && !ConfigAccess.PICKUP_UNBREAKABLE_BLOCKS.get()) return false;
+                && !ConfigAccess.PICKUP_UNBREAKABLE_BLOCKS) return false;
 
-        if (blockEntity == null && !ConfigAccess.PICKUP_ALL_BLOCKS.get()) return false;
+        if (blockEntity == null && !ConfigAccess.PICKUP_ALL_BLOCKS) return false;
 
         if (blockEntity != null && tileTag != null && tileTag.contains("Lock")) return false;
 
         if (customHook != null && !customHook.apply(state, pos)) return false;
 
-        if (ConfigAccess.USE_SCRIPTS.get()) {
+        if (ConfigAccess.USE_SCRIPTS) {
             Optional<CarryScript> script = ScriptManager.inspectBlock(state, level, pos, tileTag);
             if (script.isPresent()) {
                 CarryScript s = script.get();
@@ -116,24 +116,24 @@ public class PickupHandler {
         }
 
         if (!ListHandler.isPermitted(entity)) {
-            if (entity instanceof AgeableMob baby && ConfigAccess.ALLOW_BABIES.get() && baby.isBaby()) {
+            if (entity instanceof AgeableMob baby && ConfigAccess.ALLOW_BABIES && baby.isBaby()) {
             } else {
                 return false;
             }
         }
 
-        if (!player.isCreative() && !ConfigAccess.PICKUP_HOSTILE_MOBS.get()
+        if (!player.isCreative() && !ConfigAccess.PICKUP_HOSTILE_MOBS
                 && (entity instanceof Enemy || entity.getType().getCategory() == MobCategory.MONSTER)) return false;
 
-        if (ConfigAccess.MAX_ENTITY_HEIGHT.get() < entity.getBbHeight()
-                || ConfigAccess.MAX_ENTITY_WIDTH.get() < entity.getBbWidth()) return false;
+        if (ConfigAccess.MAX_ENTITY_HEIGHT < entity.getBbHeight()
+                || ConfigAccess.MAX_ENTITY_WIDTH < entity.getBbWidth()) return false;
 
         if (customHook != null && !customHook.apply(entity)) return false;
 
         CarryData data = CarryDataManager.getCarryData(player);
         ServerLevel serverLevel = (ServerLevel) player.level();
 
-        if (ConfigAccess.USE_SCRIPTS.get()) {
+        if (ConfigAccess.USE_SCRIPTS) {
             Optional<CarryScript> script = ScriptManager.inspectEntity(entity);
             if (script.isPresent()) {
                 CarryScript s = script.get();
@@ -164,7 +164,7 @@ public class PickupHandler {
     }
 
     private static void applySlowness(ServerPlayer player, CarryData data) {
-        if (!player.isCreative() || ConfigAccess.SLOWNESS_IN_CREATIVE.get()) {
+        if (!player.isCreative() || ConfigAccess.SLOWNESS_IN_CREATIVE) {
             int level = potionLevel(data, (ServerLevel) player.level());
             if (level < 0) level = 0;
             player.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 100000000, level, false, false));
@@ -187,15 +187,15 @@ public class PickupHandler {
             int size = (int)(entity.getBbHeight() * entity.getBbWidth());
             if (size > 4) size = 4;
             if (size < 1) size = 1;
-            if (!ConfigAccess.HEAVY_ENTITIES.get()) size = 1;
-            return (int)(size * ConfigAccess.ENTITY_SLOWNESS_MULTIPLIER.get());
+            if (!ConfigAccess.HEAVY_ENTITIES) size = 1;
+            return (int)(size * ConfigAccess.ENTITY_SLOWNESS_MULTIPLIER);
         }
         if (data.isCarrying(CarryData.CarryType.BLOCK)) {
             int size = data.getFullNbt().toString().length() / 500;
             if (size > 4) size = 4;
             if (size < 1) size = 1;
-            if (!ConfigAccess.HEAVY_TILES.get()) size = 1;
-            return (int)(size * ConfigAccess.BLOCK_SLOWNESS_MULTIPLIER.get());
+            if (!ConfigAccess.HEAVY_TILES) size = 1;
+            return (int)(size * ConfigAccess.BLOCK_SLOWNESS_MULTIPLIER);
         }
         return 0;
     }

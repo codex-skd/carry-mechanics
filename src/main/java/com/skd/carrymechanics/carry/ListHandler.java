@@ -29,7 +29,7 @@ public class ListHandler {
 
     public static boolean isPermitted(Block block) {
         var holder = block.builtInRegistryHolder();
-        boolean useWhitelist = ConfigAccess.COMMON_USE_WHITELIST_BLOCKS.get();
+        boolean useWhitelist = ConfigAccess.COMMON_USE_WHITELIST_BLOCKS;
         if (useWhitelist) {
             return holder.is(BLOCK_WHITELIST);
         }
@@ -38,7 +38,7 @@ public class ListHandler {
 
     public static boolean isPermitted(Entity entity) {
         var holder = entity.getType().builtInRegistryHolder();
-        boolean useWhitelist = ConfigAccess.COMMON_USE_WHITELIST_ENTITIES.get();
+        boolean useWhitelist = ConfigAccess.COMMON_USE_WHITELIST_ENTITIES;
         if (useWhitelist) {
             return holder.is(ENTITY_WHITELIST);
         }
@@ -47,7 +47,7 @@ public class ListHandler {
 
     public static boolean isStackingPermitted(Entity entity) {
         var holder = entity.getType().builtInRegistryHolder();
-        boolean useWhitelist = ConfigAccess.COMMON_USE_WHITELIST_STACKING.get();
+        boolean useWhitelist = ConfigAccess.COMMON_USE_WHITELIST_STACKING;
         if (useWhitelist) {
             return holder.is(STACKING_WHITELIST);
         }

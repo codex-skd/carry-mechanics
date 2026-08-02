@@ -10,7 +10,7 @@
 
 <h2>✨ Overview</h2>
 
-<p>Carry Mechanics lets you pick up, carry, and place blocks (with their tile entities) and entities using only your empty hands. Inspired by the classic Carry On mod, rewritten from scratch for modern NeoForge.</p>
+<p>Carry Mechanics lets you pick up, carry, and place blocks (with their tile entities) and entities using only your empty hands. Inspired by the classic Carry On mod, rewritten from scratch for modern Fabric.</p>
 
 <br>
 
@@ -35,26 +35,23 @@
 <p>Datapack-powered JSON scripts with conditions (gamestage, advancement, XP, gamemode) and custom commands on init/loop/place.</p>
 
 <h3>⚙️ Fully configurable</h3>
-<p>25+ options including max distance, entity size limits, slowness multipliers, hit prevention, player pickup toggle, and more.</p>
+<p>25+ options including max distance, entity size limits, slowness multipliers, hit prevention, player pickup toggle, and more. Config file: <code>config/carry_mechanics.json</code>.</p>
 
 <h3>💻 Commands</h3>
-<p><code>/carrymechanics debug</code> — Shows current carry state.<br>
-<code>/carrymechanics clear [player]</code> — Clears carry data.<br>
-<code>/carrymechanics place [player]</code> — Places carried object.</p>
+<p><code>/carrymechanics debug</code> · <code>/carrymechanics clear [player]</code> · <code>/carrymechanics place [player]</code></p>
 
 <br>
 
 <h2>📋 Requirements</h2>
-
-<table>
-<tr><td><strong>Minecraft</strong></td><td>26.2</td></tr>
-<tr><td><strong>NeoForge</strong></td><td>26.2.0.37-beta</td></tr>
-</table>
+<ul>
+<li>Minecraft 26.2</li>
+<li>Fabric Loader 0.19.3</li>
+<li>Fabric API 0.156.0+26.2</li>
+</ul>
 
 <br>
 
 <h2>🎮 How to Use</h2>
-
 <ol>
 <li>Hold <strong>Shift</strong> (sneak) and <strong>right-click</strong> on a block or entity with empty hands.</li>
 <li>The block or entity is now stored in your carry data.</li>
@@ -65,28 +62,15 @@
 
 <br>
 
-<blockquote><strong>Note:</strong> This is the first stable release of Carry Mechanics for Minecraft 26.2.</blockquote>
-
-<br>
-
----
+<h2>📋 Tags</h2>
+<p>Use datapack tags to control what can be picked up:</p>
+<ul>
+<li><code>carry_mechanics:block/block_whitelist</code> / <code>block_blacklist</code></li>
+<li><code>carry_mechanics:entity_type/entity_whitelist</code> / <code>entity_blacklist</code></li>
+<li><code>carry_mechanics:entity_type/stacking_whitelist</code> / <code>stacking_blacklist</code></li>
+</ul>
 
 <br>
 
 <h2>🙏 Credits</h2>
-
-<p>Inspired by <strong>Carry On</strong> by <em>Tschipp</em> and <em>PurpliciousCow</em>.<br>
-Rewritten for NeoForge by <strong>Stalking Dragons</strong>.</p>
-
-<br>
-<br>
-
-<p align="center">
-  <a href="https://codex.skdragons.com/" target="_blank">
-    <img src="https://node-files.skdragons.com/logo_codex_stalking_dragons.png" alt="Codex Stalking Dragons" width="200">
-  </a>
-  <br>
-  <a href="https://codex.skdragons.com/">https://codex.skdragons.com/</a>
-  <br>
-  <em>Codex Stalking Dragons — Minecraft Modding</em>
-</p>
+<p>Inspired by <strong>Carry On</strong> by <em>Tschipp</em> and <em>PurpliciousCow</em>. Rewritten for Fabric by <strong>Stalking Dragons</strong>.</p>

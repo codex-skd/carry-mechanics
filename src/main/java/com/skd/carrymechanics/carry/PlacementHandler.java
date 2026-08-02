@@ -147,7 +147,7 @@ public class PlacementHandler {
     }
 
     public static void tryStackEntity(ServerPlayer player, Entity targetEntity) {
-        if (!ConfigAccess.STACKABLE_ENTITIES.get()) return;
+        if (!ConfigAccess.STACKABLE_ENTITIES) return;
 
         CarryData data = CarryDataManager.getCarryData(player);
         if (!data.isCarrying(CarryData.CarryType.ENTITY)) return;
@@ -160,14 +160,14 @@ public class PlacementHandler {
         Entity rootVehicle = targetEntity.getRootVehicle();
         int passengerCount = getPassengerCount(rootVehicle);
 
-        if (passengerCount >= ConfigAccess.MAX_ENTITY_STACK_LIMIT.get() - 1) return;
+        if (passengerCount >= ConfigAccess.MAX_ENTITY_STACK_LIMIT - 1) return;
 
         Entity topPassenger = getTopPassenger(rootVehicle);
         if (topPassenger == carriedEntity) return;
         if (!ListHandler.isStackingPermitted(topPassenger)) return;
 
         double topSize = topPassenger.getBbHeight() * topPassenger.getBbWidth();
-        if (ConfigAccess.ENTITY_SIZE_MATTERS_STACKING.get() && carriedSize > topSize) return;
+        if (ConfigAccess.ENTITY_SIZE_MATTERS_STACKING && carriedSize > topSize) return;
 
         if (topPassenger instanceof Horse horse) {
             horse.setTamed(true);

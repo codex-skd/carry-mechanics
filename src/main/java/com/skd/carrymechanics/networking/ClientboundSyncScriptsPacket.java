@@ -9,7 +9,6 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 public record ClientboundSyncScriptsPacket(Tag serialized) implements CustomPacketPayload {
 
@@ -24,12 +23,10 @@ public record ClientboundSyncScriptsPacket(Tag serialized) implements CustomPack
     @Override
     public CustomPacketPayload.Type<? extends CustomPacketPayload> type() { return TYPE; }
 
-    public static void handle(ClientboundSyncScriptsPacket packet, IPayloadContext context) {
-        context.enqueueWork(() -> {
-            var scripts = CarryScript.CODEC.listOf()
-                    .parse(NbtOps.INSTANCE, packet.serialized())
-                    .getOrThrow(msg -> new RuntimeException("Script sync: " + msg));
-            ScriptManager.setScripts(scripts);
-        });
+    public static void apply(ClientboundSyncScriptsPacket packet) {
+        var scripts = CarryScript.CODEC.listOf()
+                .parse(NbtOps.INSTANCE, packet.serialized())
+                .getOrThrow(msg -> new RuntimeException("Script sync: " + msg));
+        ScriptManager.setScripts(scripts);
     }
 }

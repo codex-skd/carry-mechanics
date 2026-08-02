@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "carry_mechanics",
+	"version": "${version}",
+	"name": "Carry Mechanics",
+	"description": "Pick up, carry, and place blocks and entities with your bare hands! A lightweight, configurable successor to Carry On.",
+	"authors": [
+		"stalking-dragons"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://gitlab.com/stalking-dragons/minecraft/carry-mechanics"
+	},
+	"license": "All Rights Reserved",
+	"icon": "assets/carry_mechanics/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.skd.carrymechanics.CarryMechanics"
+		],
+		"client": [
+			"com.skd.carrymechanics.client.CarryMechanicsClient"
+		]
+	},
+	"mixins": [
+		"carry_mechanics.mixins.json",
+		{
+			"config": "carry_mechanics.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

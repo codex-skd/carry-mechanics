@@ -2,27 +2,35 @@ package com.skd.carrymechanics.scripting;
 
 import com.skd.carrymechanics.CarryMechanics;
 import com.skd.carrymechanics.networking.ClientboundSyncScriptsPacket;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.nbt.Tag;
 import net.minecraft.resources.FileToIdConverter;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.OnDatapackSyncEvent;
-import net.neoforged.neoforge.network.PacketDistributor;
 
 public class ScriptReloadListener {
-    public static final ScriptReloadListener INSTANCE = new ScriptReloadListener();
 
     public static void register() {
-        NeoForge.EVENT_BUS.addListener((OnDatapackSyncEvent event) -> {
-            if (event.getPlayer() != null) {
-                syncToClient(event.getPlayer());
-            } else {
-                event.getPlayerList().getPlayers().forEach(ScriptReloadListener::syncToClient);
-            }
-        });
+        ResourceManagerHelper.get(PackType.SERVER_DATA)
+                .registerReloadListener(new SimpleSynchronousResourceReloadListener() {
+                    @Override
+                    public Identifier getFabricId() {
+                        return Identifier.parse("carry_mechanics:scripts");
+                    }
+
+                    @Override
+                    public void onResourceManagerReload(ResourceManager manager) {
+                        ScriptReloadListener.onResourceManagerReload(manager);
+                    }
+                });
+
+        ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS.register((player, joined) -> syncToClient(player));
     }
 
     public static void onResourceManagerReload(ResourceManager manager) {
@@ -50,6 +58,6 @@ public class ScriptReloadListener {
         Tag serialized = CarryScript.CODEC.listOf()
                 .encodeStart(NbtOps.INSTANCE, ScriptManager.SCRIPTS)
                 .getOrThrow(msg -> new RuntimeException("Failed to sync scripts: " + msg));
-        PacketDistributor.sendToPlayer(player, new ClientboundSyncScriptsPacket(serialized));
+        ServerPlayNetworking.send(player, new ClientboundSyncScriptsPacket(serialized));
     }
 }

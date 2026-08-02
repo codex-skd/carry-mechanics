@@ -5,7 +5,7 @@
 project_id = 1608286
 api_token = ee776b0a-ee95-4850-b554-06be02a8657f
 game_versions = 9638, 9639, 16498, 7499
-release_type = beta
+release_type = release
 relations = fabric-api:requiredDependency
 
 ## Proyecto
@@ -34,7 +34,7 @@ Autenticación Core: cabecera `x-api-key`
 | `framework` | `fabric` |
 | `java_version` | `25` |
 | `environment` | `Client`, `Server` |
-| `mod_version` | `0.0.0-beta.1` |
+| `mod_version` | `1.0.0` |
 
 ## Rama
 

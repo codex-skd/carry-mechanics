@@ -4,7 +4,7 @@ Pick up, carry, and place blocks and entities with your bare hands!
 
 ![minecraft](https://img.shields.io/badge/Minecraft-26.2-blue)
 ![fabric](https://img.shields.io/badge/Fabric-0.19.3-orange)
-![version](https://img.shields.io/badge/version-0.0.0--beta.1-green)
+![version](https://img.shields.io/badge/version-1.0.0-green)
 
 ## Overview
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0] - 2026-08-02
+
+### Stable Release
+
+- Primera versión estable del port de Fabric para Minecraft 26.2 / Fabric Loader 0.19.3 / Fabric API 0.156.0
+- Sin cambios funcionales respecto a `0.0.0-beta.1`; solo bump de versión (`0.0.0-beta.1` → `1.0.0`) tras dar por estable el set de funcionalidades del port
+
 ## [0.0.0-beta.1] - 2026-08-02
 
 ### Initial Fabric Port

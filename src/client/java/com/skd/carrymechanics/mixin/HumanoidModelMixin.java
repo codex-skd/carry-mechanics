@@ -2,7 +2,7 @@ package com.skd.carrymechanics.mixin;
 
 import com.skd.carrymechanics.carry.CarryData;
 import com.skd.carrymechanics.client.render.CarryRenderHelper;
-import com.skd.carrymechanics.client.render.ICarryOnRenderState;
+import com.skd.carrymechanics.client.render.CarryMechanicsRenderState;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
@@ -22,7 +22,7 @@ public class HumanoidModelMixin {
 
     @Inject(method = "setupAnim(Lnet/minecraft/client/renderer/entity/state/HumanoidRenderState;)V", at = @At("RETURN"))
     private void onSetupAnim(HumanoidRenderState state, CallbackInfo ci) {
-        if (!(state instanceof ICarryOnRenderState carryState)) return;
+        if (!(state instanceof CarryMechanicsRenderState carryState)) return;
 
         CarryData data = carryState.carry_mechanics$getCarryData();
         Player player = carryState.carry_mechanics$getPlayer();

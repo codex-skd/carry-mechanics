@@ -1,14 +1,14 @@
 package com.skd.carrymechanics.mixin;
 
 import com.skd.carrymechanics.carry.CarryData;
-import com.skd.carrymechanics.client.render.ICarryOnRenderState;
+import com.skd.carrymechanics.client.render.CarryMechanicsRenderState;
 import net.minecraft.client.renderer.entity.state.AvatarRenderState;
 import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(AvatarRenderState.class)
-public class PlayerRenderStateMixin implements ICarryOnRenderState {
+public class PlayerRenderStateMixin implements CarryMechanicsRenderState {
     @Unique private CarryData carry_mechanics$data;
     @Unique private Player carry_mechanics$player;
 

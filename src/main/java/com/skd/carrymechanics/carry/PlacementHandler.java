@@ -19,7 +19,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -198,12 +197,6 @@ public class PlacementHandler {
             placement = carried;
         }
 
-        for (Property<?> prop : carried.getProperties()) {
-            if (prop.getValueClass() == Direction.class || prop.getValueClass() == Direction.Axis.class) {
-                placement = updateProperty(placement, carried, prop);
-            }
-        }
-
         BlockState updated = Block.updateFromNeighbourShapes(placement, (ServerLevel) player.level(), pos);
         if (updated.getBlock() == placement.getBlock()) placement = updated;
 
@@ -214,11 +207,6 @@ public class PlacementHandler {
         }
 
         return placement;
-    }
-
-    @SuppressWarnings("unchecked")
-    private static <T extends Comparable<T>> BlockState updateProperty(BlockState placement, BlockState carried, Property<T> prop) {
-        return placement.setValue(prop, carried.getValue(prop));
     }
 
     private static void executePlaceCommand(ServerPlayer player, CarryData data) {

@@ -16,6 +16,7 @@ public class ListHandler {
     public static final TagKey<EntityType<?>> ENTITY_BLACKLIST = createEntityTag("entity_blacklist");
     public static final TagKey<EntityType<?>> STACKING_WHITELIST = createEntityTag("stacking_whitelist");
     public static final TagKey<EntityType<?>> STACKING_BLACKLIST = createEntityTag("stacking_blacklist");
+    public static final TagKey<EntityType<?>> HOSTILE_PICKUP_WHITELIST = createEntityTag("hostile_pickup_whitelist");
 
     private static TagKey<Block> createBlockTag(String name) {
         return TagKey.create(BuiltInRegistries.BLOCK.key(),
@@ -52,5 +53,9 @@ public class ListHandler {
             return holder.is(STACKING_WHITELIST);
         }
         return !holder.is(STACKING_BLACKLIST);
+    }
+
+    public static boolean isHostilePickupExempt(Entity entity) {
+        return entity.getType().builtInRegistryHolder().is(HOSTILE_PICKUP_WHITELIST);
     }
 }

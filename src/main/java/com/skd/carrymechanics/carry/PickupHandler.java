@@ -123,7 +123,8 @@ public class PickupHandler {
         }
 
         if (!player.isCreative() && !ConfigAccess.PICKUP_HOSTILE_MOBS.get()
-                && (entity instanceof Enemy || entity.getType().getCategory() == MobCategory.MONSTER)) return false;
+                && (entity instanceof Enemy || entity.getType().getCategory() == MobCategory.MONSTER)
+                && !ListHandler.isHostilePickupExempt(entity)) return false;
 
         if (ConfigAccess.MAX_ENTITY_HEIGHT.get() < entity.getBbHeight()
                 || ConfigAccess.MAX_ENTITY_WIDTH.get() < entity.getBbWidth()) return false;

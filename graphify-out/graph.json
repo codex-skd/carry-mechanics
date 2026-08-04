@@ -666,7 +666,7 @@
       "source_location": "L166",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iscarrying",
-      "community": 0,
+      "community": 3,
       "norm_label": ".iscarrying()"
     },
     {
@@ -676,7 +676,7 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iskeypressed",
-      "community": 19,
+      "community": 15,
       "norm_label": ".iskeypressed()"
     },
     {
@@ -706,7 +706,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getselected",
-      "community": 0,
+      "community": 23,
       "norm_label": ".getselected()"
     },
     {
@@ -716,7 +716,7 @@
       "source_location": "L172",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getactivescript",
-      "community": 19,
+      "community": 15,
       "norm_label": ".getactivescript()"
     },
     {
@@ -736,7 +736,7 @@
       "source_location": "L174",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_gettick",
-      "community": 19,
+      "community": 3,
       "norm_label": ".gettick()"
     },
     {
@@ -965,7 +965,7 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_java",
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler",
       "community": 13,
       "norm_label": "listhandler.java"
     },
@@ -975,7 +975,7 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
       "community": 13,
       "norm_label": "listhandler"
     },
@@ -995,8 +995,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_java_block",
-      "community": 100,
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_block",
+      "community": 13,
       "norm_label": "block"
     },
     {
@@ -1005,17 +1005,17 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_java_entitytype",
-      "community": 102,
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entitytype",
+      "community": 13,
       "norm_label": "entitytype"
     },
     {
       "label": ".createBlockTag()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createblocktag",
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createblocktag",
       "community": 13,
       "norm_label": ".createblocktag()"
     },
@@ -1023,9 +1023,9 @@
       "label": ".createEntityTag()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createentitytag",
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createentitytag",
       "community": 13,
       "norm_label": ".createentitytag()"
     },
@@ -1033,10 +1033,10 @@
       "label": ".isPermitted()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted",
-      "community": 0,
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted",
+      "community": 13,
       "norm_label": ".ispermitted()"
     },
     {
@@ -1045,19 +1045,29 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_java_entity",
-      "community": 101,
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entity",
+      "community": 13,
       "norm_label": "entity"
     },
     {
       "label": ".isStackingPermitted()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L48",
+      "source_location": "L49",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_isstackingpermitted",
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_isstackingpermitted",
       "community": 13,
       "norm_label": ".isstackingpermitted()"
+    },
+    {
+      "label": ".isHostilePickupExempt()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ishostilepickupexempt",
+      "community": 13,
+      "norm_label": ".ishostilepickupexempt()"
     },
     {
       "label": "ModelOverrideHandler.java",
@@ -1145,8 +1155,8 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java",
-      "community": 19,
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
+      "community": 0,
       "norm_label": "pickuphandler.java"
     },
     {
@@ -1155,7 +1165,7 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L32",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
       "community": 0,
       "norm_label": "pickuphandler"
     },
@@ -1165,7 +1175,7 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L34",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
       "community": 0,
       "norm_label": ".cancarrygeneral()"
     },
@@ -1175,8 +1185,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
-      "community": 48,
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
+      "community": 0,
       "norm_label": "serverplayer"
     },
     {
@@ -1185,8 +1195,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_vec3",
-      "community": 49,
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_vec3",
+      "community": 0,
       "norm_label": "vec3"
     },
     {
@@ -1195,7 +1205,7 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
       "community": 0,
       "norm_label": ".trypickupblock()"
     },
@@ -1205,8 +1215,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockpos",
-      "community": 44,
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockpos",
+      "community": 0,
       "norm_label": "blockpos"
     },
     {
@@ -1215,8 +1225,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_level",
-      "community": 47,
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_level",
+      "community": 0,
       "norm_label": "level"
     },
     {
@@ -1225,8 +1235,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockstate",
-      "community": 45,
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockstate",
+      "community": 0,
       "norm_label": "blockstate"
     },
     {
@@ -1235,7 +1245,7 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L105",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
       "community": 0,
       "norm_label": ".trypickupentity()"
     },
@@ -1245,17 +1255,17 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_entity",
-      "community": 46,
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_entity",
+      "community": 0,
       "norm_label": "entity"
     },
     {
       "label": ".applySlowness()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L166",
+      "source_location": "L167",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
       "community": 0,
       "norm_label": ".applyslowness()"
     },
@@ -1263,9 +1273,9 @@
       "label": ".refreshSlowness()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L174",
+      "source_location": "L175",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
       "community": 0,
       "norm_label": ".refreshslowness()"
     },
@@ -1273,19 +1283,19 @@
       "label": ".potionLevel()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L183",
+      "source_location": "L184",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
-      "community": 0,
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
+      "community": 19,
       "norm_label": ".potionlevel()"
     },
     {
       "label": ".executeCommand()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L203",
+      "source_location": "L204",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
       "community": 0,
       "norm_label": ".executecommand()"
     },
@@ -1293,9 +1303,9 @@
       "label": ".hasPropertyOfType()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L212",
+      "source_location": "L213",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
+      "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
       "community": 0,
       "norm_label": ".haspropertyoftype()"
     },
@@ -1306,7 +1316,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "property",
-      "community": 19,
+      "community": 0,
       "norm_label": "property"
     },
     {
@@ -1886,7 +1896,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_client_render_carryrenderhelper_carryrenderhelper_getrenderwidth",
-      "community": 23,
+      "community": 4,
       "norm_label": ".getrenderwidth()"
     },
     {
@@ -2016,7 +2026,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_command_commandcarrymechanics_java",
-      "community": 19,
+      "community": 15,
       "norm_label": "commandcarrymechanics.java"
     },
     {
@@ -2026,7 +2036,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_command_commandcarrymechanics_commandcarrymechanics",
-      "community": 19,
+      "community": 15,
       "norm_label": "commandcarrymechanics"
     },
     {
@@ -2036,7 +2046,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_command_commandcarrymechanics_commandcarrymechanics_register",
-      "community": 19,
+      "community": 15,
       "norm_label": ".register()"
     },
     {
@@ -2046,7 +2056,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "commanddispatcher",
-      "community": 19,
+      "community": 15,
       "norm_label": "commanddispatcher"
     },
     {
@@ -2056,7 +2066,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "commandsourcestack",
-      "community": 19,
+      "community": 15,
       "norm_label": "commandsourcestack"
     },
     {
@@ -2286,7 +2296,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_clientevents_clientevents_onclienttick",
-      "community": 0,
+      "community": 23,
       "norm_label": ".onclienttick()"
     },
     {
@@ -2296,7 +2306,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pre",
-      "community": 0,
+      "community": 23,
       "norm_label": "pre"
     },
     {
@@ -2336,7 +2346,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_java",
-      "community": 0,
+      "community": 15,
       "norm_label": "commonevents.java"
     },
     {
@@ -2346,7 +2356,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_commonevents",
-      "community": 0,
+      "community": 15,
       "norm_label": "commonevents"
     },
     {
@@ -2366,7 +2376,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onblockclick",
-      "community": 0,
+      "community": 3,
       "norm_label": ".onblockclick()"
     },
     {
@@ -2376,7 +2386,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "rightclickblock",
-      "community": 0,
+      "community": 3,
       "norm_label": "rightclickblock"
     },
     {
@@ -2416,7 +2426,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onregistercommands",
-      "community": 0,
+      "community": 15,
       "norm_label": ".onregistercommands()"
     },
     {
@@ -2426,7 +2436,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "registercommandsevent",
-      "community": 0,
+      "community": 15,
       "norm_label": "registercommandsevent"
     },
     {
@@ -2456,7 +2466,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onbreakspeed",
-      "community": 0,
+      "community": 15,
       "norm_label": ".onbreakspeed()"
     },
     {
@@ -2466,7 +2476,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "breakspeed",
-      "community": 0,
+      "community": 15,
       "norm_label": "breakspeed"
     },
     {
@@ -2476,7 +2486,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onattackentity",
-      "community": 0,
+      "community": 15,
       "norm_label": ".onattackentity()"
     },
     {
@@ -2486,7 +2496,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "attackentityevent",
-      "community": 0,
+      "community": 15,
       "norm_label": "attackentityevent"
     },
     {
@@ -2496,7 +2506,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onentityleave",
-      "community": 0,
+      "community": 15,
       "norm_label": ".onentityleave()"
     },
     {
@@ -2506,7 +2516,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entityleavelevelevent",
-      "community": 0,
+      "community": 15,
       "norm_label": "entityleavelevelevent"
     },
     {
@@ -2726,7 +2736,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java",
-      "community": 19,
+      "community": 3,
       "norm_label": "entityrenderermixin.java"
     },
     {
@@ -2736,7 +2746,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_entityrenderermixin",
-      "community": 19,
+      "community": 3,
       "norm_label": "entityrenderermixin"
     },
     {
@@ -2756,7 +2766,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_entityrenderermixin_onshouldshowname",
-      "community": 0,
+      "community": 3,
       "norm_label": ".onshouldshowname()"
     },
     {
@@ -2896,7 +2906,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_mixin_inventorymixin_java",
-      "community": 19,
+      "community": 3,
       "norm_label": "inventorymixin.java"
     },
     {
@@ -2906,7 +2916,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_mixin_inventorymixin_inventorymixin",
-      "community": 19,
+      "community": 3,
       "norm_label": "inventorymixin"
     },
     {
@@ -2936,7 +2946,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_mixin_inventorymixin_inventorymixin_onpickslot",
-      "community": 0,
+      "community": 3,
       "norm_label": ".onpickslot()"
     },
     {
@@ -3116,7 +3126,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_mixin_playermixin_java",
-      "community": 0,
+      "community": 44,
       "norm_label": "playermixin.java"
     },
     {
@@ -3126,7 +3136,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_mixin_playermixin_playermixin",
-      "community": 0,
+      "community": 44,
       "norm_label": "playermixin"
     },
     {
@@ -3146,7 +3156,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_mixin_playermixin_playermixin_ondrop",
-      "community": 0,
+      "community": 44,
       "norm_label": ".ondrop()"
     },
     {
@@ -3176,7 +3186,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "itementity",
-      "community": 0,
+      "community": 44,
       "norm_label": "itementity"
     },
     {
@@ -3936,7 +3946,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_scripting_scriptmanager_java",
-      "community": 15,
+      "community": 0,
       "norm_label": "scriptmanager.java"
     },
     {
@@ -3946,7 +3956,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager",
-      "community": 15,
+      "community": 0,
       "norm_label": "scriptmanager"
     },
     {
@@ -3966,7 +3976,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_inspectblock",
-      "community": 15,
+      "community": 0,
       "norm_label": ".inspectblock()"
     },
     {
@@ -4016,7 +4026,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_inspectentity",
-      "community": 15,
+      "community": 0,
       "norm_label": ".inspectentity()"
     },
     {
@@ -4036,7 +4046,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_scriptmatches",
-      "community": 15,
+      "community": 0,
       "norm_label": ".scriptmatches()"
     },
     {
@@ -4170,14 +4180,14 @@
       "norm_label": "changelog"
     },
     {
-      "label": "[1.0.5] - 2026-08-04",
+      "label": "[1.0.6] - 2026-08-04",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "changelog_1_0_5_2026_08_04",
+      "id": "changelog_1_0_6_2026_08_04",
       "community": 6,
-      "norm_label": "[1.0.5] - 2026-08-04"
+      "norm_label": "[1.0.6] - 2026-08-04"
     },
     {
       "label": "Fix",
@@ -4190,10 +4200,30 @@
       "norm_label": "fix"
     },
     {
-      "label": "[1.0.4] - 2026-08-02",
+      "label": "[1.0.5] - 2026-08-04",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L8",
+      "_origin": "ast",
+      "id": "changelog_1_0_5_2026_08_04",
+      "community": 6,
+      "norm_label": "[1.0.5] - 2026-08-04"
+    },
+    {
+      "label": "Fix",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "changelog_fix_10",
+      "community": 6,
+      "norm_label": "fix"
+    },
+    {
+      "label": "[1.0.4] - 2026-08-02",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "changelog_1_0_4_2026_08_02",
       "community": 6,
@@ -4203,7 +4233,7 @@
       "label": "Refactor",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "changelog_refactor",
       "community": 6,
@@ -4213,31 +4243,11 @@
       "label": "[1.0.3] - 2026-08-02",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L13",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "changelog_1_0_3_2026_08_02",
       "community": 6,
       "norm_label": "[1.0.3] - 2026-08-02"
-    },
-    {
-      "label": "Fix",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "changelog_fix_15",
-      "community": 6,
-      "norm_label": "fix"
-    },
-    {
-      "label": "[1.0.2] - 2026-08-02",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "changelog_1_0_2_2026_08_02",
-      "community": 6,
-      "norm_label": "[1.0.2] - 2026-08-02"
     },
     {
       "label": "Fix",
@@ -4250,10 +4260,30 @@
       "norm_label": "fix"
     },
     {
+      "label": "[1.0.2] - 2026-08-02",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "changelog_1_0_2_2026_08_02",
+      "community": 6,
+      "norm_label": "[1.0.2] - 2026-08-02"
+    },
+    {
+      "label": "Fix",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "changelog_fix_25",
+      "community": 6,
+      "norm_label": "fix"
+    },
+    {
       "label": "[1.0.1] - 2026-08-01",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L24",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "changelog_1_0_1_2026_08_01",
       "community": 6,
@@ -4263,9 +4293,9 @@
       "label": "Fix",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L26",
+      "source_location": "L31",
       "_origin": "ast",
-      "id": "changelog_fix_26",
+      "id": "changelog_fix_31",
       "community": 6,
       "norm_label": "fix"
     },
@@ -4273,7 +4303,7 @@
       "label": "[1.0.0] - 2026-08-01",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L29",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "changelog_1_0_0_2026_08_01",
       "community": 6,
@@ -4283,7 +4313,7 @@
       "label": "Stable Release",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L31",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "changelog_stable_release",
       "community": 6,
@@ -4293,7 +4323,7 @@
       "label": "[0.0.0-beta.2] - 2026-07-31",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L37",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_2_2026_07_31",
       "community": 6,
@@ -4303,9 +4333,9 @@
       "label": "Fix",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L39",
+      "source_location": "L44",
       "_origin": "ast",
-      "id": "changelog_fix_39",
+      "id": "changelog_fix_44",
       "community": 6,
       "norm_label": "fix"
     },
@@ -4313,7 +4343,7 @@
       "label": "[0.0.0-beta.1] - 2026-07-31",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L42",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_1_2026_07_31",
       "community": 6,
@@ -4323,7 +4353,7 @@
       "label": "Initial Port",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L44",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "changelog_initial_port",
       "community": 6,
@@ -4738,6 +4768,16 @@
       "id": "docs_curseforge_versions_1_0_5",
       "community": 27,
       "norm_label": "1.0.5.md"
+    },
+    {
+      "label": "1.0.6.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/1.0.6.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_1_0_6",
+      "community": 45,
+      "norm_label": "1.0.6.md"
     }
   ],
   "links": [
@@ -5166,28 +5206,6 @@
       "weight": 1.0,
       "context": "generic_arg",
       "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_carrymechanicsaccess_carrymechanicsaccess_getattachmenttype",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L166",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L183",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
       "target": "src_main_java_com_skd_carrymechanics_carry_carrydata",
       "confidence_score": 1.0
     },
@@ -5798,6 +5816,28 @@
     {
       "relation": "references",
       "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L167",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L184",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PlacementHandler.java",
       "source_location": "L212",
       "weight": 1.0,
@@ -6105,21 +6145,10 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L194",
+      "source_location": "L195",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
       "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getfullnbt"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L92",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setblock"
     },
     {
       "relation": "references",
@@ -6166,6 +6195,17 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setblock"
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/CarryData.java",
@@ -6177,17 +6217,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java",
-      "target": "blockentity",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/CarryData.java",
@@ -6195,6 +6224,17 @@
       "weight": 1.0,
       "context": "return_type",
       "source": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getblockentity",
+      "target": "blockentity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
       "target": "blockentity",
       "confidence_score": 1.0
     },
@@ -6314,21 +6354,10 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L152",
+      "source_location": "L153",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
       "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setentity"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L186",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getentity"
     },
     {
       "relation": "calls",
@@ -6373,6 +6402,17 @@
       "source": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getentity",
       "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_java_level",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getentity"
     },
     {
       "relation": "calls",
@@ -6450,39 +6490,6 @@
       "source": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getcarryingplayer",
       "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_java_player",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L39",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iscarrying"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L184",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iscarrying"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L176",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iscarrying"
     },
     {
       "relation": "calls",
@@ -6581,6 +6588,39 @@
       "source_location": "L23",
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_mixin_inventorymixin_inventorymixin_onpickslot",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iscarrying"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iscarrying"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iscarrying"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
       "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iscarrying"
     },
     {
@@ -6738,28 +6778,6 @@
       "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getactivescript"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L84",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setactivescript"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L141",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setactivescript"
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/CarryData.java",
@@ -6776,10 +6794,21 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L41",
+      "source_location": "L84",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
-      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_gettick"
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setactivescript"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setactivescript"
     },
     {
       "relation": "calls",
@@ -6790,6 +6819,17 @@
       "source_location": "L22",
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_command_commandcarrymechanics_commandcarrymechanics_register",
+      "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_gettick"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
       "target": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_gettick"
     },
     {
@@ -6898,50 +6938,6 @@
       "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager",
       "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_setcarrydata",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L38",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L175",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L133",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata"
     },
     {
       "relation": "calls",
@@ -7113,6 +7109,50 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
+      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
+      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PlacementHandler.java",
       "source_location": "L31",
       "weight": 1.0,
@@ -7179,28 +7219,6 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L95",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_setcarrydata"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L160",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_setcarrydata"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "src/main/java/com/skd/carrymechanics/command/CommandCarryMechanics.java",
       "source_location": "L32",
       "weight": 1.0,
@@ -7228,6 +7246,28 @@
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_setcarrydata",
       "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_carrymechanicsaccess_carrymechanicsaccess_getattachmenttype"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_setcarrydata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L161",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_setcarrydata"
     },
     {
       "relation": "calls",
@@ -7336,13 +7376,46 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_block",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entitytype",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
       "source_location": "L11",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_java",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
       "confidence_score": 1.0
     },
     {
@@ -7352,58 +7425,90 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
       "source_location": "L8",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_java",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler",
       "target": "tagkey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createblocktag",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createentitytag",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L39",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L48",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_isstackingpermitted",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L18",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_block",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entitytype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createblocktag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createentitytag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ishostilepickupexempt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_isstackingpermitted",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L19",
       "weight": 1.0,
       "context": "field",
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler",
       "target": "tagkey",
       "confidence_score": 1.0
     },
@@ -7411,10 +7516,10 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "return_type",
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createblocktag",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createblocktag",
       "target": "tagkey",
       "confidence_score": 1.0
     },
@@ -7422,11 +7527,55 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "context": "return_type",
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createentitytag",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createentitytag",
       "target": "tagkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createblocktag",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_block",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_block",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_createentitytag",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entitytype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entity",
       "confidence_score": 1.0
     },
     {
@@ -7437,8 +7586,8 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L65",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted"
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted"
     },
     {
       "relation": "calls",
@@ -7448,8 +7597,30 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L118",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted"
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ispermitted"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L58",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ishostilepickupexempt",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/ListHandler.java",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_isstackingpermitted",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_java_entity",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -7460,7 +7631,18 @@
       "source_location": "L166",
       "weight": 1.0,
       "source": "src_main_java_com_skd_carrymechanics_carry_placementhandler_placementhandler_trystackentity",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_isstackingpermitted"
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_isstackingpermitted"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "src_main_java_com_skd_carrymechanics_carry_listhandler_listhandler_ishostilepickupexempt"
     },
     {
       "relation": "contains",
@@ -7569,23 +7751,13 @@
       "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_carry_modeloverridehandler_modeloverridehandler_getoverridestack"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L24",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
       "target": "property",
       "confidence_score": 1.0
     },
@@ -7596,18 +7768,94 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L7",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_java",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
       "target": "serverlevel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockpos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_entity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_vec3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L166",
+      "source_location": "L167",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
       "confidence_score": 1.0
     },
     {
@@ -7616,48 +7864,48 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L34",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L203",
+      "source_location": "L204",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L212",
+      "source_location": "L213",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L183",
+      "source_location": "L184",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L174",
+      "source_location": "L175",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
       "confidence_score": 1.0
     },
     {
@@ -7666,8 +7914,8 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L49",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
       "confidence_score": 1.0
     },
     {
@@ -7676,8 +7924,30 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L105",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_vec3",
       "confidence_score": 1.0
     },
     {
@@ -7687,8 +7957,8 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L51",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
       "confidence_score": 1.0
     },
     {
@@ -7698,64 +7968,64 @@
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
       "source_location": "L107",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L100",
+      "source_location": "L167",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L87",
+      "source_location": "L204",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L67",
+      "source_location": "L175",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "references",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L80",
+      "source_location": "L49",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_inspectblock"
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
+      "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
+      "relation": "references",
+      "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L83",
+      "source_location": "L105",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_scripting_carryscript_carryscript_fulfillsconditions"
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -7766,29 +8036,7 @@
       "source_location": "L47",
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onblockclick",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L161",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L143",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
-      "confidence_score": 1.0
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock"
     },
     {
       "relation": "calls",
@@ -7796,10 +8044,10 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L137",
+      "source_location": "L80",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_inspectentity"
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_inspectblock"
     },
     {
       "relation": "calls",
@@ -7807,10 +8055,98 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L140",
+      "source_location": "L83",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
       "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_scripting_carryscript_carryscript_fulfillsconditions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockpos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L184",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L213",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockstate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -7821,17 +8157,39 @@
       "source_location": "L68",
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onentityrightclick",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity"
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L168",
+      "source_location": "L138",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_scripting_scriptmanager_scriptmanager_inspectentity"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "g_proyectos_mods_minecraft_carry_mechanics_src_main_java_com_skd_carrymechanics_scripting_carryscript_carryscript_fulfillsconditions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L105",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_entity",
       "confidence_score": 1.0
     },
     {
@@ -7839,10 +8197,43 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L177",
+      "source_location": "L162",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_potionlevel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
       "confidence_score": 1.0
     },
     {
@@ -7854,16 +8245,16 @@
       "source_location": "L97",
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onservertick",
-      "target": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness"
+      "target": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java",
-      "source_location": "L212",
+      "source_location": "L213",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_carry_mechanics_26_2_src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
+      "source": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
       "target": "property",
       "confidence_score": 1.0
     },
@@ -11459,7 +11850,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L42",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_0_0_0_beta_1_2026_07_31",
@@ -11469,7 +11860,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L37",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_0_0_0_beta_2_2026_07_31",
@@ -11479,7 +11870,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L29",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_1_0_0_2026_08_01",
@@ -11489,7 +11880,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L24",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_1_0_1_2026_08_01",
@@ -11499,7 +11890,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L18",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_1_0_2_2026_08_02",
@@ -11509,7 +11900,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L13",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_1_0_3_2026_08_02",
@@ -11519,7 +11910,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L8",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_1_0_4_2026_08_02",
@@ -11529,7 +11920,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L3",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_1_0_5_2026_08_04",
@@ -11539,9 +11930,19 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "changelog_changelog",
+      "target": "changelog_1_0_6_2026_08_04",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
       "source_location": "L5",
       "weight": 1.0,
-      "source": "changelog_1_0_5_2026_08_04",
+      "source": "changelog_1_0_6_2026_08_04",
       "target": "changelog_fix",
       "confidence_score": 1.0
     },
@@ -11551,8 +11952,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L10",
       "weight": 1.0,
-      "source": "changelog_1_0_4_2026_08_02",
-      "target": "changelog_refactor",
+      "source": "changelog_1_0_5_2026_08_04",
+      "target": "changelog_fix_10",
       "confidence_score": 1.0
     },
     {
@@ -11561,8 +11962,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L15",
       "weight": 1.0,
-      "source": "changelog_1_0_3_2026_08_02",
-      "target": "changelog_fix_15",
+      "source": "changelog_1_0_4_2026_08_02",
+      "target": "changelog_refactor",
       "confidence_score": 1.0
     },
     {
@@ -11571,7 +11972,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L20",
       "weight": 1.0,
-      "source": "changelog_1_0_2_2026_08_02",
+      "source": "changelog_1_0_3_2026_08_02",
       "target": "changelog_fix_20",
       "confidence_score": 1.0
     },
@@ -11579,10 +11980,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L26",
+      "source_location": "L25",
       "weight": 1.0,
-      "source": "changelog_1_0_1_2026_08_01",
-      "target": "changelog_fix_26",
+      "source": "changelog_1_0_2_2026_08_02",
+      "target": "changelog_fix_25",
       "confidence_score": 1.0
     },
     {
@@ -11590,6 +11991,16 @@
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
       "source_location": "L31",
+      "weight": 1.0,
+      "source": "changelog_1_0_1_2026_08_01",
+      "target": "changelog_fix_31",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "changelog_1_0_0_2026_08_01",
       "target": "changelog_stable_release",
@@ -11599,17 +12010,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L39",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_2_2026_07_31",
-      "target": "changelog_fix_39",
+      "target": "changelog_fix_44",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L44",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_1_2026_07_31",
       "target": "changelog_initial_port",
@@ -11907,5 +12318,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "80ad25593979a8810498c194bf03201472af1a0f"
+  "built_at_commit": "bfda233df6f94e814e26296bf25aae2842818702"
 }

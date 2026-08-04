@@ -55,9 +55,9 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/carry/ListHandler.java": {
-    "mtime": 1785511128.4123425,
-    "ast_hash": "1349a4078544cc666ac87d27c60af7b2",
-    "semantic_hash": "1349a4078544cc666ac87d27c60af7b2"
+    "mtime": 1785808038.0298686,
+    "ast_hash": "2200504ddaef2c7beb0357438a921a65",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/carry/ModelOverrideHandler.java": {
     "mtime": 1785511128.4133437,
@@ -65,8 +65,8 @@
     "semantic_hash": "7e9edc91d0a60f8f57dd4cbf46f3c4f3"
   },
   "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java": {
-    "mtime": 1785511128.4139018,
-    "ast_hash": "87326fd903bae699e3bdf45910b605f5",
+    "mtime": 1785808041.8843474,
+    "ast_hash": "3f9a8792d066e96fbf02cf72a021abc1",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/carry/PlacementHandler.java": {
@@ -250,8 +250,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785804605.2542624,
-    "ast_hash": "8db6900a326dccd0993155ae6a6c853a",
+    "mtime": 1785808297.4177208,
+    "ast_hash": "92c53ebdb6867c61a45315e36bca7fb3",
     "semantic_hash": ""
   },
   "README.md": {
@@ -357,6 +357,16 @@
   "docs/curseforge/versions/1.0.5.md": {
     "mtime": 1785804611.0806558,
     "ast_hash": "d65dc01c8c4d8535eb0b89bb0e8120e5",
+    "semantic_hash": ""
+  },
+  "src/main/resources/data/carry_mechanics/tags/entity_type/hostile_pickup_whitelist.json": {
+    "mtime": 1785808046.0546703,
+    "ast_hash": "0f1728ddb9ff5c7ad0de282119d57ae9",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.0.6.md": {
+    "mtime": 1785808304.82441,
+    "ast_hash": "ebbf5f97fd06ddf21ad54a2adddbbd51",
     "semantic_hash": ""
   }
 }

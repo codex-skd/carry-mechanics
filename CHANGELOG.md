@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.5] - 2026-08-04
+
+### Fix
+- Bloques transportados con propiedad de orientación (`FACING`/`HORIZONTAL_FACING`/`AXIS`: barriles, hornos, dispensadores, observadores, troncos…) se colocaban siempre con la orientación que tenían al ser recogidos, ignorando hacia dónde miraba el jugador al colocarlos. `PlacementHandler.getPlacementState` calculaba correctamente la nueva orientación vía `getStateForPlacement(ctx)`, pero un bucle posterior reimponía incondicionalmente el valor original guardado para cualquier propiedad `Direction`/`Direction.Axis`, anulando el recálculo. Eliminado ese bucle: ahora la orientación se recalcula igual que en una colocación vanilla normal
+
 ## [1.0.4] - 2026-08-02
 
 ### Refactor

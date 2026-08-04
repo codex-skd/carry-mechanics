@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.6] - 2026-08-04
+
+### Fix
+- Los goblins/hobgoblins del mod Warlockery (`warlockery:goblin`, `warlockery:hobgoblin`) no se podían cargar aunque el jugador quisiera transportarlos, ya que el filtro de mobs hostiles (`Enemy`/`MobCategory.MONSTER`) los bloqueaba igual que a cualquier mob hostil cuando `pickup_hostile_mobs` está desactivado. Se añade el nuevo tag de datos `carry_mechanics:hostile_pickup_whitelist` (entity_type) como excepción a ese filtro; `warlockery:goblin` y `warlockery:hobgoblin` están incluidos por defecto (marcados como no-requeridos, así que no falla si Warlockery no está instalado). El resto de mobs hostiles siguen bloqueados salvo que se active `pickup_hostile_mobs` o se añadan a ese mismo tag
+
 ## [1.0.5] - 2026-08-04
 
 ### Fix

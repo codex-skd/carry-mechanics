@@ -14,8 +14,8 @@
 | Display name (Title Case) | `Carry Mechanics` |
 | Versiones de Minecraft | `26.2` |
 | Rama | `minecraft/26.2/neoforge-26.2.0.45-beta/production` |
-| Última versión publicada | `1.0.7` (CurseForge file ID TBD) |
-| Estado | ✅ Release estable 1.0.7 |
+| Última versión publicada | `1.0.8` (CurseForge file ID 8676382) |
+| Estado | ✅ Release estable 1.0.8 |
 
 ## Convenciones de nomenclatura
 

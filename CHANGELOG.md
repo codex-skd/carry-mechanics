@@ -1,6 +1,14 @@
 # Changelog
 
 
+## [1.1.0] - 2026-08-19
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.45-beta a 26.2.0.57.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `carry_mechanics-26.2-neoforge-26.2.0.57-1.1.0.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_CARRY_MECHANICS_26-2.md` para reflejar la nueva rama de trabajo.
+
 ## [1.0.8] - 2026-08-18
 
 ### Change

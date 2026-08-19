@@ -45,7 +45,7 @@
 
 | Variable | Valor |
 |----------|-------|
-| branch | `minecraft/26.2/neoforge-26.2.0.45-beta/production` |
+| branch | `minecraft/26.2/neoforge-26.2.0.57/production` |
 | tag_prefix | `26.2-neoforge-` |
 
 ## Variables para el script de subida (curseforge-upload.ps1)

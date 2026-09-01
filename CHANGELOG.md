@@ -2,6 +2,19 @@
 
 Branch `minecraft/1.21.1/neoforge-21.1.249/production`. History independent of the 26.2 branch.
 
+## [0.0.0-beta.2] - 2026-09-01
+
+### Fixed
+
+- **Client crash on world load** (`InvalidInjectionException` → hard crash during the resource
+  reload of the loading screen). `AvatarExtractorMixin` `@Inject` targeted
+  `PlayerRenderer.render(Player, …)`, but in 1.21.1 that method takes `AbstractClientPlayer`
+  (`PlayerRenderer extends LivingEntityRenderer<AbstractClientPlayer, …>`). Zero matching targets
+  + `defaultRequire: 1` aborted mixin application and crashed the client. Target descriptor and
+  handler parameter corrected to `net.minecraft.client.player.AbstractClientPlayer`. This was a
+  leftover from reverting the 26.2 `AvatarRenderer#extractRenderState` render-state code to the
+  1.21.1 immediate renderer; the descriptor was never compile-validated (no mixin AP refmap).
+
 ## [0.0.0-beta.1] - 2026-09-01
 
 ### Added

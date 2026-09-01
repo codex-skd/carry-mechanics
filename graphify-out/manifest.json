@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/mixin/AvatarExtractorMixin.java": {
-    "mtime": 1788287945.7032914,
-    "ast_hash": "b3dbce2a56a73448dccd645e65931e9f",
+    "mtime": 1788296804.9507122,
+    "ast_hash": "6f1f22b8c0aca6291da16d1c4be7624b",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/carrymechanics/mixin/AvatarRendererMixin.java": {
@@ -275,8 +275,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1788288497.2166865,
-    "ast_hash": "dd4b9f6fac1100027354c38714bdd93b",
+    "mtime": 1788297260.0293593,
+    "ast_hash": "896b78b0abb6929eeb0cddd92c6ac528",
     "semantic_hash": ""
   },
   "README.md": {
@@ -327,6 +327,11 @@
   "src/main/resources/logo.png": {
     "mtime": 1785511128.0,
     "ast_hash": "b12b2c96d95e52e99ee392e597bdf4ea",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.2.md": {
+    "mtime": 1788297268.504109,
+    "ast_hash": "67439752b89ad30926394e217d71164a",
     "semantic_hash": ""
   }
 }

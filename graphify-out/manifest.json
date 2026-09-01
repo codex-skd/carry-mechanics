@@ -1,0 +1,332 @@
+{
+  "build.gradle": {
+    "mtime": 1788286970.502797,
+    "ast_hash": "a0f5e624548263b81f08ce9565fc04d1",
+    "semantic_hash": ""
+  },
+  "gradlew": {
+    "mtime": 1785511128.0,
+    "ast_hash": "f2d3d383787f61a4a99710ee8d780434",
+    "semantic_hash": ""
+  },
+  "settings.gradle": {
+    "mtime": 1785511128.0,
+    "ast_hash": "99e779284ca5df48a056afa6a0bf2cd1",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/CarryMechanics.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "de9380a6791b48add6c86ef17c7a5320",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/CarryMechanicsClient.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "b8da050aec16a30ef7261acb94dd0281",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/PacketIds.java": {
+    "mtime": 1788287511.0929866,
+    "ast_hash": "2b6faae27efb31ccfe3f3cb8869a030b",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/carry/CarryData.java": {
+    "mtime": 1788287617.0661943,
+    "ast_hash": "a6505ba6453cb95b30a2a5f993fe983b",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/carry/CarryDataManager.java": {
+    "mtime": 1788288203.1994872,
+    "ast_hash": "4a9626cec0a657e664a1a32c79bfe194",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/carry/CarryDataSyncHandler.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "d0e4b7fa6c663d30d89bddb727a454a9",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/carry/CarryMechanicsAccess.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "4b685dc29eb43db2a84ff01abd1fdf39",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/carry/ConfigAccess.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "50466ef73cb7c1df05cd63dab8c938fa",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/carry/ListHandler.java": {
+    "mtime": 1788287528.0984674,
+    "ast_hash": "b1ac6279b496cddca407a818df3909ae",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/carry/ModelOverrideHandler.java": {
+    "mtime": 1788287517.9133244,
+    "ast_hash": "0ebf14a3d86c62d3c287ff436c29f695",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/carry/PickupHandler.java": {
+    "mtime": 1788288271.779766,
+    "ast_hash": "ae937890ee5cc7f168af7c258f75957c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/carry/PlacementHandler.java": {
+    "mtime": 1788288202.881037,
+    "ast_hash": "f814e0ac7535d4d53707e4fec01f7a45",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/client/keybinds/CarryKeybinds.java": {
+    "mtime": 1788288271.732946,
+    "ast_hash": "7db8e3b05d4a031c91d2c0a40ea85366",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/client/render/CarriedObjectRender.java": {
+    "mtime": 1788288271.9523587,
+    "ast_hash": "b17c42d2b6ad381e1877c4bfa0a7d216",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/client/render/CarryRenderHelper.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "b703b0c43c925ab8305adbaa2c5bda52",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/client/render/CarryingItemRenderLayer.java": {
+    "mtime": 1788288284.896407,
+    "ast_hash": "a39b91c9968d6002beaa53b77cc1cc6c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/command/CommandCarryMechanics.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "b69b7496ebc2ae3e5b67f6251df309d6",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/compat/GamestageCompat.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "8210c911aefeb0980866db1ae6f08a85",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/compat/ModCompat.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "48627a542db514bef7b91e3ad815ee32",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/config/CarryConfig.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "97f4e2336c56f0e19efe42856a9770b0",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/config/ConfigData.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "b52905ced14c7e4cdae1d70ce7d91ac0",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/events/ClientEvents.java": {
+    "mtime": 1788288271.8509417,
+    "ast_hash": "88e5b40d7808dea8912052b9388075b8",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/events/CommonEvents.java": {
+    "mtime": 1788288271.861483,
+    "ast_hash": "4b5153874e7b2fdb9c9c3e4d5b1f6942",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/AvatarExtractorMixin.java": {
+    "mtime": 1788287945.7032914,
+    "ast_hash": "b3dbce2a56a73448dccd645e65931e9f",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/AvatarRendererMixin.java": {
+    "mtime": 1788287818.590468,
+    "ast_hash": "bd2c5b9d1b1ac4f4b62fac92fc8621cf",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/EntityMixin.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "0b73de6c001f88a6822f0846ffb36606",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/EntityRendererMixin.java": {
+    "mtime": 1788287830.5730064,
+    "ast_hash": "8487c7645e3626020cbeae4115bea88a",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/HumanoidModelMixin.java": {
+    "mtime": 1788287768.8712738,
+    "ast_hash": "cd25515084e062adb8d0b2da634b1289",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/InventoryMixin.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "ec0112c8d42dae7aa3d087063e73b1e8",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/LivingEntityMixin.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "11d82ef8ee3dc5cc1c9f9124d83f4231",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/LivingEntityRendererMixin.java": {
+    "mtime": 1788287797.8430831,
+    "ast_hash": "899fd9f13166237f8f1b9d7dc4284b00",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/mixin/PlayerMixin.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "4e0ecad6272a6b64c75b927fd773612d",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/networking/ClientboundStartRidingOtherPlayerPacket.java": {
+    "mtime": 1788287535.120509,
+    "ast_hash": "e2be652d1bb353e799b192536af832f2",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/networking/ClientboundStartRidingPacket.java": {
+    "mtime": 1788287537.8297942,
+    "ast_hash": "097d2c0b5a0ff61b4566e4cc04cf000d",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/networking/ClientboundSyncScriptsPacket.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "c9f15f8d147cd6295af4d087f212768c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/networking/NetworkHelper.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "2d5b214cc603939bbc2e47af7cf760b7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/pickupcondition/PickupCondition.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "ffe13082ec15c66a9a647efb7c903d1e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/pickupcondition/PickupConditionHandler.java": {
+    "mtime": 1788287519.0590394,
+    "ast_hash": "1c810b2225c1c89b3ff9ecb557567206",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/scripting/CarryScript.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "040ab16ce844e7dc332ce37d77f3a1f4",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/scripting/ScriptManager.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "978020724ec581bbc1f872dcb0f0b61d",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/carrymechanics/scripting/ScriptReloadListener.java": {
+    "mtime": 1785511128.0,
+    "ast_hash": "96ad34d5413b50f432effc8d19ab1173",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/carry_mechanics/lang/en_us.json": {
+    "mtime": 1785511128.0,
+    "ast_hash": "f3fc7b392ef651003d2d093ba2fcc0d6",
+    "semantic_hash": ""
+  },
+  "src/main/resources/carry_mechanics.mixins.json": {
+    "mtime": 1788287864.82289,
+    "ast_hash": "127e15942dd77d87a9cf68e6f4e61784",
+    "semantic_hash": ""
+  },
+  "src/main/resources/data/carry_mechanics/tags/block/block_blacklist.json": {
+    "mtime": 1785511128.0,
+    "ast_hash": "c2c7ce872f7e6d7cf1735ff0b6427aed",
+    "semantic_hash": ""
+  },
+  "src/main/resources/data/carry_mechanics/tags/block/block_whitelist.json": {
+    "mtime": 1785511128.0,
+    "ast_hash": "c2c7ce872f7e6d7cf1735ff0b6427aed",
+    "semantic_hash": ""
+  },
+  "src/main/resources/data/carry_mechanics/tags/entity_type/entity_blacklist.json": {
+    "mtime": 1785511128.0,
+    "ast_hash": "c2c7ce872f7e6d7cf1735ff0b6427aed",
+    "semantic_hash": ""
+  },
+  "src/main/resources/data/carry_mechanics/tags/entity_type/entity_whitelist.json": {
+    "mtime": 1785511128.0,
+    "ast_hash": "c2c7ce872f7e6d7cf1735ff0b6427aed",
+    "semantic_hash": ""
+  },
+  "src/main/resources/data/carry_mechanics/tags/entity_type/hostile_pickup_whitelist.json": {
+    "mtime": 1785808046.0,
+    "ast_hash": "0f1728ddb9ff5c7ad0de282119d57ae9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/data/carry_mechanics/tags/entity_type/stacking_blacklist.json": {
+    "mtime": 1785511128.0,
+    "ast_hash": "c2c7ce872f7e6d7cf1735ff0b6427aed",
+    "semantic_hash": ""
+  },
+  "src/main/resources/data/carry_mechanics/tags/entity_type/stacking_whitelist.json": {
+    "mtime": 1785511128.0,
+    "ast_hash": "c2c7ce872f7e6d7cf1735ff0b6427aed",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1785511189.0,
+    "ast_hash": "d404f675857d8102b8a1dbfd5e0dddc6",
+    "semantic_hash": ""
+  },
+  ".gitlab-ci.yml": {
+    "mtime": 1785801080.0,
+    "ast_hash": "075837d192768b1cf94bed61a7ba7dae",
+    "semantic_hash": ""
+  },
+  "CHANGELOG.md": {
+    "mtime": 1788288497.2166865,
+    "ast_hash": "dd4b9f6fac1100027354c38714bdd93b",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1788288497.155545,
+    "ast_hash": "4c8d0a6cfa9dd213b5c1500affb679ed",
+    "semantic_hash": ""
+  },
+  "docs/PORT_BRIEF_1.21.1.md": {
+    "mtime": 1788287060.8029032,
+    "ast_hash": "b14c3c4177ae6ed4192b912b30bfe0d9",
+    "semantic_hash": ""
+  },
+  "docs/PORT_REPORT_1.21.1.md": {
+    "mtime": 1788288127.0554981,
+    "ast_hash": "1928fa6cf647819b2c80e9dbf67c1eea",
+    "semantic_hash": ""
+  },
+  "docs/WORKFLOW_CARRY_MECHANICS_26-2.md": {
+    "mtime": 1787691627.0,
+    "ast_hash": "2e41023993e8b8d884936053f19b047b",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_description.md": {
+    "mtime": 1788288471.677521,
+    "ast_hash": "fe6aa192cff6519125d6e355f588f379",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_vars.md": {
+    "mtime": 1788288519.9446495,
+    "ast_hash": "cd7efc4d02d908692602542aa2be367b",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.1.md": {
+    "mtime": 1788288519.8979275,
+    "ast_hash": "c9026e11c64fe29cb42ac560899b041f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/carry_mechanics/icon.png": {
+    "mtime": 1785511128.0,
+    "ast_hash": "b12b2c96d95e52e99ee392e597bdf4ea",
+    "semantic_hash": ""
+  },
+  "src/main/resources/carry_mechanics.png": {
+    "mtime": 1785511128.0,
+    "ast_hash": "b12b2c96d95e52e99ee392e597bdf4ea",
+    "semantic_hash": ""
+  },
+  "src/main/resources/logo.png": {
+    "mtime": 1785511128.0,
+    "ast_hash": "b12b2c96d95e52e99ee392e597bdf4ea",
+    "semantic_hash": ""
+  }
+}

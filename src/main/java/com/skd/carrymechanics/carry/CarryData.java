@@ -1,0 +1,170 @@
+package com.skd.carrymechanics.carry;
+
+import com.mojang.serialization.Codec;
+import com.skd.carrymechanics.scripting.CarryScript;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtOps;
+import net.minecraft.nbt.NbtUtils;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
+import java.util.Optional;
+
+public class CarryData {
+    private CarryType type = CarryType.INVALID;
+    private CompoundTag nbt = new CompoundTag();
+    private boolean keyPressed;
+    private int selectedSlot;
+    private CarryScript dataActiveScript;
+    private Entity cachedEntity;
+
+    private static final java.util.concurrent.atomic.AtomicInteger NEXT_RENDER_ENTITY_ID =
+            new java.util.concurrent.atomic.AtomicInteger(1_000_000_000);
+
+    public static final Codec<CarryData> CODEC = CompoundTag.CODEC.flatXmap(
+            tag -> { try { return com.mojang.serialization.DataResult.success(new CarryData(tag)); }
+                     catch (Exception e) { return com.mojang.serialization.DataResult.error(() -> "CarryData: " + e.getMessage()); }},
+            data -> { try { return com.mojang.serialization.DataResult.success(data.getFullNbt()); }
+                     catch (Exception e) { return com.mojang.serialization.DataResult.error(() -> "CarryData: " + e.getMessage()); }});
+
+    public static final StreamCodec<RegistryFriendlyByteBuf, CarryData> STREAM_CODEC =
+            ByteBufCodecs.fromCodecWithRegistries(CODEC);
+
+    public enum CarryType { INVALID, BLOCK, ENTITY, PLAYER }
+
+    public CarryData() { this(new CompoundTag()); }
+
+    public CarryData(CompoundTag tag) {
+        this.nbt = tag;
+        this.type = tag.contains("carryType")
+                ? CarryType.valueOf(tag.getString("carryType"))
+                : CarryType.INVALID;
+        this.keyPressed = tag.getBoolean("keyPressed");
+        this.selectedSlot = tag.getInt("selectedSlot");
+        if (tag.contains("activeScript")) {
+            try {
+                this.dataActiveScript = CarryScript.CODEC.parse(NbtOps.INSTANCE, tag.get("activeScript"))
+                        .getOrThrow(msg -> new RuntimeException("Script: " + msg));
+            } catch (Exception e) { this.dataActiveScript = null; }
+        }
+        if (getTick() < 0) setTick(0);
+    }
+
+    public CarryType getType() { return type; }
+
+    public CompoundTag getFullNbt() {
+        nbt.putString("carryType", type.toString());
+        nbt.putBoolean("keyPressed", keyPressed);
+        nbt.putInt("selectedSlot", selectedSlot);
+        if (dataActiveScript != null) {
+            var scriptTag = CarryScript.CODEC.encodeStart(NbtOps.INSTANCE, dataActiveScript)
+                    .getOrThrow(msg -> new RuntimeException("Encode: " + msg));
+            nbt.put("activeScript", scriptTag);
+        }
+        return nbt;
+    }
+
+    public void setBlock(BlockState state, BlockEntity blockEntity, ServerPlayer player, BlockPos pos) {
+        this.type = CarryType.BLOCK;
+        cachedEntity = null;
+        if (state.hasProperty(BlockStateProperties.WATERLOGGED))
+            state = state.setValue(BlockStateProperties.WATERLOGGED, false);
+        nbt.put("block", NbtUtils.writeBlockState(state));
+        if (blockEntity != null) {
+            CompoundTag tileTag = blockEntity.saveWithId(player.registryAccess());
+            nbt.put("tile", tileTag);
+        }
+    }
+
+    public BlockState getBlock() {
+        if (type != CarryType.BLOCK) throw new IllegalStateException("Not block: " + type);
+        return NbtUtils.readBlockState(BuiltInRegistries.BLOCK.asLookup(), nbt.getCompound("block"));
+    }
+
+    public BlockEntity getBlockEntity(BlockPos pos, HolderLookup.Provider registries) {
+        if (type != CarryType.BLOCK || !nbt.contains("tile")) return null;
+        return BlockEntity.loadStatic(pos, getBlock(), nbt.getCompound("tile"), registries);
+    }
+
+    public void setEntity(Entity entity) {
+        this.type = CarryType.ENTITY;
+        cachedEntity = null;
+        CompoundTag entityData = new CompoundTag();
+        entity.save(entityData);
+        nbt.put("entity", entityData);
+    }
+
+    public Entity getEntity(Level level) {
+        if (type != CarryType.ENTITY) throw new IllegalStateException("Not entity: " + type);
+        if (cachedEntity != null && cachedEntity.level() == level) return cachedEntity;
+        var entity = EntityType.create(nbt.getCompound("entity"), level);
+        if (entity.isPresent()) {
+            cachedEntity = entity.get();
+            assignRenderEntityId(cachedEntity);
+            return cachedEntity;
+        }
+        CarryMechanicsAccess.LOGGER.error("Failed to create entity from: {}", nbt);
+        clear();
+        return assignRenderEntityId(new AreaEffectCloud(level, 0, 0, 0));
+    }
+
+    /**
+     * A carried entity is deserialized as a detached copy and is never added to the
+     * level, so it has no entity id assigned (Entity.getId() throws until setId() is
+     * called). Client-side render state extraction calls Entity.getId() for living
+     * entities (e.g. ItemModelResolver.updateForLiving), which threw
+     * "Tried to access entity ID before ID assignment" and made the carried entity
+     * invisible. Assign a unique non-zero id so the copy can be rendered without
+     * ever being added to the level.
+     */
+    private static Entity assignRenderEntityId(Entity entity) {
+        try {
+            entity.getId();
+        } catch (IllegalStateException ignored) {
+            entity.setId(NEXT_RENDER_ENTITY_ID.incrementAndGet());
+        }
+        return entity;
+    }
+
+    public void setCarryingPlayer(Player player) {
+        this.type = CarryType.PLAYER;
+        nbt.putString("player", player.getStringUUID());
+    }
+
+    public Player getCarryingPlayer(Level level) {
+        if (type != CarryType.PLAYER) throw new IllegalStateException("Not player: " + type);
+        if (!nbt.contains("player")) return null;
+        return level.getServer().getPlayerList().getPlayer(java.util.UUID.fromString(nbt.getString("player")));
+    }
+
+    public boolean isCarrying() { return type != CarryType.INVALID; }
+    public boolean isCarrying(CarryType t) { return type == t; }
+    public boolean isKeyPressed() { return keyPressed; }
+    public void setKeyPressed(boolean v) { keyPressed = v; nbt.putBoolean("keyPressed", v); }
+    public void setSelected(int s) { selectedSlot = s; }
+    public int getSelected() { return selectedSlot; }
+    public Optional<CarryScript> getActiveScript() { return Optional.ofNullable(dataActiveScript); }
+    public void setActiveScript(CarryScript script) { this.dataActiveScript = script; }
+    public int getTick() { return nbt.getInt("tick"); }
+    public void setTick(int t) { nbt.putInt("tick", t); }
+
+    public void clear() {
+        type = CarryType.INVALID;
+        nbt = new CompoundTag();
+        dataActiveScript = null;
+        cachedEntity = null;
+    }
+
+    public CarryData clone() { return new CarryData(nbt.copy()); }
+}

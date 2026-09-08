@@ -9,11 +9,9 @@
   "7": ".draw",
   "8": "CarryingItemRenderLayer.java",
   "9": "PickupCondition",
-  "10": "CommonEvents.java",
   "11": "API Reversion Patterns Applied",
   "12": "Flujo de trabajo — Carry Mechanics (NeoForge)",
   "13": "ListHandler",
-  "14": "HumanoidModelMixin.java",
   "15": "Delegation brief — Carry Mechanics: finish the 1.21.1 / NeoForge 21.1.249 port",
   "16": "CarryMechanicsClient.java",
   "17": ".onRenderTail",
@@ -34,6 +32,5 @@
   "32": "project_description.md",
   "33": "0.0.0-beta.1.md",
   "34": "settings.gradle",
-  "35": "EntityRendererMixin.java",
   "36": "0.0.0-beta.2.md"
 }

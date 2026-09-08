@@ -666,7 +666,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_iskeypressed",
-      "community": 10,
+      "community": 0,
       "norm_label": ".iskeypressed()"
     },
     {
@@ -686,7 +686,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setselected",
-      "community": 2,
+      "community": 0,
       "norm_label": ".setselected()"
     },
     {
@@ -706,7 +706,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_getactivescript",
-      "community": 10,
+      "community": 6,
       "norm_label": ".getactivescript()"
     },
     {
@@ -716,7 +716,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_setactivescript",
-      "community": 2,
+      "community": 5,
       "norm_label": ".setactivescript()"
     },
     {
@@ -746,7 +746,7 @@
       "source_location": "L162",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydata_carrydata_clear",
-      "community": 0,
+      "community": 6,
       "norm_label": ".clear()"
     },
     {
@@ -766,7 +766,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydatamanager",
-      "community": 2,
+      "community": 18,
       "norm_label": "carrydatamanager.java"
     },
     {
@@ -776,7 +776,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager",
-      "community": 2,
+      "community": 6,
       "norm_label": "carrydatamanager"
     },
     {
@@ -786,7 +786,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_getcarrydata",
-      "community": 2,
+      "community": 6,
       "norm_label": ".getcarrydata()"
     },
     {
@@ -796,7 +796,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydatamanager_java_player",
-      "community": 2,
+      "community": 6,
       "norm_label": "player"
     },
     {
@@ -806,7 +806,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_carrydatamanager_carrydatamanager_setcarrydata",
-      "community": 2,
+      "community": 6,
       "norm_label": ".setcarrydata()"
     },
     {
@@ -1146,7 +1146,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler",
-      "community": 2,
+      "community": 5,
       "norm_label": "pickuphandler.java"
     },
     {
@@ -1156,7 +1156,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler",
-      "community": 2,
+      "community": 5,
       "norm_label": "pickuphandler"
     },
     {
@@ -1166,7 +1166,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_cancarrygeneral",
-      "community": 2,
+      "community": 5,
       "norm_label": ".cancarrygeneral()"
     },
     {
@@ -1176,7 +1176,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_serverplayer",
-      "community": 2,
+      "community": 5,
       "norm_label": "serverplayer"
     },
     {
@@ -1186,7 +1186,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_vec3",
-      "community": 2,
+      "community": 5,
       "norm_label": "vec3"
     },
     {
@@ -1196,7 +1196,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupblock",
-      "community": 2,
+      "community": 5,
       "norm_label": ".trypickupblock()"
     },
     {
@@ -1206,7 +1206,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockpos",
-      "community": 2,
+      "community": 5,
       "norm_label": "blockpos"
     },
     {
@@ -1216,7 +1216,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_level",
-      "community": 2,
+      "community": 5,
       "norm_label": "level"
     },
     {
@@ -1226,7 +1226,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_blockstate",
-      "community": 2,
+      "community": 5,
       "norm_label": "blockstate"
     },
     {
@@ -1236,7 +1236,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_trypickupentity",
-      "community": 2,
+      "community": 5,
       "norm_label": ".trypickupentity()"
     },
     {
@@ -1246,7 +1246,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_java_entity",
-      "community": 2,
+      "community": 5,
       "norm_label": "entity"
     },
     {
@@ -1256,7 +1256,7 @@
       "source_location": "L162",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_applyslowness",
-      "community": 2,
+      "community": 5,
       "norm_label": ".applyslowness()"
     },
     {
@@ -1266,7 +1266,7 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_refreshslowness",
-      "community": 2,
+      "community": 5,
       "norm_label": ".refreshslowness()"
     },
     {
@@ -1286,7 +1286,7 @@
       "source_location": "L199",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_executecommand",
-      "community": 2,
+      "community": 5,
       "norm_label": ".executecommand()"
     },
     {
@@ -1296,7 +1296,7 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_carry_pickuphandler_pickuphandler_haspropertyoftype",
-      "community": 2,
+      "community": 5,
       "norm_label": ".haspropertyoftype()"
     },
     {
@@ -1306,7 +1306,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "property",
-      "community": 2,
+      "community": 5,
       "norm_label": "property"
     },
     {
@@ -1946,7 +1946,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_command_commandcarrymechanics",
-      "community": 10,
+      "community": 6,
       "norm_label": "commandcarrymechanics.java"
     },
     {
@@ -1956,7 +1956,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_command_commandcarrymechanics_commandcarrymechanics",
-      "community": 10,
+      "community": 6,
       "norm_label": "commandcarrymechanics"
     },
     {
@@ -1966,7 +1966,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_command_commandcarrymechanics_commandcarrymechanics_register",
-      "community": 10,
+      "community": 6,
       "norm_label": ".register()"
     },
     {
@@ -1976,7 +1976,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "commanddispatcher",
-      "community": 10,
+      "community": 6,
       "norm_label": "commanddispatcher"
     },
     {
@@ -1986,7 +1986,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "commandsourcestack",
-      "community": 10,
+      "community": 6,
       "norm_label": "commandsourcestack"
     },
     {
@@ -2266,7 +2266,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents",
-      "community": 10,
+      "community": 6,
       "norm_label": "commonevents.java"
     },
     {
@@ -2276,7 +2276,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents",
-      "community": 10,
+      "community": 6,
       "norm_label": "commonevents"
     },
     {
@@ -2286,7 +2286,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents_java_eventbussubscriber",
-      "community": 10,
+      "community": 6,
       "norm_label": "eventbussubscriber"
     },
     {
@@ -2316,7 +2316,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents_java_subscribeevent",
-      "community": 10,
+      "community": 6,
       "norm_label": "subscribeevent"
     },
     {
@@ -2326,7 +2326,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onentityrightclick",
-      "community": 2,
+      "community": 6,
       "norm_label": ".onentityrightclick()"
     },
     {
@@ -2336,7 +2336,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entityinteract",
-      "community": 2,
+      "community": 6,
       "norm_label": "entityinteract"
     },
     {
@@ -2346,7 +2346,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onregistercommands",
-      "community": 10,
+      "community": 6,
       "norm_label": ".onregistercommands()"
     },
     {
@@ -2356,7 +2356,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "registercommandsevent",
-      "community": 10,
+      "community": 6,
       "norm_label": "registercommandsevent"
     },
     {
@@ -2366,7 +2366,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onservertick",
-      "community": 2,
+      "community": 6,
       "norm_label": ".onservertick()"
     },
     {
@@ -2376,7 +2376,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "post",
-      "community": 2,
+      "community": 6,
       "norm_label": "post"
     },
     {
@@ -2386,7 +2386,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onbreakspeed",
-      "community": 10,
+      "community": 6,
       "norm_label": ".onbreakspeed()"
     },
     {
@@ -2396,7 +2396,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "breakspeed",
-      "community": 10,
+      "community": 6,
       "norm_label": "breakspeed"
     },
     {
@@ -2406,7 +2406,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onattackentity",
-      "community": 10,
+      "community": 6,
       "norm_label": ".onattackentity()"
     },
     {
@@ -2416,7 +2416,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "attackentityevent",
-      "community": 10,
+      "community": 6,
       "norm_label": "attackentityevent"
     },
     {
@@ -2426,7 +2426,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_events_commonevents_commonevents_onentityleave",
-      "community": 10,
+      "community": 6,
       "norm_label": ".onentityleave()"
     },
     {
@@ -2436,7 +2436,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entityleavelevelevent",
-      "community": 10,
+      "community": 6,
       "norm_label": "entityleavelevelevent"
     },
     {
@@ -2666,7 +2666,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin",
-      "community": 35,
+      "community": 18,
       "norm_label": "entityrenderermixin.java"
     },
     {
@@ -2676,7 +2676,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_entityrenderermixin",
-      "community": 35,
+      "community": 18,
       "norm_label": "entityrenderermixin"
     },
     {
@@ -2686,7 +2686,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_mixin",
-      "community": 35,
+      "community": 18,
       "norm_label": "mixin"
     },
     {
@@ -2696,7 +2696,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_entityrenderermixin_onshouldshowname",
-      "community": 35,
+      "community": 18,
       "norm_label": ".onshouldshowname()"
     },
     {
@@ -2706,7 +2706,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_entity",
-      "community": 35,
+      "community": 18,
       "norm_label": "entity"
     },
     {
@@ -2716,7 +2716,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_callbackinforeturnable",
-      "community": 35,
+      "community": 18,
       "norm_label": "callbackinforeturnable"
     },
     {
@@ -2726,7 +2726,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_entityrenderermixin_java_inject",
-      "community": 35,
+      "community": 18,
       "norm_label": "inject"
     },
     {
@@ -2736,7 +2736,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin",
-      "community": 14,
+      "community": 4,
       "norm_label": "humanoidmodelmixin.java"
     },
     {
@@ -2746,7 +2746,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_humanoidmodelmixin",
-      "community": 14,
+      "community": 4,
       "norm_label": "humanoidmodelmixin"
     },
     {
@@ -2756,7 +2756,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_java_mixin",
-      "community": 14,
+      "community": 4,
       "norm_label": "mixin"
     },
     {
@@ -2766,7 +2766,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "modelpart",
-      "community": 14,
+      "community": 4,
       "norm_label": "modelpart"
     },
     {
@@ -2776,7 +2776,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_humanoidmodelmixin_onsetupanim",
-      "community": 14,
+      "community": 4,
       "norm_label": ".onsetupanim()"
     },
     {
@@ -2786,7 +2786,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_java_livingentity",
-      "community": 14,
+      "community": 4,
       "norm_label": "livingentity"
     },
     {
@@ -2796,7 +2796,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_java_callbackinfo",
-      "community": 14,
+      "community": 4,
       "norm_label": "callbackinfo"
     },
     {
@@ -2806,7 +2806,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_java_inject",
-      "community": 14,
+      "community": 4,
       "norm_label": "inject"
     },
     {
@@ -2816,7 +2816,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_humanoidmodelmixin_humanoidmodelmixin_changerotation",
-      "community": 14,
+      "community": 4,
       "norm_label": ".changerotation()"
     },
     {
@@ -2826,7 +2826,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "unique",
-      "community": 14,
+      "community": 4,
       "norm_label": "unique"
     },
     {
@@ -2906,7 +2906,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_livingentitymixin",
-      "community": 2,
+      "community": 18,
       "norm_label": "livingentitymixin.java"
     },
     {
@@ -2916,7 +2916,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_livingentitymixin_livingentitymixin",
-      "community": 2,
+      "community": 18,
       "norm_label": "livingentitymixin"
     },
     {
@@ -2926,7 +2926,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_livingentitymixin_java_mixin",
-      "community": 2,
+      "community": 18,
       "norm_label": "mixin"
     },
     {
@@ -2936,7 +2936,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_livingentitymixin_livingentitymixin_onsetjumping",
-      "community": 2,
+      "community": 18,
       "norm_label": ".onsetjumping()"
     },
     {
@@ -2946,7 +2946,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_livingentitymixin_java_callbackinfo",
-      "community": 2,
+      "community": 18,
       "norm_label": "callbackinfo"
     },
     {
@@ -2956,7 +2956,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_livingentitymixin_java_inject",
-      "community": 2,
+      "community": 18,
       "norm_label": "inject"
     },
     {
@@ -2966,7 +2966,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_mixin_livingentitymixin_livingentitymixin_onjumpfromground",
-      "community": 2,
+      "community": 18,
       "norm_label": ".onjumpfromground()"
     },
     {
@@ -3436,7 +3436,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_networking_networkhelper",
-      "community": 10,
+      "community": 1,
       "norm_label": "networkhelper.java"
     },
     {
@@ -3446,7 +3446,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_networking_networkhelper_networkhelper",
-      "community": 10,
+      "community": 1,
       "norm_label": "networkhelper"
     },
     {
@@ -3456,7 +3456,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_networking_networkhelper_networkhelper_sendtoallplayers",
-      "community": 10,
+      "community": 1,
       "norm_label": ".sendtoallplayers()"
     },
     {
@@ -3466,7 +3466,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "serverlevel",
-      "community": 10,
+      "community": 1,
       "norm_label": "serverlevel"
     },
     {
@@ -3476,7 +3476,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_networking_networkhelper_java_custompacketpayload",
-      "community": 10,
+      "community": 1,
       "norm_label": "custompacketpayload"
     },
     {
@@ -3696,7 +3696,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_main_java_com_skd_carrymechanics_scripting_carryscript_carryscript_fulfillsconditions",
-      "community": 2,
+      "community": 5,
       "norm_label": ".fulfillsconditions()"
     },
     {
@@ -4030,10 +4030,30 @@
       "norm_label": "carry mechanics (1.21.1) \u2014 changelog"
     },
     {
-      "label": "[0.0.0-beta.2] - 2026-09-01",
+      "label": "[0.0.0-beta.3] - 2026-09-08",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L5",
+      "_origin": "ast",
+      "id": "changelog_0_0_0_beta_3_2026_09_08",
+      "community": 26,
+      "norm_label": "[0.0.0-beta.3] - 2026-09-08"
+    },
+    {
+      "label": "Added",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "changelog_added",
+      "community": 26,
+      "norm_label": "added"
+    },
+    {
+      "label": "[0.0.0-beta.2] - 2026-09-01",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_2_2026_09_01",
       "community": 26,
@@ -4043,7 +4063,7 @@
       "label": "Fixed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L7",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "changelog_fixed",
       "community": 26,
@@ -4053,7 +4073,7 @@
       "label": "[0.0.0-beta.1] - 2026-09-01",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L18",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_1_2026_09_01",
       "community": 26,
@@ -4063,9 +4083,9 @@
       "label": "Added",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L20",
+      "source_location": "L28",
       "_origin": "ast",
-      "id": "changelog_added",
+      "id": "changelog_added_28",
       "community": 26,
       "norm_label": "added"
     },
@@ -4073,7 +4093,7 @@
       "label": "Technical",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L29",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "changelog_technical",
       "community": 26,
@@ -4628,6 +4648,16 @@
       "id": "docs_curseforge_versions_0_0_0_beta_2",
       "community": 36,
       "norm_label": "0.0.0-beta.2.md"
+    },
+    {
+      "label": "0.0.0-beta.3.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/0.0.0-beta.3.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_0_0_0_beta_3",
+      "community": 2,
+      "norm_label": "0.0.0-beta.3.md"
     }
   ],
   "links": [
@@ -13801,7 +13831,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L18",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "changelog_carry_mechanics_1_21_1_changelog",
       "target": "changelog_0_0_0_beta_1_2026_09_01",
@@ -13811,7 +13841,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L5",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "changelog_carry_mechanics_1_21_1_changelog",
       "target": "changelog_0_0_0_beta_2_2026_09_01",
@@ -13821,7 +13851,27 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "changelog_carry_mechanics_1_21_1_changelog",
+      "target": "changelog_0_0_0_beta_3_2026_09_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
       "source_location": "L7",
+      "weight": 1.0,
+      "source": "changelog_0_0_0_beta_3_2026_09_08",
+      "target": "changelog_added",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_2_2026_09_01",
       "target": "changelog_fixed",
@@ -13831,17 +13881,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L20",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_1_2026_09_01",
-      "target": "changelog_added",
+      "target": "changelog_added_28",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L29",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_1_2026_09_01",
       "target": "changelog_technical",
@@ -14319,5 +14369,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "973f96d247ddf47dfc20007eebb80a683f0685cc"
+  "built_at_commit": "b3dfb30ec4e324234e087297e73a02377c863742"
 }

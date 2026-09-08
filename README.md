@@ -6,7 +6,7 @@ Carry Mechanics lets you pick up, carry, and place blocks (with their block enti
 
 ## Status
 
-Beta (`0.0.0-beta.1`). Port to Minecraft 1.21.1 / NeoForge 21.1.249 (Java 21) — the 26.2 fork tree with all 26.2-only Minecraft/NeoForge API reverted to 1.21.1, using upstream Carry On 1.21.1 (v2.2.6) as the API reference. The fork's own dynamics are preserved. `./gradlew build` and `./gradlew runServer` verified (server side; the client render code is compile-checked only).
+Stable (`1.0.0`). Port to Minecraft 1.21.1 / NeoForge 21.1.249 (Java 21) — the 26.2 fork tree with all 26.2-only Minecraft/NeoForge API reverted to 1.21.1, using upstream Carry On 1.21.1 (v2.2.6) as the API reference. The fork's own dynamics are preserved. `./gradlew build` and `./gradlew runServer` verified; this build has been running server-side in a full modded-server pack.
 
 ## Requirements
 

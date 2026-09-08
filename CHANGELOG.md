@@ -2,6 +2,31 @@
 
 Branch `minecraft/1.21.1/neoforge-21.1.249/production`. History independent of the 26.2 branch.
 
+## [1.0.0] - 2026-09-09
+
+First stable release for **Minecraft 1.21.1 / NeoForge 21.1.249** (Java 21). Consolidates the
+`0.0.0-beta.1` → `0.0.0-beta.3` line with no further code changes. The 1.21.1 build has been
+running server-side in the *(Develop) Mystical Realms* modded-server pack.
+
+### Summary of the beta line
+
+- **beta.1** — initial port from the 26.2 fork tree (`com.skd.carrymechanics` identity), all
+  26.2-only Minecraft/NeoForge API reverted to 1.21.1 using upstream Carry On 1.21.1 (v2.2.6,
+  Tschipp / PurpliciousCow, LGPL-3.0) as the API reference. The fork's own gameplay dynamics
+  (crouch-to-pick-up, grab rules, carry conditions, entity stacking, scripting, model overrides,
+  movement penalties, inventory locking) are preserved unchanged.
+- **beta.2** — fixed a client crash on world load: `AvatarExtractorMixin` `@Inject` targeted
+  `PlayerRenderer.render(Player, …)`, but in 1.21.1 that method takes `AbstractClientPlayer`;
+  the descriptor and handler parameter were corrected.
+- **beta.3** — bundled the Spanish (`es_es`) locale: all 32 keys (creative-tab name, «Cargar»
+  keybind, every config-screen label).
+
+### Notes
+
+- No gameplay change relative to `0.0.0-beta.3`. Verified: `./gradlew clean build` is green.
+- Same CurseForge project as the 26.2 line (`1608286`); pick the file that matches your Minecraft
+  version.
+
 ## [0.0.0-beta.3] - 2026-09-08
 
 ### Added

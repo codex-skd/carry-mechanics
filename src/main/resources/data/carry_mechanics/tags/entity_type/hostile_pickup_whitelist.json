@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "warlockery:goblin",
+      "required": false
+    },
+    {
+      "id": "warlockery:hobgoblin",
+      "required": false
+    }
+  ]
+}

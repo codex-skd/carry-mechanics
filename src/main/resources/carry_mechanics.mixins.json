@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.skd.carrymechanics.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EntityMixin",
+    "InventoryMixin",
+    "LivingEntityMixin",
+    "PlayerMixin"
+  ],
+  "client": [
+    "AvatarExtractorMixin",
+    "AvatarRendererMixin",
+    "EntityRendererMixin",
+    "HumanoidModelMixin",
+    "LivingEntityRendererMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "com.skd.carrymechanics.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"EntityMixin",
+		"InventoryMixin",
+		"LivingEntityMixin",
+		"PlayerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

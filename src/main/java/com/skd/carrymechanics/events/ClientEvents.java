@@ -1,0 +1,50 @@
+package com.skd.carrymechanics.events;
+
+import com.skd.carrymechanics.CarryMechanics;
+import com.skd.carrymechanics.carry.CarryData;
+import com.skd.carrymechanics.carry.CarryDataManager;
+import com.skd.carrymechanics.client.compat.FirstPersonCompat;
+import com.skd.carrymechanics.client.render.CarriedObjectRender;
+import net.minecraft.client.Minecraft;
+import net.minecraft.world.InteractionHand;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.event.RenderHandEvent;
+
+@EventBusSubscriber(modid = CarryMechanics.MODID, value = Dist.CLIENT)
+public class ClientEvents {
+
+    @SubscribeEvent
+    public static void onClientTick(ClientTickEvent.Pre event) {
+        Minecraft mc = Minecraft.getInstance();
+        var player = mc.player;
+        if (player == null) return;
+
+        CarryData data = CarryDataManager.getCarryData(player);
+        if (data.isCarrying()) {
+            player.getInventory().setSelectedSlot(data.getSelected());
+        }
+    }
+
+    @SubscribeEvent
+    public static void onRenderHand(RenderHandEvent event) {
+        Minecraft mc = Minecraft.getInstance();
+        var player = mc.player;
+        if (player == null) return;
+
+        CarryData data = CarryDataManager.getCarryData(player);
+        if (!data.isCarrying()) return;
+
+        // First Person Model already cancels the vanilla hand and draws the carried object
+        // through the player body render layer. Drawing it again in hand space would
+        // duplicate it (and place the body copy against the camera).
+        if (FirstPersonCompat.isActive()) return;
+
+        if (event.getHand() == InteractionHand.MAIN_HAND) {
+            CarriedObjectRender.draw(player, event.getPoseStack(), event.getPackedLight(), event.getSubmitNodeCollector(), true);
+        }
+        event.setCanceled(true);
+    }
+}
